@@ -1,0 +1,56 @@
+ /**************************************************************************
+  * This program is free software; you can redistribute it and/or modify   *
+  * under the terms of the GNU General Public License as published by the  *
+  * Free Software Foundation; either version 2 of the License, or (at your *
+  * option) any later version.                                             *
+  *                                                                        *
+  * This program is distributed in the hope that it will be useful,        *
+  * but WITHOUT ANY WARRANTY; without even the implied warranty of         *
+  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU       *
+  * General Public License for more details.                               *
+  *                                                                        *
+  * You should have received a copy of the GNU General Public License      *
+  * along with this program; if not, write to the Free Software Foundation,*
+  * Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA            *
+  *************************************************************************/
+
+#ifdef __STDC__
+# define	P(s) s
+#else
+# define P(s) ()
+#endif
+
+
+/* mbmgecvt.c */
+/*     277 */ void main P((void ));
+/*     485 */ void validate P((void ));
+/*     518 */ void move_old_to_new P((void ));
+/*     557 */ void clrscrx P((void ));
+/*     567 */ void clrscr1 P((void ));
+/*     579 */ void clrscr2 P((void ));
+/*     601 */ struct btvblk *opnbtv P((char *filnam , int maxlen ));
+/*     619 */ int clckln P((void ));
+/*     644 */ int omdbtv P((int mode ));
+/*     650 */ int setbtv P((struct btvblk *bbptr ));
+/*     656 */ int qrybtv P((char *key , int keynum , int qryopt ));
+/*     679 */ int qnpbtv P((int getopt ));
+/*     691 */ int getbtv P((char *recptr , char *key , int keynum , int getopt ));
+/*     714 */ int obtbtv P((char *recptr , char *key , int keynum , int obtopt ));
+/*     741 */ int anpbtv P((char *recptr , int anpopt ));
+/*     753 */ long absbtv P((void ));
+/*     763 */ int gabbtv P((char *recptr , long abspos , int keynum ));
+/*     778 */ int aabbtv P((char *recptr , long abspos , int keynum ));
+/*     791 */ int sabbtv P((char *recptr ));
+/*     802 */ int updbtv P((char *recptr ));
+/*     808 */ int upvbtv P((char *recptr , int length ));
+/*     820 */ int insbtv P((char *recptr ));
+/*     826 */ int invbtv P((char *recptr , int length ));
+/*     838 */ int delbtv P((void ));
+/*     845 */ int clsbtv P((struct btvblk *bbp ));
+/*     860 */ int btverr P((char *who ));
+/*     882 */ int btvu P((int funcno , char *datbuf , char *key , int keyno , int rlen ));
+/*     930 */ char *alcmem P((unsigned size ));
+/*     941 */ char *secure P((void ));
+/*     946 */ int honk P((void ));
+
+#undef P

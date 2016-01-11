@@ -1,0 +1,855 @@
+
+HLPINDEX { Help is available on the following commands and topics:
+
+Commands: abandon abort  admin  attack  buy  cloak  cls  decoy  destruct  
+          flux  freq  help  impulse  jammer  maintenance  mine  missile  
+          new  orbit  phaser  planet price rename  report  roster  
+          rotate  scan  sell  send  set  shield  torpedo  transfer  
+          warp  zipper
+
+Topics  : battle  class  communicate  simultron  galaxy  moving  planets  
+          scoring  sector  starting  strategy  wormholes
+
+Issue the help command as follows;
+
+   help [<topic>]
+
+   topic = one of the command or topic words above.
+} T
+
+HLPSTART {Topic: Start playing Galactic Empire Trainer
+
+When you begin playing Galactic Empire you are first given your trainer
+ship. You can immediately move out from sector 0 0 and begin doing
+battle with the Simultrons, or you can go to the Traders Haven to 
+purchase additional weapons and systems. 
+
+You will learn from experience the best mix of supplies to take on each
+mission. 
+
+Remember, no hostile activity will be tolerated in the neutral zone
+so move off to another sector before beginning any attacks.
+
+Good Luck and Enjoy!
+
+Further hints are available under other help topics.
+} T
+
+
+HLPGALXY {Topic: Galaxy
+
+The training simulation in a universe which is 20 x 20 and few planets.
+Each sector is 10000 by 10000 parsecs square. The entire 
+navigable galaxy is 20 by 20 sectors numbered from the center of 
+the galaxy to the edges. Sectors are mapped on a two coordinate system 
+giving a galactic map that looks something like this;
+
+       +--------------------------------------+
+       |-9,-9                           +10,-9|
+       |                                      |
+       |                                      |
+       |                                      |
+       |                                      |
+       |                                      |
+       |                  0,0                 |
+       |                                      |
+       |                                      |
+       |                                      |
+       |                                      |
+       |                                      |
+       |-9,+10                         +10,+10|
+       +--------------------------------------+
+
+Each sector is measured 10000 by 10000 parsecs square measured from the
+top left to bottom right as follows;
+
+       +--------------------------------------+
+       |0,0                             0,9999|
+       |                                      |
+       |                                      |
+       |                                      |
+       |                                      |
+       |                                      |
+       |              5000,5000               |
+       |                                      |
+       |                                      |
+       |                                      |
+       |                                      |
+       |                                      |
+       |9999,0                       9999,9999|
+       +--------------------------------------+
+} T
+
+
+HLPSECTR {Topic: Sector 
+In each sector there may be between 0 and 9
+planetary bodies. Each planet has various environmental and resource
+qualities. The best planet has very good resources and a very good
+environment.
+
+Sector 0 0 is governed by the Galactic Command and is a declared neutral
+zone. This policy is maintained by the Sentry Asteroid. A single
+hostile action by any player in this sector will be met with a swift and
+preemptive strike from the Galactic Commands top secret weapons base on
+the Sentry Asteroid.
+
+Sector 0 0 also has the supply planet Traders Haven. Here you can buy
+additional weapons and supplies.
+
+Planet number two in Sector 0 0 is the Space Station, a embarking station
+for colonists and mercenary soldiers. This is also where you can purchase
+food supplies.
+
+Once out of Sector 0 0 it is a free for all, and you have to decide how to
+best defend yourself and your planets.
+} T
+
+HLPCOMMU {Topic: Communications
+Each ship has a communications console with three separate transmission
+channels. You can set each to a specific channel or to the HAIL setting which
+permits you to receive all general hailing messages. If you create alliances
+you can set one radio to an agreed upon channel and have a private and secure
+communications path between members of your alliance. 
+
+Use the FREQ command to change the communications frequency. 
+
+Note that if the frequency is set above 32000 then it is determined to be 
+a Hyperspace communications Packet Code and transmissions will be sent 
+via Hyperspace to anyone with the same packet code anywhere in the Galaxy.
+} T
+
+HLPNAVIG {Topic: Moving (Navigating)
+All directional information in Galactic Empire functions on a 360 degree
+compass and is strictly two dimensional. The major bearings are illustrated
+as follow;
+
+       315  0  45
+          \ | /
+           \|/
+     270----*----90
+           /|\
+          / | \
+       225 180 135
+
+BEARING - Bearing is always used to indicate where a particular ship or
+planet is in relation to you. It is relative to the direction you are facing
+and expressed in a number from -180 to +180. If a object is bearing -90, it
+is to the left of you, if +90 it is to the right of you, if 0 it is directly
+in front of you, and if - or + 180 it is directly behind you.
+
+HEADING - Heading is the relative direction of the other ship. It is used to
+indicate when a ship is facing toward or away from you. A heading of 0 means
+the ship is facing toward you, while a heading of 180 is away from you.
+
+GALACTIC HEADING - This is the absolute heading in the galaxy. A galactic
+heading of 0 means you (or the other ship) is facing north up.
+} T
+
+
+HLPPLANT {Topic: Owning Planets
+
+In the Training Simulation there are few if any planets. You need not
+concern yourself with them.
+} T
+
+HLPPLAN2 {} T
+
+HLPPLAN3 {} T
+
+HLPSTRAT {Topic: Game Strategy
+
+Your ship is equipped with nothing when you first enter the game, you are not
+in any eminent danger as sector 0 0 is a neutral zone. You are provided with
+a Battle Trainer and an amount of cash with which you must decide what you 
+are going to do.
+
+On Traders Haven you can purchase shield systems, phaser systems, missiles, 
+torpedoes, fighters, decoys, and ion cannons.
+
+An alternative, albeit somewhat immoral, strategy is to purchase weapons and
+lie waiting for other ships to leave sector 0 0. When they do mount an attack
+and upon destroying their ship, gain what remains of the supplies on their
+ship. After several successful attacks you may have enough to colonize a
+planet or two.
+
+} T
+
+
+HLPBATTL {Topic: Battle Strategy
+
+The flexibility of Galactic Empire precludes an exhaustive discussion of all
+the strategies involved in user versus user battling. Some suggestions are
+simply put forth here to get you started.
+
+When in a potential battle situation make sure your shields are up, and keep
+moving. The easiest target is a ship with shields down, sitting still.
+
+If you have a cloaking system use it sparingly as it consumes incredible 
+amounts of energy, it is most useful in covering a retreat.
+
+If you have incoming torpedoes you can ditch them easily by making a jump to
+light speed provided you have warp drive.  This does not work for missiles 
+though as they too can go hyperspace.
+
+Launching decoys does not guarantee that the incoming missiles or torpedoes
+will be destroyed. Launching more decoys than incoming weapons increases the
+chance of destroying an incoming weapon.
+
+When launching an attack try to get close to the target and use the faster
+torpedoes as they will have less time to react.
+
+Type HELP BATTLE2 for more information on battling
+} T
+
+HLPBATT2 {Topic: Battle Strategy (Section 2)
+
+If a target goes to light speed be prepared to make the jump with him and use
+Hyper-Phasers as soon as you pass warp 1.
+
+If you get hit with a Hyper-Phaser immediately go into a series of 180 degree
+high speed turns as your opponent will have difficulty locating you. Go out
+of light speed in another sector and immediately cloak as a last ditch effort
+to loose your pursuers.
+
+Form alliances to help protect each other from marauders. Remember two ships
+are twice as powerful as one.
+
+When you are under attack you cannot EXIT the game to avoid your attackers.
+If you hang-up while you are under attack your ship will be destroyed.
+Remember "Death before Dishonor"!!
+
+If you are damaged try to make it back to sector 0 0 or to one of your own
+planets where you can get your ship repaired with the MAINT command. Remember
+the cost for everything is much more expensive in Sector 0 0.
+
+When you kill another ship you will get some of his goods on his ship. This
+can be very helpful when you are running low.
+
+} T
+
+HLPBATT3 {} T
+
+HLPCYBER {Topic: Simultrons
+
+Simultrons are a variety of simulated opponents to hone you battle skills.
+When you can successfully defend youself from them you should be ready for
+the full Galactic Empire game and the Cybertrons.
+
+} T
+
+HLPSCORE {Topic: Scoring
+
+Scores are based upon the number of kills you make. Simple.
+
+} T
+
+HLPWORM {Topic: Wormholes
+
+Wormholes are fairly rare galactic anomalies caused by
+a paired spatial singularity. The effect it to create a means of
+"leaping" across the galaxy to another sector. To navigate through
+a wormhole you must carefully approach it directly at about 1/4 
+impulse. You will be pulled into the wormhole and emerge at the 
+terminal sector. If you approach too fast you will simply miss the
+event horizon. If you approach too slow you may oscillate between
+terminal sectors. Each time you pass through a wormhole some
+damage to systems may occur. Passing through a wormhole while severely 
+damaged is not recommended. Wormholes are usually by-directional but
+an even rarer form of one way wormhole has been speculated to exist.
+
+} T T
+
+HLPADM {The ADMIN command permits you to claim and administer a planet once 
+in orbit. If you already own this planet then you can perform several
+planetary maintenance functions from the Planer Administration Menu.
+
+Planet Administration Menu
+-----------------------------------
+1 - Get accounting report
+2 - Collect taxes ($)
+3 - Alter work assignments and
+    adjust trade policy/pricing
+4 - Rename planet
+5 - Adjust Tax Rate
+6 - Set Trade Password
+x - Exit to command mode
+
+} T
+
+HLPABA {The abandon command will release ownership of a planet previously
+claimed. You must be in orbit around the planet to be abandoned.
+Issue the abandon command as follows;
+
+   abandon
+
+simple enough.
+} T
+
+
+
+HLPABO {The Abort command will abort a self distract countdown and prevent 
+the destruction of your ship.
+} T
+
+HLPATT {The Attack command permits you to start an attack on a planet with
+either troops or fighters. Issue the Attack command as follows;
+
+  attack [<number>] [tro/fig]
+
+  number = number of troops or fighters to attack with;
+
+  tro = send <number> troops to the surface.
+  fig = send <number> fighters to the surface.
+
+  examples: attack 100 tro
+            attack 30 fighters
+
+} T
+
+HLPBUY {The Buy command will permit you to purchase goods from one of your own
+planets or another players planet. Issue the Buy command as follows;
+
+buy [<number>] [men/tro/mis/tor/ion/flu/foo/fig/dec/min/jam/zip/gol] 
+               [<password>]
+
+number = the number you want to buy.
+
+  men  = buy men
+  tro  = buy troops
+  mis  = buy missiles
+  tor  = buy torpedoes
+  ion  = buy ion cannons
+  flu  = buy flux pods
+  foo  = buy food
+  fig  = buy fighters
+  dec  = buy decoys
+  min  = buy mines
+  jam  = buy jammers
+  zip  = buy zippers
+  gol  = buy gold
+
+  password = optional trade password may be required by planet.
+
+examples:
+  buy 1000 men
+  buy 3 ion
+  buy 500 foo drowssap
+
+} T
+
+HLPCLO {The Cloak command will turn on or off the cloaking system, if your
+ship is equipped. The cloaking system consumes large amounts of power and
+you should be careful not to drain all your energy pool.
+
+Only Cruisers are equipped with cloaking systems.
+
+} T
+
+HLPCLS {The CLS function simply clears the screen using ANSI characters.
+
+} T
+
+
+HLPDEC {The Decoy command deploys a single decoy. Decoys proceed away from 
+your ship and send a sensor signature that resembles your ship. If a torpedo
+or missile comes near the decoy the decoy will explode and destroy the 
+inbound weapon. The decoy will self destruct after a period of time to prevent
+stray decoys floating around in your navigation path.
+
+} T
+
+HLPDES {The Destruct command will begin a self destruct countdown timer that
+when it reaches zero will destroy your ship. The countdown can be aborted with
+the ABORT command.
+
+} T
+
+HLPFLU {The Flux command will replace an exhausted Flux Pod from the energy pool
+with a new one. This command presumes that you want it changed now, and does
+not warn you if there is still a good percentage of power left in the old pod.
+The old pod is jettisoned. Your power is restored to full charge automatically.
+
+} T
+
+HLPHEL {The Help command will display a vast amount of information on 
+Galactic Empire. Type HELP for a list of subjects.
+
+} T
+
+HLPHYP {When in hyperspace the normal ships phasers are useless. The 
+Hyper-Phaser however can be deadly. The Hyper-Phaser Beam is very narrow 
+but very powerful and can destroy another ship with only a few well placed 
+shots. Issue the Hyper-Phaser command as follows;
+  phaser [<direction>]
+
+  direction = the heading to fire the phasers at, usually the same as the
+              bearing of another ship given in the "scan sh" command. With
+              the Hyper-Phaser you must be pin-point accurate to score a hit.
+
+  examples: phaser 4    fire 4 degrees off starboard.
+            phaser 180  fire directly behind you.
+
+  Note: The Fire Control System automatically switches to Hyper-Phasers
+        when in hyperspace.
+} T
+
+HLPIMP {The Impulse command directs your impulse (sub-light) engines and
+sets your course and speed. Issue the Impulse command as follows;
+
+  impulse [<speed>] [<heading>]
+
+  speed   = the impulse speed between 0 and 99 (99 is .99 light speed)
+  heading = the heading from your current direction
+
+  examples: impulse 5 0    would alter the speed to impulse 5 and not
+                           change the heading.
+            impulse 10 5   would alter the speed to impulse 10 and turn the
+                           ship 5 degrees to the starboard (right).
+            impulse 10 355 would alter the speed to impulse 10 and turn the
+                           ship 5 degrees to the port (left).
+
+} T
+
+HLPJAM {
+The jammer command will cause a jammer device to be launched. It 
+disrupts all scanner systems on all ships within range of the device, yours
+included. It is useful for covering an escape or distracting an opponent.
+Issue the jammer command as follows;
+
+  jammer
+
+Simple enough!
+
+} T
+
+HLPLOC {The Lock command permits you to lock your fire control systems onto
+a specific ship no matter what its letter designation changes to. As long
+as the ship is within scanner range the fire control systems will remain 
+locked onto that specific ship. This is extremely useful when in heated 
+battle and multiple ships are in the vicinity. Ship letter designated -A-
+may become -B- or -C- as other ships move closer to you. The Lock command
+permits you to stay locked on to the ship as distances and letter designates
+change. 
+
+Commands like MISSILE and TORPEDO can be then be used with the Lock option
+to fire on the ship you have locked onto. Issue the Lock command as follows;
+
+   lock [<ship letter designate>]
+   -or-
+   lock
+
+   examples: lock A     would lock onto the closest ship.
+             lock B     would lock onto the second closest ship.
+
+             lock       would cause the lock to be released.
+
+Note: Once a ship is killed the lock is released automatically.
+
+} T
+
+
+
+
+HLPMAI {
+
+The Maintenance command functions when you are in orbit at your own
+planet or Planet 1 in Sector 0 0. The maintenance crews will start
+repairing your ship and charge you a nominal fee of 200c's at your
+own planet and 2500c's at Sector 0 0.
+
+Leaving orbit early will cease all repairs on the ship.
+
+} T
+
+HLPMIN  {The MINE command causes a neutron mine to be deposited at your 
+current location. You specify how long until detonation permitting you time
+to leave the spot for safety. Mines are useful when you are being tailed
+by another ship. Beware that they are very powerful and you can also be
+damaged by them if you don't get far enough away. Issue the MINE command 
+as follows;
+
+  mine [<time>]
+
+  time = the time till detonation in centocks (approx 5 seconds). This can
+         be set from 1 to 50.
+
+  Example:  mine 10    will deposit a mine to detonate in 10 centocks
+
+} T 
+
+HLPMIS {The Missile command instructs your ship to fire a hyper-missile at
+a given ship with a given charge. This missile guidance system will attempt 
+to lock on the ship prior to firing the missile. If a lock is made the missile
+is launched. Issue the Missile command as follows;
+
+  missile [<ship letter>/@] [<energy>]
+
+  ship letter = the ship you are firing upon
+  @           = to fire at the locked on ship
+  energy      = the energy from your Neutron Flux Pile to charge into
+                the missile.
+  
+  examples: missile A 100   would fire a missile at ship A which will only
+                           cause minor (if any) damage.
+            missile C 20000 would fire a missile at ship C which will cause
+                           major damage.
+            missile @ 10000 would fire on the ship that a previous Lock 
+                           command has locked on to.
+
+  note: the energy imparted to the missile must come from your charged
+        neutron flux pile and will drain the pile by that amount.
+} T
+
+HLPNAV {Please issue the Navigate command as follows;
+  navigate [sector]
+
+  sector number = the sector number you wish to navigate to.
+
+
+  examples: navigate sector 0 0   give a bearing and distance to sector 0 0.
+} T
+
+HLPNEW {The New command permits you to purchase from the ship yards
+at Planet 1 in Sector 0 0 one of several types of shields, phaser
+systems, or even a new ship.  Issue the New command as follows;
+
+  New [shield/ship/phaser] [<type>] 
+  
+  type   = the class type of the shield, phaser, or ship you wish to purchase.
+           ---- Shields ----   ---- Phasers ----   ------ Ships ------
+           Mark-1 Shield = 1   Mark-1 Phaser = 1   Interceptor     = 1
+           Mark-2 Shield = 2   Mark-2 Phaser = 2   Light Freighter = 2
+           Mark-3 Shield = 3   Mark-3 Phaser = 3   Heavy Freighter = 3
+           Mark-4 Shield = 4   Mark-4 Phaser = 4   Destroyer       = 4
+           Mark-5 Shield = 5   Mark-5 Phaser = 5   Star Cruiser    = 5
+           Mark-6 Shield = 6                       Battle Cruiser  = 6
+                                                   Frigate         = 7
+                                                   Dreadnought     = 8
+
+  examples: new ship 2    purchase a new Heavy Freighter
+
+  note: you must be orbiting around Planet 1 in Sector 0 0 to issue this 
+        command. A complete list of ship classes and prices can be obtained
+        from the HELP CLASS command.
+} T
+
+HLPORB {The Orbit command instructs your ship to enter into orbit around
+a given planet. Issue the Orbit command as follows;
+
+  orbit [<planet #>]
+
+  planet # = the planet you are wishing to orbit.
+  
+  NOTE: YOU MUST BE 250 or closer to orbit a planet!
+
+  example:  orbit 2
+
+} T
+
+HLPPHA {The Phaser command directs your ships phasers to fire in a given 
+direction with a given beam spread. The more narrow the beam the stronger the
+hit, but the more difficult it is to get a hit. 
+Issue the Phaser command as follows;
+
+  phaser [<direction>] [<spread>]
+
+  direction = the heading to fire the phasers at, usually the same as the
+              bearing of another ship given in the "scan sh" command.
+  spread    = the focus of the beam (0 to 5). 0 gives the most concentrated
+              beam but is so narrow that you must be dead on to get a hit.
+              1 and 2 are good numbers to use if you know where a target is
+              located. Use 5 if you know he is close but cloaked.
+
+  examples: phaser 4 1   fire 4 degrees off starboard, focus 1.
+            phaser 180 5 fire directly behind focus 5.
+} T
+
+HLPPLA {Produces a list of the planets registered to you. This list is only 
+current as of 3AM each day. Any planets added to your empire today will not 
+appear in the list until 3AM tomorrow.
+
+} T
+
+HLPPRI {The Price command permits you to get a price for a quantity of goods
+prior to actually purchasing them. Issue the Price command as follows;
+
+  price [<number>] [men/tro/mis/tor/ion/flu/foo/fig/dec/min/jam/zip/gol]
+
+  men  = price men
+  tro  = price troops
+  mis  = price missiles
+  tor  = price torpedoes
+  ion  = price ion cannons
+  flu  = price flux pods
+  foo  = price food
+  fig  = price fighters
+  dec  = price decoys
+  min  = price mines
+  jam  = price jammers
+  zip  = price zippers
+  gol  = price gold
+
+examples:
+  price 1000 men
+  price 3 ion
+  price 500 foo
+
+} T
+
+HLPREN {The Rename command will change the name assigned to your ship. Issue
+the Rename command as follows;
+
+  rename <new ship name>
+
+} T
+
+HLPREP {The Report command gives you status information on navigation, ships
+systems, inventory, and accounting. Issue the Report command as follows;
+
+  report [nav/sys/inv/acc] 
+
+  examples: report nav    - produces a navigational report
+            report sys    - produces a systems report 
+            report inv    - produces an inventory report
+            report acc    - produces an accounting report
+
+} T
+
+HLPROS {The Roster command will display the Top Players Roster.
+
+  roster [all]
+
+  examples: roster        - display the top players
+            roster all    - display all players
+
+
+} T
+
+HLPROT {The Rotate command will cause to directional thrusters to rotate the
+ship a specified number of degrees. The ship must be stationary first. The ship
+will automatically turn in the direction which causes the shortest arc to 
+arrive at the given heading. Issue the Rotate command as follows;
+
+  rotate [<heading>]
+
+  heading = the heading from your current direction
+
+  examples: rotate 5   would turn the ship 5 degrees to the starboard (right).
+            rotate 355 would turn the ship 5 degrees to the port (left).
+
+Note that the heading is relative from your current heading and not fixed.
+} T
+
+HLPSET {The SET command lets you set user configurable options.
+
+  set  <option>/? [on/off]
+
+  options are;
+
+  scanhome   -  home the screen before displaying scan
+  scanfull   -  full screen scans
+  scannames  -  show user names in Range Scans (scanfull must be ON too)
+
+  examples:
+  set scanhome on
+  set scannames off
+  set ?
+} T
+
+
+HLPSCA {The Scan command permits you to direct the ships tactical scanners
+in a number of different ways. Issue the Scanner command as follows;
+
+  scan [se/sh/pl/ra/lo] [<ship letter>/<planet #>/<range>]
+
+  se = sector scan showing the ships and planets in this sector
+  sh = ship scan showing detail on ship <ship letter>
+  pl = planet scan showing detail on planet <planet #>
+  ra = close range scan for range <range> 1 to 9
+  lo = long range scan of neutron distortions
+
+  examples: scan se
+            scan sh a
+            scan pl 1
+            scan ra 9 
+            scan lo
+
+  Note: See the SET command for additional configuration options for SCAN
+
+} T
+
+HLPSEL {The Sell command will permit you to re-sell back to the Empire excess goods.
+The Empire will charge a small Tranfer Tax on each transaction.
+
+Issue the Sell command as follows;
+
+Sell [<number>] [men/tro/mis/tor/ion/flu/foo/fig/dec/min/jam/zip/gol] 
+
+number = the number you want to sell.
+
+  men  = sell men
+  tro  = sell troops
+  mis  = sell missiles
+  tor  = sell torpedoes
+  ion  = sell ion cannons
+  flu  = sell flux pods
+  foo  = sell food
+  fig  = sell fighters
+  dec  = sell decoys
+  min  = sell mines
+  jam  = sell jammers
+  zip  = sell zippers
+  gol  = sell gold
+
+examples:
+  sell 1000 men
+  sell 3 ion
+  sell 500 foo 
+
+} T
+
+HLPSEN {The Send command is the only means of communication between ships
+and team members. Please issue the Send command as follows;
+
+  send [<channel>] [<message>]
+
+  channel  = Your communications channel A, B, or C as set by the SET command.
+  message  = Your message to be sent.
+
+  examples: send A Why you scum guzzler, I am gonna get you
+            send C This is a warning to all ships.... I am here!!!!
+
+} T
+
+HLPFRE {The Freq command permits you to specify the channels you want your ships
+communication system set to. Issue the Com channel set command as follows;
+
+  freq [<channel>] [hail/<freq>]
+
+  examples: freq A 12345
+            freq b hail
+            freq c 23221
+
+  note: Channel frequencies above 20000 are converted to hyperspace modulation
+           packets and transmitted through hyperspace.
+        Channel frequencies below 20000 are transmitted in the current star
+           system only.
+} T
+
+HLPSHI {The Shield command will raise or lower the ships shields. The shields
+will begin charging upon being raised for the first time. They are providing 
+immediate yet limited protection until fully charged. When fully charged the
+shields come up immediately when issued. The shields do drain on the neutron
+flux pile, and will automatically come down when the energy drops to 
+dangerously low levels.
+
+NOTE: When firing a weapon with the shields up, the shields will be 
+automatically lowered. They WILL NOT be automatically raised after the firing.
+
+  shield [up/down]
+
+  examples: shield up    would raise the shields
+            shield down  would lower the shields
+
+
+} T
+
+HLPTOR {The Torpedo command instructs your ship to fire a torpedo at a given 
+ship. This fire control system will attempt to lock on the ship prior to 
+firing the torpedo. If a lock is made the torpedo is launched. Issue the 
+Torpedo command as follows;
+
+  torpedo [<ship letter>/@] 
+
+  ship letter = the ship you are firing upon
+  @           = the locked on ship.
+  
+  examples: torpedo A   would fire a torpedo at ship A.
+            torpedo @   would fire at the ship you locked on with the LOCK cmd
+
+
+} T
+
+HLPTRA {The Transfer command permits you to transfer goods from your ship 
+to a newly established planet, or from a planet to your ship. 
+Issue the transfer command as follows;
+
+  transfer [up/down] [<number>] [men/tro/mis/tor/ion/flu/foo/fig/dec/min/jam]
+
+  men  = transfer men
+  tro  = transfer troops
+  mis  = transfer missiles
+  tor  = transfer torpedoes
+  ion  = transfer ion cannons
+  flu  = transfer flux pods
+  foo  = transfer food
+  fig  = transfer fighters
+  dec  = transfer decoys
+  min  = transfer mines
+  jam  = transfer jammers
+  zip  = transfer zippers
+
+examples:
+  transfer up 3 ion 
+  transfer down 500 foo 
+
+} T
+
+
+HLPWAR {The Warp command starts the warp drives (provided your type of ship
+has them) and directs your course and speed. Issue the Warp command as follows;
+
+  warp [<speed>] [<heading>]
+
+  speed   = the warp speed between 0 and 50
+  heading = the heading from your current direction
+
+  examples: warp 5 0    would alter the speed to warp 5 and not
+                        change the heading.
+            warp 10 5   would alter the speed to warp 10 and turn the ship
+                        5 degrees to the starboard (right).
+            warp 10 355 would alter the speed to warp 10 and turn the ship
+                        5 degrees to the port (left).
+
+} T
+
+HLPZIP {The ZIP command launches a defensive (and sometimes offensive) weapon
+which interferes with the timing mechanism on mines. The effect is to trip 
+all mines in the vicinity of the players ship into exploding immediately. This
+weapon can be used to "trip" an opponents mines after he has laid them but
+before he can distance himself from them, causing the mines to do damage to 
+the opponents own ship. Issue the zipper command as follows;
+
+  zipper
+
+Easy enough!
+} T
+
+
+
+HLPCLS1 {There is only one class of ship in the Training Simulator.
+
+## ------A--------     -B-C-D-E-F-G-H-I-J-K-L---M----N------O-------P-----Q--
+} T
+
+
+HLPCLS2 {------------------------------------------------------------------------------
+A - Ship class name
+B - Maximum Shield type (0 = No shields available)
+C - Maximum Phaser type 
+D - 0 = Has no Torpedo System / 1 = Has Torpedo System
+E - 0 = Has no Missile System / 1 = Has Missile System
+F - 0 = Has no Decoy Launching system / 1 = Has Decoy Launcher
+G - 0 = Has no Jammer Launching system / 1 = Has Jammer Launcher
+H - 0 = Has no Zipper Launching system / 1 = Has Zipper Launcher
+I - 0 = Has no Mine Launching system / 1 = Has Mine Launcher
+J - Has Planetary Attack Capability
+K - 0 = Has no Cloaking System / 1 = Has Cloaking System
+L - Maximum Acceleration rate
+M - 0 = Has no Warp Drive / >0 = Maximum Warp drive capable of
+N - Maximum Tonnage ship can transport
+O - Price for a ship of this class
+P - Maximum Scanner Range
+Q - Points for killing a ship in this class
+} T
+

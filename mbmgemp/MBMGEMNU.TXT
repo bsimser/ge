@@ -1,0 +1,127 @@
+[0;1;33;44mÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿[0m
+[1;33;44m³ [37mGALACTIC EMPIRE rel 3.2d      [31mşşşşşşşşş Whats new this release şşşşşşşşş   [33m³[0m
+[1;33;44mÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ[0m
+
+The weight of gold has been reduced to allow you to carry more on a ship.
+
+The value of Spies has been reduced from 10000 to 100. This caused the game to
+become unbalanced easily. 
+
+Torpedos and Missiles will no-longer follow you through a Wormhole.
+
+The Phaser and Hyper-Phaser strength has been increased all around.
+
+You can now change directions while moving with the ROTATE command.
+
+You can now specify only the first parameter on the WARP command. GE will
+adjust your speed but keep you on the same heading.
+
+The prices of all items are now Sysop configurable.
+
+A bug which prevented shield types above Mark-7 from draining the Flux has
+been fixed.
+
+A new SET option has been added. You can now significantly reduce the excess
+messages coming to you while you are battling by setting the FILTER option
+on. See HELP SET for more details.
+
+The SCAN LO will now identify Human Players as '=' instead of '+'. 
+
+The cloaking systems have been enhanced to require a charging period each time
+they are used. This will make it a bit more realistic and challenging.
+
+The cloak command now is an explicit CLOAK ON and CLOAK OFF.
+
+The Planet "team" trade password now works the way it was supposed to.
+
+The scanners on all ships have been enhanced to detect a cloaked ship that
+moves while cloaked. More accurately, the faster the cloaked player goes,
+the more likely a background ion trail will be detectable. If the player
+moves slowly while cloaked they might go undetected. To detect this effect
+the cloaked ship must be fairly close, at least within 1/2 the normal scan 
+range for your ship.
+
+The NEW SHIELD and NEW PHASER commands have been enhanced to give you a
+credit for your existing class of shield or phaser system. The credit will
+be 2/3rds the price of a new one (after all -- its used equipment). If the
+credit exceeds the price of the new system (as when you are downgrading)
+the excess credit will be given to you as cash, minus a 2% banking fee.
+
+The Scoring System has been enhanced so that players who have planets don't
+end up with mega scores which are impossible to beat. Your sysop also now
+has the ability to fine tune the scoring system.
+
+Planets can now be assigned to teams. This is done by setting the trade
+password for a planet to TEAM. From then on players on the same team
+(and only players on the team) can buy from the planet. 
+
+Players can now set the price to sell items instead of the amount to 
+mark up. This allows players who wish to give there goods away to other
+teammates at low prices to do so. It also lets players offer special
+discounted prices to other players BELOW what market values are.
+
+The price of items in sector 0 0 will vary according to market conditions.
+This means that you might get a better deal at differing times depending
+upon the market.
+
+HELP NEWPRICE will now list the price of Phasers and Shields.
+
+Your Sysop can now add new types of Cyborg Ships to the game.
+
+The ship size function has been adjusted to reflect what we feel is more
+reasonable sizes. I will update the HELP CLASS nn function accordingly.
+If you have created your own classes of ships this will effect them also.
+
+The Roster function has been enhanced to display planet populations in
+the thousands.
+
+We have added several new classes of ships to the standard release to make
+the game more interesting. Among them are a CYBER BASE STAR, a Sarten
+Attack Drone, and a Sarten Obliterator. I leave it up to your users to 
+discover the attributes of these ships.
+
+If you win a planet which you had put a spy on the spy will now figure this
+out and shut up.
+
+We have reduced the standard released galaxy size to 600x600 and increased
+the frequency of planets and wormholes. This will force players into closer 
+proximity with each other and make for a more interesting game.
+
+We have enhanced the logic so that droids will all be centered within
+20 sectors of sector 0 0. This will allow players more opportunity to 
+interact with droids who make easy targets.
+
+Planets can be taxed a bit more before they revolt. Please let us know if this
+still seems too low (no - you cant tax at 90%)
+
+A new commend JETTISON has been added. This command lets you jettison all or
+a specific number of an item to free load space for other items. Type 
+HELP JETTISON for details on usage.
+
+Phasers can now be fired in impulse without specifying the spread. A 
+default spread of 1 is assumed. This way a player does not need to change
+how they use the command depending upon whether they are in warp or impulse.
+
+The size of the Freight Barge has been reduced and its offensive weapons 
+removed. It was never intended to be the invunerable offensive platform
+it became. Sorry to those players who used it in this manner.
+
+Players will now get only the first message when a planets production reaches
+maximum. This way they are not inundated with repeated messages.
+
+Your Sysop can now specify the amount of energy to charge against the Flux
+Pile each time a missile is fired. The default setting is 10 indicating a
+1/10 charge. If the player fires a missile with 50000 (MIS x 50000) it will
+deduct 5000 from the flux pile. 
+
+We have reduced significantly the speed at wich ION Cannons are produced.
+There were entirely too many being produced in the game to keep a balance
+of power.
+
+In order to prevent a single user flooding a sector with mines the maximum
+which can be deployed simultaneously is now 3.
+
+Many, many options have been added to give you Sysop more control over the
+game configuration. If you wish some changes please ask your sysop...
+Chances are he/she can change them.
+

@@ -1,0 +1,361 @@
+                         
+
+
+
+
+
+
+
+
+
+
+                                   Galactic Empire
+                                   Planet Database
+																	 Estract Utility
+                                      MBMGEMAP
+                                    Version 1.0
+
+
+
+
+
+
+                                    Installation 
+                                        and
+                                     Operations
+                                       Guide
+
+
+
+
+
+
+    1.0   Introduction
+
+    2.0   Disclaimer
+
+    3.0   Installation
+
+    4.0   Operations  
+
+    5.0   Support
+
+
+
+    1.0   Introduction
+
+
+    The MBMGEMAP Galactic Empire Planet Database Extract Utility is designed
+		to work in conjunction with MBMGEGRF to provide your users with a tool 
+		to generate custom, personal starmaps of your current Galactic Empire 
+		Game. 
+
+		Each night in the nightly cleanup MBMGEMAP will process the whole 
+		MBMGEPLT.DAT file (it only takes a minute or two). It extracts out a 
+		couple key pieces of information on each sector, planet, and wormhole 
+		and writes it to the encrypted MBMGEPLT.MAP file. This file can then
+		be downloaded by your users to enable them to render graphic starmaps 
+		of your current GE game.
+
+		This greatly enhances the enjoyment of the game by allowing users to 
+		visualize the game map they are playing on. Additionally, with the 
+		registered version of MBMGEGRF your users can generate GIF or PCX
+		images that they can print and edit to suit themselves.
+		
+    This document describes the procedures to install and operate this 
+    software. Please read it carefully prior to installation.
+    
+
+
+
+
+
+    2.0   Disclaimer
+
+
+    This information is very important - Read Carefully
+
+
+    THIS IS A LEGAL AGREEMENT BETWEEN YOU, THE END USER, AND M. B.
+    MURDOCK & ASSOCIATES ("COMPANY"). BY USING THIS SOFTWARE, YOU
+    ARE AGREEING TO BE BOUND BY THE TERMS OF THIS AGREEMENT. 
+    
+    2.1   SOFTWARE LICENSE
+    
+    2.1.1 GRANT OF LICENSE. 
+    
+    COMPANY grants you the right to use one copy of the enclosed
+    software program (the "SOFTWARE") on a single computer (i.e with
+    a single CPU). You may merge this software into an executable
+    load module (specifically, an MS-DOS COM or EXE file, or
+    functional equivalent).
+    
+    2.1.2 COPYRIGHT. 
+    
+    The SOFTWARE is owned by COMPANY and is protected by United
+    States copyright laws and international treaty provisions. 
+    Therefore, you must treat the SOFTWARE like any other copyrighted
+    material (e.g. a book or musical recording) except that you may
+    either (a) make one copy of the SOFTWARE solely for backup or 
+    archival purposes, or (b) transfer the SOFTWARE to a single hard
+    disk provided you keep the original solely for backup or
+    archival purposes.
+    
+    2.1.3 OTHER RESTRICTIONS. 
+    
+    You may not use, copy, modify, or transfer the SOFTWARE, or any
+    copy, modification, or merged portion, in whole or in part,
+    except as expressly provided for in this license. You may not
+    rent or lease the SOFTWARE, but you may transfer the SOFTWARE on
+    a permanent basis provided you retain no copies and the recipient
+    agrees to the terms of this Agreement. You may not reverse
+    engineer, decompile, or disassemble the portions of SOFTWARE for
+    which no source code is provided.
+    
+
+
+    2.2   LIMITED WARRANTY
+    
+    The SOFTWARE is provides "AS IS" without warranty of any kind,
+    either expressed or implied, including, but not limited to, the
+    implied warranties of merchantability and fitness for a
+    particular purpose. The entire risk as to the quality and
+    performance of the software is with you. Should the software
+    prove defective, you shall assume the entire cost of all
+    necessary remedies.
+    
+    Some states do not allow the exclusion of implied warranties, so
+    the above exclusion may not apply to you. This warranty gives
+    you specific legal rights and you may also have other rights
+    which vary from state to state.
+    
+    2.3   LIMITATIONS OF REMEDIES
+    
+    The COMPANY's entire liability and your exclusive remedy shall be
+    at COMPANY's option (a) the repair or replacement of the SOFTWARE
+    that does not meet COMPANY's Limited Warranty and which is
+    returned to COMPANY, or (b) return of the purchase price upon
+    return of all copies of the SOFTWARE.
+    
+    IN NO EVENT SHALL COMPANY be liable for any damages whatsoever
+    (including, without limitation, damages for loss of business
+    profits, business interruption, loss of business information, or
+    other pecuniary loss) arising out of the use of the SOFTWARE
+    even if COMPANY has been advised of the possibility of such
+    damages. Because some states do not allow the exclusion or
+    limitation of liability for consequential or incidental damages,
+    the above limitation may not apply to you.
+    
+    This Agreement will be governed by the laws of the State of
+    Florida.
+    
+    BY USING THIS SOFTWARE, YOU ACKNOWLEDGE THAT YOU HAVE READ THIS
+    AGREEMENT, UNDERSTAND IT, AND AGREE TO BE BOUND BY ITS TERMS AND
+    CONDITIONS. YOU FURTHER AGREE THAT IT IS THE COMPLETE AND
+    EXCLUSIVE STATEMENT OF THE AGREEMENT BETWEEN US, WHICH SUPERCEDES
+    ANY PROPOSAL OR PRIOR AGREEMENT, ORAL OR WRITTEN, AND ANY OTHER
+    COMMUNICATIONS BETWEEN US RELATING TO THE SUBJECT MATTER OF THIS
+    AGREEMENT. 
+      
+
+
+
+    3.0    Installation from a release diskette
+
+    Use this procedure if you received your software on a release
+    diskette. If you downloaded a .ZIP file from our support system refer
+    to section 3.2 and 3.3.
+
+    Copying files from install diskette to your system.
+    ---------------------------------------------------
+
+    In order to install the software place the release diskette in your
+    floppy diskette drive and type the following command;
+
+    A: 
+    INSTALL A: C:\BBSV6
+
+    Note: If your floppy diskette is B: then substitute "B:" for "A:"
+    above. Also, if you would like it installed on another drive or in 
+    another directory, please substitute your drive and directory for the 
+    "C:\BBSV6" above.
+
+    The install procedure will copy the appropriate files to BBSV6
+    directory with sample databases ready to generate starmaps on.
+
+
+
+
+    3.1   Upgrade from a release diskette
+
+    Use this procedure if you received a software update on a
+    release diskette. If you downloaded a .ZIP file from our support
+    system refer to section 3.2 and 3.3.
+
+    NOTE: ALWAYS BACKUP YOUR SYSTEM PRIOR TO MAKING ANY 
+    MAJOR CHANGES! 
+
+    STEP 1:   
+    Copying files from install diskette to your system.
+
+    In order to update the software place the release diskette in your
+    floppy diskette drive and type the following command;
+
+    A: 
+    UPDATE A: C:\BBSV6
+
+    Note: If your floppy diskette is B: then substitute "B:" for "A:"
+    above. Also, if you would like it installed on another drive or in 
+    another directory, please substitute your drive and directory for the 
+    "C:\BBSV6" above.
+
+    The update procedure will copy the appropriate files to your BBS
+    directory but will not effect your existing databases.
+
+
+
+
+    3.2   Installation from a downloaded ZIP file.
+
+    Use this procedure if you received your first copy of the software
+    by downloading it from our support BBS. If you are updating a
+    previous release please refer to section 3.3 below.
+
+    STEP 1:   
+    
+    Copy the downloaded file to your BBSV6 directory
+
+    COPY MBMGEMAP.ZIP C:\BBSV6
+
+    Note: If you would like it installed on another drive or in 
+    another directory, please substitute your drive and directory for the 
+    "C:" and "\BBSV6" above.
+
+    STEP 2:
+
+    Switch to the BBSV6 Directory
+
+    C:
+    CD \BBSV6
+
+    Note: If you would like it installed on another drive or in 
+    another directory, please substitute your drive and directory for the 
+    "C:" and "\BBSV6" above.
+
+    STEP 4:   
+    Unzipping the downloaded file.
+
+    PKUNZIP MBMGEMAP.ZIP
+
+
+
+
+    3.3   Upgrade from a downloaded ZIP file.
+
+    Use this procedure if you downloaded an update from our support BBS.
+    The main difference is that an update will not contain empty
+    databases unless absolutely required.
+
+    NOTE: ALWAYS BACKUP YOUR SYSTEM PRIOR TO MAKING ANY 
+    MAJOR CHANGES! 
+
+    STEP 1:   
+    Copy the downloaded file to your BBSV6 directory
+
+    COPY MBMGEMAP.ZIP C:\BBSV6
+
+    Note: If you would like it installed on another drive or in 
+    another directory, please substitute your drive and directory for the 
+    "C:" and "\BBSV6" above.
+
+    STEP 2:
+
+    Switch to the BBSV6 Directory
+
+    C:
+    CD \BBSV6
+
+    Note: If you would like it installed on another drive or in 
+    another directory, please substitute your drive and directory for the 
+    "C:" and "\BBSV6" above.
+
+    STEP 3:   
+    Unzipping the downloaded file.
+
+    PKUNZIP MBMGEMAP.ZIP
+
+
+
+
+    4.0   Operations
+
+
+    MBMGEMAP is a simple program to operate. If you forget the command line 
+    options simply run the program with the "-?" switch as follows;
+
+    MBMGEMAP -?
+
+    This will display a complete list of the command line options available
+    as follows;
+
+    USAGE:
+
+     MBMGEMAP [-options]
+
+
+		    -nxxxxxxxx      8 Digit GE Registration #
+
+				                This is your 8 digit Galactic Empire Activation code.
+												If you have forgotten this code simply look in the
+												MBMGEMSG.MSG file.
+
+
+
+		Examples:
+
+   		mbmgemap -n12345678
+
+
+
+
+    4.0    Operations (cont.)
+
+		A batch file GECLEAN.BAT has been provided as an example how to automate
+		the nightly generation of the map file. This batch should be appended
+		to the end of your existing BBSCLEAN.BAT (if you have one). If you don't
+		already have a BBSCLEAN.BAT use this batch as a sample one.
+
+		Note: You will also need to create a Library directory to hold the
+		nightly map file so your users can download it. You will need to use
+		the library options to manually log in the file the first time and then
+		can simply copy the new version into the library each night. In the
+		example GECLEAN.BAT file I chose GEMAPS as the library name. You may 
+		choose any name you like by simply changing the copy command in the 
+		BBSCLEAN.BAT you create (or update).
+
+		Some sysops may choose to use the GALUTIL utility to update the library
+		so that it accurately reflects the file date and file size. Please 
+		refer to your MajorBBS operations manual for information on GALUTIL.
+
+
+
+
+
+    5.0    Support
+
+    For Technical Support email us at;
+
+		mmurdock@cloudnet.com
+
+    Our mailing address is;
+
+    Mail to:
+    M.B. Murdock & Associates
+    800 Hwy 10 S. #5 
+		St. Cloud, MN. 56304
+
+    Office: (320) 654-8522
+
+
+
+

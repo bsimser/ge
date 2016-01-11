@@ -1,0 +1,31 @@
+; MBMGEMP.MDF
+
+Module Name: Galactic Empire
+
+Developer: M.B. Murdock & Associates
+
+
+Requires:
+Replaces:
+
+Install:
+
+Online user manual:MBMGEMP.DOC
+
+DLLs:MBMGEMP
+MSGs:MBMGEHLP  MBMGEMSG MBMGESHP
+
+
+Btrieve page size:    2048
+Btrieve files:       6
+
+Cleanup:
+
+Event-1:
+Event-2:
+Event-3:
+Event-4:
+
+Add-On Utility:
+
+
