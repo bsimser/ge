@@ -1,0 +1,7 @@
+record=493 variable=n key=3 page=1024
+
+position=1 length=6 duplicates=n modifiable=n type=binary alternate=n null=n segment=n
+
+position=25 length=30 duplicates=y modifiable=y type=zstring alternate=n null=n segment=n
+
+position=7 length=2 duplicates=y modifiable=n type=binary alternate=n null=n segment=n

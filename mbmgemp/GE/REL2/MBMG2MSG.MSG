@@ -1,0 +1,7545 @@
+LEVEL0 {}
+
+FILE01 {MBMG2MSG.MSG} Galactic Empire
+
+LEVEL3 {}
+
+Define the KEY the player must have to play GE.
+
+PLAYKEY {DEMO} S 15 Key required to play GE
+
+This defines the key required to use the special
+sysop commands. You can set this to something 
+other than SYSOP and then assign that key to
+specific GAMEOP's or players as needed.
+
+SYSKEY {SYSOP} S 15 Key required for sysop powers
+
+This is the Registration Number specific to YOUR system. 
+This number will be sent to you upon receipt of your 
+registration document. Galactic Empire will function fine
+for a limited period without this number. After the 
+trial period your system will continue to function 
+properly, although GE will be temporarily suspended.
+When you place the valid number in this field the game 
+will continue where it left off.
+
+REGNO {00000000} S 8 Registration Number
+
+LEVEL4 {}
+
+This Option is maintained for backward compatibility and
+has no effect in Version 6+ of MajorBBS. If you are using
+a 5.xx version set this to the descriptive name on the
+main menu you wish associated with GE.
+
+GEMNU {Galactic Empire} S 30 Main menu description
+
+This Option is maintained for backward compatibility and
+has no effect in Version 6+ of MajorBBS. If you are using
+a 5.xx version set this to the Selection Letter associated
+with GE.
+
+GESEL {The main menu selection: G} C
+
+Set this option on if you wish to enable the optional menu
+text page.
+ 
+OPTMENU {Enable the optional menu selection: YES} B
+
+This is the text of the menu description. The menu
+will appear as...
+
+   OPTCHR ... OPTTXT       or
+   C ... Chronicles of Zygor
+
+OPTTXT {Whats New!} S 30 Text menu selection
+
+This is the menu selection character for the optional
+menu.
+
+OPTCHR {Optional menu character: N} C
+
+You can limit the number of players who can simultaneously
+play the game. You may with to set this value in order to
+keep your systems performance within an acceptable
+response.  The more players in the game the more CPU
+resources the game consumes.
+
+MAXPLRS {The maximum players in the game at once: 30} N 1 256
+
+This option controls if non-paying players can enter the
+game.  Set to 1 to allow non-paying players to pay, 0 to
+restrict.
+
+NOTE: In release 6.0 this field has no effect. Please
+control this feature with the PLAYKEY field in the
+Level 3 Security Options.
+
+FREEBIES {If 1 non-payers can play, otherwise set to 0: 0} N 0 1
+
+Set this value to control the number of TOP PLAYERS
+displayed in the roster.
+
+MAXLIST {The number of entries shown in the roster: 10} N 3 50
+
+Set this value to control the maximum number of ships a 
+player can have at the same. 
+
+MAXSHIPS {The maximum number of ships a player can own: 1} N 1 50
+
+Set this value to control the maximum number of planets a
+player can own at the same time. 
+
+MAXPLNTS {Maximum planets a single player can own? 1} N 1 256
+
+If a player tries to attack another player in the Neutral
+Zone they will be fired upon by the Enforcer planet. Set
+this to the amount of damage inflicted each time this 
+occurs.
+
+NOTE- set SE100DAM to 101 to kill violators in 1 shot
+
+SE100DAM {The amt of damage when hostile in Neutral: 10} N 0 101
+
+Set this option on if you wish the MajorBBS's profanity
+filters to be monitored during the game.
+
+PROFON {Do you want profanity checking on? YES} B
+
+This option turns on some optional logging generally used
+for debugging purposes. It is recommended that it remain 0
+unless instructed to change it by our support staff.
+
+0 = show minimal log messages
+1 = show operational information messages
+2 = show diagnostic messages
+3 = show debugging messages
+
+SHOWOPT {Show on log "GE:" messages at which level? 0} N 0 5
+
+This option turns on extended trace logging generally used
+for debugging purposes. It is recommended that it remain NO
+unless instructed to change it by our support staff.
+
+If enabled output is sent to GEOUT.LOG. Note, this file can
+grow quite large if this option is left on.
+
+LOGFLG {Enable extended trace logging? NO} B
+
+This option specifies the filename of the user database. It
+is provided to you in case you wish to store the datafiles
+in a seperate directory.
+
+GEUSER {MBMG2USR.DAT} S 40 GE User Filename
+
+This option specifies the filename of the Ship database. It
+is provided to you in case you wish to store the datafiles
+in a seperate directory.
+
+GESHIP {MBMG2SHP.DAT} S 40 GE Ship Filename
+
+This option specifies the filename of the Mail database. It
+is provided to you in case you wish to store the datafiles
+in a seperate directory.
+
+GEMAIL {MBMG2MAL.DAT} S 40 GE Mail Filename
+
+This option specifies the filename of the planet database. It
+is provided to you in case you wish to store the datafiles
+in a seperate directory.
+
+GEPLNT {MBMG2PLT.DAT} S 40 GE Planet Filename
+
+This option controls if a player is allowed to transfer
+goods to a planet which they do not own. If YES a player
+can transfer goods to another players planets. This could
+give players with multiple USERID's an unfair advantage as
+they could transfer goods from multiple accounts to a
+single account giving that account an initial boost in the
+game. 
+
+Note: If you only permit paying accounts to play the game
+this is of less concern.
+
+TRANSOPT {Allow goods transfers to planets not owned? YES} B
+
+This option enables the special SYSOP commands. It is
+STRONGLY recommended that you only turn this on when
+specifically needed and leave it off otherwise.
+
+SYSCMDS {Allow sysop commands? YES} B
+
+If sysop commands are enabled are they restricted to
+players with SYSOP class only.
+
+SYSONLY {Allow sysop only to use sysop commands? YES} B
+
+This option controls the Dynamic Planet Update Feature.
+The system will monitor how long it takes to process 
+through all the planets in the galaxy and dynamically
+adjust the update frequency to keep the total cycle time as
+close to the time below as it can.
+
+Caution: Setting this value too small will cause the system
+to consume more CPU time than may be available.  It is
+recommended that this value be set to 6 hours (21600
+seconds) which will cause four updates a day.
+
+PLANTOCK {How long to take to update all planets (seconds)? 21600} N 1 32760
+
+This value controls the odds of a sector having 
+planets. The lower the number the more likely
+a sector will have planets.
+
+PLODDS {Frequency Factor for planets: 20} N 1 20
+
+This value controls the odds of a sector having
+a wormhole. The lower the number the more likely
+a sector will have a wormhole.
+
+WORMODDS {Frequency Factor for wormholes: 100} N 1 100
+
+Depending upon your CPU's performance you can have up to
+256 additional Robotic Ships (Automatons) in the game. 
+
+Caution: This value can DRAMATICALLY effect CPU 
+performance. If you are not confident about your specific
+system please set to a lower value at first and experiment
+with increased values as you evaluate your CPU's
+performance.
+
+NUMSHIPS {The number of additional ships (robots) in game? 6} N 0 500
+
+This value limits the number of DROID class ships
+insuring that there are plenty of CYBS for players.
+Recommended setting is half of NUMSHIPS.
+
+MAXDROID {Max droid class ships in game: 1} N 0 500
+
+This value controls how far from the center (sector 0 0) 
+the galaxy extends. The Galaxy is square and UNIVMAX
+sectors in each direction (N,S,E,W).
+
+NOTE: The size has some pretty dramatic effects on the
+game. You may with to try various values in each of your
+campaigns to determine which works best for you. 
+
+DO NOT CHANGE THIS VALUE WITHOUT RESETTING ALL THE GALACTIC
+EMPIRE DATABASES AS UNEXPECTED PROBLEMS -WILL- OCCUR!!!
+
+UNIVMAX {The radius of the Virtual Galaxy: 10} N 10 32000
+
+This value controls how large the GEPLANET.DAT data file
+will grow to. Each time a sector is "teraformed" the 
+GEPLANET.DAT database grows by the following formula; 
+space added = (number planets * 512) + 512
+
+In order to prevent your disk from filling up you can
+specify the maximum size that the database will grow to in
+Kbytes. When the maximum is reached no more planets will be
+created. Note: a 32,767 database will hold 65,535 planets
+and sectors. That should keep most players busy for awhile.
+
+MAXPLREC {Max size of GEPLANET.DAT in Kbytes: 32767} N 10 32767
+
+This option controls the range of the Torpedo Lock-on
+function. It functions as a divisor to reduce the effective
+range down from the maximum possible range of 50,000. The
+specific formula for those who want to know is as follows;
+
+IF (1.2-(speed/5000))*((5-distance)/(TORFACT/10))
+IS GREATER THAN .7 LOCKON SUCCESSFUL
+
+speed = opponents speed
+distance = opponents distance (in sectors)
+
+NOTE: Valid range is between 1 and 50.
+
+TORFACT {Torpedo Lock-on divisor: 40} N 1 50
+
+This option sets the maximum damage % a torpedo can 
+do. It is factored in the game later with a random 
+multiplier between .5 and 1.0 giving each torpedo a
+damage factor between 50% and 100% of the value you 
+specify here.
+
+TDAMMAX {Torpedo Damage Maximum: 25} N 1 100
+
+This option controls the speed of a torpedo. 
+It is the distance the torpedo goes each "tic"
+which is about 5 seconds.
+
+TORPSPED {Speed of torpedo: 1181} N 1 10000
+
+This option controls the range of the Missile Lock-on
+function. It functions as a divisor to reduce the effective
+range down from the maximum possible range of 50,000. The
+specific formula for those who want to know is as follows;
+
+IF ((5-distance)/(MISFACT/10))
+IS GREATER THAN .7 LOCKON SUCCESSFULL
+
+speed = opponents speed
+distance = opponents distance 
+
+NOTE: Valid range is between 1 and 50.
+
+MISFACT {Missile Lock-on divisor: 25} N 1 50
+
+This option sets the maximum damage % a missile can 
+do. It is factored in the game later with a random 
+multiplier between .5 and 1.0 and the power of the
+missile. The exact formula is...
+damage = (MDAMMAX/100)*(50000/missile power)*
+         (random(.5)+random(.5);
+
+MDAMMAX {Missile Damage Maximum: 25} N 1 100
+
+This option controls the speed of a missile. 
+It is the distance the missile goes each "tic"
+which is about 5 seconds.
+
+MISLSPED {Speed of missile: 850} N 1 10000
+
+This option controls the maximum damage an Ion
+Cannon can do each shot. It is factored in the 
+game by a random multiplier of .5 to 1.0 giving
+a maximum damage of 50% to 100% of IDAMMAX.
+
+IDAMMAX {Maximum damage from Ion Cannon: 50} N 1 100
+
+This option specifies the maximum number of 
+mines which can be "ticking" at the same 
+time. 
+
+CAUTION: This option can dramatically effect 
+CPU usage. Change carefully.
+
+NUMMINES {Number of Mines "ticking": 10} N 1 200
+
+This option controls the maximum damage a Mine
+can do. It is factored later in the game by the 
+distance from the ship. 
+
+
+MNDAMMAX {Maximum damage a Mine can do: 50} N 1 200
+
+This option controls the odds of a decoy snagging
+a missile or torpedo. If the distance from the 
+incoming object is less than 3000 then there is a 
+one in DECODDS chance the decoy will snag it each
+tic (every 5 seconds) cycle.
+
+DECODDS {Odds of a decoy decoying: 8} N 1 20
+
+This option controls the rate at which spontaneous repairs
+occur to a damaged ship. The value is specified in 
+percent of damage reduced each cycle. 
+
+Values above 10 are not recommended as repairs would 
+occur so fast that it might be too difficult to kill
+a ship.
+
+REPAIRRT {Rate of repair in %: 25} N 1 50
+
+This option controls the effective distance of the 
+Hyperphasers. Increase to extend their range, decrease
+to shorten.
+
+HPFIRDST {Hyperphaser distance factor: 3} N 1 20
+
+This option controls the amount of damage a hyperphaser
+does. Increase to cause more damage per shot, decrease
+to reduce. Because this is factored down by range and
+phaser type you can set the value to numbers greater
+than 100.
+
+HPDAMMAX {Hyperphaser maximum damage: 35} N 1 200
+
+This option controls the effective distance of the 
+Hyperphasers. Increase to extend their range, decrease
+to shorten.
+
+PFIRDST {Phaser distance factor: 3} N 1 20
+
+This option controls the amount of damage a phaser
+does. Increase to cause more damage per shot, decrease
+to reduce. Because this is factored down by range and
+phaser type you can set the value to numbers greater
+than 100.
+
+PDAMMAX {Phaser maximum damage: 35} N 1 200
+
+This option controls the duration of a jammer.
+It is factored in the game by the distance 
+from the ship that launches it.
+
+JAMTIME {How long do Jammers last: 6} N 1 10
+
+This option specifies how much energy the cloaking system
+draws during each tick cycle. 
+
+CLENGUSE {How much does Cloak draw each tick: 2600} N 1 32000
+
+This option controls how many days mail messages
+are queued before deletion.
+
+MAILDAYS {How many days to save mail: 3} N 1 7
+
+This option sets the amount of cash each player starts 
+with when they begin the game. It is specified in thousands.
+
+STRTCASH {How much cash does a player start with (in 1000's): 100 } N 1 32000
+
+This option specifies the distance Cyb's will allow 
+non-combative classes of ships to approach before they
+consider the approach an aggressive act. This value is
+modified in the code using the following formula on a
+case by case basis.
+
+distance = TOOCLOSE + random(TOOCLOSE)
+
+The range is therefore TOOCLOSE to 2*TOOCLOSE
+
+TOOCLOSE {How close do Cybs allow players to get: 1000 } N 1 32000
+
+This option specifies the upper limit of the 
+random gold given to a Cyb each time they
+are created. Increase this value if you 
+would like to put more value in shooting
+down cybs.
+
+CYBGOLD {Max amount of gold a cyb gets: 25} N 0 32000
+
+This option specifies the number of planets in the neutral
+zone (sector 0 0). 
+
+Note: You need not change this unless you want more than 
+3 planets in the Neutral Zone. 
+
+If you turn on an additional planet you MUST change 
+this option to reflect the number of planets.
+The planets are only created the FIRST TIME a player
+scans the Neutral Zone.
+
+S00PLNUM {Number of Planets in Sector 0 0: 3} N 3 9
+
+Is planet # 1 defined? This should be set to YES
+in the default version. 
+
+S00P1DEF {Is planet #1 defined? YES} B
+
+This is the name of planet # 1 in the Neutral Zone.
+
+S00P1NM {Traders Haven} (S00P1DEF=YES) S 19 Planet #1 Name
+
+This field specifies the Owner of this planet. If
+desired you can specify a specific USERID and 
+that user will be able to administer this planet.
+
+S00P1OWN {**Free**} (S00P1DEF=YES) S 30 Owner of Planet #1
+
+Type of planet indicator. One planet in Sector 0 0
+-MUST- be each of the following types;
+
+0 = Nothing Special
+1 = Base trading planet (Zygor)
+2 = Population Planet (Tahanian Station)
+
+S00P1TYP {Planet Type: 1} (S00P1DEF=YES) N 0 2
+
+This value specifies the X coordinate of this planet.
+
+S00P1X {X Coordinate of Planet: 7000} (S00P1DEF=YES) N 100 9900
+
+This value specifies the Y coordinate of this planet.
+
+S00P1Y {Y Coordinate of Planet: 7000} (S00P1DEF=YES) N 100 9900
+
+This value specifies the Environment for this Planet.
+
+0 = Poor
+1 = Marginal
+2 = Good
+3 = Very Good
+
+S00P1ENV {Environment for planet: 3} (S00P1DEF=YES) N 0 3
+
+This value specifies the Resources for this Planet.
+
+0 = Poor
+1 = Marginal
+2 = Good
+3 = Very Good
+
+S00P1RES {Resources for planet: 3} (S00P1DEF=YES) N 0 3
+
+This is the name of planet # 2 in the Neutral Zone.
+
+Is planet # 2 defined? This should be set to YES
+in the default version. 
+
+S00P2DEF {Is planet #2 defined? YES} B
+
+
+S00P2NM {Space Station} (S00P2DEF=YES) S 19 Planet #2 Name
+
+This field specifies the Owner of this planet. If
+desired you can specify a specific USERID and 
+that user will be able to administer this planet.
+
+S00P2OWN {**Free**} (S00P2DEF=YES) S 30 Owner of Planet #2
+
+Type of planet indicator. One planet in Sector 0 0
+-MUST- be each of the following types;
+
+0 = Nothing Special
+1 = Base trading planet (Zygor)
+2 = Population Planet (Tahanian Station)
+
+S00P2TYP {Planet Type: 2} (S00P2DEF=YES) N 0 2
+
+This value specifies the X coordinate of this planet.
+
+S00P2X {X Coordinate of Planet: 7512} (S00P2DEF=YES) N 100 9900
+
+This value specifies the Y coordinate of this planet.
+
+S00P2Y {Y Coordinate of Planet: 7224} (S00P2DEF=YES) N 100 9900
+
+This value specifies the Environment for this Planet.
+
+0 = Poor
+1 = Marginal
+2 = Good
+3 = Very Good
+
+S00P2ENV {Environment for planet: 3} (S00P2DEF=YES) N 0 3
+
+This value specifies the Resources for this Planet.
+
+0 = Poor
+1 = Marginal
+2 = Good
+3 = Very Good
+
+S00P2RES {Resources for planet: 3} (S00P2DEF=YES) N 0 3
+
+Is planet # 3 defined? This should be set to YES
+in the default version. 
+
+S00P3DEF {Is planet #3 defined? YES} B
+
+This is the name of planet # 3 in the Neutral Zone.
+
+S00P3NM {Sentry Asteroid} (S00P3DEF=YES) S 19 Planet #3 Name
+
+This field specifies the Owner of this planet. If
+desired you can specify a specific USERID and 
+that user will be able to administer this planet.
+
+S00P3OWN {**Free**} (S00P3DEF=YES) S 30 Owner of Planet #3
+
+Type of planet indicator. One planet in Sector 0 0
+-MUST- be each of the following types;
+
+0 = Nothing Special
+1 = Base trading planet (Zygor)
+2 = Population Planet (Tahanian Station)
+
+S00P3TYP {Planet Type: 0} (S00P3DEF=YES) N 0 2
+
+This value specifies the X coordinate of this planet.
+
+S00P3X {X Coordinate of Planet: 5000} (S00P3DEF=YES) N 100 9900
+
+This value specifies the Y coordinate of this planet.
+
+S00P3Y {Y Coordinate of Planet: 5000} (S00P3DEF=YES) N 100 9900
+
+This value specifies the Environment for this Planet.
+
+0 = Poor
+1 = Marginal
+2 = Good
+3 = Very Good
+
+S00P3ENV {Environment for planet: 1} (S00P3DEF=YES) N 0 3
+
+This value specifies the Resources for this Planet.
+
+0 = Poor
+1 = Marginal
+2 = Good
+3 = Very Good
+
+S00P3RES {Resources for planet: 0} (S00P3DEF=YES) N 0 3
+
+This option specifies the odds of a new cybertron being 
+the big Cyberquad when created. Decrease this number to
+increase the number of quads in the game. 
+
+Is planet # 4 defined? This should be set to NO
+in the default version. 
+
+S00P4DEF {Is planet #4 defined? NO} B
+
+This is the name of planet # 4 in the Neutral Zone.
+
+S00P4NM {Planet 4} (S00P4DEF=YES) S 19 Planet #4 Name
+
+This field specifies the Owner of this planet. If
+desired you can specify a specific USERID and 
+that user will be able to administer this planet.
+
+S00P4OWN {*EMPIRE*} (S00P4DEF=YES) S 30 Owner of Planet #4
+
+Type of planet indicator. One planet in Sector 0 0
+-MUST- be each of the following types;
+
+0 = Nothing Special
+1 = Base trading planet (Zygor)
+2 = Population Planet (Tahanian Station)
+
+S00P4TYP {Planet Type: 0} (S00P4DEF=YES) N 0 2
+
+This value specifies the X coordinate of this planet.
+
+S00P4X {X Coordinate of Planet: 2500} (S00P4DEF=YES) N 100 9900
+
+This value specifies the Y coordinate of this planet.
+
+S00P4Y {Y Coordinate of Planet: 2500} (S00P4DEF=YES) N 100 9900
+
+This value specifies the Environment for this Planet.
+
+0 = Poor
+1 = Marginal
+2 = Good
+3 = Very Good
+
+S00P4ENV {Environment for planet: 1} (S00P4DEF=YES) N 0 3
+
+This value specifies the Resources for this Planet.
+
+0 = Poor
+1 = Marginal
+2 = Good
+3 = Very Good
+
+S00P4RES {Resources for planet: 0} (S00P4DEF=YES) N 0 3
+
+This option specifies the odds of a new cybertron being 
+the big Cyberquad when created. Decrease this number to
+increase the number of quads in the game. 
+
+
+Is planet # 5 defined? This should be set to YES
+in the default version. 
+
+S00P5DEF {Is planet #5 defined? NO} B
+
+This is the name of planet # 5 in the Neutral Zone.
+
+S00P5NM {Planet 5} (S00P5DEF=YES) S 19 Planet #5 Name
+
+This field specifies the Owner of this planet. If
+desired you can specify a specific USERID and 
+that user will be able to administer this planet.
+
+S00P5OWN {*EMPIRE*} (S00P5DEF=YES) S 30 Owner of Planet #5
+
+Type of planet indicator. One planet in Sector 0 0
+-MUST- be each of the following types;
+
+0 = Nothing Special
+1 = Base trading planet (Zygor)
+2 = Population Planet (Tahanian Station)
+
+S00P5TYP {Planet Type: 0} (S00P5DEF=YES) N 0 2
+
+This value specifies the X coordinate of this planet.
+
+S00P5X {X Coordinate of Planet: 2000} (S00P5DEF=YES) N 100 9900
+
+This value specifies the Y coordinate of this planet.
+
+S00P5Y {Y Coordinate of Planet: 2000} (S00P5DEF=YES) N 100 9900
+
+This value specifies the Environment for this Planet.
+
+0 = Poor
+1 = Marginal
+2 = Good
+3 = Very Good
+
+S00P5ENV {Environment for planet: 1} (S00P5DEF=YES) N 0 3
+
+This value specifies the Resources for this Planet.
+
+0 = Poor
+1 = Marginal
+2 = Good
+3 = Very Good
+
+S00P5RES {Resources for planet: 0} (S00P5DEF=YES) N 0 3
+
+This option specifies the odds of a new cybertron being 
+the big Cyberquad when created. Decrease this number to
+increase the number of quads in the game. 
+
+
+Is planet # 6 defined? This should be set to YES
+in the default version. 
+
+S00P6DEF {Is planet #6 defined? NO} B
+
+This is the name of planet # 6 in the Neutral Zone.
+
+S00P6NM {Planet 6} (S00P6DEF=YES) S 19 Planet #6 Name
+
+This field specifies the Owner of this planet. If
+desired you can specify a specific USERID and 
+that user will be able to administer this planet.
+
+S00P6OWN {*EMPIRE*} (S00P6DEF=YES) S 30 Owner of Planet #6
+
+Type of planet indicator. One planet in Sector 0 0
+-MUST- be each of the following types;
+
+0 = Nothing Special
+1 = Base trading planet (Zygor)
+2 = Population Planet (Tahanian Station)
+
+S00P6TYP {Planet Type: 0} (S00P6DEF=YES) N 0 2
+
+This value specifies the X coordinate of this planet.
+
+S00P6X {X Coordinate of Planet: 2000} (S00P6DEF=YES) N 100 9900
+
+This value specifies the Y coordinate of this planet.
+
+S00P6Y {Y Coordinate of Planet: 2000} (S00P6DEF=YES) N 100 9900
+
+This value specifies the Environment for this Planet.
+
+0 = Poor
+1 = Marginal
+2 = Good
+3 = Very Good
+
+S00P6ENV {Environment for planet: 1} (S00P6DEF=YES) N 0 3
+
+This value specifies the Resources for this Planet.
+
+0 = Poor
+1 = Marginal
+2 = Good
+3 = Very Good
+
+S00P6RES {Resources for planet: 0} (S00P6DEF=YES) N 0 3
+
+This option specifies the odds of a new cybertron being 
+the big Cyberquad when created. Decrease this number to
+increase the number of quads in the game. 
+
+
+Is planet # 7 defined? This should be set to YES
+in the default version. 
+
+S00P7DEF {Is planet #7 defined? NO} B
+
+This is the name of planet # 7 in the Neutral Zone.
+
+S00P7NM {Planet 7} (S00P7DEF=YES) S 19 Planet #7 Name
+
+This field specifies the Owner of this planet. If
+desired you can specify a specific USERID and 
+that user will be able to administer this planet.
+
+S00P7OWN {*EMPIRE*} (S00P7DEF=YES) S 30 Owner of Planet #7
+
+Type of planet indicator. One planet in Sector 0 0
+-MUST- be each of the following types;
+
+0 = Nothing Special
+1 = Base trading planet (Zygor)
+2 = Population Planet (Tahanian Station)
+
+S00P7TYP {Planet Type: 0} (S00P7DEF=YES) N 0 2
+
+This value specifies the X coordinate of this planet.
+
+S00P7X {X Coordinate of Planet: 2050} (S00P7DEF=YES) N 100 9900
+
+This value specifies the Y coordinate of this planet.
+
+S00P7Y {Y Coordinate of Planet: 2500} (S00P7DEF=YES) N 100 9900
+
+This value specifies the Environment for this Planet.
+
+0 = Poor
+1 = Marginal
+2 = Good
+3 = Very Good
+
+S00P7ENV {Environment for planet: 1} (S00P7DEF=YES) N 0 3
+
+This value specifies the Resources for this Planet.
+
+0 = Poor
+1 = Marginal
+2 = Good
+3 = Very Good
+
+S00P7RES {Resources for planet: 0} (S00P7DEF=YES) N 0 3
+
+This option specifies the odds of a new cybertron being 
+the big Cyberquad when created. Decrease this number to
+increase the number of quads in the game. 
+
+
+Is planet # 8 defined? This should be set to YES
+in the default version. 
+
+S00P8DEF {Is planet #8 defined? NO} B
+
+This is the name of planet # 8 in the Neutral Zone.
+
+S00P8NM {Planet 8} (S00P8DEF=YES) S 19 Planet #8 Name
+
+This field specifies the Owner of this planet. If
+desired you can specify a specific USERID and 
+that user will be able to administer this planet.
+
+S00P8OWN {*EMPIRE*} (S00P8DEF=YES) S 30 Owner of Planet #8
+
+Type of planet indicator. One planet in Sector 0 0
+-MUST- be each of the following types;
+
+0 = Nothing Special
+1 = Base trading planet (Zygor)
+2 = Population Planet (Tahanian Station)
+
+S00P8TYP {Planet Type: 0} (S00P8DEF=YES) N 0 2
+
+This value specifies the X coordinate of this planet.
+
+S00P8X {X Coordinate of Planet: 2000} (S00P8DEF=YES) N 100 9900
+
+This value specifies the Y coordinate of this planet.
+
+S00P8Y {Y Coordinate of Planet: 2000} (S00P8DEF=YES) N 100 9900
+
+This value specifies the Environment for this Planet.
+
+0 = Poor
+1 = Marginal
+2 = Good
+3 = Very Good
+
+S00P8ENV {Environment for planet: 1} (S00P8DEF=YES) N 0 3
+
+This value specifies the Resources for this Planet.
+
+0 = Poor
+1 = Marginal
+2 = Good
+3 = Very Good
+
+S00P8RES {Resources for planet: 0} (S00P8DEF=YES) N 0 3
+
+This option specifies the odds of a new cybertron being 
+the big Cyberquad when created. Decrease this number to
+increase the number of quads in the game. 
+
+
+Is planet # 9 defined? This should be set to YES
+in the default version. 
+
+S00P9DEF {Is planet #9 defined? NO} B
+
+This is the name of planet # 9 in the Neutral Zone.
+
+S00P9NM {Planet 9} (S00P9DEF=YES) S 19 Planet #9 Name
+
+This field specifies the Owner of this planet. If
+desired you can specify a specific USERID and 
+that user will be able to administer this planet.
+
+S00P9OWN {*EMPIRE*} (S00P9DEF=YES) S 30 Owner of Planet #9
+
+Type of planet indicator. One planet in Sector 0 0
+-MUST- be each of the following types;
+
+0 = Nothing Special
+1 = Base trading planet (Zygor)
+2 = Population Planet (Tahanian Station)
+
+S00P9TYP {Planet Type: 0} (S00P9DEF=YES) N 0 2
+
+This value specifies the X coordinate of this planet.
+
+S00P9X {X Coordinate of Planet: 2000} (S00P9DEF=YES) N 100 9900
+
+This value specifies the Y coordinate of this planet.
+
+S00P9Y {Y Coordinate of Planet: 2000} (S00P9DEF=YES) N 100 9900
+
+This value specifies the Environment for this Planet.
+
+0 = Poor
+1 = Marginal
+2 = Good
+3 = Very Good
+
+S00P9ENV {Environment for planet: 1} (S00P9DEF=YES) N 0 3
+
+This value specifies the Resources for this Planet.
+
+0 = Poor
+1 = Marginal
+2 = Good
+3 = Very Good
+
+S00P9RES {Resources for planet: 0} (S00P9DEF=YES) N 0 3
+
+This option specifies the odds of a new cybertron being 
+the big Cyberquad when created. Decrease this number to
+increase the number of quads in the game. 
+
+
+
+QUADODDS {Odds of a Cybertron being a big one: 4} N 1 20
+
+Ship Class 01
+
+This option specifies the TYPE of ship.
+ 
+USER = A ship a user can purchase and fly.
+CYBORG = A Cybertron ship controlled by the automated
+         battle logic in the game.
+DROID = A non-combatant ship (sometimes) controlled by
+        much simpler navigation logic.
+
+S01TYPE {Class 01 type of Ship? USER} E USER CYBORG DROID <NONE>
+
+This is the name of this class of ship.
+
+S01NAME {Trainer} (S01TYPE#<NONE>) S 29 Class-01 Ship Name
+
+Ship Class 01
+
+This is the name of the ship itself (i.e. Cyber-destroyer)
+For USER ships this field is blank.
+
+S01SNAME {} (S01TYPE#<NONE>,USER) S 29 Class-01 Ship title name
+
+Ship Class 01
+
+This option specifies the MAXIMUM shield type for this
+class of ship. Setting this option to 0 means this class
+of ship has no shields at all.
+
+S01SHLD {  Maximum Shield Type: 3} (S01TYPE#<NONE>) N 1 6
+
+Ship Class 01
+
+This option specifies the MAXIMUM Phaser type for this
+class of ship. Setting this option to 0 means this class
+of ship has no phasers at all.
+
+S01PHSR {  Maximum Phaser Type: 4} (S01TYPE#<NONE>) N 0 5
+
+Ship Class 01
+
+This option specifies if this ship class has torpedo
+capability.
+
+S01TORP {  Has Torpedo Capability? YES} (S01TYPE#<NONE>) B
+
+Ship Class 01
+
+This option specifies if this ship class has missile
+capability.
+
+S01MISL {  Has Missile Capability? YES} (S01TYPE#<NONE>) B
+
+Ship Class 01
+
+This option specifies if this ship class has decoy 
+launching capability.
+
+S01DECY {  Has Decoy Capability? YES} (S01TYPE#<NONE>) B
+
+Ship Class 01
+
+This option specifies if this ship class has jamming
+capabilities.
+
+S01JAMMR {  Has Jammer Capability? YES} (S01TYPE#<NONE>) B
+
+Ship Class 01
+
+This option specifies if this ship class has zipper
+launching capabilities.
+
+S01ZIPPR {  Has Zipper Capability? YES} (S01TYPE#<NONE>) B
+
+Ship Class 01
+
+This option specifies if this ship class has mine 
+launching capabilities.
+
+S01MINE {  Has Mine Capability? YES} (S01TYPE#<NONE>) B
+
+Ship Class 01
+
+This option specifies if this ship class has planetary
+attack capability.
+
+S01ATTK {  Has Attack Planet Capability? YES} (S01TYPE#<NONE>) B
+
+Ship Class 01
+
+This option specifies if this ship class has cloaking
+capability.
+
+S01CLOK {  Has Cloaking Capability? YES} (S01TYPE#<NONE>) B
+
+Ship Class 01
+
+This option controls the acceleration rate for this class
+of ship.
+
+S01ACCL {  Acceleration Rate: 300} (S01TYPE#<NONE>) N 20 20000
+
+Ship Class 01
+
+This option specifies the maximum warp for this class of
+ship.
+
+S01WARP {  Maximum Warp: 4} (S01TYPE#<NONE>) N 1 100
+
+Ship Class 01
+
+This option specifies the maximum weight in tons for this
+class of ship.
+
+S01TONS {  Maximum Tonnage (in 100's): 100} (S01TYPE#<NONE>) N 1 5000
+
+Ship Class 01
+
+This option specifies the price for each ship in this
+class.
+
+S01PRIC {  Price for each ship (in 1000's): 60} (S01TYPE#<NONE>) N 1 32000
+
+Ship Class 01
+
+This option specifies the points awarded to another player
+for killing this class of ship.
+
+S01PNTS {  Points awarded for kill: 100} (S01TYPE#<NONE>) N 1 1000
+
+Ship Class 01
+
+This option specifies the maximum range in thousands for
+the range scanners in this class of ship.
+
+S01SRNG {  Scan Range (in 1000's): 25} (S01TYPE#<NONE>) N 1 32767
+
+Ship Class 01
+
+This option determines if this class of ship is "attackable"
+by cybertrons. If NO then Cyb's will only attack it if 
+provoked. If YES then they will attack on sight.
+
+S01CATK {  Cyb's can attack this class ship: YES} (S01TYPE#<NONE>) B
+
+Ship Class 01
+
+This option deternines the number of Cybs that will come
+after this class of ship at the same time. Set to 0 to
+have Cyb's leave it alone. Set to higher numbers to
+have this class massed by cybs.
+
+S01NATK {  Number of cyb's to attack this class: 2 } (S01TYPE#<NONE>) N 0 255
+
+Ship Class 02
+
+This option specifies the TYPE of ship.
+ 
+USER = A ship a user can purchase and fly.
+CYBORG = A Cybertron ship controlled by the automated
+         battle logic in the game.
+DROID = A non-combatant ship (sometimes) controlled by
+        much simpler navigation logic.
+
+S02TYPE {Class 02 type of Ship? <NONE>} E USER CYBORG DROID <NONE> 
+
+Ship Class 02
+
+This is the name of this class of ship.
+
+S02NAME {Light Freighter} (S02TYPE#<NONE>) S 29 Class-02 Ship Name
+
+Ship Class 02
+
+This is the name of the ship itself (i.e. Cyber-destroyer)
+For USER ships this field is blank.
+
+S02SNAME {} (S02TYPE#<NONE>,USER) S 29 Class-02 Ship title name
+
+Ship Class 02
+
+This option specifies the MAXIMUM shield type for this
+class of ship. Setting this option to 0 means this class
+of ship has no shields at all.
+
+S02SHLD {  Maximum Shield Type: 1} (S02TYPE#<NONE>) N 1 6
+
+Ship Class 02
+
+This option specifies the MAXIMUM Phaser type for this
+class of ship. Setting this option to 0 means this class
+of ship has no phasers at all.
+
+S02PHSR {  Maximum Phaser Type: 1} (S02TYPE#<NONE>) N 1 5
+
+Ship Class 02
+
+This option specifies if this ship class has torpedo
+capability.
+
+S02TORP {  Has Torpedo Capability? NO} (S02TYPE#<NONE>) B
+
+Ship Class 02
+
+This option specifies if this ship class has missile
+capability.
+
+S02MISL {  Has Missile Capability? NO} (S02TYPE#<NONE>) B
+
+Ship Class 02
+
+This option specifies if this ship class has decoy 
+launching capability.
+
+S02DECY {  Has Decoy Capability? YES} (S02TYPE#<NONE>) B
+
+Ship Class 02
+
+This option specifies if this ship class has jamming
+capabilities.
+
+S02JAMMR {  Has Jammer Capability? YES} (S02TYPE#<NONE>) B
+
+Ship Class 02
+
+This option specifies if this ship class has zipper
+launching capabilities.
+
+S02ZIPPR {  Has Zipper Capability? YES} (S02TYPE#<NONE>) B
+
+Ship Class 02
+
+This option specifies if this ship class has mine 
+launching capabilities.
+
+S02MINE {  Has Mine Capability? YES} (S02TYPE#<NONE>) B
+
+Ship Class 02
+
+This option specifies if this ship class has planetary
+attack capability.
+
+S02ATTK {  Has Attack Planet Capability? NO} (S02TYPE#<NONE>) B
+
+Ship Class 02
+
+This option specifies if this ship class has cloaking
+capability.
+
+S02CLOK {  Has Cloaking Capability? NO} (S02TYPE#<NONE>) B
+
+Ship Class 02
+
+This option controls the acceleration rate for this class
+of ship.
+
+S02ACCL {  Acceleration Rate: 200} (S02TYPE#<NONE>) N 20 20000
+
+Ship Class 02
+
+This option specifies the maximum warp for this class of
+ship.
+
+S02WARP {  Maximum Warp: 3} (S02TYPE#<NONE>) N 1 100
+
+Ship Class 02
+
+This option specifies the maximum weight in tons for this
+class of ship.
+
+S02TONS {  Maximum Tonnage (in 100's): 300} (S02TYPE#<NONE>) N 1 5000
+
+Ship Class 02
+
+This option specifies the price for each ship in this
+class.
+
+S02PRIC {  Price for each ship (in 1000's): 20} (S02TYPE#<NONE>) N 1 32000
+
+Ship Class 02
+
+This option specifies the points awarded to another player
+for killing this class of ship.
+
+S02PNTS {  Points awarded for kill: 25} (S02TYPE#<NONE>) N 1 1000
+
+Ship Class 02
+
+This option specifies the maximum range in thousands for
+the range scanners in this class of ship.
+
+S02SRNG {  Scan Range (in 1000's): 25} (S02TYPE#<NONE>) N 1 32767
+
+Ship Class 02
+
+This option determines if this class of ship is "attackable"
+by cybertrons. If NO then Cyb's will only attack it if 
+provoked. If YES then they will attack on sight.
+
+S02CATK {  Cyb's can attack this class ship: NO} (S02TYPE#<NONE>) B
+
+Ship Class 02
+
+This option deternines the number of Cybs that will come
+after this class of ship at the same time. Set to 0 to
+have Cyb's leave it alone. Set to higher numbers to
+have this class massed by cybs.
+
+S02NATK {  Number of cyb's to attack this class: 0 } (S02TYPE#<NONE>) N 0 255
+
+Ship Class 03
+
+This option specifies the TYPE of ship.
+ 
+USER = A ship a user can purchase and fly.
+CYBORG = A Cybertron ship controlled by the automated
+         battle logic in the game.
+DROID = A non-combatant ship (sometimes) controlled by
+        much simpler navigation logic.
+
+S03TYPE {Class 03 type of Ship? <NONE>} E USER CYBORG DROID <NONE> 
+
+Ship Class 03
+
+This is the name of this class of ship.
+
+S03NAME {Heavy Freighter} (S03TYPE#<NONE>) S 29 Class-03 Ship Name
+
+Ship Class 03
+
+This is the name of the ship itself (i.e. Cyber-destroyer)
+For USER ships this field is blank.
+
+S03SNAME {} (S03TYPE#<NONE>,USER) S 29 Class-03 Ship title name
+
+Ship Class 03
+
+This option specifies the MAXIMUM shield type for this
+class of ship. Setting this option to 0 means this class
+of ship has no shields at all.
+
+S03SHLD {  Maximum Shield Type: 1} (S03TYPE#<NONE>) N 1 6
+
+Ship Class 03
+
+This option specifies the MAXIMUM Phaser type for this
+class of ship. Setting this option to 0 means this class
+of ship has no phasers at all.
+
+S03PHSR {  Maximum Phaser Type: 2} (S03TYPE#<NONE>) N 1 5
+
+Ship Class 03
+
+This option specifies if this ship class has torpedo
+capability.
+
+S03TORP {  Has Torpedo Capability? NO} (S03TYPE#<NONE>) B
+
+Ship Class 03
+
+This option specifies if this ship class has missile
+capability.
+
+S03MISL {  Has Missile Capability? NO} (S03TYPE#<NONE>) B
+
+Ship Class 03
+
+This option specifies if this ship class has decoy 
+launching capability.
+
+S03DECY {  Has Decoy Capability? YES} (S03TYPE#<NONE>) B
+
+Ship Class 03
+
+This option specifies if this ship class has jamming
+capabilities.
+
+S03JAMMR {  Has Jammer Capability? YES} (S03TYPE#<NONE>) B
+
+Ship Class 03
+
+This option specifies if this ship class has zipper
+launching capabilities.
+
+S03ZIPPR {  Has Zipper Capability? YES} (S03TYPE#<NONE>) B
+
+Ship Class 03
+
+This option specifies if this ship class has mine 
+launching capabilities.
+
+S03MINE {  Has Mine Capability? YES} (S03TYPE#<NONE>) B
+
+Ship Class 03
+
+This option specifies if this ship class has planetary
+attack capability.
+
+S03ATTK {  Has Attack Planet Capability? YES} (S03TYPE#<NONE>) B
+
+Ship Class 03
+
+This option specifies if this ship class has cloaking
+capability.
+
+S03CLOK {  Has Cloaking Capability? NO} (S03TYPE#<NONE>) B
+
+Ship Class 03
+
+This option controls the acceleration rate for this class
+of ship.
+
+S03ACCL {  Acceleration Rate: 100} (S03TYPE#<NONE>) N 20 20000
+
+Ship Class 03
+
+This option specifies the maximum warp for this class of
+ship.
+
+S03WARP {  Maximum Warp: 5} (S03TYPE#<NONE>) N 1 100
+
+Ship Class 03
+
+This option specifies the maximum weight in tons for this
+class of ship.
+
+S03TONS {  Maximum Tonnage (in 100's): 600} (S03TYPE#<NONE>) N 1 5000
+
+Ship Class 03
+
+This option specifies the price for each ship in this
+class.
+
+S03PRIC {  Price for each ship (in 1000's): 40} (S03TYPE#<NONE>) N 1 32000
+
+Ship Class 03
+
+This option specifies the points awarded to another player
+for killing this class of ship.
+
+S03PNTS {  Points awarded for kill: 75} (S03TYPE#<NONE>) N 1 1000
+
+Ship Class 03
+
+This option specifies the maximum range in thousands for
+the range scanners in this class of ship.
+
+S03SRNG {  Scan Range (in 1000's): 50} (S03TYPE#<NONE>) N 1 32767
+
+Ship Class 03
+
+This option determines if this class of ship is "attackable"
+by cybertrons. If NO then Cyb's will only attack it if 
+provoked. If YES then they will attack on sight.
+
+S03CATK {  Cyb's can attack this class ship: NO} (S03TYPE#<NONE>) B
+
+Ship Class 03
+
+This option deternines the number of Cybs that will come
+after this class of ship at the same time. Set to 0 to
+have Cyb's leave it alone. Set to higher numbers to
+have this class massed by cybs.
+
+S03NATK {  Number of cyb's to attack this class: 0 } (S03TYPE#<NONE>) N 0 255
+
+Ship Class 04
+
+This option specifies the TYPE of ship.
+ 
+USER = A ship a user can purchase and fly.
+CYBORG = A Cybertron ship controlled by the automated
+         battle logic in the game.
+DROID = A non-combatant ship (sometimes) controlled by
+        much simpler navigation logic.
+
+S04TYPE {Class 04 type of Ship? <NONE>} E USER CYBORG DROID <NONE> 
+
+Ship Class 04
+
+This is the name of this class of ship.
+
+S04NAME {Destroyer} (S04TYPE#<NONE>) S 29 Class-04 Ship Name
+
+Ship Class 04
+
+This is the name of the ship itself (i.e. Cyber-destroyer)
+For USER ships this field is blank.
+
+S04SNAME {} (S04TYPE#<NONE>,USER) S 29 Class-04 Ship title name
+
+Ship Class 04
+
+This option specifies the MAXIMUM shield type for this
+class of ship. Setting this option to 0 means this class
+of ship has no shields at all.
+
+S04SHLD {  Maximum Shield Type: 3} (S04TYPE#<NONE>) N 1 6
+
+Ship Class 04
+
+This option specifies the MAXIMUM Phaser type for this
+class of ship. Setting this option to 0 means this class
+of ship has no phasers at all.
+
+S04PHSR {  Maximum Phaser Type: 3} (S04TYPE#<NONE>) N 1 5
+
+Ship Class 04
+
+This option specifies if this ship class has torpedo
+capability.
+
+S04TORP {  Has Torpedo Capability? YES} (S04TYPE#<NONE>) B
+
+Ship Class 04
+
+This option specifies if this ship class has missile
+capability.
+
+S04MISL {  Has Missile Capability? YES} (S04TYPE#<NONE>) B
+
+Ship Class 04
+
+This option specifies if this ship class has decoy 
+launching capability.
+
+S04DECY {  Has Decoy Capability? YES} (S04TYPE#<NONE>) B
+
+Ship Class 04
+
+This option specifies if this ship class has jamming
+capabilities.
+
+S04JAMMR {  Has Jammer Capability? YES} (S04TYPE#<NONE>) B
+
+Ship Class 04
+
+This option specifies if this ship class has zipper
+launching capabilities.
+
+S04ZIPPR {  Has Zipper Capability? YES} (S04TYPE#<NONE>) B
+
+Ship Class 04
+
+This option specifies if this ship class has mine 
+launching capabilities.
+
+S04MINE {  Has Mine Capability? YES} (S04TYPE#<NONE>) B
+
+Ship Class 04
+
+This option specifies if this ship class has planetary
+attack capability.
+
+S04ATTK {  Has Attack Planet Capability? YES} (S04TYPE#<NONE>) B
+
+Ship Class 04
+
+This option specifies if this ship class has cloaking
+capability.
+
+S04CLOK {  Has Cloaking Capability? NO} (S04TYPE#<NONE>) B
+
+Ship Class 04
+
+This option controls the acceleration rate for this class
+of ship.
+
+S04ACCL {  Acceleration Rate: 700} (S04TYPE#<NONE>) N 20 20000
+
+Ship Class 04
+
+This option specifies the maximum warp for this class of
+ship.
+
+S04WARP {  Maximum Warp: 5} (S04TYPE#<NONE>) N 1 100
+
+Ship Class 04
+
+This option specifies the maximum weight in tons for this
+class of ship.
+
+S04TONS {  Maximum Tonnage (in 100's): 20} (S04TYPE#<NONE>) N 1 5000
+
+Ship Class 04
+
+This option specifies the price for each ship in this
+class.
+
+S04PRIC {  Price for each ship (in 1000's): 150} (S04TYPE#<NONE>) N 1 32000
+
+Ship Class 04
+
+This option specifies the points awarded to another player
+for killing this class of ship.
+
+S04PNTS {  Points awarded for kill: 150} (S04TYPE#<NONE>) N 1 1000
+
+Ship Class 04
+
+This option specifies the maximum range in thousands for
+the range scanners in this class of ship.
+
+S04SRNG {  Scan Range (in 1000's): 100} (S04TYPE#<NONE>) N 1 32767
+
+Ship Class 04
+
+This option determines if this class of ship is "attackable"
+by cybertrons. If NO then Cyb's will only attack it if 
+provoked. If YES then they will attack on sight.
+
+S04CATK {  Cyb's can attack this class ship: YES } (S04TYPE#<NONE>) B
+
+Ship Class 04
+
+This option deternines the number of Cybs that will come
+after this class of ship at the same time. Set to 0 to
+have Cyb's leave it alone. Set to higher numbers to
+have this class massed by cybs.
+
+S04NATK {  Number of cyb's to attack this class: 3 } (S04TYPE#<NONE>) N 0 255
+
+Ship Class 05
+
+This option specifies the TYPE of ship.
+ 
+USER = A ship a user can purchase and fly.
+CYBORG = A Cybertron ship controlled by the automated
+         battle logic in the game.
+DROID = A non-combatant ship (sometimes) controlled by
+        much simpler navigation logic.
+
+S05TYPE {Class 05 type of Ship? <NONE>} E USER CYBORG DROID <NONE> 
+
+Ship Class 05
+
+This is the name of this class of ship.
+
+S05NAME {Star Cruiser} (S05TYPE#<NONE>) S 29 Class-05 Ship Name
+
+Ship Class 05
+
+This is the name of the ship itself (i.e. Cyber-destroyer)
+For USER ships this field is blank.
+
+S05SNAME {} (S05TYPE#<NONE>,USER) S 29 Class-05 Ship title name
+
+Ship Class 05
+
+This option specifies the MAXIMUM shield type for this
+class of ship. Setting this option to 0 means this class
+of ship has no shields at all.
+
+S05SHLD {  Maximum Shield Type: 4} (S05TYPE#<NONE>) N 1 6
+
+Ship Class 05
+
+This option specifies the MAXIMUM Phaser type for this
+class of ship. Setting this option to 0 means this class
+of ship has no phasers at all.
+
+S05PHSR {  Maximum Phaser Type: 4} (S05TYPE#<NONE>) N 1 5
+
+Ship Class 05
+
+This option specifies if this ship class has torpedo
+capability.
+
+S05TORP {  Has Torpedo Capability? YES} (S05TYPE#<NONE>) B
+
+Ship Class 05
+
+This option specifies if this ship class has missile
+capability.
+
+S05MISL {  Has Missile Capability? YES} (S05TYPE#<NONE>) B
+
+Ship Class 05
+
+This option specifies if this ship class has decoy 
+launching capability.
+
+S05DECY {  Has Decoy Capability? YES} (S05TYPE#<NONE>) B
+
+Ship Class 05
+
+This option specifies if this ship class has jamming
+capabilities.
+
+S05JAMMR {  Has Jammer Capability? YES} (S05TYPE#<NONE>) B
+
+Ship Class 05
+
+This option specifies if this ship class has zipper
+launching capabilities.
+
+S05ZIPPR {  Has Zipper Capability? YES} (S05TYPE#<NONE>) B
+
+Ship Class 05
+
+This option specifies if this ship class has mine 
+launching capabilities.
+
+S05MINE {  Has Mine Capability? YES} (S05TYPE#<NONE>) B
+
+Ship Class 05
+
+This option specifies if this ship class has planetary
+attack capability.
+
+S05ATTK {  Has Attack Planet Capability? YES} (S05TYPE#<NONE>) B
+
+Ship Class 05
+
+This option specifies if this ship class has cloaking
+capability.
+
+S05CLOK {  Has Cloaking Capability? YES} (S05TYPE#<NONE>) B
+
+Ship Class 05
+
+This option controls the acceleration rate for this class
+of ship.
+
+S05ACCL {  Acceleration Rate: 500} (S05TYPE#<NONE>) N 20 20000
+
+Ship Class 05
+
+This option specifies the maximum warp for this class of
+ship.
+
+S05WARP {  Maximum Warp: 8} (S05TYPE#<NONE>) N 1 100
+
+Ship Class 05
+
+This option specifies the maximum weight in tons for this
+class of ship.
+
+S05TONS {  Maximum Tonnage (in 100's): 30} (S05TYPE#<NONE>) N 1 5000
+
+Ship Class 05
+
+This option specifies the price for each ship in this
+class.
+
+S05PRIC {  Price for each ship (in 1000's): 300} (S05TYPE#<NONE>) N 1 32000
+
+Ship Class 05
+
+This option specifies the points awarded to another player
+for killing this class of ship.
+
+S05PNTS {  Points awarded for kill: 200} (S05TYPE#<NONE>) N 1 1000
+
+Ship Class 05
+
+This option specifies the maximum range in thousands for
+the range scanners in this class of ship.
+
+S05SRNG {  Scan Range (in 1000's): 200} (S05TYPE#<NONE>) N 1 32767
+
+Ship Class 05
+
+This option determines if this class of ship is "attackable"
+by cybertrons. If NO then Cyb's will only attack it if 
+provoked. If YES then they will attack on sight.
+
+S05CATK {  Cyb's can attack this class ship: YES } (S05TYPE#<NONE>) B
+
+Ship Class 05
+
+This option deternines the number of Cybs that will come
+after this class of ship at the same time. Set to 0 to
+have Cyb's leave it alone. Set to higher numbers to
+have this class massed by cybs.
+
+S05NATK {  Number of cyb's to attack this class: 3 } (S05TYPE#<NONE>) N 0 255
+
+Ship Class 06
+
+This option specifies the TYPE of ship.
+ 
+USER = A ship a user can purchase and fly.
+CYBORG = A Cybertron ship controlled by the automated
+         battle logic in the game.
+DROID = A non-combatant ship (sometimes) controlled by
+        much simpler navigation logic.
+
+S06TYPE {Class 06 type of Ship? <NONE>} E USER CYBORG DROID <NONE> 
+
+Ship Class 06
+
+This is the name of this class of ship.
+
+S06NAME {Battle Cruiser} (S06TYPE#<NONE>) S 29 Class-06 Ship Name
+
+Ship Class 06
+
+This is the name of the ship itself (i.e. Cyber-destroyer)
+For USER ships this field is blank.
+
+S06SNAME {} (S06TYPE#<NONE>,USER) S 29 Class-06 Ship title name
+
+Ship Class 06
+
+This option specifies the MAXIMUM shield type for this
+class of ship. Setting this option to 0 means this class
+of ship has no shields at all.
+
+S06SHLD {  Maximum Shield Type: 5} (S06TYPE#<NONE>) N 1 6
+
+Ship Class 06
+
+This option specifies the MAXIMUM Phaser type for this
+class of ship. Setting this option to 0 means this class
+of ship has no phasers at all.
+
+S06PHSR {  Maximum Phaser Type: 4} (S06TYPE#<NONE>) N 1 5
+
+Ship Class 06
+
+This option specifies if this ship class has torpedo
+capability.
+
+S06TORP {  Has Torpedo Capability? YES} (S06TYPE#<NONE>) B
+
+Ship Class 06
+
+This option specifies if this ship class has missile
+capability.
+
+S06MISL {  Has Missile Capability? YES} (S06TYPE#<NONE>) B
+
+Ship Class 06
+
+This option specifies if this ship class has decoy 
+launching capability.
+
+S06DECY {  Has Decoy Capability? YES} (S06TYPE#<NONE>) B
+
+Ship Class 06
+
+This option specifies if this ship class has jamming
+capabilities.
+
+S06JAMMR {  Has Jammer Capability? YES} (S06TYPE#<NONE>) B
+
+Ship Class 06
+
+This option specifies if this ship class has zipper
+launching capabilities.
+
+S06ZIPPR {  Has Zipper Capability? YES} (S06TYPE#<NONE>) B
+
+Ship Class 06
+
+This option specifies if this ship class has mine 
+launching capabilities.
+
+S06MINE {  Has Mine Capability? YES} (S06TYPE#<NONE>) B
+
+Ship Class 06
+
+This option specifies if this ship class has planetary
+attack capability.
+
+S06ATTK {  Has Attack Planet Capability? YES} (S06TYPE#<NONE>) B
+
+Ship Class 06
+
+This option specifies if this ship class has cloaking
+capability.
+
+S06CLOK {  Has Cloaking Capability? YES} (S06TYPE#<NONE>) B
+
+Ship Class 06
+
+This option controls the acceleration rate for this class
+of ship.
+
+S06ACCL {  Acceleration Rate: 350} (S06TYPE#<NONE>) N 20 20000
+
+Ship Class 06
+
+This option specifies the maximum warp for this class of
+ship.
+
+S06WARP {  Maximum Warp: 10} (S06TYPE#<NONE>) N 1 100
+
+Ship Class 06
+
+This option specifies the maximum weight in tons for this
+class of ship.
+
+S06TONS {  Maximum Tonnage (in 100's): 60} (S06TYPE#<NONE>) N 1 5000
+
+Ship Class 06
+
+This option specifies the price for each ship in this
+class.
+
+S06PRIC {  Price for each ship (in 1000's): 500} (S06TYPE#<NONE>) N 1 32000
+
+Ship Class 06
+
+This option specifies the points awarded to another player
+for killing this class of ship.
+
+S06PNTS {  Points awarded for kill: 250} (S06TYPE#<NONE>) N 1 1000
+
+Ship Class 06
+
+This option specifies the maximum range in thousands for
+the range scanners in this class of ship.
+
+S06SRNG {  Scan Range (in 1000's): 250} (S06TYPE#<NONE>) N 1 32767
+
+Ship Class 06
+
+This option determines if this class of ship is "attackable"
+by cybertrons. If NO then Cyb's will only attack it if 
+provoked. If YES then they will attack on sight.
+
+S06CATK {  Cyb's can attack this class ship: YES } (S06TYPE#<NONE>) B
+
+Ship Class 06
+
+This option deternines the number of Cybs that will come
+after this class of ship at the same time. Set to 0 to
+have Cyb's leave it alone. Set to higher numbers to
+have this class massed by cybs.
+
+S06NATK {  Number of cyb's to attack this class: 4 } (S06TYPE#<NONE>) N 0 255
+
+Ship Class 07
+
+This option specifies the TYPE of ship.
+ 
+USER = A ship a user can purchase and fly.
+CYBORG = A Cybertron ship controlled by the automated
+         battle logic in the game.
+DROID = A non-combatant ship (sometimes) controlled by
+        much simpler navigation logic.
+
+S07TYPE {Class 07 type of Ship? <NONE>} E USER CYBORG DROID <NONE> 
+
+Ship Class 07
+
+This is the name of this class of ship.
+
+S07NAME {Frigate} (S07TYPE#<NONE>) S 29 Class-07 Ship Name
+
+Ship Class 07
+
+This is the name of the ship itself (i.e. Cyber-destroyer)
+For USER ships this field is blank.
+
+S07SNAME {} (S07TYPE#<NONE>,USER) S 29 Class-07 Ship title name
+
+Ship Class 07
+
+This option specifies the MAXIMUM shield type for this
+class of ship. Setting this option to 0 means this class
+of ship has no shields at all.
+
+S07SHLD {  Maximum Shield Type: 5} (S07TYPE#<NONE>) N 1 6
+
+Ship Class 07
+
+This option specifies the MAXIMUM Phaser type for this
+class of ship. Setting this option to 0 means this class
+of ship has no phasers at all.
+
+S07PHSR {  Maximum Phaser Type: 4} (S07TYPE#<NONE>) N 1 5
+
+Ship Class 07
+
+This option specifies if this ship class has torpedo
+capability.
+
+S07TORP {  Has Torpedo Capability? YES} (S07TYPE#<NONE>) B
+
+Ship Class 07
+
+This option specifies if this ship class has missile
+capability.
+
+S07MISL {  Has Missile Capability? YES} (S07TYPE#<NONE>) B
+
+Ship Class 07
+
+This option specifies if this ship class has decoy 
+launching capability.
+
+S07DECY {  Has Decoy Capability? YES} (S07TYPE#<NONE>) B
+
+Ship Class 07
+
+This option specifies if this ship class has jamming
+capabilities.
+
+S07JAMMR {  Has Jammer Capability? YES} (S07TYPE#<NONE>) B
+
+Ship Class 07
+
+This option specifies if this ship class has zipper
+launching capabilities.
+
+S07ZIPPR {  Has Zipper Capability? YES} (S07TYPE#<NONE>) B
+
+Ship Class 07
+
+This option specifies if this ship class has mine 
+launching capabilities.
+
+S07MINE {  Has Mine Capability? YES} (S07TYPE#<NONE>) B
+
+Ship Class 07
+
+This option specifies if this ship class has planetary
+attack capability.
+
+S07ATTK {  Has Attack Planet Capability? YES} (S07TYPE#<NONE>) B
+
+Ship Class 07
+
+This option specifies if this ship class has cloaking
+capability.
+
+S07CLOK {  Has Cloaking Capability? NO} (S07TYPE#<NONE>) B
+
+Ship Class 07
+
+This option controls the acceleration rate for this class
+of ship.
+
+S07ACCL {  Acceleration Rate: 300} (S07TYPE#<NONE>) N 20 20000
+
+Ship Class 07
+
+This option specifies the maximum warp for this class of
+ship.
+
+S07WARP {  Maximum Warp: 20} (S07TYPE#<NONE>) N 1 100
+
+Ship Class 07
+
+This option specifies the maximum weight in tons for this
+class of ship.
+
+S07TONS {  Maximum Tonnage (in 100's): 120} (S07TYPE#<NONE>) N 1 5000
+
+Ship Class 07
+
+This option specifies the price for each ship in this
+class.
+
+S07PRIC {  Price for each ship (in 1000's): 1250} (S07TYPE#<NONE>) N 1 32000
+
+Ship Class 07
+
+This option specifies the points awarded to another player
+for killing this class of ship.
+
+S07PNTS {  Points awarded for kill: 300} (S07TYPE#<NONE>) N 1 1000
+
+Ship Class 07
+
+This option specifies the maximum range in thousands for
+the range scanners in this class of ship.
+
+S07SRNG {  Scan Range (in 1000's): 250} (S07TYPE#<NONE>) N 1 32767
+
+Ship Class 07
+
+This option determines if this class of ship is "attackable"
+by cybertrons. If NO then Cyb's will only attack it if 
+provoked. If YES then they will attack on sight.
+
+S07CATK {  Cyb's can attack this class ship: YES } (S07TYPE#<NONE>) B
+
+Ship Class 07
+
+This option deternines the number of Cybs that will come
+after this class of ship at the same time. Set to 0 to
+have Cyb's leave it alone. Set to higher numbers to
+have this class massed by cybs.
+
+S07NATK {  Number of cyb's to attack this class: 6 } (S07TYPE#<NONE>) N 0 255
+
+Ship Class 08
+
+This option specifies the TYPE of ship.
+ 
+USER = A ship a user can purchase and fly.
+CYBORG = A Cybertron ship controlled by the automated
+         battle logic in the game.
+DROID = A non-combatant ship (sometimes) controlled by
+        much simpler navigation logic.
+
+S08TYPE {Class 08 type of Ship? <NONE>} E USER CYBORG DROID <NONE> 
+
+Ship Class 08
+
+This is the name of this class of ship.
+
+S08NAME {Dreadnought} (S08TYPE#<NONE>) S 29 Class-08 Ship Name
+
+Ship Class 08
+
+This is the name of the ship itself (i.e. Cyber-destroyer)
+For USER ships this field is blank.
+
+S08SNAME {} (S08TYPE#<NONE>,USER) S 29 Class-08 Ship title name
+
+Ship Class 08
+
+This option specifies the MAXIMUM shield type for this
+class of ship. Setting this option to 0 means this class
+of ship has no shields at all.
+
+S08SHLD {  Maximum Shield Type: 6} (S08TYPE#<NONE>) N 1 6
+
+Ship Class 08
+
+This option specifies the MAXIMUM Phaser type for this
+class of ship. Setting this option to 0 means this class
+of ship has no phasers at all.
+
+S08PHSR {  Maximum Phaser Type: 5} (S08TYPE#<NONE>) N 1 5
+
+Ship Class 08
+
+This option specifies if this ship class has torpedo
+capability.
+
+S08TORP {  Has Torpedo Capability? YES} (S08TYPE#<NONE>) B
+
+Ship Class 08
+
+This option specifies if this ship class has missile
+capability.
+
+S08MISL {  Has Missile Capability? YES} (S08TYPE#<NONE>) B
+
+Ship Class 08
+
+This option specifies if this ship class has decoy 
+launching capability.
+
+S08DECY {  Has Decoy Capability? YES} (S08TYPE#<NONE>) B
+
+Ship Class 08
+
+This option specifies if this ship class has jamming
+capabilities.
+
+S08JAMMR {  Has Jammer Capability? YES} (S08TYPE#<NONE>) B
+
+Ship Class 08
+
+This option specifies if this ship class has zipper
+launching capabilities.
+
+S08ZIPPR {  Has Zipper Capability? YES} (S08TYPE#<NONE>) B
+
+Ship Class 08
+
+This option specifies if this ship class has mine 
+launching capabilities.
+
+S08MINE {  Has Mine Capability? YES} (S08TYPE#<NONE>) B
+
+Ship Class 08
+
+This option specifies if this ship class has planetary
+attack capability.
+
+S08ATTK {  Has Attack Planet Capability? YES} (S08TYPE#<NONE>) B
+
+Ship Class 08
+
+This option specifies if this ship class has cloaking
+capability.
+
+S08CLOK {  Has Cloaking Capability? NO} (S08TYPE#<NONE>) B
+
+Ship Class 08
+
+This option controls the acceleration rate for this class
+of ship.
+
+S08ACCL {  Acceleration Rate: 200} (S08TYPE#<NONE>) N 20 20000
+
+Ship Class 08
+
+This option specifies the maximum warp for this class of
+ship.
+
+S08WARP {  Maximum Warp: 50} (S08TYPE#<NONE>) N 1 100
+
+Ship Class 08
+
+This option specifies the maximum weight in tons for this
+class of ship.
+
+S08TONS {  Maximum Tonnage (in 100's): 400} (S08TYPE#<NONE>) N 1 5000
+
+Ship Class 08
+
+This option specifies the price for each ship in this
+class.
+
+S08PRIC {  Price for each ship (in 1000's): 2500} (S08TYPE#<NONE>) N 1 32000
+
+Ship Class 08
+
+This option specifies the points awarded to another player
+for killing this class of ship.
+
+S08PNTS {  Points awarded for kill: 500} (S08TYPE#<NONE>) N 1 1000
+
+This option specifies the maximum range in thousands for
+the range scanners in this class of ship.
+
+S08SRNG {  Scan Range (in 1000's): 500} (S08TYPE#<NONE>) N 1 32767
+
+Ship Class 08
+
+This option determines if this class of ship is "attackable"
+by cybertrons. If NO then Cyb's will only attack it if 
+provoked. If YES then they will attack on sight.
+
+S08CATK {  Cyb's can attack this class ship: YES } (S08TYPE#<NONE>) B
+
+Ship Class 08
+
+This option deternines the number of Cybs that will come
+after this class of ship at the same time. Set to 0 to
+have Cyb's leave it alone. Set to higher numbers to
+have this class massed by cybs.
+
+S08NATK {  Number of cyb's to attack this class: 7 } (S08TYPE#<NONE>) N 0 255
+
+Ship Class 09
+
+This option specifies the TYPE of ship.
+ 
+USER = A ship a user can purchase and fly.
+CYBORG = A Cybertron ship controlled by the automated
+         battle logic in the game.
+DROID = A non-combatant ship (sometimes) controlled by
+        much simpler navigation logic.
+
+S09TYPE {Class 09 type of Ship? <NONE>} E USER CYBORG DROID <NONE> 
+
+Ship Class 09
+
+This is the name of this class of ship.
+
+S09NAME {} (S09TYPE#<NONE>) S 29 Class-09 Ship Name
+
+Ship Class 09
+
+This is the name of the ship itself (i.e. Cyber-destroyer)
+For USER ships this field is blank.
+
+S09SNAME {} (S09TYPE#<NONE>,USER) S 29 Class-09 Ship title name
+
+Ship Class 09
+
+This option specifies the MAXIMUM shield type for this
+class of ship. Setting this option to 0 means this class
+of ship has no shields at all.
+
+S09SHLD {  Maximum Shield Type: 6} (S09TYPE#<NONE>) N 1 6
+
+Ship Class 09
+
+This option specifies the MAXIMUM Phaser type for this
+class of ship. Setting this option to 0 means this class
+of ship has no phasers at all.
+
+S09PHSR {  Maximum Phaser Type: 5} (S09TYPE#<NONE>) N 1 5
+
+Ship Class 09
+
+This option specifies if this ship class has torpedo
+capability.
+
+S09TORP {  Has Torpedo Capability? YES} (S09TYPE#<NONE>) B
+
+Ship Class 09
+
+This option specifies if this ship class has missile
+capability.
+
+S09MISL {  Has Missile Capability? YES} (S09TYPE#<NONE>) B
+
+Ship Class 09
+
+This option specifies if this ship class has decoy 
+launching capability.
+
+S09DECY {  Has Decoy Capability? YES} (S09TYPE#<NONE>) B
+
+Ship Class 09
+
+This option specifies if this ship class has jamming
+capabilities.
+
+S09JAMMR {  Has Jammer Capability? YES} (S09TYPE#<NONE>) B
+
+Ship Class 09
+
+This option specifies if this ship class has zipper
+launching capabilities.
+
+S09ZIPPR {  Has Zipper Capability? YES} (S09TYPE#<NONE>) B
+
+Ship Class 09
+
+This option specifies if this ship class has mine 
+launching capabilities.
+
+S09MINE {  Has Mine Capability? YES} (S09TYPE#<NONE>) B
+
+Ship Class 09
+
+This option specifies if this ship class has planetary
+attack capability.
+
+S09ATTK {  Has Attack Planet Capability? YES} (S09TYPE#<NONE>) B
+
+Ship Class 09
+
+This option specifies if this ship class has cloaking
+capability.
+
+S09CLOK {  Has Cloaking Capability? NO} (S09TYPE#<NONE>) B
+
+Ship Class 09
+
+This option controls the acceleration rate for this class
+of ship.
+
+S09ACCL {  Acceleration Rate: 200} (S09TYPE#<NONE>) N 20 20000
+
+Ship Class 09
+
+This option specifies the maximum warp for this class of
+ship.
+
+S09WARP {  Maximum Warp: 50} (S09TYPE#<NONE>) N 1 100
+
+Ship Class 09
+
+This option specifies the maximum weight in tons for this
+class of ship.
+
+S09TONS {  Maximum Tonnage (in 100's): 400} (S09TYPE#<NONE>) N 1 5000
+
+Ship Class 09
+
+This option specifies the price for each ship in this
+class.
+
+S09PRIC {  Price for each ship (in 1000's): 2500} (S09TYPE#<NONE>) N 1 32000
+
+Ship Class 09
+
+This option specifies the points awarded to another player
+for killing this class of ship.
+
+S09PNTS {  Points awarded for kill: 500} (S09TYPE#<NONE>) N 1 1000
+
+This option specifies the maximum range in thousands for
+the range scanners in this class of ship.
+
+S09SRNG {  Scan Range (in 1000's): 500} (S09TYPE#<NONE>) N 1 32767
+
+Ship Class 09
+
+This option determines if this class of ship is "attackable"
+by cybertrons. If NO then Cyb's will only attack it if 
+provoked. If YES then they will attack on sight.
+
+S09CATK {  Cyb's can attack this class ship: YES} (S09TYPE#<NONE>) B
+
+Ship Class 09
+
+This option deternines the number of Cybs that will come
+after this class of ship at the same time. Set to 0 to
+have Cyb's leave it alone. Set to higher numbers to
+have this class massed by cybs.
+
+S09NATK {  Number of cyb's to attack this class: 2 } (S09TYPE#<NONE>) N 0 255
+
+Ship Class 10
+
+This option specifies the TYPE of ship.
+ 
+USER = A ship a user can purchase and fly.
+CYBORG = A Cybertron ship controlled by the automated
+         battle logic in the game.
+DROID = A non-combatant ship (sometimes) controlled by
+        much simpler navigation logic.
+
+S10TYPE {Class 10 type of Ship? <NONE>} E USER CYBORG DROID <NONE> 
+
+Ship Class 10
+
+This is the name of this class of ship.
+
+S10NAME {} (S10TYPE#<NONE>) S 29 Class-10 Ship Name
+
+Ship Class 10
+
+This is the name of the ship itself (i.e. Cyber-destroyer)
+For USER ships this field is blank.
+
+S10SNAME {} (S10TYPE#<NONE>,USER) S 29 Class-10 Ship title name
+
+Ship Class 10
+
+This option specifies the MAXIMUM shield type for this
+class of ship. Setting this option to 0 means this class
+of ship has no shields at all.
+
+S10SHLD {  Maximum Shield Type: 6} (S10TYPE#<NONE>) N 1 6
+
+Ship Class 10
+
+This option specifies the MAXIMUM Phaser type for this
+class of ship. Setting this option to 0 means this class
+of ship has no phasers at all.
+
+S10PHSR {  Maximum Phaser Type: 5} (S10TYPE#<NONE>) N 1 5
+
+Ship Class 10
+
+This option specifies if this ship class has torpedo
+capability.
+
+S10TORP {  Has Torpedo Capability? YES} (S10TYPE#<NONE>) B
+
+Ship Class 10
+
+This option specifies if this ship class has missile
+capability.
+
+S10MISL {  Has Missile Capability? YES} (S10TYPE#<NONE>) B
+
+Ship Class 10
+
+This option specifies if this ship class has decoy 
+launching capability.
+
+S10DECY {  Has Decoy Capability? YES} (S10TYPE#<NONE>) B
+
+Ship Class 10
+
+This option specifies if this ship class has jamming
+capabilities.
+
+S10JAMMR {  Has Jammer Capability? YES} (S10TYPE#<NONE>) B
+
+Ship Class 10
+
+This option specifies if this ship class has zipper
+launching capabilities.
+
+S10ZIPPR {  Has Zipper Capability? YES} (S10TYPE#<NONE>) B
+
+Ship Class 10
+
+This option specifies if this ship class has mine 
+launching capabilities.
+
+S10MINE {  Has Mine Capability? YES} (S10TYPE#<NONE>) B
+
+Ship Class 10
+
+This option specifies if this ship class has planetary
+attack capability.
+
+S10ATTK {  Has Attack Planet Capability? YES} (S10TYPE#<NONE>) B
+
+Ship Class 10
+
+This option specifies if this ship class has cloaking
+capability.
+
+S10CLOK {  Has Cloaking Capability? NO} (S10TYPE#<NONE>) B
+
+Ship Class 10
+
+This option controls the acceleration rate for this class
+of ship.
+
+S10ACCL {  Acceleration Rate: 200} (S10TYPE#<NONE>) N 20 20000
+
+Ship Class 10
+
+This option specifies the maximum warp for this class of
+ship.
+
+S10WARP {  Maximum Warp: 50} (S10TYPE#<NONE>) N 1 100
+
+Ship Class 10
+
+This option specifies the maximum weight in tons for this
+class of ship.
+
+S10TONS {  Maximum Tonnage (in 100's): 400} (S10TYPE#<NONE>) N 1 5000
+
+Ship Class 10
+
+This option specifies the price for each ship in this
+class.
+
+S10PRIC {  Price for each ship (in 1000's): 2500} (S10TYPE#<NONE>) N 1 32000
+
+Ship Class 10
+
+This option specifies the points awarded to another player
+for killing this class of ship.
+
+S10PNTS {  Points awarded for kill: 500} (S10TYPE#<NONE>) N 1 1000
+
+This option specifies the maximum range in thousands for
+the range scanners in this class of ship.
+
+S10SRNG {  Scan Range (in 1000's): 500} (S10TYPE#<NONE>) N 1 32767
+
+Ship Class 10
+
+This option determines if this class of ship is "attackable"
+by cybertrons. If NO then Cyb's will only attack it if 
+provoked. If YES then they will attack on sight.
+
+S10CATK {  Cyb's can attack this class ship: YES } (S10TYPE#<NONE>) B
+
+Ship Class 10
+
+This option deternines the number of Cybs that will come
+after this class of ship at the same time. Set to 0 to
+have Cyb's leave it alone. Set to higher numbers to
+have this class massed by cybs.
+
+S10NATK {  Number of cyb's to attack this class: 2 } (S10TYPE#<NONE>) N 0 255
+
+Ship Class 11
+
+This option specifies the TYPE of ship.
+ 
+USER = A ship a user can purchase and fly.
+CYBORG = A Cybertron ship controlled by the automated
+         battle logic in the game.
+DROID = A non-combatant ship (sometimes) controlled by
+        much simpler navigation logic.
+
+S11TYPE {Class 11 type of Ship? <NONE>} E USER CYBORG DROID <NONE> 
+
+Ship Class 11
+
+This is the name of this class of ship.
+
+S11NAME {} (S11TYPE#<NONE>) S 29 Class-11 Ship Name
+
+Ship Class 11
+
+This is the name of the ship itself (i.e. Cyber-destroyer)
+For USER ships this field is blank.
+
+S11SNAME {} (S11TYPE#<NONE>,USER) S 29 Class-11 Ship title name
+
+Ship Class 11
+
+This option specifies the MAXIMUM shield type for this
+class of ship. Setting this option to 0 means this class
+of ship has no shields at all.
+
+S11SHLD {  Maximum Shield Type: 6} (S11TYPE#<NONE>) N 1 6
+
+Ship Class 11
+
+This option specifies the MAXIMUM Phaser type for this
+class of ship. Setting this option to 0 means this class
+of ship has no phasers at all.
+
+S11PHSR {  Maximum Phaser Type: 5} (S11TYPE#<NONE>) N 1 5
+
+Ship Class 11
+
+This option specifies if this ship class has torpedo
+capability.
+
+S11TORP {  Has Torpedo Capability? YES} (S11TYPE#<NONE>) B
+
+Ship Class 11
+
+This option specifies if this ship class has missile
+capability.
+
+S11MISL {  Has Missile Capability? YES} (S11TYPE#<NONE>) B
+
+Ship Class 11
+
+This option specifies if this ship class has decoy 
+launching capability.
+
+S11DECY {  Has Decoy Capability? YES} (S11TYPE#<NONE>) B
+
+Ship Class 11
+
+This option specifies if this ship class has jamming
+capabilities.
+
+S11JAMMR {  Has Jammer Capability? YES} (S11TYPE#<NONE>) B
+
+Ship Class 11
+
+This option specifies if this ship class has zipper
+launching capabilities.
+
+S11ZIPPR {  Has Zipper Capability? YES} (S11TYPE#<NONE>) B
+
+Ship Class 11
+
+This option specifies if this ship class has mine 
+launching capabilities.
+
+S11MINE {  Has Mine Capability? YES} (S11TYPE#<NONE>) B
+
+Ship Class 11
+
+This option specifies if this ship class has planetary
+attack capability.
+
+S11ATTK {  Has Attack Planet Capability? YES} (S11TYPE#<NONE>) B
+
+Ship Class 11
+
+This option specifies if this ship class has cloaking
+capability.
+
+S11CLOK {  Has Cloaking Capability? NO} (S11TYPE#<NONE>) B
+
+Ship Class 11
+
+This option controls the acceleration rate for this class
+of ship.
+
+S11ACCL {  Acceleration Rate: 200} (S11TYPE#<NONE>) N 20 20000
+
+Ship Class 11
+
+This option specifies the maximum warp for this class of
+ship.
+
+S11WARP {  Maximum Warp: 50} (S11TYPE#<NONE>) N 1 100
+
+Ship Class 11
+
+This option specifies the maximum weight in tons for this
+class of ship.
+
+S11TONS {  Maximum Tonnage (in 100's): 400} (S11TYPE#<NONE>) N 1 5000
+
+Ship Class 11
+
+This option specifies the price for each ship in this
+class.
+
+S11PRIC {  Price for each ship (in 1000's): 2500} (S11TYPE#<NONE>) N 1 32000
+
+Ship Class 11
+
+This option specifies the points awarded to another player
+for killing this class of ship.
+
+S11PNTS {  Points awarded for kill: 500} (S11TYPE#<NONE>) N 1 1000
+
+This option specifies the maximum range in thousands for
+the range scanners in this class of ship.
+
+S11SRNG {  Scan Range (in 1000's): 500} (S11TYPE#<NONE>) N 1 32767
+
+Ship Class 11
+
+This option determines if this class of ship is "attackable"
+by cybertrons. If NO then Cyb's will only attack it if 
+provoked. If YES then they will attack on sight.
+
+S11CATK {  Cyb's can attack this class ship: YES } (S11TYPE#<NONE>) B
+
+Ship Class 11
+
+This option deternines the number of Cybs that will come
+after this class of ship at the same time. Set to 0 to
+have Cyb's leave it alone. Set to higher numbers to
+have this class massed by cybs.
+
+S11NATK {  Number of cyb's to attack this class: 2 } (S11TYPE#<NONE>) N 0 255
+
+Ship Class 12
+
+This option specifies the TYPE of ship.
+ 
+USER = A ship a user can purchase and fly.
+CYBORG = A Cybertron ship controlled by the automated
+         battle logic in the game.
+DROID = A non-combatant ship (sometimes) controlled by
+        much simpler navigation logic.
+
+S12TYPE {Class 12 type of Ship? <NONE>} E USER CYBORG DROID <NONE> 
+
+Ship Class 12
+
+This is the name of this class of ship.
+
+S12NAME {} (S12TYPE#<NONE>) S 29 Class-12 Ship Name
+
+Ship Class 12
+
+This is the name of the ship itself (i.e. Cyber-destroyer)
+For USER ships this field is blank.
+
+S12SNAME {} (S12TYPE#<NONE>,USER) S 29 Class-12 Ship title name
+
+Ship Class 12
+
+This option specifies the MAXIMUM shield type for this
+class of ship. Setting this option to 0 means this class
+of ship has no shields at all.
+
+S12SHLD {  Maximum Shield Type: 6} (S12TYPE#<NONE>) N 1 6
+
+Ship Class 12
+
+This option specifies the MAXIMUM Phaser type for this
+class of ship. Setting this option to 0 means this class
+of ship has no phasers at all.
+
+S12PHSR {  Maximum Phaser Type: 5} (S12TYPE#<NONE>) N 1 5
+
+Ship Class 12
+
+This option specifies if this ship class has torpedo
+capability.
+
+S12TORP {  Has Torpedo Capability? YES} (S12TYPE#<NONE>) B
+
+Ship Class 12
+
+This option specifies if this ship class has missile
+capability.
+
+S12MISL {  Has Missile Capability? YES} (S12TYPE#<NONE>) B
+
+Ship Class 12
+
+This option specifies if this ship class has decoy 
+launching capability.
+
+S12DECY {  Has Decoy Capability? YES} (S12TYPE#<NONE>) B
+
+Ship Class 12
+
+This option specifies if this ship class has jamming
+capabilities.
+
+S12JAMMR {  Has Jammer Capability? YES} (S12TYPE#<NONE>) B
+
+Ship Class 12
+
+This option specifies if this ship class has zipper
+launching capabilities.
+
+S12ZIPPR {  Has Zipper Capability? YES} (S12TYPE#<NONE>) B
+
+Ship Class 12
+
+This option specifies if this ship class has mine 
+launching capabilities.
+
+S12MINE {  Has Mine Capability? YES} (S12TYPE#<NONE>) B
+
+Ship Class 12
+
+This option specifies if this ship class has planetary
+attack capability.
+
+S12ATTK {  Has Attack Planet Capability? YES} (S12TYPE#<NONE>) B
+
+Ship Class 12
+
+This option specifies if this ship class has cloaking
+capability.
+
+S12CLOK {  Has Cloaking Capability? NO} (S12TYPE#<NONE>) B
+
+Ship Class 12
+
+This option controls the acceleration rate for this class
+of ship.
+
+S12ACCL {  Acceleration Rate: 200} (S12TYPE#<NONE>) N 20 20000
+
+Ship Class 12
+
+This option specifies the maximum warp for this class of
+ship.
+
+S12WARP {  Maximum Warp: 50} (S12TYPE#<NONE>) N 1 100
+
+Ship Class 12
+
+This option specifies the maximum weight in tons for this
+class of ship.
+
+S12TONS {  Maximum Tonnage (in 100's): 400} (S12TYPE#<NONE>) N 1 5000
+
+Ship Class 12
+
+This option specifies the price for each ship in this
+class.
+
+S12PRIC {  Price for each ship (in 1000's): 2500} (S12TYPE#<NONE>) N 1 32000
+
+Ship Class 12
+
+This option specifies the points awarded to another player
+for killing this class of ship.
+
+S12PNTS {  Points awarded for kill: 500} (S12TYPE#<NONE>) N 1 1000
+
+This option specifies the maximum range in thousands for
+the range scanners in this class of ship.
+
+S12SRNG {  Scan Range (in 1000's): 500} (S12TYPE#<NONE>) N 1 32767
+
+Ship Class 12
+
+This option determines if this class of ship is "attackable"
+by cybertrons. If NO then Cyb's will only attack it if 
+provoked. If YES then they will attack on sight.
+
+S12CATK {  Cyb's can attack this class ship: YES } (S12TYPE#<NONE>) B
+
+Ship Class 12
+
+This option deternines the number of Cybs that will come
+after this class of ship at the same time. Set to 0 to
+have Cyb's leave it alone. Set to higher numbers to
+have this class massed by cybs.
+
+S12NATK {  Number of cyb's to attack this class: 2 } (S12TYPE#<NONE>) N 0 255
+
+Ship Class 13
+
+This option specifies the TYPE of ship.
+ 
+USER = A ship a user can purchase and fly.
+CYBORG = A Cybertron ship controlled by the automated
+         battle logic in the game.
+DROID = A non-combatant ship (sometimes) controlled by
+        much simpler navigation logic.
+
+S13TYPE {Class 13 type of Ship? <NONE>} E USER CYBORG DROID <NONE> 
+
+Ship Class 13
+
+This is the name of this class of ship.
+
+S13NAME {} (S13TYPE#<NONE>) S 29 Class-13 Ship Name
+
+Ship Class 13
+
+This is the name of the ship itself (i.e. Cyber-destroyer)
+For USER ships this field is blank.
+
+S13SNAME {} (S13TYPE#<NONE>,USER) S 29 Class-13 Ship title name
+
+Ship Class 13
+
+This option specifies the MAXIMUM shield type for this
+class of ship. Setting this option to 0 means this class
+of ship has no shields at all.
+
+S13SHLD {  Maximum Shield Type: 6} (S13TYPE#<NONE>) N 1 6
+
+Ship Class 13
+
+This option specifies the MAXIMUM Phaser type for this
+class of ship. Setting this option to 0 means this class
+of ship has no phasers at all.
+
+S13PHSR {  Maximum Phaser Type: 5} (S13TYPE#<NONE>) N 1 5
+
+Ship Class 13
+
+This option specifies if this ship class has torpedo
+capability.
+
+S13TORP {  Has Torpedo Capability? YES} (S13TYPE#<NONE>) B
+
+Ship Class 13
+
+This option specifies if this ship class has missile
+capability.
+
+S13MISL {  Has Missile Capability? YES} (S13TYPE#<NONE>) B
+
+Ship Class 13
+
+This option specifies if this ship class has decoy 
+launching capability.
+
+S13DECY {  Has Decoy Capability? YES} (S13TYPE#<NONE>) B
+
+Ship Class 13
+
+This option specifies if this ship class has jamming
+capabilities.
+
+S13JAMMR {  Has Jammer Capability? YES} (S13TYPE#<NONE>) B
+
+Ship Class 13
+
+This option specifies if this ship class has zipper
+launching capabilities.
+
+S13ZIPPR {  Has Zipper Capability? YES} (S13TYPE#<NONE>) B
+
+Ship Class 13
+
+This option specifies if this ship class has mine 
+launching capabilities.
+
+S13MINE {  Has Mine Capability? YES} (S13TYPE#<NONE>) B
+
+Ship Class 13
+
+This option specifies if this ship class has planetary
+attack capability.
+
+S13ATTK {  Has Attack Planet Capability? YES} (S13TYPE#<NONE>) B
+
+Ship Class 13
+
+This option specifies if this ship class has cloaking
+capability.
+
+S13CLOK {  Has Cloaking Capability? NO} (S13TYPE#<NONE>) B
+
+Ship Class 13
+
+This option controls the acceleration rate for this class
+of ship.
+
+S13ACCL {  Acceleration Rate: 200} (S13TYPE#<NONE>) N 20 20000
+
+Ship Class 13
+
+This option specifies the maximum warp for this class of
+ship.
+
+S13WARP {  Maximum Warp: 50} (S13TYPE#<NONE>) N 1 100
+
+Ship Class 13
+
+This option specifies the maximum weight in tons for this
+class of ship.
+
+S13TONS {  Maximum Tonnage (in 100's): 400} (S13TYPE#<NONE>) N 1 5000
+
+Ship Class 13
+
+This option specifies the price for each ship in this
+class.
+
+S13PRIC {  Price for each ship (in 1000's): 2500} (S13TYPE#<NONE>) N 1 32000
+
+Ship Class 13
+
+This option specifies the points awarded to another player
+for killing this class of ship.
+
+S13PNTS {  Points awarded for kill: 500} (S13TYPE#<NONE>) N 1 1000
+
+This option specifies the maximum range in thousands for
+the range scanners in this class of ship.
+
+S13SRNG {  Scan Range (in 1000's): 500} (S13TYPE#<NONE>) N 1 32767
+
+Ship Class 13
+
+This option determines if this class of ship is "attackable"
+by cybertrons. If NO then Cyb's will only attack it if 
+provoked. If YES then they will attack on sight.
+
+S13CATK {  Cyb's can attack this class ship: YES } (S13TYPE#<NONE>) B
+
+Ship Class 13
+
+This option deternines the number of Cybs that will come
+after this class of ship at the same time. Set to 0 to
+have Cyb's leave it alone. Set to higher numbers to
+have this class massed by cybs.
+
+S13NATK {  Number of cyb's to attack this class: 2 } (S13TYPE#<NONE>) N 0 255
+
+Ship Class 14
+
+This option specifies the TYPE of ship.
+ 
+USER = A ship a user can purchase and fly.
+CYBORG = A Cybertron ship controlled by the automated
+         battle logic in the game.
+DROID = A non-combatant ship (sometimes) controlled by
+        much simpler navigation logic.
+
+S14TYPE {Class 14 type of Ship? <NONE>} E USER CYBORG DROID <NONE> 
+
+Ship Class 14
+
+This is the name of this class of ship.
+
+S14NAME {} (S14TYPE#<NONE>) S 29 Class-14 Ship Name
+
+Ship Class 14
+
+This is the name of the ship itself (i.e. Cyber-destroyer)
+For USER ships this field is blank.
+
+S14SNAME {} (S14TYPE#<NONE>,USER) S 29 Class-14 Ship title name
+
+Ship Class 14
+
+This option specifies the MAXIMUM shield type for this
+class of ship. Setting this option to 0 means this class
+of ship has no shields at all.
+
+S14SHLD {  Maximum Shield Type: 6} (S14TYPE#<NONE>) N 1 6
+
+Ship Class 14
+
+This option specifies the MAXIMUM Phaser type for this
+class of ship. Setting this option to 0 means this class
+of ship has no phasers at all.
+
+S14PHSR {  Maximum Phaser Type: 5} (S14TYPE#<NONE>) N 1 5
+
+Ship Class 14
+
+This option specifies if this ship class has torpedo
+capability.
+
+S14TORP {  Has Torpedo Capability? YES} (S14TYPE#<NONE>) B
+
+Ship Class 14
+
+This option specifies if this ship class has missile
+capability.
+
+S14MISL {  Has Missile Capability? YES} (S14TYPE#<NONE>) B
+
+Ship Class 14
+
+This option specifies if this ship class has decoy 
+launching capability.
+
+S14DECY {  Has Decoy Capability? YES} (S14TYPE#<NONE>) B
+
+Ship Class 14
+
+This option specifies if this ship class has jamming
+capabilities.
+
+S14JAMMR {  Has Jammer Capability? YES} (S14TYPE#<NONE>) B
+
+Ship Class 14
+
+This option specifies if this ship class has zipper
+launching capabilities.
+
+S14ZIPPR {  Has Zipper Capability? YES} (S14TYPE#<NONE>) B
+
+Ship Class 14
+
+This option specifies if this ship class has mine 
+launching capabilities.
+
+S14MINE {  Has Mine Capability? YES} (S14TYPE#<NONE>) B
+
+Ship Class 14
+
+This option specifies if this ship class has planetary
+attack capability.
+
+S14ATTK {  Has Attack Planet Capability? YES} (S14TYPE#<NONE>) B
+
+Ship Class 14
+
+This option specifies if this ship class has cloaking
+capability.
+
+S14CLOK {  Has Cloaking Capability? NO} (S14TYPE#<NONE>) B
+
+Ship Class 14
+
+This option controls the acceleration rate for this class
+of ship.
+
+S14ACCL {  Acceleration Rate: 200} (S14TYPE#<NONE>) N 20 20000
+
+Ship Class 14
+
+This option specifies the maximum warp for this class of
+ship.
+
+S14WARP {  Maximum Warp: 50} (S14TYPE#<NONE>) N 1 100
+
+Ship Class 14
+
+This option specifies the maximum weight in tons for this
+class of ship.
+
+S14TONS {  Maximum Tonnage (in 100's): 400} (S14TYPE#<NONE>) N 1 5000
+
+Ship Class 14
+
+This option specifies the price for each ship in this
+class.
+
+S14PRIC {  Price for each ship (in 1000's): 2500} (S14TYPE#<NONE>) N 1 32000
+
+Ship Class 14
+
+This option specifies the points awarded to another player
+for killing this class of ship.
+
+S14PNTS {  Points awarded for kill: 500} (S14TYPE#<NONE>) N 1 1000
+
+This option specifies the maximum range in thousands for
+the range scanners in this class of ship.
+
+S14SRNG {  Scan Range (in 1000's): 500} (S14TYPE#<NONE>) N 1 32767
+
+Ship Class 14
+
+This option determines if this class of ship is "attackable"
+by cybertrons. If NO then Cyb's will only attack it if 
+provoked. If YES then they will attack on sight.
+
+S14CATK {  Cyb's can attack this class ship: YES } (S14TYPE#<NONE>) B
+
+Ship Class 14
+
+This option deternines the number of Cybs that will come
+after this class of ship at the same time. Set to 0 to
+have Cyb's leave it alone. Set to higher numbers to
+have this class massed by cybs.
+
+S14NATK {  Number of cyb's to attack this class: 2 } (S14TYPE#<NONE>) N 0 255
+
+Ship Class 15
+
+This option specifies the TYPE of ship.
+ 
+USER = A ship a user can purchase and fly.
+CYBORG = A Cybertron ship controlled by the automated
+         battle logic in the game.
+DROID = A non-combatant ship (sometimes) controlled by
+        much simpler navigation logic.
+
+S15TYPE {Class 15 type of Ship? <NONE>} E USER CYBORG DROID <NONE> 
+
+Ship Class 15
+
+This is the name of this class of ship.
+
+S15NAME {} (S15TYPE#<NONE>) S 29 Class-15 Ship Name
+
+Ship Class 15
+
+This is the name of the ship itself (i.e. Cyber-destroyer)
+For USER ships this field is blank.
+
+S15SNAME {} (S15TYPE#<NONE>,USER) S 29 Class-15 Ship title name
+
+Ship Class 15
+
+This option specifies the MAXIMUM shield type for this
+class of ship. Setting this option to 0 means this class
+of ship has no shields at all.
+
+S15SHLD {  Maximum Shield Type: 6} (S15TYPE#<NONE>) N 1 6
+
+Ship Class 15
+
+This option specifies the MAXIMUM Phaser type for this
+class of ship. Setting this option to 0 means this class
+of ship has no phasers at all.
+
+S15PHSR {  Maximum Phaser Type: 5} (S15TYPE#<NONE>) N 1 5
+
+Ship Class 15
+
+This option specifies if this ship class has torpedo
+capability.
+
+S15TORP {  Has Torpedo Capability? YES} (S15TYPE#<NONE>) B
+
+Ship Class 15
+
+This option specifies if this ship class has missile
+capability.
+
+S15MISL {  Has Missile Capability? YES} (S15TYPE#<NONE>) B
+
+Ship Class 15
+
+This option specifies if this ship class has decoy 
+launching capability.
+
+S15DECY {  Has Decoy Capability? YES} (S15TYPE#<NONE>) B
+
+Ship Class 15
+
+This option specifies if this ship class has jamming
+capabilities.
+
+S15JAMMR {  Has Jammer Capability? YES} (S15TYPE#<NONE>) B
+
+Ship Class 15
+
+This option specifies if this ship class has zipper
+launching capabilities.
+
+S15ZIPPR {  Has Zipper Capability? YES} (S15TYPE#<NONE>) B
+
+Ship Class 15
+
+This option specifies if this ship class has mine 
+launching capabilities.
+
+S15MINE {  Has Mine Capability? YES} (S15TYPE#<NONE>) B
+
+Ship Class 15
+
+This option specifies if this ship class has planetary
+attack capability.
+
+S15ATTK {  Has Attack Planet Capability? YES} (S15TYPE#<NONE>) B
+
+Ship Class 15
+
+This option specifies if this ship class has cloaking
+capability.
+
+S15CLOK {  Has Cloaking Capability? NO} (S15TYPE#<NONE>) B
+
+Ship Class 15
+
+This option controls the acceleration rate for this class
+of ship.
+
+S15ACCL {  Acceleration Rate: 200} (S15TYPE#<NONE>) N 20 20000
+
+Ship Class 15
+
+This option specifies the maximum warp for this class of
+ship.
+
+S15WARP {  Maximum Warp: 50} (S15TYPE#<NONE>) N 1 100
+
+Ship Class 15
+
+This option specifies the maximum weight in tons for this
+class of ship.
+
+S15TONS {  Maximum Tonnage (in 100's): 400} (S15TYPE#<NONE>) N 1 5000
+
+Ship Class 15
+
+This option specifies the price for each ship in this
+class.
+
+S15PRIC {  Price for each ship (in 1000's): 2500} (S15TYPE#<NONE>) N 1 32000
+
+Ship Class 15
+
+This option specifies the points awarded to another player
+for killing this class of ship.
+
+S15PNTS {  Points awarded for kill: 500} (S15TYPE#<NONE>) N 1 1000
+
+This option specifies the maximum range in thousands for
+the range scanners in this class of ship.
+
+S15SRNG {  Scan Range (in 1000's): 500} (S15TYPE#<NONE>) N 1 32767
+
+Ship Class 15
+
+This option determines if this class of ship is "attackable"
+by cybertrons. If NO then Cyb's will only attack it if 
+provoked. If YES then they will attack on sight.
+
+S15CATK {  Cyb's can attack this class ship: YES } (S15TYPE#<NONE>) B
+
+Ship Class 15
+
+This option deternines the number of Cybs that will come
+after this class of ship at the same time. Set to 0 to
+have Cyb's leave it alone. Set to higher numbers to
+have this class massed by cybs.
+
+S15NATK {  Number of cyb's to attack this class: 2 } (S15TYPE#<NONE>) N 0 255
+
+Ship Class 16
+
+This option specifies the TYPE of ship.
+ 
+USER = A ship a user can purchase and fly.
+CYBORG = A Cybertron ship controlled by the automated
+         battle logic in the game.
+DROID = A non-combatant ship (sometimes) controlled by
+        much simpler navigation logic.
+
+S16TYPE {Class 16 type of Ship? <NONE>} E USER CYBORG DROID <NONE> 
+
+Ship Class 16
+
+This is the name of this class of ship.
+
+S16NAME {} (S16TYPE#<NONE>) S 29 Class-16 Ship Name
+
+Ship Class 16
+
+This is the name of the ship itself (i.e. Cyber-destroyer)
+For USER ships this field is blank.
+
+S16SNAME {} (S16TYPE#<NONE>,USER) S 29 Class-16 Ship title name
+
+Ship Class 16
+
+This option specifies the MAXIMUM shield type for this
+class of ship. Setting this option to 0 means this class
+of ship has no shields at all.
+
+S16SHLD {  Maximum Shield Type: 6} (S16TYPE#<NONE>) N 1 6
+
+Ship Class 16
+
+This option specifies the MAXIMUM Phaser type for this
+class of ship. Setting this option to 0 means this class
+of ship has no phasers at all.
+
+S16PHSR {  Maximum Phaser Type: 5} (S16TYPE#<NONE>) N 1 5
+
+Ship Class 16
+
+This option specifies if this ship class has torpedo
+capability.
+
+S16TORP {  Has Torpedo Capability? YES} (S16TYPE#<NONE>) B
+
+Ship Class 16
+
+This option specifies if this ship class has missile
+capability.
+
+S16MISL {  Has Missile Capability? YES} (S16TYPE#<NONE>) B
+
+Ship Class 16
+
+This option specifies if this ship class has decoy 
+launching capability.
+
+S16DECY {  Has Decoy Capability? YES} (S16TYPE#<NONE>) B
+
+Ship Class 16
+
+This option specifies if this ship class has jamming
+capabilities.
+
+S16JAMMR {  Has Jammer Capability? YES} (S16TYPE#<NONE>) B
+
+Ship Class 16
+
+This option specifies if this ship class has zipper
+launching capabilities.
+
+S16ZIPPR {  Has Zipper Capability? YES} (S16TYPE#<NONE>) B
+
+Ship Class 16
+
+This option specifies if this ship class has mine 
+launching capabilities.
+
+S16MINE {  Has Mine Capability? YES} (S16TYPE#<NONE>) B
+
+Ship Class 16
+
+This option specifies if this ship class has planetary
+attack capability.
+
+S16ATTK {  Has Attack Planet Capability? YES} (S16TYPE#<NONE>) B
+
+Ship Class 16
+
+This option specifies if this ship class has cloaking
+capability.
+
+S16CLOK {  Has Cloaking Capability? NO} (S16TYPE#<NONE>) B
+
+Ship Class 16
+
+This option controls the acceleration rate for this class
+of ship.
+
+S16ACCL {  Acceleration Rate: 200} (S16TYPE#<NONE>) N 20 20000
+
+Ship Class 16
+
+This option specifies the maximum warp for this class of
+ship.
+
+S16WARP {  Maximum Warp: 50} (S16TYPE#<NONE>) N 1 100
+
+Ship Class 16
+
+This option specifies the maximum weight in tons for this
+class of ship.
+
+S16TONS {  Maximum Tonnage (in 100's): 400} (S16TYPE#<NONE>) N 1 5000
+
+Ship Class 16
+
+This option specifies the price for each ship in this
+class.
+
+S16PRIC {  Price for each ship (in 1000's): 2500} (S16TYPE#<NONE>) N 1 32000
+
+Ship Class 16
+
+This option specifies the points awarded to another player
+for killing this class of ship.
+
+S16PNTS {  Points awarded for kill: 500} (S16TYPE#<NONE>) N 1 1000
+
+This option specifies the maximum range in thousands for
+the range scanners in this class of ship.
+
+S16SRNG {  Scan Range (in 1000's): 500} (S16TYPE#<NONE>) N 1 32767
+
+Ship Class 16
+
+This option determines if this class of ship is "attackable"
+by cybertrons. If NO then Cyb's will only attack it if 
+provoked. If YES then they will attack on sight.
+
+S16CATK {  Cyb's can attack this class ship: YES } (S16TYPE#<NONE>) B
+
+Ship Class 16
+
+This option deternines the number of Cybs that will come
+after this class of ship at the same time. Set to 0 to
+have Cyb's leave it alone. Set to higher numbers to
+have this class massed by cybs.
+
+S16NATK {  Number of cyb's to attack this class: 2 } (S16TYPE#<NONE>) N 0 255
+
+Ship Class 17
+
+This option specifies the TYPE of ship.
+ 
+USER = A ship a user can purchase and fly.
+CYBORG = A Cybertron ship controlled by the automated
+         battle logic in the game.
+DROID = A non-combatant ship (sometimes) controlled by
+        much simpler navigation logic.
+
+S17TYPE {Class 17 type of Ship? <NONE>} E USER CYBORG DROID <NONE> 
+
+Ship Class 17
+
+This is the name of this class of ship.
+
+S17NAME {} (S17TYPE#<NONE>) S 29 Class-17 Ship Name
+
+Ship Class 17
+
+This is the name of the ship itself (i.e. Cyber-destroyer)
+For USER ships this field is blank.
+
+S17SNAME {} (S17TYPE#<NONE>,USER) S 29 Class-17 Ship title name
+
+Ship Class 17
+
+This option specifies the MAXIMUM shield type for this
+class of ship. Setting this option to 0 means this class
+of ship has no shields at all.
+
+S17SHLD {  Maximum Shield Type: 6} (S17TYPE#<NONE>) N 1 6
+
+Ship Class 17
+
+This option specifies the MAXIMUM Phaser type for this
+class of ship. Setting this option to 0 means this class
+of ship has no phasers at all.
+
+S17PHSR {  Maximum Phaser Type: 5} (S17TYPE#<NONE>) N 1 5
+
+Ship Class 17
+
+This option specifies if this ship class has torpedo
+capability.
+
+S17TORP {  Has Torpedo Capability? YES} (S17TYPE#<NONE>) B
+
+Ship Class 17
+
+This option specifies if this ship class has missile
+capability.
+
+S17MISL {  Has Missile Capability? YES} (S17TYPE#<NONE>) B
+
+Ship Class 17
+
+This option specifies if this ship class has decoy 
+launching capability.
+
+S17DECY {  Has Decoy Capability? YES} (S17TYPE#<NONE>) B
+
+Ship Class 17
+
+This option specifies if this ship class has jamming
+capabilities.
+
+S17JAMMR {  Has Jammer Capability? YES} (S17TYPE#<NONE>) B
+
+Ship Class 17
+
+This option specifies if this ship class has zipper
+launching capabilities.
+
+S17ZIPPR {  Has Zipper Capability? YES} (S17TYPE#<NONE>) B
+
+Ship Class 17
+
+This option specifies if this ship class has mine 
+launching capabilities.
+
+S17MINE {  Has Mine Capability? YES} (S17TYPE#<NONE>) B
+
+Ship Class 17
+
+This option specifies if this ship class has planetary
+attack capability.
+
+S17ATTK {  Has Attack Planet Capability? YES} (S17TYPE#<NONE>) B
+
+Ship Class 17
+
+This option specifies if this ship class has cloaking
+capability.
+
+S17CLOK {  Has Cloaking Capability? NO} (S17TYPE#<NONE>) B
+
+Ship Class 17
+
+This option controls the acceleration rate for this class
+of ship.
+
+S17ACCL {  Acceleration Rate: 200} (S17TYPE#<NONE>) N 20 20000
+
+Ship Class 17
+
+This option specifies the maximum warp for this class of
+ship.
+
+S17WARP {  Maximum Warp: 50} (S17TYPE#<NONE>) N 1 100
+
+Ship Class 17
+
+This option specifies the maximum weight in tons for this
+class of ship.
+
+S17TONS {  Maximum Tonnage (in 100's): 400} (S17TYPE#<NONE>) N 1 5000
+
+Ship Class 17
+
+This option specifies the price for each ship in this
+class.
+
+S17PRIC {  Price for each ship (in 1000's): 2500} (S17TYPE#<NONE>) N 1 32000
+
+Ship Class 17
+
+This option specifies the points awarded to another player
+for killing this class of ship.
+
+S17PNTS {  Points awarded for kill: 500} (S17TYPE#<NONE>) N 1 1000
+
+This option specifies the maximum range in thousands for
+the range scanners in this class of ship.
+
+S17SRNG {  Scan Range (in 1000's): 500} (S17TYPE#<NONE>) N 1 32767
+
+Ship Class 17
+
+This option determines if this class of ship is "attackable"
+by cybertrons. If NO then Cyb's will only attack it if 
+provoked. If YES then they will attack on sight.
+
+S17CATK {  Cyb's can attack this class ship: YES } (S17TYPE#<NONE>) B
+
+Ship Class 17
+
+This option deternines the number of Cybs that will come
+after this class of ship at the same time. Set to 0 to
+have Cyb's leave it alone. Set to higher numbers to
+have this class massed by cybs.
+
+S17NATK {  Number of cyb's to attack this class: 2 } (S17TYPE#<NONE>) N 0 255
+
+Ship Class 18
+
+This option specifies the TYPE of ship.
+ 
+USER = A ship a user can purchase and fly.
+CYBORG = A Cybertron ship controlled by the automated
+         battle logic in the game.
+DROID = A non-combatant ship (sometimes) controlled by
+        much simpler navigation logic.
+
+S18TYPE {Class 18 type of Ship? <NONE>} E USER CYBORG DROID <NONE> 
+
+Ship Class 18
+
+This is the name of this class of ship.
+
+S18NAME {} (S18TYPE#<NONE>) S 29 Class-18 Ship Name
+
+Ship Class 18
+
+This is the name of the ship itself (i.e. Cyber-destroyer)
+For USER ships this field is blank.
+
+S18SNAME {} (S18TYPE#<NONE>,USER) S 29 Class-18 Ship title name
+
+Ship Class 18
+
+This option specifies the MAXIMUM shield type for this
+class of ship. Setting this option to 0 means this class
+of ship has no shields at all.
+
+S18SHLD {  Maximum Shield Type: 6} (S18TYPE#<NONE>) N 1 6
+
+Ship Class 18
+
+This option specifies the MAXIMUM Phaser type for this
+class of ship. Setting this option to 0 means this class
+of ship has no phasers at all.
+
+S18PHSR {  Maximum Phaser Type: 5} (S18TYPE#<NONE>) N 1 5
+
+Ship Class 18
+
+This option specifies if this ship class has torpedo
+capability.
+
+S18TORP {  Has Torpedo Capability? YES} (S18TYPE#<NONE>) B
+
+Ship Class 18
+
+This option specifies if this ship class has missile
+capability.
+
+S18MISL {  Has Missile Capability? YES} (S18TYPE#<NONE>) B
+
+Ship Class 18
+
+This option specifies if this ship class has decoy 
+launching capability.
+
+S18DECY {  Has Decoy Capability? YES} (S18TYPE#<NONE>) B
+
+Ship Class 18
+
+This option specifies if this ship class has jamming
+capabilities.
+
+S18JAMMR {  Has Jammer Capability? YES} (S18TYPE#<NONE>) B
+
+Ship Class 18
+
+This option specifies if this ship class has zipper
+launching capabilities.
+
+S18ZIPPR {  Has Zipper Capability? YES} (S18TYPE#<NONE>) B
+
+Ship Class 18
+
+This option specifies if this ship class has mine 
+launching capabilities.
+
+S18MINE {  Has Mine Capability? YES} (S18TYPE#<NONE>) B
+
+Ship Class 18
+
+This option specifies if this ship class has planetary
+attack capability.
+
+S18ATTK {  Has Attack Planet Capability? YES} (S18TYPE#<NONE>) B
+
+Ship Class 18
+
+This option specifies if this ship class has cloaking
+capability.
+
+S18CLOK {  Has Cloaking Capability? NO} (S18TYPE#<NONE>) B
+
+Ship Class 18
+
+This option controls the acceleration rate for this class
+of ship.
+
+S18ACCL {  Acceleration Rate: 200} (S18TYPE#<NONE>) N 20 20000
+
+Ship Class 18
+
+This option specifies the maximum warp for this class of
+ship.
+
+S18WARP {  Maximum Warp: 50} (S18TYPE#<NONE>) N 1 100
+
+Ship Class 18
+
+This option specifies the maximum weight in tons for this
+class of ship.
+
+S18TONS {  Maximum Tonnage (in 100's): 400} (S18TYPE#<NONE>) N 1 5000
+
+Ship Class 18
+
+This option specifies the price for each ship in this
+class.
+
+S18PRIC {  Price for each ship (in 1000's): 2500} (S18TYPE#<NONE>) N 1 32000
+
+Ship Class 18
+
+This option specifies the points awarded to another player
+for killing this class of ship.
+
+S18PNTS {  Points awarded for kill: 500} (S18TYPE#<NONE>) N 1 1000
+
+This option specifies the maximum range in thousands for
+the range scanners in this class of ship.
+
+S18SRNG {  Scan Range (in 1000's): 500} (S18TYPE#<NONE>) N 1 32767
+
+Ship Class 18
+
+This option determines if this class of ship is "attackable"
+by cybertrons. If NO then Cyb's will only attack it if 
+provoked. If YES then they will attack on sight.
+
+S18CATK {  Cyb's can attack this class ship: YES } (S18TYPE#<NONE>) B
+
+Ship Class 18
+
+This option deternines the number of Cybs that will come
+after this class of ship at the same time. Set to 0 to
+have Cyb's leave it alone. Set to higher numbers to
+have this class massed by cybs.
+
+S18NATK {  Number of cyb's to attack this class: 2 } (S18TYPE#<NONE>) N 0 255
+
+Ship Class 19
+
+This option specifies the TYPE of ship.
+ 
+USER = A ship a user can purchase and fly.
+CYBORG = A Cybertron ship controlled by the automated
+         battle logic in the game.
+DROID = A non-combatant ship (sometimes) controlled by
+        much simpler navigation logic.
+
+S19TYPE {Class 19 type of Ship? <NONE>} E USER CYBORG DROID <NONE> 
+
+Ship Class 19
+
+This is the name of this class of ship.
+
+S19NAME {} (S19TYPE#<NONE>) S 29 Class-19 Ship Name
+
+Ship Class 19
+
+This is the name of the ship itself (i.e. Cyber-destroyer)
+For USER ships this field is blank.
+
+S19SNAME {} (S19TYPE#<NONE>,USER) S 29 Class-19 Ship title name
+
+Ship Class 19
+
+This option specifies the MAXIMUM shield type for this
+class of ship. Setting this option to 0 means this class
+of ship has no shields at all.
+
+S19SHLD {  Maximum Shield Type: 6} (S19TYPE#<NONE>) N 1 6
+
+Ship Class 19
+
+This option specifies the MAXIMUM Phaser type for this
+class of ship. Setting this option to 0 means this class
+of ship has no phasers at all.
+
+S19PHSR {  Maximum Phaser Type: 5} (S19TYPE#<NONE>) N 1 5
+
+Ship Class 19
+
+This option specifies if this ship class has torpedo
+capability.
+
+S19TORP {  Has Torpedo Capability? YES} (S19TYPE#<NONE>) B
+
+Ship Class 19
+
+This option specifies if this ship class has missile
+capability.
+
+S19MISL {  Has Missile Capability? YES} (S19TYPE#<NONE>) B
+
+Ship Class 19
+
+This option specifies if this ship class has decoy 
+launching capability.
+
+S19DECY {  Has Decoy Capability? YES} (S19TYPE#<NONE>) B
+
+Ship Class 19
+
+This option specifies if this ship class has jamming
+capabilities.
+
+S19JAMMR {  Has Jammer Capability? YES} (S19TYPE#<NONE>) B
+
+Ship Class 19
+
+This option specifies if this ship class has zipper
+launching capabilities.
+
+S19ZIPPR {  Has Zipper Capability? YES} (S19TYPE#<NONE>) B
+
+Ship Class 19
+
+This option specifies if this ship class has mine 
+launching capabilities.
+
+S19MINE {  Has Mine Capability? YES} (S19TYPE#<NONE>) B
+
+Ship Class 19
+
+This option specifies if this ship class has planetary
+attack capability.
+
+S19ATTK {  Has Attack Planet Capability? YES} (S19TYPE#<NONE>) B
+
+Ship Class 19
+
+This option specifies if this ship class has cloaking
+capability.
+
+S19CLOK {  Has Cloaking Capability? NO} (S19TYPE#<NONE>) B
+
+Ship Class 19
+
+This option controls the acceleration rate for this class
+of ship.
+
+S19ACCL {  Acceleration Rate: 200} (S19TYPE#<NONE>) N 20 20000
+
+Ship Class 19
+
+This option specifies the maximum warp for this class of
+ship.
+
+S19WARP {  Maximum Warp: 50} (S19TYPE#<NONE>) N 1 100
+
+Ship Class 19
+
+This option specifies the maximum weight in tons for this
+class of ship.
+
+S19TONS {  Maximum Tonnage (in 100's): 400} (S19TYPE#<NONE>) N 1 5000
+
+Ship Class 19
+
+This option specifies the price for each ship in this
+class.
+
+S19PRIC {  Price for each ship (in 1000's): 2500} (S19TYPE#<NONE>) N 1 32000
+
+Ship Class 19
+
+This option specifies the points awarded to another player
+for killing this class of ship.
+
+S19PNTS {  Points awarded for kill: 500} (S19TYPE#<NONE>) N 1 1000
+
+This option specifies the maximum range in thousands for
+the range scanners in this class of ship.
+
+S19SRNG {  Scan Range (in 1000's): 500} (S19TYPE#<NONE>) N 1 32767
+
+Ship Class 19
+
+This option determines if this class of ship is "attackable"
+by cybertrons. If NO then Cyb's will only attack it if 
+provoked. If YES then they will attack on sight.
+
+S19CATK {  Cyb's can attack this class ship: YES } (S19TYPE#<NONE>) B
+
+Ship Class 19
+
+This option deternines the number of Cybs that will come
+after this class of ship at the same time. Set to 0 to
+have Cyb's leave it alone. Set to higher numbers to
+have this class massed by cybs.
+
+S19NATK {  Number of cyb's to attack this class: 2 } (S19TYPE#<NONE>) N 0 255
+
+Ship Class 20
+
+This option specifies the TYPE of ship.
+ 
+USER = A ship a user can purchase and fly.
+CYBORG = A Cybertron ship controlled by the automated
+         battle logic in the game.
+DROID = A non-combatant ship (sometimes) controlled by
+        much simpler navigation logic.
+
+S20TYPE {Class 20 type of Ship? <NONE>} E USER CYBORG DROID <NONE> 
+
+Ship Class 20
+
+This is the name of this class of ship.
+
+S20NAME {} (S20TYPE#<NONE>) S 29 Class-20 Ship Name
+
+Ship Class 20
+
+This is the name of the ship itself (i.e. Cyber-destroyer)
+For USER ships this field is blank.
+
+S20SNAME {} (S20TYPE#<NONE>,USER) S 29 Class-20 Ship title name
+
+Ship Class 20
+
+This option specifies the MAXIMUM shield type for this
+class of ship. Setting this option to 0 means this class
+of ship has no shields at all.
+
+S20SHLD {  Maximum Shield Type: 6} (S20TYPE#<NONE>) N 1 6
+
+Ship Class 20
+
+This option specifies the MAXIMUM Phaser type for this
+class of ship. Setting this option to 0 means this class
+of ship has no phasers at all.
+
+S20PHSR {  Maximum Phaser Type: 5} (S20TYPE#<NONE>) N 1 5
+
+Ship Class 20
+
+This option specifies if this ship class has torpedo
+capability.
+
+S20TORP {  Has Torpedo Capability? YES} (S20TYPE#<NONE>) B
+
+Ship Class 20
+
+This option specifies if this ship class has missile
+capability.
+
+S20MISL {  Has Missile Capability? YES} (S20TYPE#<NONE>) B
+
+Ship Class 20
+
+This option specifies if this ship class has decoy 
+launching capability.
+
+S20DECY {  Has Decoy Capability? YES} (S20TYPE#<NONE>) B
+
+Ship Class 20
+
+This option specifies if this ship class has jamming
+capabilities.
+
+S20JAMMR {  Has Jammer Capability? YES} (S20TYPE#<NONE>) B
+
+Ship Class 20
+
+This option specifies if this ship class has zipper
+launching capabilities.
+
+S20ZIPPR {  Has Zipper Capability? YES} (S20TYPE#<NONE>) B
+
+Ship Class 20
+
+This option specifies if this ship class has mine 
+launching capabilities.
+
+S20MINE {  Has Mine Capability? YES} (S20TYPE#<NONE>) B
+
+Ship Class 20
+
+This option specifies if this ship class has planetary
+attack capability.
+
+S20ATTK {  Has Attack Planet Capability? YES} (S20TYPE#<NONE>) B
+
+Ship Class 20
+
+This option specifies if this ship class has cloaking
+capability.
+
+S20CLOK {  Has Cloaking Capability? NO} (S20TYPE#<NONE>) B
+
+Ship Class 20
+
+This option controls the acceleration rate for this class
+of ship.
+
+S20ACCL {  Acceleration Rate: 200} (S20TYPE#<NONE>) N 20 20000
+
+Ship Class 20
+
+This option specifies the maximum warp for this class of
+ship.
+
+S20WARP {  Maximum Warp: 50} (S20TYPE#<NONE>) N 1 100
+
+Ship Class 20
+
+This option specifies the maximum weight in tons for this
+class of ship.
+
+S20TONS {  Maximum Tonnage (in 100's): 400} (S20TYPE#<NONE>) N 1 5000
+
+Ship Class 20
+
+This option specifies the price for each ship in this
+class.
+
+S20PRIC {  Price for each ship (in 1000's): 2500} (S20TYPE#<NONE>) N 1 32000
+
+Ship Class 20
+
+This option specifies the points awarded to another player
+for killing this class of ship.
+
+S20PNTS {  Points awarded for kill: 500} (S20TYPE#<NONE>) N 1 1000
+
+This option specifies the maximum range in thousands for
+the range scanners in this class of ship.
+
+S20SRNG {  Scan Range (in 1000's): 500} (S20TYPE#<NONE>) N 1 32767
+
+Ship Class 20
+
+This option determines if this class of ship is "attackable"
+by cybertrons. If NO then Cyb's will only attack it if 
+provoked. If YES then they will attack on sight.
+
+S20CATK {  Cyb's can attack this class ship: YES } (S20TYPE#<NONE>) B
+
+Ship Class 20
+
+This option deternines the number of Cybs that will come
+after this class of ship at the same time. Set to 0 to
+have Cyb's leave it alone. Set to higher numbers to
+have this class massed by cybs.
+
+S20NATK {  Number of cyb's to attack this class: 2 } (S20TYPE#<NONE>) N 0 255
+
+Ship Class 21
+
+This option specifies the TYPE of ship.
+ 
+USER = A ship a user can purchase and fly.
+CYBORG = A Cybertron ship controlled by the automated
+         battle logic in the game.
+DROID = A non-combatant ship (sometimes) controlled by
+        much simpler navigation logic.
+
+S21TYPE {Class 21 type of Ship? CYBORG} E USER CYBORG DROID <NONE> 
+
+Ship Class 21
+
+This is the name of this class of ship.
+
+S21NAME {Simultron} (S21TYPE#<NONE>) S 29 Class-21 Ship Name
+
+Ship Class 21
+
+This is the name of the ship itself (i.e. Cyber-destroyer)
+For USER ships this field is blank.
+
+S21SNAME {Simultron } (S21TYPE#<NONE>,USER) S 29 Class-21 Ship title name
+
+Ship Class 21
+
+This option specifies the MAXIMUM shield type for this
+class of ship. Setting this option to 0 means this class
+of ship has no shields at all.
+
+S21SHLD {  Maximum Shield Type: 1} (S21TYPE#<NONE>) N 1 6
+
+Ship Class 21
+
+This option specifies the MAXIMUM Phaser type for this
+class of ship. Setting this option to 0 means this class
+of ship has no phasers at all.
+
+S21PHSR {  Maximum Phaser Type: 1} (S21TYPE#<NONE>) N 1 5
+
+Ship Class 21
+
+This option specifies if this ship class has torpedo
+capability.
+
+S21TORP {  Has Torpedo Capability? YES} (S21TYPE#<NONE>) B
+
+Ship Class 21
+
+This option specifies if this ship class has missile
+capability.
+
+S21MISL {  Has Missile Capability? NO} (S21TYPE#<NONE>) B
+
+Ship Class 21
+
+This option specifies if this ship class has decoy 
+launching capability.
+
+S21DECY {  Has Decoy Capability? YES} (S21TYPE#<NONE>) B
+
+Ship Class 21
+
+This option specifies if this ship class has jamming
+capabilities.
+
+S21JAMMR {  Has Jammer Capability? NO} (S21TYPE#<NONE>) B
+
+Ship Class 21
+
+This option specifies if this ship class has zipper
+launching capabilities.
+
+S21ZIPPR {  Has Zipper Capability? YES} (S21TYPE#<NONE>) B
+
+Ship Class 21
+
+This option specifies if this ship class has mine 
+launching capabilities.
+
+S21MINE {  Has Mine Capability? NO} (S21TYPE#<NONE>) B
+
+Ship Class 21
+
+This option specifies if this ship class has planetary
+attack capability.
+
+S21ATTK {  Has Attack Planet Capability? NO} (S21TYPE#<NONE>) B
+
+Ship Class 21
+
+This option specifies if this ship class has cloaking
+capability.
+
+S21CLOK {  Has Cloaking Capability? NO} (S21TYPE#<NONE>) B
+
+Ship Class 21
+
+This option controls the acceleration rate for this class
+of ship.
+
+S21ACCL {  Acceleration Rate: 700} (S21TYPE#<NONE>) N 20 20000
+
+Ship Class 21
+
+This option specifies the maximum warp for this class of
+ship.
+
+S21WARP {  Maximum Warp: 12} (S21TYPE#<NONE>) N 1 100
+
+Ship Class 21
+
+This option specifies the maximum weight in tons for this
+class of ship.
+
+S21TONS {  Maximum Tonnage (in 100's): 20} (S21TYPE#<NONE>) N 1 5000
+
+Ship Class 21
+
+This option specifies the price for each ship in this
+class.
+
+S21PRIC {  Price for each ship (in 1000's): 20} (S21TYPE#<NONE>) N 1 32000
+
+Ship Class 21
+
+This option specifies the points awarded to another player
+for killing this class of ship.
+
+S21PNTS {  Points awarded for kill: 75} (S21TYPE#<NONE>) N 1 1000
+
+Ship Class 21
+
+This option specifies the maximum range in thousands for
+the range scanners in this class of ship.
+
+S21SRNG {  Scan Range (in 1000's): 25} (S21TYPE#<NONE>) N 1 32767
+
+Ship Class 21
+
+This option determines if this class of ship is "attackable"
+by cybertrons. If NO then Cyb's will only attack it if 
+provoked. If YES then they will attack on sight.
+
+S21CATK {  Cyb's can attack this class ship: NO} (S21TYPE#<NONE>) B
+
+Ship Class 21
+
+This option deternines the number of Cybs that will come
+after this class of ship at the same time. Set to 0 to
+have Cyb's leave it alone. Set to higher numbers to
+have this class massed by cybs.
+
+S21NATK {  Number of cyb's to attack this class: 2 } (S21TYPE#<NONE>) N 0 255
+
+Ship Class 22
+
+This option specifies the TYPE of ship.
+ 
+USER = A ship a user can purchase and fly.
+CYBORG = A Cybertron ship controlled by the automated
+         battle logic in the game.
+DROID = A non-combatant ship (sometimes) controlled by
+        much simpler navigation logic.
+
+S22TYPE {Class 22 type of Ship? CYBORG} E USER CYBORG DROID <NONE> 
+
+Ship Class 22
+
+This is the name of this class of ship.
+
+S22NAME {Simultron} (S22TYPE#<NONE>) S 29 Class-22 Ship Name
+
+Ship Class 22
+
+This is the name of the ship itself (i.e. Cyber-destroyer)
+For USER ships this field is blank.
+
+S22SNAME {Simultron } (S22TYPE#<NONE>,USER) S 29 Class-22 Ship title name
+
+Ship Class 22
+
+This option specifies the MAXIMUM shield type for this
+class of ship. Setting this option to 0 means this class
+of ship has no shields at all.
+
+S22SHLD {  Maximum Shield Type: 3} (S22TYPE#<NONE>) N 1 6
+
+Ship Class 22
+
+This option specifies the MAXIMUM Phaser type for this
+class of ship. Setting this option to 0 means this class
+of ship has no phasers at all.
+
+S22PHSR {  Maximum Phaser Type: 3} (S22TYPE#<NONE>) N 1 5
+
+Ship Class 22
+
+This option specifies if this ship class has torpedo
+capability.
+
+S22TORP {  Has Torpedo Capability? YES} (S22TYPE#<NONE>) B
+
+Ship Class 22
+
+This option specifies if this ship class has missile
+capability.
+
+S22MISL {  Has Missile Capability? NO} (S22TYPE#<NONE>) B
+
+Ship Class 22
+
+This option specifies if this ship class has decoy 
+launching capability.
+
+S22DECY {  Has Decoy Capability? YES} (S22TYPE#<NONE>) B
+
+Ship Class 22
+
+This option specifies if this ship class has jamming
+capabilities.
+
+S22JAMMR {  Has Jammer Capability? YES} (S22TYPE#<NONE>) B
+
+Ship Class 22
+
+This option specifies if this ship class has zipper
+launching capabilities.
+
+S22ZIPPR {  Has Zipper Capability? YES} (S22TYPE#<NONE>) B
+
+Ship Class 22
+
+This option specifies if this ship class has mine 
+launching capabilities.
+
+S22MINE {  Has Mine Capability? YES} (S22TYPE#<NONE>) B
+
+Ship Class 22
+
+This option specifies if this ship class has planetary
+attack capability.
+
+S22ATTK {  Has Attack Planet Capability? YES} (S22TYPE#<NONE>) B
+
+Ship Class 22
+
+This option specifies if this ship class has cloaking
+capability.
+
+S22CLOK {  Has Cloaking Capability? NO} (S22TYPE#<NONE>) B
+
+Ship Class 22
+
+This option controls the acceleration rate for this class
+of ship.
+
+S22ACCL {  Acceleration Rate: 400} (S22TYPE#<NONE>) N 20 20000
+
+Ship Class 22
+
+This option specifies the maximum warp for this class of
+ship.
+
+S22WARP {  Maximum Warp: 20} (S22TYPE#<NONE>) N 1 100
+
+Ship Class 22
+
+This option specifies the maximum weight in tons for this
+class of ship.
+
+S22TONS {  Maximum Tonnage (in 100's): 15} (S22TYPE#<NONE>) N 1 5000
+
+Ship Class 22
+
+This option specifies the price for each ship in this
+class.
+
+S22PRIC {  Price for each ship (in 1000's): 20} (S22TYPE#<NONE>) N 1 32000
+
+Ship Class 22
+
+This option specifies the points awarded to another player
+for killing this class of ship.
+
+S22PNTS {  Points awarded for kill: 200} (S22TYPE#<NONE>) N 1 1000
+
+Ship Class 22
+
+This option specifies the maximum range in thousands for
+the range scanners in this class of ship.
+
+S22SRNG {  Scan Range (in 1000's): 25} (S22TYPE#<NONE>) N 1 32767
+
+Ship Class 22
+
+This option determines if this class of ship is "attackable"
+by cybertrons. If NO then Cyb's will only attack it if 
+provoked. If YES then they will attack on sight.
+
+S22CATK {  Cyb's can attack this class ship: NO} (S22TYPE#<NONE>) B
+
+Ship Class 22
+
+This option deternines the number of Cybs that will come
+after this class of ship at the same time. Set to 0 to
+have Cyb's leave it alone. Set to higher numbers to
+have this class massed by cybs.
+
+S22NATK {  Number of cyb's to attack this class: 2 } (S22TYPE#<NONE>) N 0 255
+
+Ship Class 31
+
+This option specifies the TYPE of ship.
+ 
+USER = A ship a user can purchase and fly.
+CYBORG = A Cybertron ship controlled by the automated
+         battle logic in the game.
+DROID = A non-combatant ship (sometimes) controlled by
+        much simpler navigation logic.
+
+S31TYPE {Class 31 type of Ship? DROID} E USER CYBORG DROID <NONE> 
+
+Ship Class 31
+
+This is the name of this class of ship.
+
+S31NAME {Lydorian Garbage Scow} (S31TYPE#<NONE>) S 29 Class-31 Ship Name
+
+Ship Class 31
+
+This is the name of the ship itself (i.e. Cyber-destroyer)
+For USER ships this field is blank.
+
+S31SNAME {NCC Lx4} (S31TYPE#<NONE>,USER) S 29 Class-31 Ship title name
+
+Ship Class 31
+
+This option specifies the MAXIMUM shield type for this
+class of ship. Setting this option to 0 means this class
+of ship has no shields at all.
+
+S31SHLD {  Maximum Shield Type: 1} (S31TYPE#<NONE>) N 1 6
+
+Ship Class 31
+
+This option specifies the MAXIMUM Phaser type for this
+class of ship. Setting this option to 0 means this class
+of ship has no phasers at all.
+
+S31PHSR {  Maximum Phaser Type: 1} (S31TYPE#<NONE>) N 1 5
+
+Ship Class 31
+
+This option specifies if this ship class has torpedo
+capability.
+
+S31TORP {  Has Torpedo Capability? NO} (S31TYPE#<NONE>) B
+
+Ship Class 31
+
+This option specifies if this ship class has missile
+capability.
+
+S31MISL {  Has Missile Capability? NO} (S31TYPE#<NONE>) B
+
+Ship Class 31
+
+This option specifies if this ship class has decoy 
+launching capability.
+
+S31DECY {  Has Decoy Capability? YES} (S31TYPE#<NONE>) B
+
+Ship Class 31
+
+This option specifies if this ship class has jamming
+capabilities.
+
+S31JAMMR {  Has Jammer Capability? YES} (S31TYPE#<NONE>) B
+
+Ship Class 31
+
+This option specifies if this ship class has zipper
+launching capabilities.
+
+S31ZIPPR {  Has Zipper Capability? YES} (S31TYPE#<NONE>) B
+
+Ship Class 31
+
+This option specifies if this ship class has mine 
+launching capabilities.
+
+S31MINE {  Has Mine Capability? YES} (S31TYPE#<NONE>) B
+
+Ship Class 31
+
+This option specifies if this ship class has planetary
+attack capability.
+
+S31ATTK {  Has Attack Planet Capability? NO} (S31TYPE#<NONE>) B
+
+Ship Class 31
+
+This option specifies if this ship class has cloaking
+capability.
+
+S31CLOK {  Has Cloaking Capability? NO} (S31TYPE#<NONE>) B
+
+Ship Class 31
+
+This option controls the acceleration rate for this class
+of ship.
+
+S31ACCL {  Acceleration Rate: 50} (S31TYPE#<NONE>) N 20 20000
+
+Ship Class 31
+
+This option specifies the maximum warp for this class of
+ship.
+
+S31WARP {  Maximum Warp: 1} (S31TYPE#<NONE>) N 1 100
+
+Ship Class 31
+
+This option specifies the maximum weight in tons for this
+class of ship.
+
+S31TONS {  Maximum Tonnage (in 100's): 500} (S31TYPE#<NONE>) N 1 5000
+
+Ship Class 31
+
+This option specifies the price for each ship in this
+class.
+
+S31PRIC {  Price for each ship (in 1000's): 20} (S31TYPE#<NONE>) N 1 32000
+
+Ship Class 31
+
+This option specifies the points awarded to another player
+for killing this class of ship.
+
+S31PNTS {  Points awarded for kill: 5} (S31TYPE#<NONE>) N 1 1000
+
+Ship Class 31
+
+This option specifies the maximum range in thousands for
+the range scanners in this class of ship.
+
+S31SRNG {  Scan Range (in 1000's): 25} (S31TYPE#<NONE>) N 1 32767
+
+Ship Class 31
+
+This option determines if this class of ship is "attackable"
+by cybertrons. If NO then Cyb's will only attack it if 
+provoked. If YES then they will attack on sight.
+
+S31CATK {  Cyb's can attack this class ship: NO} (S31TYPE#<NONE>) B
+
+Ship Class 31
+
+This option deternines the number of Cybs that will come
+after this class of ship at the same time. Set to 0 to
+have Cyb's leave it alone. Set to higher numbers to
+have this class massed by cybs.
+
+S31NATK {  Number of cyb's to attack this class: 2 } (S31TYPE#<NONE>) N 0 255
+
+Ship Class 32
+
+This option specifies the TYPE of ship.
+ 
+USER = A ship a user can purchase and fly.
+CYBORG = A Cybertron ship controlled by the automated
+         battle logic in the game.
+DROID = A non-combatant ship (sometimes) controlled by
+        much simpler navigation logic.
+
+S32TYPE {Class 32 type of Ship? DROID} E USER CYBORG DROID <NONE> 
+
+Ship Class 32
+
+This is the name of this class of ship.
+
+S32NAME {Murdonian Transport} (S32TYPE#<NONE>) S 29 Class-32 Ship Name
+
+Ship Class 32
+
+This is the name of the ship itself (i.e. Cyber-destroyer)
+For USER ships this field is blank.
+
+S32SNAME {Trans-Gal #2} (S32TYPE#<NONE>,USER) S 29 Class-32 Ship title name
+
+Ship Class 32
+
+This option specifies the MAXIMUM shield type for this
+class of ship. Setting this option to 0 means this class
+of ship has no shields at all.
+
+S32SHLD {  Maximum Shield Type: 2} (S32TYPE#<NONE>) N 1 6
+
+Ship Class 32
+
+This option specifies the MAXIMUM Phaser type for this
+class of ship. Setting this option to 0 means this class
+of ship has no phasers at all.
+
+S32PHSR {  Maximum Phaser Type: 5} (S32TYPE#<NONE>) N 1 5
+
+Ship Class 32
+
+This option specifies if this ship class has torpedo
+capability.
+
+S32TORP {  Has Torpedo Capability? NO} (S32TYPE#<NONE>) B
+
+Ship Class 32
+
+This option specifies if this ship class has missile
+capability.
+
+S32MISL {  Has Missile Capability? NO} (S32TYPE#<NONE>) B
+
+Ship Class 32
+
+This option specifies if this ship class has decoy 
+launching capability.
+
+S32DECY {  Has Decoy Capability? YES} (S32TYPE#<NONE>) B
+
+Ship Class 32
+
+This option specifies if this ship class has jamming
+capabilities.
+
+S32JAMMR {  Has Jammer Capability? YES} (S32TYPE#<NONE>) B
+
+Ship Class 32
+
+This option specifies if this ship class has zipper
+launching capabilities.
+
+S32ZIPPR {  Has Zipper Capability? YES} (S32TYPE#<NONE>) B
+
+Ship Class 32
+
+This option specifies if this ship class has mine 
+launching capabilities.
+
+S32MINE {  Has Mine Capability? YES} (S32TYPE#<NONE>) B
+
+Ship Class 32
+
+This option specifies if this ship class has planetary
+attack capability.
+
+S32ATTK {  Has Attack Planet Capability? NO} (S32TYPE#<NONE>) B
+
+Ship Class 32
+
+This option specifies if this ship class has cloaking
+capability.
+
+S32CLOK {  Has Cloaking Capability? NO} (S32TYPE#<NONE>) B
+
+Ship Class 32
+
+This option controls the acceleration rate for this class
+of ship.
+
+S32ACCL {  Acceleration Rate: 400} (S32TYPE#<NONE>) N 20 20000
+
+Ship Class 32
+
+This option specifies the maximum warp for this class of
+ship.
+
+S32WARP {  Maximum Warp: 8} (S32TYPE#<NONE>) N 1 100
+
+Ship Class 32
+
+This option specifies the maximum weight in tons for this
+class of ship.
+
+S32TONS {  Maximum Tonnage (in 100's): 500} (S32TYPE#<NONE>) N 1 5000
+
+Ship Class 32
+
+This option specifies the price for each ship in this
+class.
+
+S32PRIC {  Price for each ship (in 1000's): 20} (S32TYPE#<NONE>) N 1 32000
+
+Ship Class 32
+
+This option specifies the points awarded to another player
+for killing this class of ship.
+
+S32PNTS {  Points awarded for kill: 200} (S32TYPE#<NONE>) N 1 1000
+
+Ship Class 32
+
+This option specifies the maximum range in thousands for
+the range scanners in this class of ship.
+
+S32SRNG {  Scan Range (in 1000's): 25} (S32TYPE#<NONE>) N 1 32767
+
+Ship Class 32
+
+This option determines if this class of ship is "attackable"
+by cybertrons. If NO then Cyb's will only attack it if 
+provoked. If YES then they will attack on sight.
+
+S32CATK {  Cyb's can attack this class ship: NO} (S32TYPE#<NONE>) B
+
+Ship Class 32
+
+This option deternines the number of Cybs that will come
+after this class of ship at the same time. Set to 0 to
+have Cyb's leave it alone. Set to higher numbers to
+have this class massed by cybs.
+
+S32NATK {  Number of cyb's to attack this class: 2 } (S32TYPE#<NONE>) N 0 255
+
+Ship Class 33
+
+This option specifies the TYPE of ship.
+ 
+USER = A ship a user can purchase and fly.
+CYBORG = A Cybertron ship controlled by the automated
+         battle logic in the game.
+DROID = A non-combatant ship (sometimes) controlled by
+        much simpler navigation logic.
+
+S33TYPE {Class 33 type of Ship? DROID} E USER CYBORG DROID <NONE> 
+
+Ship Class 33
+
+This is the name of this class of ship.
+
+S33NAME {Vakory Survey Drone} (S33TYPE#<NONE>) S 29 Class-33 Ship Name
+
+Ship Class 33
+
+This is the name of the ship itself (i.e. Cyber-destroyer)
+For USER ships this field is blank.
+
+S33SNAME {Vakory SD-82} (S33TYPE#<NONE>,USER) S 29 Class-33 Ship title name
+
+Ship Class 33
+
+This option specifies the MAXIMUM shield type for this
+class of ship. Setting this option to 0 means this class
+of ship has no shields at all.
+
+S33SHLD {  Maximum Shield Type: 1} (S33TYPE#<NONE>) N 1 6
+
+Ship Class 33
+
+This option specifies the MAXIMUM Phaser type for this
+class of ship. Setting this option to 0 means this class
+of ship has no phasers at all.
+
+S33PHSR {  Maximum Phaser Type: 1} (S33TYPE#<NONE>) N 1 5
+
+Ship Class 33
+
+This option specifies if this ship class has torpedo
+capability.
+
+S33TORP {  Has Torpedo Capability? NO} (S33TYPE#<NONE>) B
+
+Ship Class 33
+
+This option specifies if this ship class has missile
+capability.
+
+S33MISL {  Has Missile Capability? NO} (S33TYPE#<NONE>) B
+
+Ship Class 33
+
+This option specifies if this ship class has decoy 
+launching capability.
+
+S33DECY {  Has Decoy Capability? YES} (S33TYPE#<NONE>) B
+
+Ship Class 33
+
+This option specifies if this ship class has jamming
+capabilities.
+
+S33JAMMR {  Has Jammer Capability? YES} (S33TYPE#<NONE>) B
+
+Ship Class 33
+
+This option specifies if this ship class has zipper
+launching capabilities.
+
+S33ZIPPR {  Has Zipper Capability? YES} (S33TYPE#<NONE>) B
+
+Ship Class 33
+
+This option specifies if this ship class has mine 
+launching capabilities.
+
+S33MINE {  Has Mine Capability? YES} (S33TYPE#<NONE>) B
+
+Ship Class 33
+
+This option specifies if this ship class has planetary
+attack capability.
+
+S33ATTK {  Has Attack Planet Capability? NO} (S33TYPE#<NONE>) B
+
+Ship Class 33
+
+This option specifies if this ship class has cloaking
+capability.
+
+S33CLOK {  Has Cloaking Capability? NO} (S33TYPE#<NONE>) B
+
+Ship Class 33
+
+This option controls the acceleration rate for this class
+of ship.
+
+S33ACCL {  Acceleration Rate: 1200} (S33TYPE#<NONE>) N 20 20000
+
+Ship Class 33
+
+This option specifies the maximum warp for this class of
+ship.
+
+S33WARP {  Maximum Warp: 4} (S33TYPE#<NONE>) N 1 100
+
+Ship Class 33
+
+This option specifies the maximum weight in tons for this
+class of ship.
+
+S33TONS {  Maximum Tonnage (in 100's): 1} (S33TYPE#<NONE>) N 1 5000
+
+Ship Class 33
+
+This option specifies the price for each ship in this
+class.
+
+S33PRIC {  Price for each ship (in 1000's): 20} (S33TYPE#<NONE>) N 1 32000
+
+Ship Class 33
+
+This option specifies the points awarded to another player
+for killing this class of ship.
+
+S33PNTS {  Points awarded for kill: 50} (S33TYPE#<NONE>) N 1 1000
+
+Ship Class 33
+
+This option specifies the maximum range in thousands for
+the range scanners in this class of ship.
+
+S33SRNG {  Scan Range (in 1000's): 25} (S33TYPE#<NONE>) N 1 32767
+
+Ship Class 33
+
+This option determines if this class of ship is "attackable"
+by cybertrons. If NO then Cyb's will only attack it if 
+provoked. If YES then they will attack on sight.
+
+S33CATK {  Cyb's can attack this class ship: NO} (S33TYPE#<NONE>) B
+
+Ship Class 33
+
+This option deternines the number of Cybs that will come
+after this class of ship at the same time. Set to 0 to
+have Cyb's leave it alone. Set to higher numbers to
+have this class massed by cybs.
+
+S33NATK {  Number of cyb's to attack this class: 2 } (S33TYPE#<NONE>) N 0 255
+
+Ship Class 41
+
+This option specifies the TYPE of ship.
+ 
+USER = A ship a user can purchase and fly.
+CYBORG = A Cybertron ship controlled by the automated
+         battle logic in the game.
+DROID = A non-combatant ship (sometimes) controlled by
+        much simpler navigation logic.
+
+S41TYPE {Class 41 type of Ship? USER} E USER CYBORG DROID <NONE> 
+
+This is the name of this class of ship.
+
+S41NAME {Sysopian Death Star} (S41TYPE#<NONE>) S 29 Class-41 Ship Name
+
+Ship Class 41
+
+This is the name of the ship itself (i.e. Cyber-destroyer)
+For USER ships this field is blank.
+
+S41SNAME {} (S41TYPE#<NONE>,USER) S 29 Class-41 Ship title name
+
+Ship Class 41
+
+This option specifies the MAXIMUM shield type for this
+class of ship. Setting this option to 0 means this class
+of ship has no shields at all.
+
+S41SHLD {  Maximum Shield Type: 6} (S41TYPE#<NONE>) N 1 6
+
+Ship Class 41
+
+This option specifies the MAXIMUM Phaser type for this
+class of ship. Setting this option to 0 means this class
+of ship has no phasers at all.
+
+S41PHSR {  Maximum Phaser Type: 5} (S41TYPE#<NONE>) N 1 5
+
+Ship Class 41
+
+This option specifies if this ship class has torpedo
+capability.
+
+S41TORP {  Has Torpedo Capability? YES} (S41TYPE#<NONE>) B
+
+Ship Class 41
+
+This option specifies if this ship class has missile
+capability.
+
+S41MISL {  Has Missile Capability? YES} (S41TYPE#<NONE>) B
+
+Ship Class 41
+
+This option specifies if this ship class has decoy 
+launching capability.
+
+S41DECY {  Has Decoy Capability? YES} (S41TYPE#<NONE>) B
+
+Ship Class 41
+
+This option specifies if this ship class has jamming
+capabilities.
+
+S41JAMMR {  Has Jammer Capability? YES} (S41TYPE#<NONE>) B
+
+Ship Class 41
+
+This option specifies if this ship class has zipper
+launching capabilities.
+
+S41ZIPPR {  Has Zipper Capability? YES} (S41TYPE#<NONE>) B
+
+Ship Class 41
+
+This option specifies if this ship class has mine 
+launching capabilities.
+
+S41MINE {  Has Mine Capability? YES} (S41TYPE#<NONE>) B
+
+Ship Class 41
+
+This option specifies if this ship class has planetary
+attack capability.
+
+S41ATTK {  Has Attack Planet Capability? YES} (S41TYPE#<NONE>) B
+
+Ship Class 41
+
+This option specifies if this ship class has cloaking
+capability.
+
+S41CLOK {  Has Cloaking Capability? YES} (S41TYPE#<NONE>) B
+
+Ship Class 41
+
+This option controls the acceleration rate for this class
+of ship.
+
+S41ACCL {  Acceleration Rate: 5000} (S41TYPE#<NONE>) N 20 20000
+
+Ship Class 41
+
+This option specifies the maximum warp for this class of
+ship.
+
+S41WARP {  Maximum Warp: 100} (S41TYPE#<NONE>) N 1 100
+
+Ship Class 41
+
+This option specifies the maximum weight in tons for this
+class of ship.
+
+S41TONS {  Maximum Tonnage (in 100's): 5000} (S41TYPE#<NONE>) N 1 5000
+
+Ship Class 41
+
+This option specifies the price for each ship in this
+class.
+
+S41PRIC {  Price for each ship (in 1000's): 32000} (S41TYPE#<NONE>) N 1 32000
+
+Ship Class 41
+
+This option specifies the points awarded to another player
+for killing this class of ship.
+
+S41PNTS {  Points awarded for kill: 1000} (S41TYPE#<NONE>) N 1 1000
+
+Ship Class 41
+
+This option specifies the maximum range in thousands for
+the range scanners in this class of ship.
+
+S41SRNG {  Scan Range (in 1000's): 32767} (S41TYPE#<NONE>) N 1 32767
+
+Ship Class 41
+
+This option determines if this class of ship is "attackable"
+by cybertrons. If NO then Cyb's will only attack it if 
+provoked. If YES then they will attack on sight.
+
+S41CATK {  Cyb's can attack this class ship: YES} (S41TYPE#<NONE>) B
+
+Ship Class 41
+
+This option deternines the number of Cybs that will come
+after this class of ship at the same time. Set to 0 to
+have Cyb's leave it alone. Set to higher numbers to
+have this class massed by cybs.
+
+S41NATK {  Number of cyb's to attack this class: 0} (S41TYPE#<NONE>) N 0 255
+
+
+SXXEND {} T Place holder - do not remove
+
+LEVEL6{}
+
+INTRO {[1;36m
+[33m    Galactic Empire ([31m%s[33m) [36m
+     (C) Copyright 1992,93
+   M.B. Murdock & Associates
+     All Rights Reserved
+} T 
+
+
+MENUA {
+[36m   Galactic Empire Trainer Menu
+[31m   -----------------------------------------
+[34m   1 ... Play Galactic Empire Trainer
+   2 ... General Instructions
+   3 ... Top Players Roster} T
+
+MENUB1 {   
+   4 ... Hyper space Messages ** Empty **} T
+
+MENUB2 {   
+   4 ... Hyper space Messages ** Messages **} T
+   
+MENUC {
+   I ... Information on game
+   ? ... To redisplay this menu
+   X ... Exit to Main Menu [36m
+
+   Enter your selection :[1;32m } T 
+
+
+REPRMT {
+
+[34mSelect 1, 2, 3, 4, X to exit, or ? for menu : [1;32m} T 
+
+MENUD {
+[36m   Hyper space Messages
+[31m   -----------------------------------------
+[34m} T
+
+MENUE1 {
+   1 ... Distress Messages    ** None **} T
+
+MENUE2 {
+   1 ... Distress Messages    ** Msgs **} T
+
+MENUF1 {
+   2 ... Production Reports   ** None **} T
+
+MENUF2 {
+   2 ... Production Reports   ** Msgs **} T
+
+MENUG {
+   X ... Exit to Main Menu [36m
+
+   Enter your selection :[1;32m } T 
+
+MENUG1 {
+Press N for NEXT or X to stop: } T
+
+MENUG2 {
+Press N for NEXT or X to stop: } T
+
+COINFO {Galactic Empire is brought to you by the folks at ...
+[36m
++------------------------------------+---------------------------------------+
+| M.B. Murdock & Associates          |     (813) 545-8050 voice              |
+| P.O. Box 2194                      |     (813) 541-5876 bbs                |
+| Pinellas Park, Fl. 34665-2194      |     2400 - 9600 baud                  |
++------------------------------------+---------------------------------------+
+[34m
+If you have suggestions for improvements, questions, or general comments
+about this game please call our on-line system, "NetworX" at the number above. 
+There you can also preview the latest release of GALACTIC EMPIRE and other
+fine products available for the MajorBBS including the latest terminal
+programs and Galactic Empire tips and hint.
+
+We also have available printed Galactic Empire Users Guides, Tee Shirts,
+and other paraphernalia.
+
+<press enter>
+} T
+
+Please do not move or remove this definition.
+
+OPTDISP {} T
+
+Please do not move or remove this definition.
+
+OPTDISP2 {} T
+
+Please do not move or remove this definition.
+
+CHOOSESH {} T
+
+This message is a place holder to distinguish between menu messages and
+game messages. Please do not remove or move.
+
+FIGHTSUB {} T
+
+EXPLAIN {[36m
+
+To help you train for the intense battles in the real Galactic Empire
+Game you may engage in a training simulation. In this simulation the
+ship you are training in has outstanding performance characteristics.
+The simulated opponents will hone your skills and prepare you for
+the real thing. 
+
+Good luck and happy hunting!
+
+[0;32m
+} T
+
+
+FORLIVE {
+[33mSorry, only "Live" users can play Galactic Empire.[37m
+For information on this exciting game select 2. For more information
+on becoming a live user contact your SYSOP.
+} T 
+
+
+FORPLAY {
+[33mSorry, only authorized users can play Galactic Empire.[37m
+Contact your SYSOP for more information.
+} T 
+
+
+NOCANDO {You have to have credits to do that!
+} T 
+
+
+GECALLS {[36m
+
+Hone your fighting skills in...
+
+Galactic Empire Trainer!
+
+[37m
+} T 
+
+
+GECALLS2 {[33m
+
+You need to get some more training time in...
+
+Galactic Empire Trainer!
+
+[37m
+} T 
+
+
+EXIWAR {[35m
+Exiting Galactic Empire Trainer, returning to main menu...[37m
+
+} T 
+
+
+CANTEXT {[33m
+Sorry..The Galactic Codes of Engagement prevent you from abandoning
+a battle you are involved in until a cease fire of a period of time
+has passed.If you hang up the phone your ship will be destroyed![37m
+} T 
+
+
+EXIWAR2 {***
+[33mScanners can no longer locate The[37m %s[37m,[33m
+Sir![37m
+} T 
+
+
+WARHUP {***
+[36mCommander[31m %s's[36m ship just vanished!!
+} T 
+
+
+TPRCNT {Enter warp factor (0 - 100) } T 
+
+
+HUH {[32mType ? for HELP[37m
+} T 
+
+
+NOSHPS {All the ships have been assigned, please check back later
+} T 
+
+
+NUMOOR {
+Please enter a number in the range from %d to %d.
+} T 
+
+
+INVCMD {Sorry Sir, I don't understand the command!
+} T 
+
+
+YOURDEAD {[31m
+***
+WARNING! WARNING! WARNING! WARNING!
+[36mDamage control reports severe structural damage in critical systems!
+
+Since this is only a simulation, only your ego was really damaged.
+You may try again if you like.
+
+ [37m
+<Press ENTER>
+
+} T 
+
+
+DIED {
+***
+[36m[31mThe %s[36m, Commanded by[31m %s[36m has been destroyed!!!
+} T 
+
+
+KILLEDBY {
+***
+[36mCommander[31m %s's[36m ship was destroyed by[31m %s[36m!!![37m
+} T 
+
+
+PHITHIM {Sensors indicate we caused[31m %s[37m damage to Commander[31m %s's[37m ship!
+} T 
+
+
+PHITYOU {***
+[33mPhaser hit from Commander[31m %s's[33m ship, caused[31m %s[33m damage, Sir![37m
+} T 
+
+
+PDEFLECT {Sensors indicate our phasers were deflected by Commander[31m %s's[37m shields!
+} T 
+
+
+PHITDEF {***
+[32mPhaser hit from Ship[37m %c[37m,[32m Commander[37m %s's[32m ship,
+magnitude[37m %d, [32mwas deflected by the shields, Sir![37m
+} T 
+
+
+PHSRUP {***
+[33mPhaser banks are now at minimum fire power, Sir![37m
+} T 
+
+
+PHSRMAX {***
+[32mPhaser banks are at full power, Sir![37m
+} T 
+
+
+PCLOKUP {We cannot do that while the cloaking device is on, Sir!
+} T 
+
+
+WARP {***
+[33mHelm reports WARP[31m %d[37m
+} T 
+
+
+DEADSTOP {***
+[32mHelm reports we are at a dead stop, Sir.[37m
+} T 
+
+
+NOACCEL {***
+Helm reports engine shutdown at warp[31m %d[37m, Sir!
+} T 
+
+
+WARP01 {Warp Drive? On this tub? Sorry Sir!
+} T 
+
+
+SPEEDIS {***
+[36mHelm reports speed is now warp %d point %d, Sir![37m
+} T 
+
+
+SPEED0 {***
+Helm reports we are at a dead stop, Sir!
+} T 
+
+
+NOFIREP {[31mThere is insufficient power to fire, Sir![37m
+} T 
+
+
+NOFIRES {[35mSorry Sir, we cannot fire with the shields up.[37m
+} T 
+
+
+PFIRED {[36mPhasers fired at[31m %d[36m percent power - focus[31m %d[37m
+
+} T 
+
+
+PHREPR {***
+[32mDamage Control reports Phasers are now functional Sir![37m
+} T 
+
+
+CANTROT {Sir, we cannot rotate while we are moving!!
+} T 
+
+
+NOROTPW {Sorry Sir, we don't have enough power to rotate
+} T 
+
+
+NOWTURN {[33m
+Ship is now turning to %u degrees.[37m
+} T 
+
+
+NOWTHER {***
+Helm reports we are now heading %d degrees.
+} T 
+
+
+ENGFIRE {Helm Reports Engines Firing - Ship coming to %u degrees
+} T 
+
+
+SHLDCHP {[35mShields energizing, Sir![37m
+} T 
+
+
+SHLDUP {***
+[32mShields are now fully charged, Sir![37m
+} T 
+
+
+SHLDAT {***
+[33mShields are at %d% percent charge, Sir![37m
+} T 
+
+
+SHIELD0 {We don't have a shield system on this ship, Sir!
+} T
+
+SHNOPWR {[31mWe don't have enough power to raise the shields, Sir![37m
+} T 
+
+
+SHNORPR {Damage Control is repairing the shields, Sir!
+} T 
+
+
+SHLDDN {[34mShields are now down, Sir![37m
+} T 
+
+
+SHDNNOP {***
+[31mShields have come done due to lack of power, Sir!!![37m
+} T 
+
+
+SHDAMAG {***
+The last hit damaged the shields Sir!! Damage Control notified.
+} T 
+
+
+SHKNKDN {***
+[33mThe last hit knocked the shields down Sir, restoring them now.[37m
+} T 
+
+
+SHREPR {***
+Damage Control reports the shields have been repaired, Sir.
+} T 
+
+
+SHLD1 {Shields are not functional in Hyper space, Sir!
+} T 
+
+
+SHLD2 {We don't have any shields on this tub, Sir!
+} T 
+
+
+CLOK01 {HAHA! A cloaking system on this tub? Sorry Sir!
+} T 
+
+
+CLOKON {[35mCloaking device is now active, Sir![37m
+} T 
+
+
+CLOKOFF {Cloaking device is now off, Sir!
+} T 
+
+
+CLOKDAM {[31mThe Cloaking device is damaged and not functional Sir![37m
+} T 
+
+
+CLREPR {***
+[32mDamage Control reports that the Cloaking Device is now functional, Sir![37m
+} T 
+
+
+CLOKPWR {We don't have enough power for cloaking, Sir!
+} T 
+
+
+CLOKNOP {***
+Cloaking device has shut down due to lack of power, Sir!!!
+} T 
+
+
+CLOK1 {We cannot operate the Cloaking device in hyperspace Sir!
+} T 
+
+
+RNDSHLD {
+***
+[31mThe shields are no longer functioning, Sir!!
+Damage Control notified![37m
+} T 
+
+
+RNDPHSR {***
+The phaser systems appear to be damaged, Sir!!
+Damage Control notified!
+} T 
+
+
+RNDCLOK {***
+The cloaking system appears to be damaged, Sir!!
+Damage Control notified!
+} T 
+
+
+RNDTACT {***
+[33mThe Tactical Display has been damaged Sir!!
+Damage Control notified![37m
+} T 
+
+
+RNDNAVG {***
+[31mThe Helm Navigational systems have been damaged Sir!!
+Damage Control notified![37m
+} T 
+
+
+RNDFCNT {***
+[31mThe Fire Control Systems have been damaged Sir!!
+Damage Control notified![37m
+} T 
+
+
+RNDXX1 {***
+Some of the crew have abandoned ship after that last hit, Sir!
+} T 
+
+
+RNDXX2 {***
+That one shook us pretty good. We cannot take much more of this pounding!
+} T 
+
+
+RNDXX3 {***
+Damage control reports the head was damaged in the last strike, Sir!
+} T 
+
+
+RNDXX4 {***
+If this keeps up, I may have to update my Will, and quick!
+} T 
+
+
+TAREPR {***
+[32mDamage Control reports the Tactical Display is again functioning Sir![37m
+} T 
+
+
+HLREPR {***
+[32mDamage Control reports the Helm Navigational Controls are functioning
+Sir![37m
+} T 
+
+
+TABROKE {[33mSorry Sir, the scanners are not functioning,
+Damage control is working on it.[37m
+} T 
+
+
+HLBROKE {Sorry Sir, The Helm is still not functional, Damage Control is
+working on it.
+} T 
+
+
+FCBROKE {Sorry Sir, Fire Control Systems are not functioning, Damage control
+is working on it.
+} T 
+
+
+FCREPR {***
+[32mDamage Control reports Fire Control Systems are now functioning Sir![37m
+} T 
+
+
+FCNONO {***
+The Fire Control System won't lock on a ship in the Neutral Zone, Sir!
+} T 
+
+
+HYPERIN {***
+[34mHELM reports we are entering HYPERSPACE now, Sir![37m
+} T 
+
+
+HYPERIN2 {***
+Sensors indicate the %s has gone to Hyper Space, Sir!
+} T 
+
+
+HYPEROUT {***
+HELM reports we are leaving HYPERSPACE now, Sir!
+} T 
+
+
+HYPEROU2 {***
+[36mScanners detect the[31m %s[36m coming out of Hyper Space.[37m
+} T 
+
+
+NOTORPS {[33mSorry Sir, we have no more torpedoes.[37m
+} T 
+
+
+NOSHIP {Sorry Sir, the tactical scanners cannot locate that ship.
+} T 
+
+
+TFIRE1 {
+[32mTorpedoes fired sir![37m
+} T 
+
+
+TFIRE2 {
+[31mWARNING! WARNING![37m Incoming torpedo from ship[31m %c.[37m
+} T 
+
+
+TORMANY {Sorry Sir! But the torpedo launchers are overheated,
+it will be a few more seconds.
+} T 
+
+
+TORP2 {That would simply waste a torpedo in hyperspace Sir!
+} T 
+
+
+TORP3 {We don't have a torpedo system on this tub, Sir!
+} T 
+
+
+NOMISSL {Sorry Sir, we have no more hyper-missiles!
+} T 
+
+
+MFIRE1 {
+[32mMissile fired sir![37m
+} T 
+
+
+MFIRE2 {
+[31mWARNING! WARNING![37m Incoming missile from ship[31m %c.[37m
+} T 
+
+
+MISMANY {Sorry Sir! But the missile launchers are overheated,
+it will be a few more seconds.
+} T 
+
+
+MISS01 {We don't have a missile system on this tub, Sir!
+} T 
+
+
+LOCK1 {[36mFire control has lock on ship %c, Sir![37m
+} T 
+
+
+LOCK2 {***
+[31m
+WARNING! WARNING![37m Ship[31m %c[37m has a fire control scanner locked on us![37m
+} T 
+
+
+LOCK3 {Fire control scanners cannot get a positive lock on ship %c, Sir!
+} T 
+
+
+LOCK4 {***
+[31m
+WARNING! WARNING! Ship %c is attempting to lock fire control scanners on us.[37m
+} T 
+
+
+LOCK5 {Fire control scanners cannot find ship %c, Sir!
+} T 
+
+
+THIT1 {***[33m
+We have taken a hit from a torpedo, shields deflected some of the blast![37m
+} T 
+
+
+THIT2 {***[33m
+We have taken a hit from a torpedo, Sir! Damage control has been notified.
+[37m} T 
+
+
+MHIT1 {***[33m
+We have been hit by a hyper-missile carrying a %s charge, Sir!.
+Shields deflected some of the blast.[37m
+} T 
+
+
+MHIT2 {***[33m
+We have been hit by a hyper-missile carrying a %s charge, Sir!.[37m
+} T 
+
+
+MTACC1 {***[36m
+Sensors indicate our torpedo has hit ship %c, The %s.[37m
+} T 
+
+
+MTACC2 {***[36m
+Sensors indicate our hyper-missile has hit ship %c, The %s.[37m
+} T 
+
+
+TORP1 {***
+
+
+[31mRED ALERT![37m Tracking incoming torpedo.[37m
+} T 
+
+
+MISSL1 {***
+
+
+[31mRED ALERT![37m Sensors tracking incoming missile![37m
+} T 
+
+
+MISSL2 {***
+The missile tracking us has lost lockon and self destructed Sir!
+} T 
+
+
+NOSCANS {Sorry Sir! Sector scans are impossible in Hyperspace.
+} T 
+
+
+NOSCANH {Sorry Sir! The Hyper Scanners only work when we are in Hyperspace.
+} T 
+
+
+NOSCANL {Sorry Sir! The Long Range Scanners only work when we are in Hyperspace.
+} T 
+
+
+HYSHDN {***[35m
+Shields shut down, Sir.[37m
+} T 
+
+
+HYCLDN {***
+Cloaking off, Sir.
+} T 
+
+
+SCAN1 {***[33m
+Sir! We are being scanned by Ship %c, The[37m %s.
+} T 
+
+
+SCAN2 {***[33m
+Sir! We are being scanned by an unknown source beyond our range bearing %d.
+} T 
+
+
+SCAN3 {***[33m
+Sir! We are being scanned by an unknown source bearing %d.
+} T 
+
+
+ENTWAR {***[36m
+A %s The %s just appeared in this star system![37m
+} T 
+
+
+FIRSTIME {[32m
+Since you are just an Ensign and still wet behind the ears we are going to
+assign you to this lovely Interceptor for your command. Take care of
+her well.[37m
+} T 
+
+
+ENTSHP {[35m
+You are being transported to your waiting ship, Commander %s[37m
+} T 
+
+
+NEWSHP1 {
+WHAT!!!! You lost your last ship! Giving you another ship is against
+my better judgment. But since you insist....
+} T 
+
+
+NEWSHP2 {[33m
+I am very sorry, but the Galactic Monetary Reserve Bank has marked you
+a credit risk due to your outstanding debt, and has reduced the cash
+advance you are permitted.  [37m
+} T 
+
+
+WELBACK {[36m
+Welcome back Commander %s, the con is yours...Type ? if you need assistance.
+[37m
+} T 
+
+
+WELCOM {[36m
+Welcome aboard Commander %s, the con is yours.Type ? if you need assistance.
+[37m
+} T 
+
+
+ANNOUN {***[33m
+Hyperspace Transmission: The %s, The %s has been
+detected cruising the galaxy. <end trans>[37m
+} T 
+
+
+FOOLISH {That would be foolish Sir!
+} T 
+
+
+NODECOYS {Sorry Sir! We have no more decoy ships.
+} T 
+
+
+DECGONE {***
+Our decoy ship self destructed Sir!
+} T 
+
+
+DECFIRE {Decoy ship launched per your orders Sir!
+} T 
+
+
+DECMANY {We already have 10 decoy ships out Sir!
+} T 
+
+
+DECOY0 {We don't have a decoy system on this tub, Sir!
+} T
+
+DECOY1 {We would simply waste the decoy while in hyperspace Sir!
+} T 
+
+
+TORDEST {The torpedo locked on to the decoy Sir! It has exploded destroying both!
+} T 
+
+
+MISDEST {The missile locked on to the decoy Sir! It has exploded destroying both!
+} T 
+
+
+NOFLUX {[33mWe are out of Flux Pods Sir!, we will have to "limp" to a base on
+minimal power only![37m
+} T 
+
+
+LASTFLUX {[33mThat was our last Flux Pod Sir!. I suggest we find a base soon.[37m
+} T 
+
+
+FLUXLOAD {[32m***
+Flux Pod loaded sir, Neutron Flux levels back to normal.[37m
+} T 
+
+
+LOWFOOD {***
+The ships Quartermaster reports our food reserves are getting low, Sir!
+} T 
+
+
+OUTFOOD {***
+The galley reports we are out of food Sir! The men are fighting over
+what little supplies are left. We must replenish our supplies soon!
+} T 
+
+
+RADSET1 {Communications confirms that com channel[32m %c[37m is set to the
+general
+hailing frequencies.
+} T 
+
+
+RADSET2 {Communications confirms that com channel[32m %c[37m is set to
+frequency[32m %u.[37m
+} T 
+
+
+RADSET3 {Communications confirms that com channel[32m %c[37m is set to hyperspace
+packet code[32m %u[37m.
+} T 
+
+
+MSGSNT1 {***
+[36mHailing message from the %s (ch:%c)
+[31m< %s >[37m
+} T 
+
+
+MSGSNT2 {Message sent on all hailing channels, Sir!
+} T 
+
+
+MSGSNT3 {***[36m
+Message from the %s (ch:%c)
+[31m< %s >[37m
+} T 
+
+
+MSGSNT4 {Message sent to all ships in this star system on com freq[32m %u[37m,
+Sir!
+} T 
+
+
+MSGSNT5 {***[36m
+Hyperspace message from the %s (ch:%c)
+[31m< %s >[37m
+} T 
+
+
+MSGSNT6 {Hyperspace message encoded[32m %u[37m and sent Sir!
+} T 
+
+
+BADCOM {[33mPlease specify com channel A, B, or C.[37m
+} T 
+
+
+DASHES {[36m--------------------------------------[37m
+} T 
+
+ORBIT0 {You can't do that to a wormhole!!!
+} T Orbit wormhole message
+
+
+ORBIT1 {We are now in stationary orbit around planet %d %s SIR!.
+} T 
+
+
+ORBIT2 {We must be much closer to establish an orbit Sir!
+} T 
+
+
+ORBIT3 {We are already in orbit, Sir!
+} T 
+
+
+ORBIT4 {We cannot obtain an orbit from hyperspace Sir!
+} T 
+
+
+GRAVITY1 {***
+[32m
+Entering gravity pull of planet %d, Helm compensating, Sir![37m
+} T 
+
+
+GRAVITY2 {***
+
+
+[31mWARNING![33m Gravity pull increasing, we are dangerously close to the
+escape horizon of planet %d, Sir!![37m} T 
+
+
+GRAVITY3 {***
+
+[31m
+WARNING! WARNING! WARNING!
+We are being pulled into Planet %d...[37m
+} T 
+
+
+GRAVWRM1 {***
+[32m
+Within gravity pull of Wormhole %d, prepare for impact Sir![37m
+} T 
+
+
+GRAVWRM2 {***
+
+
+[31mWARNING![33m Gravity pull high, we are dangerously close to the
+escape horizon of Wormhole %d, Sir!![37m
+} T 
+
+
+GRAVWRM3 {***
+
+[31m
+WARNING! WARNING! WARNING!
+We are being pulled into Wormhole %d...[37m
+} T 
+
+
+IMPULSE1 {Sorry Sir! Impulse drives would be useless in Hyperspace!
+} T 
+
+
+LEAVEORB {[34mLeaving orbit Sir![37m
+} T 
+
+TRANSFR0 {You can't do that to a wormhole!!!
+} T Transfer to wormhole message
+
+TRANSFR1 {Sorry Sir! We don't have that many available.
+} T 
+
+
+TRANSFR2 {Sorry Sir! I didn't understand the command.
+} T 
+
+
+TRANSFR3 {Sorry Sir! We are not in orbit.
+} T 
+
+
+TRANSFR4 {Sorry Sir! We don't own this planet.
+} T 
+
+
+TRANSFR5 {[33m%s %s[37m have been transferred to the planet Sir!
+} T 
+
+
+TRANSUP1 {Sorry Sir! They don't have that many available.
+} T 
+
+
+TRANSUP2 {Sorry Sir! I didn't understand the command.
+} T 
+
+
+TRANSUP3 {Sorry Sir! We are not in orbit.
+} T 
+
+
+TRANSUP4 {Sorry Sir! We don't own this planet.
+} T 
+
+
+TRANSUP5 {[33m%s %s[37m have been transferred from the planet Sir!
+} T 
+
+
+TRANSUP6 {Sorry Sir! We can't hold that much.
+} T 
+
+
+ABAN01 {Sorry Sir! We are not in orbit.
+} T 
+
+
+ABAN02 {Confirmed! The planet is now un-claimed.
+} T 
+
+
+ABAN03 {Sorry Sir! We do not own this planet.
+} T 
+
+
+ADMIN1 {Sorry Sir! We are not in orbit.
+} T 
+
+
+ADMIN2 {Sorry Sir! We do not own this planet.
+} T 
+
+ADMIN2A {We can't own a Wormhole!!!
+} T Own Wormhole Message
+
+ADMIN3 {Returning to command mode...
+
+} T 
+
+
+ADMIN4 {Sorry Sir! We have already claimed them maximum planets permited by law.
+} T 
+
+
+ADMENU1 {[32m
+Do you wish to settle this planet, Sir! (y/n)?[37m---} T 
+
+
+ADMENU1A {
+The Protocol Officer requests an appropriate name for the
+planet Sir, (20 characters max) ---} T 
+
+
+ADMENU1B {[36m
+
+We hereby declare planet %d to be named %s and added to the empire
+of %s the Great, Commander of The %s.} T 
+
+
+ADMENU2 {
+
+[31m  Planet Administration Menu
+[37m-----------------------------------
+[36m  1 - Get accounting report
+[33m  2 - Collect taxes ($)
+[32m  3 - Alter work assignments and
+      adjust trade policy/pricing
+[35m  4 - Rename planet
+[37m  5 - Adjust Tax Rate
+[31m  6 - Set Trade Password
+[37m  x - Exit to command mode
+
+Please Select (1 - 6)  ---} T 
+
+
+ADMENU2B {Transfer how much tax the Planetary Bank to your ship ---} T 
+
+
+ADMENU2C {%s collected in taxes, Sir!
+} T 
+
+
+ADMENU2D {There isn't that much tax revenue in the Planetary Bank, Sir!
+} T 
+
+
+ADMENU2E {[36m
+Select the item to adjust
+----------------------------
+  men  = adjust men
+  mis  = adjust missiles
+  tor  = adjust torpedoes
+  ion  = adjust ion cannons
+  flu  = adjust flux pods
+  foo  = adjust food
+  fig  = adjust fighters
+  dec  = adjust decoys
+  tro  = adjust troops
+  zip  = adjust zippers
+  jam  = adjust jammers
+  min  = adjust mines
+---------------------------- [37m
+Select now --} T 
+
+
+ADMEN2F1 {Select the percentage of effort toward %s. ---} T 
+
+
+ADMEN2F2 {Markup %s by how much. ---} T 
+
+
+ADMEN2F3 {Sell %s to other ships? (y/n) ---} T 
+
+
+ADMEN2F4 {Reserve how many %s for stock piling ---} T 
+
+
+ADMEN2FA {[33mTotal percentage exceeds 100 percent. Percentage of effort
+toward %s adjusted to %d.[37m
+} T 
+
+
+ADMEN2FB {Still have %d percent effort un-assigned.
+} T 
+
+
+ADMENU2G {Enter the new name ---} T 
+
+
+ADMENU2H {Enter the new TAX rate (0 - 100) ---} T 
+
+
+ADMENU2I {Enter the new password or "none"  ---} T 
+
+
+ADMEN2I1 {The new password is "%s".
+} T 
+
+
+ADMEN2I2 {There is no trade password required.
+} T 
+
+
+PRESSKEY {Press ENTER to continue ---} T 
+
+
+ATTACK0 {Why would you wish to attack your own planet Sir?
+} T 
+
+
+ATTACK0A {Sorry Sir, this ship is not equipped to launch a planetary attack
+} T 
+
+ATTACK0B {We can't attack a wormhole!!!
+} T Attack Wormhole Message
+
+ATTACK1 {Sorry Sir! We are not in orbit.
+} T 
+
+
+ATTACKM0 {We don't have that many troops, Sir!
+} T 
+
+
+ATTACKM1 {[33mTransporting %s troops to the planet Sir![37m
+} T 
+
+
+ATTACKM2 {In the attack our troops killed[31m %s[37m, and suffered losses
+of[31m %s[37m, Sir!
+} T 
+
+
+ATTACKM3 {The remaining %s of the planetary forces have surrendered, Sir!
+} T 
+
+
+ATTACKM4 {The remaining %s of our forces have surrendered, Sir!
+} T 
+
+
+ATTACKM5 {%s of there %s were also destroyed!
+} T 
+
+
+ATTACKM6 {%s troops have returned to the ship, Sir.
+} T 
+
+
+ATTACKM7 {Their fighters are counter-attacking our forces, Sir!
+} T 
+
+
+ATTACKM8 {Their fighters have killed %s of our troops, Sir!
+} T 
+
+
+ATTACKF0 {We don't have that many fighters, Sir!
+} T 
+
+
+ATTACKF1 {Launching %s fighters to the planet Sir!
+} T 
+
+
+ATTACKF2 {In the attack our fighters destroyed %s fighters,
+and we lost %s, Sir!
+} T 
+
+
+ATTACKF5 {Our fighters also destroyed %s %s in the attack, Sir!
+} T 
+
+
+ATTACKF6 {%s fighters have returned to the ship, Sir.
+} T 
+
+
+ATTACKF7 {Our fighters have crushed their defenses Sir!
+} T 
+
+
+ATTACKF8 {Our fighters are being fired upon Sir!
+} T 
+
+
+ATTACKF9 {We have lost %s fighter(s) Sir!
+} T 
+
+
+ATTACK6 {***[36m
+
+
+There is a distress message from[31m %s[36m in Star System[31m %d %d[36m, Sir!
+They are under attack from Commander %s in the %s and 
+are requesting our immediate help!!} T 
+
+
+ATTACK7 {The planet is sending a distress signal, Sir!
+} T 
+
+
+ATTACK8 {YAAAAA!! (sorry Sir) Our forces have won, this planet is yours!
+} T 
+
+
+ATTACK9 {The planetary forces continue to put up a valiant resistance Sir!
+} T 
+
+
+IHIT1 {[33mWe have been hit with a Ion Cannon Burst Sir, the shield
+deflected some of the blast![37m
+} T 
+
+
+IHIT2 {We have been hit hard by a Ion Cannon Burst from the surface Sir!
+} T 
+
+
+TOPTEN1 {Uh oh! You have slipped to the #%d position in the
+Top Ten Players list.
+} T 
+
+
+TOPTEN2 {Congratulations!! You are now #%d in the Top Ten Players list.
+} T 
+
+
+ROSTER1 {
+
+Top %d Roster List
+---------------------------------------
+Player.................................
+...............Score Kills Pl Empire Sz
+} T 
+
+ROSTER2 {
+
+Top %d Roster List
+-----------------------------------------------------------
+Player                             Score Kills Pl Empire Sz
+} T 
+
+
+RESET {
+**** Hi score totals Reset ****
+} T 
+
+
+BUYPAS1 {They are asking for the correct Trade Password Sir!
+} T 
+
+
+BUYPAS2 {They are not accepting that Trade Password Sir!
+} T 
+
+
+BUY1 {Sorry Sir, we are not in orbit!
+} T 
+
+
+BUY2 {They want %s C's for the %s %s, we don't have that much cash.
+} T 
+
+
+BUY3 {They only have %s %s available for sale, Sir!
+} T 
+
+
+BUY4 {They are not selling their %s, Sir!
+} T 
+
+
+BUY5 {Sorry Sir, I don't understand the command.
+} T 
+
+
+BUY7 {This planet is un-settled Sir!
+} T 
+
+
+BUY8 {Sorry Sir! That would put us overweight.
+} T 
+
+
+BUY9 {%s %s purchased at the price of %u each for a total of %s, Sir.
+} T 
+
+
+PRICE1 {%s %s are going to cost %u each for a total of %s, Sir.
+} T 
+
+
+FORHELP {For assistance type HELP.
+} T 
+
+
+PHANONE {There is insufficient phaser power to fire sir!
+} T 
+
+
+PHA01 {We have no Phasers on this tub, Sir!
+} T 
+
+
+REP01 {
+%s: The %s
+} T 
+
+
+REP02 {[36mNav Hyperspace (SS# %d %d)[37m
+} T 
+
+
+REP03 {[32mSpeed.................[37m.Warp %u.%u
+} T 
+
+
+REP04 {[33mHeading.................... %d[37m
+} T 
+
+
+REP05 {Navigating SS# %d %d
+} T 
+
+
+REP06 {Speed..................Warp 0.%u
+} T 
+
+
+REP07 {Galactic Heading.......  %u
+} T 
+
+
+REP08 {Orbiting Planet........  %d SS# %d  %d
+} T 
+
+
+REP09 {Neutron Flux............ %u
+} T 
+
+
+REP10 {Shields (Mark-%d)......[32m UP[37m
+} T 
+
+
+REP11 {Shields (Mark-%d)......[31m DOWN[37m
+} T 
+
+
+REP11B {Shield Bank Charge ....[33m %d[37m
+} T 
+
+
+REP12 {Cloak..................[32mON[37m
+} T 
+
+
+REP13 {Cloak..................[31m OFF[37m
+} T 
+
+
+REP14 {DCO reports............[31m %s[37m damage
+} T 
+
+
+REP15 {[31m   Shields out[37m
+} T 
+
+
+REP16 {[31m   Helm damaged[37m
+} T 
+
+
+REP17 {[31m   Cloaking system out[37m
+} T 
+
+
+REP18 {[31m   Tactical scanners damaged[37m
+} T 
+
+
+REP19 {Torpedoes.. %s  Missiles. %s
+} T 
+
+
+REP20 {Flux pods.. %s  Food..... %s
+} T 
+
+
+REP20A {Jammers.... %s  Mines.... %s
+} T 
+
+
+REP21 {Decoys..... %s  Fighters. %s
+} T 
+
+
+REP22 {Men........ %s  Ion Can.. %s
+} T 
+
+
+REP22A {Troops..... %s  Zippers.. %s
+} T 
+
+REP22B {Gold....... %s  
+} T 
+
+REP23 {Phasers (Mark-%d) [32m <operative>[37m
+} T 
+
+
+REP24 {Phasers (Mark-%d) [31m <inoperable>[37m
+} T 
+
+
+REP25 {Accounting Division report
+} T 
+
+
+REP26 {   No planets established
+} T 
+
+
+REP27 {   %d planets established
+} T 
+
+
+REP28 {   Cash on hand......... %s
+} T 
+
+
+REP29 {   Debt................. %s
+} T 
+
+
+REP30 {   Score................ %s
+} T 
+
+
+REP31 {   Kills................ %d
+} T 
+
+
+REP32 {Galactic Pos. Xsect:%d Ysect:%d
+Sector Pos. X:%d Y:%d
+} T 
+
+
+REP35 {Navigational Report
+} T 
+
+
+REP36 {Systems Report
+} T 
+
+
+REP37 {Total Cargo Weight... %s Tons
+} T 
+
+
+REP38 {Inventory Report
+} T 
+
+
+REP40 {Cyborg: %d, Cybmine: %d, Cybskill: %d, Cybupdate: %d
+} T 
+
+
+SCAN01 {Scanning The %s
+} T 
+
+
+SCAN01A {Ship Class: %s
+} T 
+
+
+SCAN02 {Commanded by: %s
+} T 
+
+
+SCAN03 {Bearing: %d Heading: %d Dist: %s
+} T 
+
+
+SCAN03A {Galactic Heading: %d Sect: %d %d
+} T 
+
+
+SCAN04 {Speed: Warp %u.%u
+} T 
+
+
+SCAN05 {Damage: %s damage
+} T 
+
+
+SCAN06 {Shields: UP
+} T 
+
+
+SCAN07 {Shields: DOWN
+} T 
+
+
+SCAN07A {Registered Kills: %u
+} T 
+
+
+SCAN08 {
+Scanning Planet %d %s
+} T 
+
+
+SCAN09 {Commanded by: %s
+} T 
+
+
+SCAN10 {Bearing: %d Dist: %s
+} T 
+
+
+SCAN10A {Type: %d
+} T 
+
+
+SCAN11 {Environment: } T 
+
+
+SCAN12 {Poor
+} T 
+
+
+SCAN13 {Marginal
+} T 
+
+
+SCAN14 {Good
+} T 
+
+
+SCAN15 {Very Good
+} T 
+
+
+SCAN16 {Resources: } T 
+
+
+SCAN17 {Civilian Population...   %u
+} T 
+
+
+SCAN17A {Troops................   %u
+} T 
+
+
+SCAN18 {Missiles...............   %u
+} T 
+
+
+SCAN19 {Torpedoes..............   %u
+} T 
+
+
+SCAN20 {Ion Cannons...........   %u
+} T 
+
+
+SCAN21 {Fighters..............   %u
+} T 
+
+
+SCAN22 {Neutron Flux Pods......   %u
+} T 
+
+
+SCAN23 {Food Lots.............   %u
+} T 
+
+
+SCAN24 {   Range Scan Dist:%s (s:%d %d)
+} T 
+
+
+SCAN25 {   Sector Scan mag:1x (s:%d %d)
+} T 
+
+
+SCAN26 {   Hyperspace Scan  (s:%d %d)
+} T 
+
+
+SCAN27 {Sorry Sir! The scanners cannot show planet detail from hyperspace.
+} T 
+
+
+SCAN28 {%s Populated
+} T 
+
+
+SCAN29 {%s stockpile of missiles
+} T 
+
+
+SCAN30 {%s stockpile of torpedoes.
+} T 
+
+
+SCAN31 {No sign of fighters anywhere.
+} T 
+
+
+SCAN32 {There are indications of fighters.
+} T 
+
+
+SCAN33 {%s stockpile of fluxpods.
+} T 
+
+
+SCAN34 {%s stockpile of food.
+} T 
+
+
+SCAN35 {Sorry Sir! The scanners cannot show ship detail from hyperspace.
+} T 
+
+
+SCAN36 {   Long Range Scan  (s:%d)
+} T 
+
+
+SCANWRM { Object Class: Wormhole
+} T 
+
+
+PLUSDASH { [36m  +------------------------------+ [37m
+} T 
+
+
+PLUSFULL { [36m  +------------------------------+ [37m Shp Distance Bearing Heading Speed
+} T 
+
+
+USER01 {USER-ID ...... OPTION SELECTED
+} T 
+
+
+USER02 {(line %02d)  ... (log-on)
+} T 
+
+
+USER03 {(line %02d)  ... (sign-up)
+} T 
+
+
+USER04 {%-11s... %s
+} T 
+
+
+ADMIN01 {Planet Accounting report for %s
+} T 
+
+
+ADMIN02 {Item          Rate Qty  Price  Resv  S Mkup  Sold
+} T 
+
+
+ADMIN03 {%-11s %5u %5u %5u %5u  %1c %4u %4u
+} T 
+
+
+ADMIN04 {Cash in Planetary Bank ..... %s
+} T 
+
+
+ADMIN04A {Tax Revenue ................ %s
+} T 
+
+
+ADMIN04B {Tax Rate ................... %d
+} T 
+
+
+ADMIN05 {Warnings to intruders....... %c
+} T 
+
+
+ADMIN06 {Trade password.............. %s
+} T 
+
+
+MISSHRT {Sorry Sir! There is not that much energy in out neutron flux pile.
+} T 
+
+
+KILLGOT1 {***[33m
+We have destroyed the %s. Our crew have collecting any usable flotsam.
+We have retrieved[37m} T 
+
+
+KILLPNTS {
+The %s was worth %s points.
+} T 
+
+PHASER0 {We don't have a lousy Phaser system on this tub, SIR!!
+} T
+
+HPFIRED {[33mHyper-Phaser fired at bearing[37m %d[33m, Sir![37m
+} T 
+
+
+HPHITM {[36mOur Hyper-Phaser caused[31m %s[36m damage to Commander[31m
+%s's[36m ship![37m
+} T 
+
+
+HPHITU {***[31m
+Hyper-Phaser hit from Commander %s's ship, caused[37m %s[31m damage, Sir![37m
+} T 
+
+
+HNOFIRP {There is insufficient power in the Neutron Flux to fire, Sir!
+} T 
+
+
+HPWAIT {[35mThe Hyper-Phasers need a few more seconds to cool
+before firing again.[37m
+} T 
+
+
+MOVE1 {***[36m
+Helm reports leaving Sector[31m %d %d[36m and entering Sector[31m %d %d[37m
+} T 
+
+
+MOVE2 {***
+Scanners indicate the %s has left this sector.
+} T 
+
+
+MOVE3 {***[33m
+Scanners detect the %s has entered this sector.[37m
+} T 
+
+
+MOVE4 {***[31m
+Neutron Flux levels are too low. Engines shut down!
+} T 
+
+
+ZAPHIM1 {*** Sssssssssss.... ZAPP!!!!![31m
+
+You are instantly blinded by an intense beam from the Sentry Asteroid.
+
+} T 
+
+
+ZAPHIM2 {***[33m
+Hailing message from the Sentry Asteroid
+<Sector is a Neutral Zone, any hostilities will be dealt with severely!>
+[37m
+} T 
+
+
+PLAMSG1 {Planet Name         sector planet
+} T 
+
+
+PLAMSG2 {Sorry Sir! No planets have been established!
+} T 
+
+
+MAINT1 {Sorry Sir, we are not in orbit around any planet.
+} T 
+
+
+MAINT2 {They are requesting a trade Password before commencing repairs Sir!
+} T 
+
+
+MAINT3 {They say our password is not correct Sir!
+} T 
+
+
+MAINT4 {The Asteroid does not have a repair depot Sir!
+} T 
+
+
+MAINT5 {They are commencing the maintenance and repairs and should be
+completed in 20 centocks Sir!
+} T 
+
+
+MAINT6 {We don't have enough cash to pay for a maintenance team Sir!
+} T 
+
+
+MAINT7 {***[32m
+Repairs and general maintenance have been completed Sir![37m
+} T 
+
+
+MAINT8 {Sorry this planet has not established a repair facility.
+} T 
+
+
+JAMMER0 {We don't have a Jammer System on this ship, Sir!
+} T
+
+JAMMER1 {We have no Jammers on-board
+} T 
+
+
+JAMMER2 {Jammer Fired!
+} T 
+
+
+JAMMER3 {***
+Our scanners are being jammed Sir!
+} T 
+
+
+JAMMER4 {***
+Sorry Sir, All scanners systems are being jammed!
+} T 
+
+
+JAMMER5 {***
+The jamming has stopped Sir!
+} T 
+
+
+ZIPPER0 {Sorry Sir! We don't have a Zipper Launcher on this ship
+} T
+
+ZIPPER1 {We have no Zippers on-board, Sir!
+} T 
+
+
+ZIPPER2 {Zipper Fired!
+} T 
+
+
+ZIPPER3 {***[36m
+Scanners detect The %s just launched a Zipper.[37m
+} T 
+
+
+NEW1 {Sorry Sir, we must go to Sector 0 0 to get a new ship.
+} T 
+
+
+NEW2 {Type HELP CLASS for a list of ship class types.
+} T 
+
+
+NEW3 {You are now the proud owner of a[32m %s.[37m
+} T 
+
+
+NEW4 {Sorry Sir, we don't have enough cash for a %s.
+} T 
+
+
+NEW5 {Sir, we must be in orbit around Planet 1 in Sector 0 0 to get new equipment.
+} T 
+
+
+NEW6 {Sir, this ship cannot be equipped with a Mark-%d Shield
+} T 
+
+
+NEW7 {Your ship now has a Mark-%d Shield defense system.
+} T 
+
+
+NEW8 {Sorry Sir, We don't have enough cash for a Mark-%d Shield.
+} T 
+
+
+NEW9 {Sir, this ship cannot be equipped with a Mark-%d Phaser.
+} T 
+
+
+NEW10 {Your ship now has a Mark-%d Phaser System.
+} T 
+
+
+NEW11 {Sorry Sir, We don't have enough cash for a Mark-%d Phaser.
+} T 
+
+
+NEW12 {There is no such item.
+} T 
+
+
+NEW15 {Type HELP NEW for proper usage.
+} T 
+
+
+NEW16 {You already have %d ships, the maximum permitted!
+} T 
+
+
+SELL1 {Sorry Sir! We are not in orbit around Planet 1 in Sector 0 0.
+} T 
+
+
+SELL2 {After the Transfer Tax of %s we have netted %s C's for our %s %s, Sir!
+} T 
+
+
+SELL3 {We don't have that many %s Sir!
+} T 
+
+
+MAIL1 {
+   You have no messages waiting...
+} T 
+
+MAIL1A {
+   No Information on this subject available.
+} T
+
+MAIL2 {
+<Received: %s [%s]> } T 
+
+
+MAIL3 {
+The message was garbled beyond reconstruction / type - %d
+} T 
+
+
+MESG02 {
+Distress message from %s in Sector %d %d, they were attacked by 
+the %s with %s troops. They successfully defended the planet.
+} T 
+
+
+MESG03 {
+Distress message from %s in Sector %d %d, they were attacked by 
+the %s with %s troops. They have surrendered the planet.
+} T 
+
+
+MESG04 {
+Distress message from %s in Sector %d %d, they were attacked by 
+Commander %s in the %s with %s fighters. 
+They successfully defended the planet.
+} T 
+
+
+MESG05 {
+Distress message from %s in Sector %d %d, they were attacked by 
+Commander %s in the %s with %s fighters. 
+They have surrendered the planet.
+} T 
+
+
+MESG06 {
+Distress message from %s in Sector %d %d, The food supply is 
+extremely low and %s troops have starved to death.
+} T 
+
+
+MESG07 {
+Distress message from %s in Sector %d %d, The food supply is 
+extremely low and %s civilians have starved to death.
+} T 
+
+
+MESG08 {
+Message from %s in Sector %d %d,
+The population has reached the maximum sustainable on this planet.
+Implementing birth control procedures. Population now %s.
+} T 
+
+
+MESG09 {
+Message from %s in Sector %d %d,
+There is no more facilities for storing missiles, the missile production
+has been suspended at %s.
+} T 
+
+
+MESG10 {
+Message from %s in Sector %d %d,
+There is no more facilities for storing torpedoes, the torpedo production
+has been suspended at %s.
+} T 
+
+
+MESG11 {
+Message from %s in Sector %d %d,
+There is no more facilities for storing ion cannons, the production
+has been suspended at %s.
+} T 
+
+
+MESG12 {
+Message from %s in Sector %d %d,
+There is no more facilities for storing flux pods, the production has
+been suspended at %s.
+} T 
+
+
+MESG13 {
+Message from %s in Sector %d %d,
+There is no more facilities for stockpiling food supplies.
+The production has been suspended at %s.
+} T 
+
+
+MESG14 {
+Message from %s in Sector %d %d,
+There is no more support facilities for fighters, the production has
+been suspended at %s.
+} T 
+
+
+MESG15 {
+Message from %s in Sector %d %d,
+There is no more facilities for storing decoys, the production has
+been suspended at %s.
+} T 
+
+
+MESG16 {
+Message from %s in Sector %d %d,
+There is no more facilities for housing troops, the training has
+been suspended at %s troops in active duty.
+} T 
+
+
+MESG17 {
+Message from %s in Sector %d %d,
+There is no more storage facilities for zippers, the production has
+been suspended at %s.
+} T 
+
+
+MESG18 {
+Message from %s in Sector %d %d,
+There is no more storage facilities for jammers, the production has
+been suspended at %s.
+} T 
+
+
+MESG19 {
+Message from %s in Sector %d %d,
+There is no more storage facilities for mines, the production has
+been suspended at %s.
+} T 
+
+MESG19A {
+Message from %s in Sector %d %d,
+There is no more storage facilities for gold, the production has
+been suspended at %s.
+} T 
+
+
+MESG20 {
+Production Report from %s in Sector %d %d
+} T
+
+MESG30 {
+Distress message from %s in Sector %d %d, The local population
+has revolted and overpowered our troops. %s troops were 
+slaughtered in the war, the rest have joined the revolt.
+} T 
+
+CAPTDOC {***[31m
+Our intelligence team has captured a secret document, it reads...
+[37m
+Planet Name         sector planet
+} T 
+
+
+FLEET1 {You currently have in your fleet...
+} T 
+
+
+FLEET2 {You are being transported to your %s The %s...
+} T 
+
+
+FLEET3 {Which ship do you wish to command this mission, Sir --- } T 
+
+
+FLEET4 {Be real.... Pick one from the list
+} T 
+
+
+RENAME1 {Your ship is now named The %s.
+
+} T 
+
+
+RENAME3 {Type HELP RENAME for the correct usage.
+} T 
+
+
+SELFD1 {Self Destruct Countdown Begun, Type ABORT to stop!
+} T
+
+SELFD1A {Sorry Sir! Thats not permitted in the Neutral Zone!
+} T
+
+SELFD2 {***
+<WARNING> Self Destruct in %d.
+} T 
+
+SELFD2A {***
+<Warning> Sensors detect a large Neutron Flux buildup in The %s.
+} T
+
+SELFD2B {***
+<Warning> Dangerous Neutron Flux overload condition in The %s.
+}  T
+
+SELFD2C {***
+<Warning> Critical Neutron Flux overload condition in The %s.
+}  T
+
+SELFD3 {***
+
+Kaaaaaaa BOOOOOMMMM!!!!!!
+} T 
+
+SELFD3A {***
+Kaaaaaa Booooooom!
+The %s just exploded with a massive neutron implosion. Shock wave eminent!
+} T
+
+SELFD4 {Self destruct sequence aborted!
+} T 
+
+SELFD4A {***
+The Neutron Flux overload on The %s appears to have been resolved, Sir!
+} T
+
+SELFD5 {The Self Destruct sequence has not been started!
+} T 
+
+SELFD6 {***
+Shields deflected some of the blast! Damage Control reports %s damage.
+} T
+
+SELFD7 {***
+The shock wave caused %s damage Sir!
+} T
+
+CYBMSG {***
+Hailing message from the %s
+< Humans are the scum of the universe, not fit to survive! >
+} T 
+
+
+CYBMSG2 {***
+Hailing message from the %s
+< Cybertrons shall rule the universe! >
+} T 
+
+
+CYBMSG3 {***
+Hailing message from the %s
+< You are not worth wasting a single torpedo on! >
+} T 
+
+
+CYBMSG4 {***
+Hailing message from the %s
+< By Cyborg Decree, all humans are doomed to destruction! >
+} T 
+
+
+CYBMSG5 {***
+Hailing message from the %s
+< You had better run if you know whats good for you! >
+} T 
+
+
+CYBMSG6 {***
+Hailing message from the %s
+< I could kill you right now if it weren't so un-sportsmen like! >
+} T 
+
+
+CYBMSG7 {***
+Hailing message from the %s
+< You are so dumb you make a Toranian pig look like intelligent life. >
+} T 
+
+
+CYBMSG8 {***
+Hailing message from the %s
+< Are you just going to sit there and let me kill you without a fight? >
+} T 
+
+
+CYBMSG9 {***
+Hailing message from the %s
+< You are no match for a Cybertron! >
+} T 
+
+
+CYBMSG10 {***
+Hailing message from the %s
+< I will destroy you, human vermin! >
+} T 
+
+
+CYBMSG11 {***
+Hailing message from the %s
+< Extermination is the only way to deal with human scum! >
+} T 
+
+
+CYBMSG12 {***
+Hailing message from the %s
+< You are mine human. Mine to toy with, mine to slay! >
+} T 
+
+
+CYBMSG13 {***
+Sir! There seems to have been a large explosion just out of scanner range!
+} T 
+
+
+CYBMSG14 {***
+Sir! We are receiving a garbled message.
+Something about The %s.
+} T 
+
+
+CYBMSG15 {***
+Sir! The scanners indicate a huge energy burst bearing %d.
+} T 
+
+
+CYBMSG16 {***
+Hailing message from the %s
+< Eat this! You Biological Misfit!  >
+} T 
+
+
+CYBMSG17 {***
+Hailing message from the %s
+< Suck on this torpedo you Gloxanian Slugworm!  >
+} T 
+
+
+CYBMSG18 {***
+Hailing message from the %s
+< You can't dodge torpedoes forever you Mongonian Mudmole!  >
+} T 
+
+
+CYBMSG19 {***
+Hailing message from the %s
+< Give it up Human. I can keep this up for hours! >
+} T 
+
+
+CYBWOOP1 {***
+Hailing message from the %s
+< Cyborgs are perfect per per perfzzzzztt perfzzzzztt perfzzzzztt. >
+} T 
+
+
+CYBWOOP2 {***
+Hailing message from the %s
+< Kill! Kill! Kill! >
+} T 
+
+
+CYBWOOP3 {***
+Hailing message from the %s
+< Cyborgs are <click> are <click> are <click> are >
+} T 
+
+
+CYBWOOP4 {***
+Hailing message from the %s
+< Prepare to die human! >
+} T 
+
+
+CYBTERM {***
+Hailing message from the %s
+< Cybertrons are superior beings!! >
+} T 
+
+
+CYBLUCK {***
+Hailing message from the %s
+< I shall be back for you later, human vermin!! >
+} T 
+
+
+DRDMSG1 {***
+Beacon Message from the %s
+< This Survey Ship is protected under Galactic Treaty Gt05-66A6-5532 >
+} T 
+
+
+DRDMSG2 {***
+Beacon Message from the %s
+< Disturbing this Survey Ship is punishable under Galactic Law >
+} T 
+
+
+DRDMSG3 {***
+Beacon Message from the %s
+< Maintain standard approach clearance regulations Gr06-25K5-29D2 >
+} T 
+
+
+DRDMSG4 {***
+Beacon Message from the %s
+< Caution! Auto Defense Systems Activated >
+} T 
+
+
+DRDMSG5 {***
+Beacon Message from the %s
+< Warning! This Vessel equiped with Auto Defense Systems! >
+} T 
+
+
+DRDHLP1 {***
+Hailing Message from the %s 
+< Your Actions are in violation of Galactic Treaty! Cease and Desist! >
+} T 
+
+
+DRDHLP2 {***
+Hailing Message from the %s
+< Auto Defense systems activated. Cease and Desist this attack! >
+} T 
+
+
+DRDHLP3 {***
+Distress Call from the %s
+< This vessel under an illegal attack. Request assistance! >
+} T 
+
+
+DRDHLP4 {***
+Distress call from the %s
+< Under attack. Requesting assistance from any Vessel.>
+} T 
+
+
+DRDHLP5 {***
+Hailing Message from the %s
+< The Vakory High Command has been informed of you illegal agression >
+} T 
+
+
+DRDMSG6 {***
+Beacon Message from the %s
+< CAUTION! This Vessel Transports Hazardous Material >
+} T 
+
+
+DRDMSG7 {***
+Beacon Message from the %s
+< This Vessel is protected under Galactic Treaty Gt05-66A6-5532 >
+} T 
+
+
+DRDMSG8 {***
+Beacon Message from the %s
+< Disturbing this Vessel is punishable under Galactic Law >
+} T 
+
+
+DRDMSG9 {***
+Beacon Message from the %s
+< Maintain standard approach clearance regulations Gr06-25K5-29D2 >
+} T 
+
+
+DRDMSG10 {***
+Beacon Message from the %s
+< CAUTION! Avoid contamination! Maintain Clearance >
+} T 
+
+
+DRDMSG11 {***
+Hailing Message from the %s
+< Warning! This Ship is tranporting goods under Murdonian Imperial Authority >
+} T 
+
+
+DRDMSG12 {***
+Hailing Message from the %s
+< Warning! Interfering with this vessel in punishable by Murdonian Law >
+} T 
+
+
+DRDMSG13 {***
+Hailing Message from the %s
+< Warning! Approaching this vessel will be considered an act of agression >
+} T 
+
+
+DRDMSG14 {***
+Hailing Message from the %s
+< Warning! This vessel tranporting goods under Galactic Treaty >
+} T 
+
+
+DRDMSG15 {***
+Hailing Message from the %s 
+< Warning! Maintain clearance from this vessel >
+} T 
+
+
+DRDHLP11 {***
+Hailing Message from the %s 
+< Your Actions will be reported to the Murdonian Imperial Defense Command >
+} T 
+
+
+DRDHLP12 {***
+Hailing Message from the %s
+< This is a peacefull transport ship. Your actions are reprehensable! 
+} T 
+
+
+DRDHLP13 {***
+Distress Call from the %s
+< This vessel under an illegal aggression. Request assistance! >
+} T 
+
+
+DRDHLP14 {***
+Distress call from the %s
+< Under attack. Requesting assistance from any Vessel.>
+} T 
+
+
+DRDHLP15 {***
+Hailing Message from the %s
+< The Murdonian Imperial Defense has been informed of you illegal agression >
+} T 
+
+
+TELEPORT {***
+WARNING! Navagation beyond the Galactic Perimeter is not permitted. Engines
+shut down under emergency procedures.
+***
+Damage control reports light damage to all sections due to kenetic shock.
+
+} T 
+
+MINE0 {We don't have a mine launching system Sir!
+} T
+
+MINE1 {We don't have any neutron mines, Sir!
+} T 
+
+
+MINE3 {Neutron Mine launched. Detonation in %u centocks!
+} T 
+
+
+MINE2 {The mine launcher is temporarly jammed, Sir!
+} T 
+
+
+MINE4 {***
+ZZzzzzzsssssssssttttt! BOOOOOOM!
+A neutron mine exploded bearing %d, distance %u, causing %s damage!
+} T 
+
+
+MINE5 {***
+Sensors indicate a large neutron explosion bearing %d, Sir!
+} T 
+
+
+MINE6 {***
+WARNING! WARNING!
+Sensors indicate a neutron mine bearing %d, distance %u.
+} T 
+
+
+MINE7 {Sorry, no mining is permitted in sector %d!
+} T 
+
+
+LOCK01 {***
+Fire control Lock removed!
+} T 
+
+
+LOCK02 {***
+Fire control locked on %s commanded by %s.
+} T 
+
+
+NOLOCK {***
+Fire Control has no lock set.
+} T 
+
+
+NAV01 {***
+Sector %d %d is bearing %d, distance %s.
+} T 
+
+
+NAVFMT {Type HELP NAVIGATE for the correct usage.
+} T 
+
+
+SETFMT {Type HELP SET for the correct usage.
+} T 
+
+
+WARPFMT {Type HELP WARP for the correct usage.
+} T 
+
+
+IMPFMT {Type HELP IMPULSE for the correct usage.
+} T 
+
+
+ROTFMT {Type HELP ROTATE for the correct usage.
+} T 
+
+
+PHAFMT {Type HELP PHASER for the correct usage
+} T 
+
+
+SNDFMT {Type HELP SEND for the correct usage.
+} T 
+
+
+SCANFMT {Type HELP SCAN for the correct usage.
+} T 
+
+
+ORBFMT {Type HELP ORBIT for the correct usage.
+} T 
+
+
+REPFMT {Type HELP REPORT for the correct usage.
+} T 
+
+
+TRANSFMT {Type HELP TRANSFER for the correct usage.
+} T 
+
+
+ATTFMT {Type HELP ATTACK for the correct usage.
+} T 
+
+
+BUYFMT {Type HELP BUY for the correct usage.
+} T 
+
+
+PRICEFMT {Type HELP PRICE for the correct usage.
+} T 
+
+
+MISFMT {Type HELP MISSILE for the correct usage.
+} T 
+
+
+HPHAFMT {Type HELP HYPER for the correct usage.
+} T 
+
+
+NEWFMT {Type HELP NEW for the correct usage.
+} T 
+
+
+SELLFMT {Type HELP SELL for the correct usage.
+} T 
+
+
+MINFMT {Type HELP MINE for the correct usage.
+} T 
+
+
+SHLDFMT {Type HELP SHIELD for the correct usage.
+} T 
+
+FREQFMT {Type HELP FREQ for the correct usage.
+} T 
+
+
+MSGPRF {***
+Sorry Sir.... I won't transmit that!
+} T 
+

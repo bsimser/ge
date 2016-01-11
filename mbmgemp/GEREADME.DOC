@@ -1,0 +1,2476 @@
+==============================================================================
+GALACTIC EMPIRE Version 3.2
+==============================================================================
+
+
+Congratulations on your decision to run the Galactic Empire module
+on your MAJOR BBS system. If you are running this as a trial or demo
+you will find ordering information in the file ORDER.FRM.
+
+Included on this distribution diskette you will find the following files;
+
+MBMGEMP.DLL   - The Galactic Empire DLL file
+MBMGEMP.MDF   - The Galactic Empire MDF file
+MBMGEMP.DOC   - The Galactic Empire Users Documentation
+
+MBMGEMSG.MSG     - Text message file
+MBMGEHLP.MSG     - Text help file
+MBMGESHP.MSG     - Text Ship Configuration Table
+
+The following are empty databases for you to use when resetting 
+a campaign.
+
+MBMGEPLT.NEW    - Planet System Database 
+MBMGEUSR.NEW    - Empty ship database
+MBMGESHP.NEW    - Empty ship database
+MBMGEMAL.NEW    - Empty mailbox database
+MBMGETEA.NEW    - Empty Team database
+
+GEINST.DOC     - The Installation Documentation
+GEREADME.DOC   - This file
+ORDER.FRM      - Order form for GE
+
+MBMGEMAP.ZIP   - GE Starmap Utility.
+
+================================= NOTICE ======================================
+
+
+Galactic Empire Utilities coming soon.
+
+Utility:   Full Screen Editor to edit all GE databases.
+               Change Players User Profile
+               Change Players Ship Configuration
+               Create new ships for a player
+               Examine Specific Planets and Sectors
+               Change Planets or Sector data
+               Insert New Planets and Sectors and WORMHOLES
+               Edit Team Records on screen
+           
+           Detail Reports
+               Report on all players, scores, ships, teams, team members, etc.
+               Report on Galaxy with specific sector details.
+               Galactic Map of discovered sectors.
+
+           Summary Reports
+               Total Players in game, ships in play, sectors discovered,
+               planets colonized, etc.
+
+
+           All these features for only $65.00. 
+
+==============================================================================
+
+Attention Ship Yard Masters
+
+We would like to begin publishing your ship configurations. If you think 
+you have created a novel new ship class, please upload it to our support
+board for others to enjoy. If we select your alternate ship table for 
+inclusion in future releases WE will make all changes required to insure
+compatability with the new release. This means that you won't have to keep
+changing your personal copy. Simply copy the alternate table over the 
+default one and bring the system up. 
+
+Thanks!!
+
+
+
+*******************************************************************************
+*******************************************************************************
+***                         S U P P O R T                                   ***
+*******************************************************************************
+*******************************************************************************
+***                                                                         ***
+***   With your purchase of Galactic Empire Version 3 you get access to     ***
+***   one year of free upgrades provided you return the registration card   ***
+***   enclosed in your product package.                                     ***
+***                                                                         ***
+***   You may at the end of the year extend your maintenance and have       ***
+***   access to another year of upgrades                                    ***
+***   with a nominal fee of $95.00. While some will take exception to this  ***
+***   charge it provides some reimbursement for the thousands of hours a    ***
+***   year we put into enhancements for this product.                       ***
+***                                                                         ***
+***   If you choose not to renew your maintenance you may continue to use   ***
+***   the last version you received under the maintenance program. We       ***
+***   are confident, however, that you will choose to continue supporting   ***
+***   the growth and enhancement of this product.                           ***
+***                                                                         ***
+***   In advance of your support we want to THANK YOU!! Without such        ***
+***   great customers as you this product would not be possible.            ***
+***                                                                         ***
+*******************************************************************************
+*******************************************************************************
+
+
+===============================================================================
+Revision notes: 
+===============================================================================
+
+===============================================================================
+08/06/94 Release 3.2e
+===============================================================================
+
+Installation Notes 
+------------------------------------------------------------------
+In order to give you the capability of adding specific annoyance
+messages to each class of CYBORG player we have added a new group 
+of messages to the MBMGEMSG.MSG file. Between the messages CYBBASEM
+and CYBLASTM are sets of messages for each class of CYB and DROID 
+defined. If you have added your own classes you will want to expand
+the table as described below. 
+
+IF THE MESSAGES CYBMASEM AND CYBLASTM ARE NOT DEFINED IN YOUR 
+MESSAGE FILE THE GAME MAY DISPLAY AN ERROR.
+
+There have been no changes to the default MBMGESHP.MSG configuration.
+
+Release Notes
+------------------------------------------------------------------
+
+The option to customize the annoyance messages displayed from the
+CYBORG players has been added. The messages fall in sets between
+the two messages CYBBASEM and CYBLASTM in the MBMGEMSG.MSG file.
+
+Each class of CYBORG ship gets 16 messages. The first four messages are
+general messages displayed when the cybertron approaches another player
+from a distance. The next four messages are general messages displayed
+when the cybertron begins to brake to engage a player. The last four
+messages are displayed when a player is to a cybertron but the cyb chooses
+not to attack for any number of reasons. The next four messages are
+displayed when a cybertron attacks another player.
+
+If you have created custom MBMGEMSG.MSG files please insert these new 
+messages in the exact same spot or copy the tail end of the released 
+MBMGEMSG.MSG file (including the new messages) to your file, replacing
+the same section in your file.
+
+
+
+
+The "messy" high warp numbers are now correctly displayed. If a player goes
+to "hyper-warp" (usually only cybs do this) then the word "Hyper" will
+be displayed instead.
+
+
+===============================================================================
+03/06/94 Release 3.2d
+===============================================================================
+
+Installation Notes 
+------------------------------------------------------------------
+In order to give you the option to specify the prices of items,
+phasers, and shields, many new messages were added to the MBMGEMSG.MSG
+file. If you have made significant changes to your configuration 
+file please carefully compare the two as GE will not operate 
+properly without these new options.
+
+There have been no changes to the default MBMGESHP.MSG configuration.
+
+Release Notes
+------------------------------------------------------------------
+
+A bug which prevented fighters from being killed on a planet when a player
+attacked them with less than a 1 to 10 ratio has been fixed. The game now
+uses floating point to calculate the ratio and the ratio has been reduced.
+Players now must have at least 2% of the planets fighters in the attack
+to kill off some of the planets ships. Example: If the planet has 100000
+fighters and a player attacks with 1000 there will be no planatary fighters
+killed (its considered a wimpy attack). If the player attacks with 2100 
+fighters they will begin to see some of the planets fighters killed.
+
+The logic to create a random cyborg ship class from time to time has
+created some problems when a class of cyborg ship is non-motive and very
+powerful. These tended to accumulate and were hard to locate and kill do
+they hung around. We have modified the random function to select these
+less often. 
+
+A bug which allowed players to hangup without losing their ship has been
+fixed.
+
+The weight of gold has been reduced to increase the amount all ships can
+hold.
+
+Torps and Missiles will no longer follow a player through a wormhole.
+
+Many sysops have complained that the phasers are too weak. They attempt to
+increase the strength only to find out that they get weaker still. After 
+looking into the problem we realized that the documentation for the two
+options in the MBMGEMSG.MSG file was backwards. You reduce the value in 
+HPFIRDST and PFIRDST to increase the range and power. We have also bumped 
+up the power on both Hyper-phasers and regular phasers a bit in the standard
+release.
+
+The Rotate command can now be issued while moving to instruct the ship to
+turn to a new heading.
+
+The Warp command can now be issued WITHOUT the direction operand to instruct
+the ship to simply change speed on the current heading.
+
+The Impulse command can now be issued WITHOUT the direction operand to 
+instruct the ship to simply change speed on the current heading.
+
+Two new options have been added to the MBMGEMSG file. HYPDST1 and HYPDST2
+control when the cybertrons go to hyperwarp and when they drop back out.
+By adjusting these values you can even disable this feature completly. 
+The first value HYPDST1 will set the distance (in sectors) from a player 
+that the cybertron kicks into hyperwarp. If the player is more than HYPDST1
+sectors away the Cyb will go to hyperwarp. HYPDST2 controls when the Cyb
+comes out of hyperwarp and begins slowing down to their normal speed.
+
+A problem with shield types above 7 not draining flux has been fixed.
+
+A new SET option has been added. SET FILTER ON will cause GE to filter out
+90% of the messages coming to a user from the game. This option is usefull
+during battle to cut down on the message flak and improve response. I have
+left the most important messages (like your ship just got hit) to keep the
+realism. Your users should love this new feature.
+
+The prices for items, phasers, and shields are now in the configuration 
+options. To use these look for ITMPR01 to ITMPR25 for item prices; SHLDPR01
+to SHLDPR19 for shield prices; and PHSRPR01 to PHSRPR19 for phaser prices.
+
+The baseprice for spys was in error. It permitted players to sell spys back
+to Zygor for large sums and distorted the balance of play. The price has been
+adjusted to 100 instead of 10000 each. If your players balk and you wish to
+ajust it you can set it back for the current game. This does, however, create
+a large imbalance in the game.
+
+Many many spelling and syntax errors were corrected in the message files.
+
+The SCAN LO has been enhanced to distinguish between Cyb's and Humans. Human
+players will now show up as '=' while Cyb's will remain '+'.
+
+Users who do not have the Galactic Empire PLAYKEY will no-longer get the 
+logon reminder.
+
+===============================================================================
+12/14/93 Release 3.2c
+===============================================================================
+
+Installation Notes (does not pertain to patch level updates)
+------------------------------------------------------------------
+
+                           !!! IMPORTANT !!!
+Many of the default parameters have been adjusted to provide what we feel is
+a much more "playable" and balanced game. While the complexity of GE 
+precludes finding one set of parameters that makes all users and sysops 
+happy, we hope that the ones provided in the default game provide at least
+a reasonably challenging game.
+
+In order to balance the game some changes to the scoring have been
+made. The value of planets has been reduced to a much fairer ratio
+giving players who wish to battle instead the opportunity to see
+their name in the high score list. This may upset some of your players
+and if so you can adjust the new factors ITMVL01, PLTVDIV and PLTVCASH
+outlined below. 
+
+Because we have had to change the physical structure of the MBMGEMAL.DAT 
+mail file it will be necessary to replace your existing MBMGEMAL.DAT with 
+the empty one provided with this release. This means that your users will 
+loose any pending GEMAIL (provided you are using this option). 
+
+Some additions have been made to the MBMGEMSG.MSG file. If you have 
+made custom changes to yours you will have to merge the two. To make it 
+easier the new messages are annotated with "** NEW in Rel 3.1c **". 
+This is true for all but the lengthly tables added to the MBMGEMSG.MSG file.
+You can find these between the messages ITMPL01 and PLTVCASH inclusive.
+
+Because of a bug in the SnnSNAME size the MBMGESHP.DAT file has to be 
+reset. Unfortunately this means the entire game needs to be reset. For
+this reason this release is now called 3.2c and all databases **MUST** 
+be reset. We are sorry if this inconviences you.
+
+Patch level 6 (3.2c.6) 2/8/94
+-----------------------------
+
+A GP bug in the spy logic has been fixed. This problem caused immediate
+Exception 13 errors.
+
+The Cloak logic was enhanced to support an explicit CLOAK ON and CLOAK OFF
+command. Additionally the CLOAK ON command now takes a few seconds to charge 
+the cloaking system. This prevents players from doing a CLOAK OFF,FIRE,and
+CLOAK ON in a macro without risking something.
+
+The planet TEAM feature still had a logic bug. Players could designate their
+planet as a "team" planet even though they were not a member of any team.
+This allowed any player who was also not a member of a team to trade with
+the planet as if it were a team planet. Fixed.
+
+The problem with SPY messages going to the email "black hole" has been 
+resolved. They will now show up on in the distress message section.
+
+The problem with the "<Invalid Pointer>" in the production report has been 
+resolved. This was the suspected problem with the cleanup lockups also.
+
+Patch level 5 (3.2c.5) 12/28/93
+-------------------------------
+A bug in the SPY logic was resolved. This bug caused a spy who was caught
+to survive and be caught again and again. The spy is now sanctioned properly.
+
+A planet will only manufacture a small number of spy's. When the max is 
+reached a "garbled" message was sent. This has been resolved and a clear
+message is now sent to the player.
+
+A bug in the missile logic caused them to be weaker than intended. I have
+fixed the bug but if you have increased MDAMMAX to compensate you might
+want to reduce it by about 25%. If you left it as the default then no
+further change is required. Users might notice the increased strength 
+in smaller ships which may not be able to withstand as many missiles now.
+
+A bug in the math that controls the strength of shields caused the shields
+above 7 or 8 to be invincible. This was never the intent. We have resolve 
+the math error. Some users may be dissappointed when they find out that
+the shields they now have will be less powerfull but the effect is uniform
+(including Cybs) and unavoidable.
+
+We enhanced the cloaking logic a bit. If a player is cloaked and trys to
+move under impulse there is a chance that other players nearby might detect
+the ion trail the ship leaves. The slower the ship goes the less the chance.
+This should balance out the cloak a bit more.
+
+A new option, UNIVWRAP, has been added. This option lets you specify if the
+galaxy wraps from left to right, and top to bottom. The default is NO.
+
+I have included a sample GIF Starmap with this release. This Starmap is
+a product of an add-on product under development. I am interested in getting
+some feedback on suggested enhancements to the map to make it more usefull
+to your users. The map will be generated automatically each night by an
+offline utility.
+
+Fixed the Roster Position function. The default game settings for SCRBONUS
+(the bonus awarded for killing the top player) was set to 10000. Because
+no player could attain roster position 1 the maximum bonus a player who
+killed the top player actually received was 5000. This has been fixed and
+the player would now receive the full bonus. HOWEVER, since I have monitored
+some actual play for a few weeks I believe the 10000 bonus is too large. 
+I have reduced it to 1000 in the default game. If you wish to leave it 
+exactly the same as in 3.2c.4 then set SCRBONUS to 5000. I recommend the 
+lower 1000 though.
+
+
+Patch level 4 (3.2c.4) 12/25/93
+-------------------------------
+Whoops! We released patch level 3 with some diagnostic code that speeds up
+the planetary update process. For those who got this release...SORRY! We
+have quickly updated it (yes I am working on Christmas to fix this problem)
+There is no negative effect on the game other than the load on your system.
+
+We also enhanced the NEW SHIELD and NEW PHASER commands to give players
+a credit on their existing phaser and shield systems. This credit is 
+2/3rds the purchase price. Because of this enhancement there are several
+new messages in the MBMGEMSG.MSG file. If you have a custom version of this
+file please copy all the NEWnn messages relating to shield and phaser 
+purchases. Make sure your custom MBMGEMSG.MSG contains the same number
+of messages as the standard release. (In case you err GE will also check for
+you when it starts up).
+
+*** MERRY CHRISTMAS ***
+
+
+Patch level 3 (3.2c.3)
+----------------------
+
+Found a condition that caused an EXCEPTION 13 error when certain data in
+the MBMGEPLT.DAT file became corrupted. This has been repaired. If anyone 
+is continuing to have an EXCEPTION 13 problem after this patch please let
+us know.
+
+Fixed a problem with spy's not being manufactured on planets.
+
+Changed scoring so that when a player gets killed by a cybertron they
+only get penalized 10% of the amount they would have if they got killed 
+by another player.
+
+Changed the cybertron motion logic a bit to make the cybs a bit more 
+interesting. 
+
+Reduced the odds that a cybertron will run off when damaged.
+
+Patch level 2 (3.2c.2)
+----------------------
+Fixed a bug that caused the price of everything in sector 0 0 to be 32.
+Also enhanced the logic so that Sector 0 0 will have price fluctuations
+based upon market conditions. This will cause the pricing to be a little
+more interesting as some players will find better deals on some items
+depending upon the market price. 
+
+Patch level 1 (3.2c.1)
+----------------------
+Fixed a bug that caused the planets to fail to update.
+
+Fixed a math error in the NAV function and enhanced the NAV function
+to give a bearing to the center of a sector instead of the upper left corner.
+
+As Released (3.2c)
+------------------
+
+Bugs Resolved:
+--------------
+
+A bug which caused DEL ERR's and UPD ERR's has been fixed. This only appeared
+in the Beta.3 version.
+
+A bug that caused the incorrect amount to be subtracted from a players
+score when they lost a battle has been fixed.
+
+A bug which permitted players to sell 1 item to the EMPIRE and get paid
+a NEGATIVE amount has been fixed.
+
+A bug which caused the Cybers and Droids number of kills to be ANYTHING
+has been fixed. This was a memory pointer error which may have caused 
+all kinds of other nasty stuff. Hope this was the cause of some of the random
+bugs some of you reported. If not we will keep hunting.
+
+     \|/
+     [=]O<
+     /|\
+
+The Cyber logic was firing torpedoes, mines, jammers, etc, even when you
+specified that this class had none. This is now fixed.
+
+A bug which allowed a team to have more members than the TEAMMAX parameter
+has been fixed.
+
+A bug which permitted Cyb's and Droids to have shields up in hyperspace
+has been fixed.
+
+The Ship Name in the MBMGESHP.MSG file (Option SnnSNAME) was limited to
+a size of 29 characters. Unfortunately if you use more than 14 characters 
+the system would do strange things, even GP sometimes. In order to 
+fix this one I had to expand the data area size in the MBMGESHP.DAT file.
+This has the unfortunate side effect mentioned above, the whole game must be
+reset because of the incompatable files. Sorry!
+
+The games planet production of items was running TOO FAST due to a formula
+bug. This has been slowed down by a factor of 3. If this is still too fast 
+you can adjust the ITMMH01 value (see enhamcements below). Changing this
+one value effects the production rate of all other items.
+
+The SYS GOTO command could leave you still in orbit. If you then did any
+planet command strange things would happen. This is now fixed.
+
+The Spy would send a message to the wrong player. Fixed!
+
+The Spy logic caused an occasional EXCEPTION 13. Fixed! Our sincerest apology
+for letting this one slip past.
+
+Spys will no longer report his spy stuff to his owner AFTER the owner takes
+over the planet.
+
+When the MBMGEPLT.DAT database grew above 12 meg GE may stop updating the
+planets altogether. This has been resolved. BTW there are over 6300 planets
+in a galaxy of this size. If performance is becoming a problem you may wish
+to either extend the time allowed to make a complete pass of the database
+(increase PLANTOCK to its maximum), or decrease the size of the galaxy next
+time you reset the game (reduce UNIVMAX).
+
+A few sites reported a problem with a BTRIEVE ERROR 5 in the MBMGEMAL file.
+We have worked for weeks to identify the problem and have been unable to 
+conclusively identify any actual problem with GE. We suspect some sort of
+unusual interaction with other modules and have taken some defensive 
+programming measures to resolve any potential conflict. If you have had this
+problem with version 3.1b please let me know if this release resolves your
+condition. Even more important, if the problem persists PLEASE CALL US!.
+
+A bug which prevented you from reconfiguring the DROIDS as CYBORGS has been
+resolved. You can now change empty class to a CYBORG. 
+I tested changing classes 17, 18, 19, and 20 to CYBORGS and played for 
+several hours. All worked well.
+
+Taxing the planet caused a revolt at too low a tax value. This has been 
+softened.
+
+
+Enhancements:
+-------------
+
+A player de-cloaking nearby will be reported to you when they decloak.
+
+Planets can now be assigned to teams. This is done by setting the trade
+password for a planet to TEAM. From then on players on the same team
+(and only players on the team) can buy from the planet. 
+
+Players can now set the price to sell items instead of the amount to 
+mark up. This allows players who wish to give there goods away to other
+teammates at low prices to do so. It also lets players offer special
+discounted prices to other players BELOW what market values are.
+
+A new option CHGLOSER has been added to the MBMGEMSG.MSG file. This option
+allows you to charge a players cash when they lose a battle with another 
+player. The amount charged is then awarded to the winning player. This is
+similar to an older method used many versions ago with the enhanced 
+option to now let you specify the percent to charge.
+
+The ship size function has been adjusted to reflect what we feel is more
+reasonable sizes. I will update the HELP CLASS nn function accordingly.
+If you have created your own classes of ships this will effect them also.
+
+The Roster function has been enhanced to display planet populations in
+the thousands.
+
+Five new options have been added to the MBMGEMSG file to allow you to control
+the planetary attack ratios. These options are PLATTRF1 to PLATTRT2 in the
+message file. With these new options you can adjust the balance of the
+offensive and defensive in an attack. Please see the complete descriptions
+in the message file for a comprehensive description of these options.
+
+A new option has been added to each class of ship in the MBMGESHP.MSG 
+file. This new option replaces the SnnRES1 reserved option with a SnnDAMF
+parameter. This parameter allows you to specify the effect of damage on
+this class of ship. Damage effect is no longer a function of size but of
+this value. This way you can specify a large ship which is very fragile,
+or a small ship that is very tough.
+
+We have added several new classes of ships to the standard release to make
+the game more interesting. Among them are a CYBER BASE STAR, a Sarten
+Attack Drone, and a Sarten Obliterator. I leave it up to your users to 
+discover the attributes of these ships.
+
+We have reduced the standard released galaxy size to 600x600 and increased
+the frequency of planets and wormholes. This will force players into closer 
+proximity with each other and make for a more interesting game.
+
+We have enhanced the logic so that droids will all be centered within
+20 sectors of sector 0 0. This will allow players more opportunity to 
+interact with droids who make easy targets.
+
+A new command JETTISON has been added. This command lets you jettison all or
+a specific number of an item to free load space for other items.
+
+Phasers can now be fired in impulse without specifying the spread. A 
+default spread of 1 is assumed. This way a player does not need to change
+how they use the command depending upon whether they are in warp or impulse.
+
+The size of the Freight Barge has been reduced and its offensive weapons 
+removed. It was never intended to be the invunerable offensive platform
+it became.
+
+Players will now get only the first message when a planets production reaches
+maximum. This way they are not inundated with repeated messages.
+
+Planet update cycles specified in the message PLANTOCK have been changed from
+seconds to minutes. You can now specify 12 hour (720 minute) update cycles 
+if you wish to lighten the load on your disk.
+
+A new option MISENGFC has been added to the MSG file. This option lets you
+specify the amount of energy to charge against the Flux Pile each time a
+missile is fired. The default setting is 10 indicating a 1/10 charge. If the
+player fires a missile with 50000 (MIS x 50000) it will deduct 5000 from the
+flux pile. Setting this option to 1 will cause the same command to deduct
+50000 from the flux.
+
+A new option PHATOWRP has been added to the MSG file. This option specifies 
+the lowest phaser class which has the capability of firing from impulse to
+hyperspace. The default setting is 3 meaning that Mark-1, and Mark-2 Phasers
+DO NOT have this capability. MARK-3 and above do. You can disable this feature
+by setting this option to 20 or make it universal by setting it to 1.
+
+A new option SCRBONUS has been added to the MSG file. This option specifies
+the maximum bonus for killing the top player in the roster. The bonus is 
+devided by the players roster position so that the bonus for killing the 
+number two player is 1/2 this value, third is 1/3rd this value, etc. This 
+gives a huge incentive to go after the top players. Disable this feature by
+setting the value to 1.
+
+A new option SCRFACT has been added to the MSG file. This option specifies
+the ratio of the points awarded to the winning player to deduct from the
+loser. The default is 10 which will cause 1/10th of the points awarded to 
+the winner to be deducted from the looser. This allows you to penalize the
+loser for losing a battle.
+
+
+A new Table ITMPL01 to ITMPL25 has been added. This table specifies the 
+maximum amount of each type of item a planet can sustain. The actual amount
+is calculated from this value depending upon numerous factors. It could be
+more or less. This value gives you the option of configuring the maximums
+all planets can produce. Please note that all production is a function of
+the population (and other factors). By simply limiting the amount of
+men on a planet you also slow down the rate of production of other items.
+
+
+A new Table ITMWT01 to ITMWT25 has been added. This table specifies the
+base weight of each type of item. Adjusting these values controls how many
+of an item a ship can hold.
+
+A new Table ITMVAL01 to ITMVAL25 has been added. This table specifies the
+point value of each item. The item quantity is divided by the value of
+PLTVDIV prior to multiplying by the ITMVALnn number. This gives you complete
+control over the points and weight of planet populations. The default 
+setting only specifies a value for MEN, other items have no point value. 
+Decrease this value to diminish the value of planets in the scoring system or
+adjust the PLTVDIV divisor.
+
+
+A new Table ITMMH01 to ITMMH25  has been added. This table specifies the 
+amount of items produced by 10000 manweeks of work. It is factored down
+in the code and applied to each planet production update. Keep in mind 
+that all items production is a function of the number of men. You can slow
+everything down simply by reducing the rate of production of MEN and 
+adjusting no other value.
+
+
+A new option PLTVDIV has been added. This option adjusts the divisor used
+in calculating the point value of each item on a planet. The specific
+formula is as follows;
+
+points = (item count/PLTVDIV)*ITMVLnn
+
+This gives you the option of increasing or decreasing uniformly the value
+of all the items in the value table.
+
+
+A new option PLTVCASH has been added. This option specifies the point value
+of cash and taxes on a players planets. The specific formula for scoring is;
+points = (cash+taxes)/(1000000/PLTVCASH)
+
+
+We have reduced significantly the speed at wich ION Cannons are produced.
+There were entirely too many being produced in the game to keep a balance
+of power.
+
+
+In order to prevent a single user from "hogging" all the mine slots a new
+option USRMINES has been added to the MBMGEMSG.MSG file. This option will
+limit the number of mines a single user can have out at the same time. The
+default setting is 3.
+
+
+
+
+
+
+
+7/4/93 Release 3.1b
+===============================================================================
+
+Installation Notes:
+-------------------
+
+This release REQUIRES the installation of new, empty databases. This is due
+to some additional team features which required additional key fields.
+
+This release also requires a new Registration code. Please call for your
+new code (813) 545-8050. Have your invoice number handy to speed up the 
+process.
+
+Bugs Resolved:
+--------------
+
+The problem where SCAN RA would list cloaked ships has been resolved. Also
+a cloaked ship entering the game will not be announced.
+
+The problem where sneeky players could orbit and admin a planet they did not
+own (causing a GE:Plt Upd Err) has been resolved.
+
+The problem where a player could transfer goods then hangup and get the
+goods on his ship without depleating the planet has been resolved.
+
+The problem which prevented systems with more than 128 users from running
+GE error free has been resolved. The problem was that the data structures
+for this many users exceeded 64k. To fix this the whole memory allocation
+and access had to be rewritten to use the Phar Lap Protected memory 
+allocation routines. 
+
+The DATA command DATA pppppp SCAN is now blocked by jammers also.
+
+
+
+Enhancements:
+-------------
+
+The Standard ship configuration has a new ship, the FREIGHT BARGE. This 
+ship has the hugh capacity required to stage an invasion of a very well
+defended planet.
+
+The ship table (MBMGESHP.MSG) has been enhanced. Many of the maximums
+have been raised substantially. This will allow those sysops who are
+creating their own ship classes much wider latitude. 
+
+We have added to the ship table a new message "SnnHELP". This is a 
+fuller discription of the specific class of ship. 
+
+The HELP CLASS command has a better column index. Also the additional
+ship help information is accessable with the HELP CLASS nn command.
+
+Players no longer get mail messages when another player makes a nusance 
+attack with less than 2% of the planets defenses. 
+
+Planets no longer lose items unless the attack is at least 1% of the
+planets defenses. This resolves the tactic of "stripping" a planet by
+repeatedly attacking with 1 fighter.
+
+The Warp Drives may now be pushed up to 50% beyond their rated maximum
+speed. The longer and faster the player does this the greater the chance 
+of damage.
+
+The ROTATE command now supports an absolute direction letting you rotate
+to 90 degrees without having to do the math. The format is ROT @90.
+
+The Neutral Zone (sector 0 0) now has three wormholes to expand the 
+area immediately accessable to players and to give new players an
+easy way to escape from "Zone Raiders".
+
+Planets can now broadcast "beacon messages" to nearby ships. This feature
+has been added to the ADMIN menu. Beacon messages are only sent to a 
+player once they have scanned the planet for lots of performance related
+reasons (don't want to hit that hard drive constantly).
+
+Spy's have been added to the game. You can buy a spy as you would troops 
+and deposit them on an opponents planet. Once there the spy will send in
+occassional reports to you on tid bits of information he receives on 
+the planet. The more spy's the Planet has the more likely your spy 
+will get caught and executed. Spy's also sometimes dissappear for 
+no reason...gone... never to be heard from again.
+
+Spy's will report on major attacks on a planet (sometimes).
+
+Planet status messages, reports, and distress messages are now sent to
+each players personal mailbox instead of the GE mail system as the default.
+If you prefer to use the "old" GE mail system, then set the Level 4 option
+USEGEMSG to YES.
+
+The droids are now more attractive to fight. The Trans Gal ships hold
+a cache of weapons and supplies that a player may get if they win a 
+battle. 
+
+All offensive weapons damage logic has been enhanced to make allowances 
+for the size of the ship. The damage caused is now relative to the size
+of the ship. I have also enhanced the phasers and hyper-phasers to have 
+more power on similar sized ships. To aid the user in assessing the 
+ship size I have added the size to the scan ship function. Note that the
+size is caculated from the TONS specified in the ship configuration table
+in the MBMGESHP.MSG file. 
+
+PLEASE NOTE: This change may affect the play of the game. I request some
+immediate feedback in order to assess its impact. THANKS!
+
+
+Due to popular demand (and general concensus) I have enhanced the scan
+logic further so that the letter of the ship does not change. As long as
+a ship is within the players scan range they will maintain the same 
+letter. 
+
+
+In order to limit the pauses caused when a sector is created and happens
+to have 9 planets (and maybe a wormhole) a new option has been added.
+This process could result in up to 10 (and if a wormhole up to 20) disk
+writes. We have now given you the option to limit this with the new CNF
+option MAXPLSE. This option specifies the maximum number of planets that
+will get created in a new sector at the same time. We have set it to 5
+to start with which should significantly reduce the pauses. This value 
+can be changed at anytime with no adverse impact on datafiles.
+
+
+The ship tables have been moved to their own .MSG file. This is both to
+reduce the size of the MBMGEMSG.MSG file and to support multiple alternative
+ship table configurations. The new file is MBMGESHP.MSG.
+
+
+The entire memory management system has been rewritten to support systems 
+with more than 128 users as mentioned above.
+
+Teams have now been implemented. The team commands are as follows;
+
+
+The Team command allows you to perform a number of functions related
+to teams. It allows you to join a team, create a new team, leave a team,
+and get team scores. Additionally the team founder (or anyone with the 
+founder password) can expell a team member, change the Team Password, or
+change the team name.
+
+Teams are identified by a 5 digit team code created by the founder when they 
+started the team. This code never changes even though the team name may be
+changed. 
+
+Team Founder commands are;
+
+   team start nnnnn ssssssssss pppppppppp <team name>
+      starts a new team with code nnnnn, Founder Password ssssssssss, Member
+      Password pppppppppp, and with the team name <team name>.
+
+   team kick ssssssssss <user name>
+      permits a team member with the Founder Password to kick another team
+      member off the team. Note: if you don't also change the password the
+      kicked player can simply rejoin.
+
+   team newpass ssssssssss pppppppppp
+      permits a team member with the Founder Passowrd to assign a new Member
+      Password pppppppppp.
+
+   team newname ssssssssss <team name>
+      permits a team member with the Founder Password to change the team name
+      to <team name>
+
+Team Member commands are;
+
+   team join nnnnn pppppppppp
+      permits a player to join the team nnnnn provided they have the correct
+      member password pppppppppp
+
+   team unjoin
+      permits the player to leave the current team they are a member of.
+
+   team score
+      displays a list of the current teams and their scores.
+   
+   team members
+      displays a list of the members of the players current team.
+
+
+The team names and scores are maintained in an external text file that
+you can manipulate if required. I did this to ensure that you could fix
+and strangness (ie. bugs) that may result easily, and to allow you to 
+extract the team score for display elsewhere on your system.
+
+The team file name is MBMGETEA.DAT and its structure is as follows;
+
+TEAM|aaaaa|bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb|ccccc|dddddddddd|eeeeeeeeee|ffffffffff|
+
+where; aaaaa    is the team id code
+       bbb..bb  is the team name
+       ccccc    is the number of team members
+       ddd..dd  is the team score
+       eee..ee  is the player password (it is changable)
+       fff..ff  is the founders password (it is not changable)
+
+Scoring is performed during the cleanup and is as follows;
+
+TEAM SCORE = (A/B)+(C*B)
+where; A is the sum of all team members individual scores
+       B is the number of team members
+       C is the Bonus amount for each member (set in the msg file)
+
+The Bonus amount can be set by adjusting the value of TEAMBONU in the
+.MSG file.
+
+An additional option TEAMMAX has been added to allow you to specify the 
+maximum members in a team. I suggest you keep this number small to incent
+team members to be selective on who they admit to the team.
+
+There can be up to fifty teams in a game. This is currently fixed. If you 
+have need to exceed this please contact us.
+
+
+Since this is the first time we have allowed this capability I am extremely
+interested in feedback on its use, good, bad, or indifferent.
+
+
+A new SYSOP command was added due to popular demand. SYS HELP will list
+all the sysop specific commands currently supported.
+
+
+The damage level now goes down as repairs are effected. If you try to
+repair while being hostile (firing weapons) the repairs will be stopped.
+
+The com frequencies are now displayed in the REP SYS command.
+
+The Cybertrons propensity to launch a jammer when severly damaged has been
+reduced to increase the "kill-ability" and decrease the frustration.
+
+
+NOTES:  
+------
+
+
+2/5/93 Release 3.0p
+===============================================================================
+
+Installation Notes:
+-------------------
+
+No conversion of datafiles required.
+
+Bugs Resolved:
+--------------
+
+There was a nasty GP problem which might occur in one of eight times a 
+planet revolts. We have fixed this problem.
+
+Gold weighed too much. This limited the amount you could have on a ship.
+
+Cybertrons never carried more than 4 gold. They should have occasionally 
+carried more. Now you can specify the amount of gold they can have by
+changing the option CYBGOLD. The current default is 25. 
+
+Enhancements:
+-------------
+
+Seven empty planet definitions have been added to the MBMGEMSG.MSG
+file. These are turned off in the default version. If you wish to add
+more planets you simply increase the S00PLNUM value, and turn on the
+next planet in the list. You cannot skip over a planet, they must be
+used in sequence. 
+
+Note: Sector 0 0 is built only once when the first player scans it 
+after you have reset the MBMGEPLT.DAT database. Adding additional 
+planets later will not have any effect until you again reset the
+database.
+
+
+NOTES:  
+------
+Some users have complained about the gold on a planet dissappearing.
+This is natural. The planet converts the gold into cash and then uses the
+cash to increase the infrastructure development. Populated planets are 
+not banks, the population will put gold to good use if you leave it.
+
+
+If your players havn't figured this out yet, they can use any unclaimed 
+planet as a stash. Other players scanning the planet cannot see the goods 
+unless they first claim the planet. This can also be used by other players
+in a team as depots.
+
+
+
+01/15/93 Release 3.0o
+===============================================================================
+
+Installation Notes:
+-------------------
+
+No conversion of datafiles required.
+
+Bugs Resolved:
+--------------
+
+Many background processing routines have been optimized to decrease CPU 
+load. GE should only add 1% or 2% to your CPU load under idle conditions,
+and less than 10% under heavy use.
+
+The Cybertrons would sometimes not attack until a Cyberquad showed up.
+This has now been resolved. 
+
+The spurious production reports from the Neutral Zone have been resolved.
+
+The problem with rotations of multiples of 20 not reporting when they
+have rotated full cycle has been resolved.
+
+The spurious plarti message has been corrected.
+
+
+Enhancements:
+-------------
+
+In order to enhance the play of the game I have added a new item, GOLD. 
+Players can transfer gold to and from a planet, and buy and sell gold
+at Zygor-3. There is a Transfer Tax on each transaction at Zygor-3 to
+prevent the overuse. Also other goods can be sold back to Zygor-3 for
+cash. 
+
+The concept of cash has been changed a bit. Cash is the amount on deposit
+at the Galactic Bank. It is not carried on a players ship, so when a ship
+gets killed it no-longer can be captured. Gold on the otherhand is a 
+transferable item. It can be captured. A player who converts all his cash 
+to gold then looses his ship has played a foolish strategy.
+
+This capability also lets players give to each other gold (or any other items)
+by transfering the item to a planet. The second player can then go to the 
+same planet and transfer the gold up. The second player can then travel
+back to Zygor and cash in the gold.
+
+CAUTION: This capability dramatically changes the game rules and players
+may find new and inovative ways to exploit it. Please let me know if there
+are any side-effects or loop holes that your players discover given this
+new feature.
+
+
+The REP SYS command no longer shows the inventory also. The new command
+REP INV will list just those items on board the ship. This is so I can 
+implement items in the game without telling all players that they exist.
+The same is now true of the SCAN PL function when you have claimed the 
+planet. It will only show those items that exist.
+
+Under Security Options (CNF #3) a new option has been added to allow you 
+to designate a specific key for GE's Sysop commands. This allows you to
+assign the key to another player without giving him MBBS Sysop privileges.
+The new option is called SYSKEY and is set to SYSOP as default. You can 
+change it to something like GEOP and then assign the key as you like.
+
+
+The database filenames are now specified in the .MSG file. This permits
+you to place the databases on any drive or directory you like by adding
+drive and path information to the file name. The new options are GEUSER,
+GESHIP, GEMAIL, and GEPLNT.
+
+
+The new option TOOCLOSE was added permitting you to specify the distance
+where cybertrons consider a player approach a provocation. If the player
+gets closer than this distance the cyb may attack at will even if the 
+player is in a ship which has the "cybertrons can attack" option set to NO.
+
+
+The player ship class table has been enhanced greatly. We have added 
+additional undefined ships to the table which you can define as you
+like. Additionally we have added many new options to the table allowing
+you to specify if a class of ships has phasers, shields, zippers, mines,
+jammers, or decoys. The HELP CLASS command has been enhanced to reflect 
+these changes. You can now specify specifically if this class of ship 
+is "attackable" by cybertrons, and specify how many cybs will hunt down
+this class. I bit more explanation on this hunt logic follows;
+
+A cybertron when newly created, or after killing another player, goes into
+an idle state. While in this state they look around for any players to 
+go after. To prevent them from swamping a player they look at how many
+other cybs are chasing the player, and then decide if this is less than
+you have specified in the class table. If less they select the player and
+begin to hunt them down. If more they go on to the next player.
+
+The SYS KILL command has been enhanced to allow you to specify an 
+abbreviation of a players name to kill. That way your don't have to 
+spell out SYS KILL ROBERT A. JONES III, but only SYS KILL ROB. It will
+kill all players matching this sub-string so be carefull. You can also
+kill Cybertrons by typing SYS KILL @Cybrg-nn where nn is the ship number 
+out of the SYS LIST command. The same goes for droids as SYS KILL @Droid-nn.
+You can kill all droids with the SYS KILL @D command and all automatons
+with the SYS KILL @ command.
+
+
+A new Sysop command SYS CLASSLIST was added. Because of the enhancements
+to the ship class table it is now a bit harder to figure out what the
+SYSOPIAN DEATH STAR class is. Use this command to tell you.
+
+
+The maximum number of ION CANNONS, FIGHTERS, and TROOPS a planet can have
+has been increased. When a player transfers down more goods than the 
+planet can support they number of items on the planet was reduced to the
+maximum number, but no message was given to the player. The player will
+now get mail informing him that the quantity was reduced.
+
+TROOPS had little or no value. With this release the planet logic has been
+enhanced to use troops in the following manner. A player cannot capture
+a player without attcking with troops. The best strategy is to first attack
+with fighters until the fighters are no longer challenged, then attack
+with troops. 
+
+Once a planet is won troops MUST be maintained on the planet or the 
+population may revolt. The levels that must be maintained are proportional
+to the taxation level. The more you tax the planet the more troops are
+required to maintain a civil population. HINT: make sure there is at least
+the same perportion of troops to men as 2 times the tax rate.
+
+Cybertrons now can have gold.
+
+If you attack a planet you are held in the game for a period of time, the
+same way you are if you attack another ship.
+
+The GE MENU has a new item added "Whats New!" which is a user version of
+the information provided here. No SYSOP information will be included in
+the new menu option. For those of you who wish to weave the enhancements
+into a story line you can simply change the text file MBMGEMNU.TXT.
+
+NOTES
+-----
+
+If the player approaches closer than 2000 to any Cyb there is a good chance
+that the Cyb will take this as hostile provication and attack without
+further warning. 
+
+
+
+11/21/92 Release 3.0n
+===============================================================================
+
+Installation Notes:
+-------------------
+Because of the re-write of the background planet processing routines the
+MBMGEPLT.DAT database had to be enhanced. I know you are getting tired of
+resetting the databases so I took the time to develop a conversion utility.
+The MBMGECVT.BAT and MBMGECV.EXE program are provided to convert a 3.0m
+MBMGEPLT.DAT to a 3.0n MBMGEPLT.DAT. 
+
+Before you run it make sure you have the size of the MBMGEPLT.DAT 
+file free on the disk. The MBMGECVT.BAT makes a backup copy of the 
+MBMGEPLT.DAT to MBMGEPLT.SAV. Once the conversion is finished and you have 
+run the BBS for a few days with no problems you can delete this 
+file (MBMGEPLT.SAV).
+
+To run simply type;
+
+   MBMGECVT
+
+While I have thouroughly tested this utility on our own system,
+since this is the first time we have released it, I recomend you
+carefully inspect (or have your players do so) your galaxy when it is done.
+The possibility of inforseen side effects exists. Please let me know if 
+you have any problems. 
+
+Also it may take some time to process a large database. If the dots are 
+"ticking" its working, be patient.
+
+
+Bugs Resolved:
+--------------
+I planet processing routine which would consume excess CPU time has been
+completely re-written. I hope this resolves the problem. Please let me know!
+
+A problem with the database getting the wrong records was resolved. This 
+problem showed up as planets appearing and disappearing, and incorrect
+data on planets.
+
+The REP NAV command now shows the correct planet number when in orbit.
+
+Enhancements:
+-------------
+
+Several sysops have asked to be able to add a text page of their choosing
+to the GE menu. The use of this might be to add tips & hints, team 
+rosters, or additional story lines. We have added this capability to this
+release. To use set the OPTMENU option to YES, add the menu text to the
+option OPTMENU, and set the OPTCHR to the letter selection. You need to
+also add the letter to the text message REPRMT. Once a user selects this
+menu character the file MBMGEMNU.TXT will be displayed. A dummy file was
+included with this release. Replace this file with the text you want 
+displayed.
+
+In order to help you and I debug strange problems I have added a new
+tracing feature. This feature when turned on will cause detailed
+internal trace messages to be output to the file GEOUT.LOG. Please only
+use this feature to assist us with debugging problems. Do not leave it
+set on during normal operation as the file will grow quite large.
+
+
+
+
+11/11/92 Release 3.0m 
+===============================================================================
+
+Bugs Resolved:
+--------------
+
+Enhancements:
+-------------
+The Destruct Command now will cause damage to another ship. As fair warning
+the other ship will get told that an explosion is likely. This message is
+sent to all ships within THEIR scanning range. If they cannot see the ship
+about to explode they get no message. The amount of damage is porportional
+to the size (class) of the ship. Shields can defend from the shock wave but
+not completly. If the player starts a self destruct sequence and then goes 
+into the neutral zone (trying to get another player where they cannot fire)
+the destruct sequence is aborted. If the other ship is in the neutral zone
+and the ship about to destruct is not, the defensive shields around the 
+neutral zone protect the players within the zone.
+
+This enhancement took me 1200 miles (air travel) to complete, I hope you
+enjoy it.
+
+The undocumented command DATA has been added. This command is specifically 
+for terminal programs and gives important data on the current ship. 
+Currently implemented is..
+
+DATA REPORT   and 
+DATA SCAN
+
+The SCAN DATA_1 command has now been replaced by the DATA SCAN command.
+
+A new CNF option has been added, STRTCASH. This specifies the starting 
+cash given to a player when they first enter the game.
+
+===============================================================================
+11/01/92 Release 3.0l (General Release - NOT BETA!!)
+===============================================================================
+
+Bugs Resolved: 
+--------------
+
+There was a bug with the Cybs "seeing" through a cloak. This has been fixed.
+
+A problem with the SYSOP shield (20) displaying repeatedly "shields at full
+charge" (or something like that) has been fixed.
+
+Enhancements:
+-------------
+
+The Flux autoreload was set to reload at 5000, this will cause a flux to 
+reload before the cloak runs out.
+
+A new parameter was added to the .MSG CNF options. CLENGUSE allows you to
+specify the energy use by the cloak each tick cycle.
+
+All the documentation has been updated. 
+
+The Mine explosions are decreased if you have shields up.
+
+Cybertron logic has been enhanced so that if a player is in a Interceptor
+the cybertron will not attack so long at the player maintains his distance.
+If the player approaches (like to lay mines) the cybertron the cyb may
+take that as an aggressive act and premptively strike.
+
+
+                              *** NOTICE***
+
+YOU -MUST- RESET YOUR MBMGE*.DAT FILES WITH THIS RELEASE. IF YOU DO NOT
+YOU MAY GET BTRIEVE ERRORS. PLEASE INSTALL THIS RELEASE COMPLETELY.
+
+
+10/22/92 Release 3.0j
+===============================================================================
+
+Bugs Resolved: 
+--------------
+A bug which permitted players in Interceptors to fire upon a CYB and the 
+CYB would not retaliate has been fixed. This fix should come as a surprize
+to your players who have been exploiting this bug.
+
+The SYS LIST command was cleaned up.
+
+The Planet Attack GP bug has been resolved.
+
+I think we have resolved the BTRIEVE 4 on MBMGEPLT.DAT problem. If you still
+get this error let me know ASAP.
+
+Enhancements:
+-------------
+
+We have added a new sysop command, SYS UNJAM, which will clear the jammers
+effect from your ship. This is usefull to allow you to see what everyone else
+is doing while they are being jammed. 
+
+
+We added damage to the ship when it passes through a wormhole. If the user
+does not go through with ehough speed they cannot escape the terminal
+wormhole and will begin to oscillate between the two wormholes. Each time
+they do they collect a little more damage.
+
+
+We added code to autodetect the number of user ships. This should allow 
+you to add more user ships to the table. Make sure you add it BEFORE the 
+Cybertron. I have not thoroughly tested this yet so let me know how it goes.
+
+10/11/92 Release 3.0i
+===============================================================================
+
+Bugs Resolved: 
+--------------
+The BTRIEVE failure bugs should be resolved. If not please let me know ASAP.
+Because this bug was in the indexing of the databases it is necessary that
+you reset your databases again. I apologize for this but it was unavoidable.
+
+A problem with the scan command was resolved.
+
+Several minor problems have been fixed.
+
+
+Enhancements:
+-------------
+
+Wormholes are now TWO WAY. Players will pass through one and emerge through
+another. If their velocity is not enough they will not escape the wormhole
+and will occilate between sectors.
+
+A couple new SYSOP commands have been added. 
+SYS MAINT will maintenance the ship where ever its at.
+SYS LIST will list all the players in the game and where they are.
+
+The SYS PHASERTYPE and SYS SHIELDTYPE commands are no longer limited. While
+you can get a shieldtype 255 I don't recommend it. Try values like 20-30
+for very strong shields and phasers.
+
+A special SYSOP ship class ship has been added. This ship is the toughest
+class yet. To get it use the SYS CLASS 13 command.
+
+09/28/92 Release 3.0h
+===============================================================================
+
+
+Bugs Resolved: 
+--------------
+
+There still was a problem of players getting the wrong ship name. 
+Resolved now...we hope!
+
+Roster function no longer displays any auotmatic players (Cybs and Droids)
+
+A big problem with the command function not allowing non-sysops certain
+commands was resolved.
+
+The SYSOP GOTO function now takes you to the proper sector.
+
+Enhancements:
+-------------
+
+MANY MANY more options have been added to the CNF options. See the 
+CNF editor for more specifics.
+
+Some changes have been made to the battle logic to try and make the
+games more balanced. Please let me know how it goes in the real world.
+
+The MAIL system was enhanced to support automatic production reports from
+planets, and to seperate distress messages from production messages.
+
+The PLANET command has been enhanced to give an immediate report
+of planets owned. No more waiting till the cleanup. A side benefit is
+that the XREF database (MBMGEXRF.*) has been done away with totally.
+
+The PLAYKEY option was moved to SECURITY OPTIONS (Level 3) where it
+belongs. 
+
+The REGNO option was also moved to SECURITY OPTIONS.
+
+The SET command has been changed. The ability to change the SEND
+command frequencies is now controlled with the FREQ command. It functions
+exactly like the SET command did previously. The SET command now permits
+a player to set some preference options specific to them. New options with 
+this release are;
+
+   SCANHOME  -  Causes the SCAN displays to HOME in the top left using
+                ANSI control sequences. This is much easier on the eyes
+                if a player is using the SCAN command repeatedly.
+   SCANNAMES -  Causes ship owner name to be displayed in the right hand
+                information in a SCAN RA.
+   SCANFULL  -  Causes FULL range scans to be on or off, giving additional
+                information on the right hand side of a SCAN RA.
+
+Note: with the new SCANFULL feature the SCAN RA n FULL command is no-longer
+supported. 
+
+
+You can now specify the NAMES and OWNERS of planets in sector 0,0. This 
+permits you to change the Theme of the game if you like creating an Earth/SOL
+scenerio. Additionally you can add up to 9 planets in sector 0,0 by changing
+the S00PLNUM parameter and adding table elements for the additional planets
+similar to the ones for P1 through P3.
+
+By permitting you to specify the owner, a SYSOP can then make changes to
+the planet if they like. 
+
+NOTE: Sector 0,0 is created when the FIRST player enters the game. You cannot
+change these options AFTER that point without resetting the MBMGEPLT.DAT 
+database with a new empty one.
+
+
+You can now change the names of the Cybertron and Droid ships. This is 
+to support sysops who want to create another theme (such as Star Trek type)
+and want to call Cybertrons Romulans etc.
+
+
+The FREEBIES option has no effect in the Release 6.0 compatable version.
+
+
+
+09/22/92 Release 3.0f
+===============================================================================
+
+Bugs Resolved:
+
+A problem where a player seemed to be occupying another players ship has been
+resolved.
+
+An extra LOG message was displayed when a sector was created. Now fixed.
+
+Enhancements:
+
+New MSG options added.
+
+REPAIRRT - This option controls the rate at which spontaneous repairs
+occur to a damaged ship. The value is specified in 
+percent of damage reduced each cycle. 
+
+HPFIRDST - This option controls the effective distance of the 
+Hyperphasers. Increase to extend their range, decrease
+to shorten.
+
+HPDAMMAX - This option controls the amount of damage a hyperphaser
+does. Increase to cause more damage per shot, decrease
+to reduce. Because this is factored down by range and
+phaser type you can set the value to numbers greater
+than 100.
+
+PFIRDST - This option controls the effective distance of the 
+Hyperphasers. Increase to extend their range, decrease
+to shorten.
+
+PDAMMAX - This option controls the amount of damage a phaser
+does. Increase to cause more damage per shot, decrease
+to reduce. Because this is factored down by range and
+phaser type you can set the value to numbers greater
+than 100.
+
+JAMTIME - This option controls the duration of a jammer.
+It is factored in the game by the distance 
+from the ship that launches it.
+
+MAILDAYS - This option controls how many days mail messages
+are queued before deletion.
+
+
+
+
+09/11/92  Release 3.0d (BETA to go)
+===============================================================================
+
+Bug Fixes:
+
+SCAN SH caused a GP under some circumstances - Fixed
+
+Enhancements:
+
+Registration Protection Logic added so that this version can
+be generally released.
+
+
+09/09/92  Release 3.0c (More BETA)
+===============================================================================
+
+Some more bug fixes.
+
+Enhancements:
+
+The SHIELD command has been changed to support an explicit SHIELD UP and
+SHIELD DOWN function. This was changed to avoid some confusion users 
+expressed when they thought they were raising the shields and actually
+lowered it. The other advantage is for support of terminal programs.
+
+The Droid Ships have been activated.
+
+Users can now ABANDON a planet they previously claimed. This is usefull
+if they have reached the maximum planets they are permitted.
+
+08/30/92  Release 3.0b (STILL BETA)
+===============================================================================
+
+This sub-release has full support for MBBS version 6.0 DLL format. 
+Additionally some minor bugs and a few major ones were squashed.
+
+07/15/92  Release 3.0a (BETA RELEASE)
+===============================================================================
+
+With this release the third MAJOR version of Galactic Empire "evolves". This
+game has trully grown well beyond what I had invisioned in its humble 
+beginnings. Most of the credit for its success goes you you the sysop's
+of MajorBBS's Worldwide - THANK YOU. With your support (both praise and $)
+this game will continue to grow.
+
+Version 3.0 represents a major change to the basic game structure. You will
+find below listed the numerous enhancement and changes listed. While all
+the changes were added to create a better and more enjoyable game, it is
+possible that we have changed the balance of the game in some way that 
+has a detrimental effect on the playability of it. If this is the case we
+need to hear from you ASAP!! 
+
+Version 3.0 also changes several underlying archetecture problems that 
+prevented us from making some VERY significant enhancements. With these 
+changes I hope to bring to you some very interesting game enhancements 
+in the future.
+
+Version 3.0 also has some built in support for TERMINAL PROGRAMS. If you 
+are an author of such an animal please leave me mail on our support system
+NETWORX (813-551-5876) and I will get you details.
+
+Bugs Resolved:
+
+The Cybertrons were sometimes not responding properly. Hopefully this major
+re-design of the cybertron logic fixes that.
+
+Enhancements:
+
+Probably the biggest change is the elimination of the GALMAKE code and 
+the implementation of the "Virtual Galaxy". The Virtual Galaxy works by
+creating the sector and planets when-ever a player first goes into them.
+If a player never looks at a sector the sector database entry is never
+created. This permits us to give the perception of a huge galaxy (up to
+65535 X 65535) while maintaining a realistic database size. The Neutral
+Zone is now the center of the Galaxy (sector 0 0). This is not truly the
+center but the quadrant to the upper right of the center. Because of this 
+there are fewer sectors (by one) on the right side than the left.
+The Parameter UNIVMAX is now in the message file GEMSG.MSG.
+
+Many of the parameters have been moved to the GEMSG.MSG file. With more to
+come.
+
+The GEMSG.MSG file is now compliant with Galacticomm's CONFIG utility.
+
+All the code has been cleaned up to remove all the warning messages.
+
+BETA TESTERS NOTE: There is currently no limiter on the growth of the
+GEPLANET.DAT database. Insure that you have ample disk space for this version
+and monitor your disk usage daily.
+
+The "edge of the universe" code has been changed. When a player hits the
+edge they are simply "bounced back" a couple sectors and the engines shut
+down. The Universe no-longer "wraps" but is flat and square. With up to
+65000 X 65000 sectors I don't think this will be a problem.
+
+A new "LOCK" command has been added to permit a player to lock the fire 
+control systems onto another ship. The player doesn't need to worry about 
+what the opponents ship letter is anymore, or what it changes to. As long
+as it is within scanner range the fire control systems remain locked on.
+See the HELP LOCK information in the GEHLP.MSG file for more info.
+
+A new NAVIGATE command has been added. This command gives the player a 
+bearing and distance to any sector they select. The purpose of this is
+to aid in navigating. If a player knows that a planet he wants to find
+is in sector 234 567 but is having trouble figuring out the direction
+to it, the navigate command will give him specific heading and distance
+to go. It WILL NOT take the ship there under computer control, some
+advances in technology still remain elusive (kinda like cold fusion eh?!).
+
+Cybertrons are somewhat generic. In order to give users the feeling that 
+there are thousands of them, cybertron names have been changed. While for
+filing purposes they still are named Cyborg-xx (in place of the userid) 
+the player will only be told that the ship is captained by "a Cybertron" 
+and not which specific one. While this seems a trivial change I hope that
+in conjunction with the Cybertrons new "hyper-warp" capability this will
+give the impression of many more cybertrons and make the game more enjoyable.
+
+Planet Clusters: Ge3.0 now has more planets per sector and fewer sectors
+with planets. This more closely replicates the real universe where there
+are great gaps of nothing between star systems with clusters of planets.
+
+Wormholes: Some planet clusters may have a wormhole within them. If a player
+carefully navigates his ship into the wormhole he will be transported to
+another section of the galaxy. The same wormhole will always take him to
+the same place allowing players to map the wormholes to gain access to the
+far reaches of the galaxy.
+
+Ship Letters No longer are ships assigned a fixed letter cooresponding to
+their channel. Ships are now identified based upon proximity. The closest
+ship is 'A', next 'B', and so on. Now you can have as many Ship's in the
+game as your CPU power supports, and never have to worry about those
+pesky ']' ships.
+
+Virtual Channels: Cybertrons no-longer share data space with user ships.
+Your quarry will not 'dissappear' from you just because another player came
+into the game on that channel. You can now specify the number of Artificial
+Players in the game in the GEMSG.MSG file. No need for all those memory
+hogging emulation channels.
+
+The ship configuration table has been expanded and is now in the GEMSG.MSG
+file. You can change ship attributes, names, etc. In the future you will
+be able to add your own types of ships to the table easily.
+
+Different scan ranges: The bigger ships can 'see' further than the smaller
+ones due to more powerful scanning equipment. This lets you see an Interceptor
+from a Star Cruiser before they see you.
+
+Improved scan command with ship data display of all ships in scanning range.
+This lets you see at a glance who is out there and where they are.
+
+Missile and Torpedo commands have been enhanced to support the new LOCK 
+command. By typing "TOR @" instead of "TOR A" the torpedo will be fired
+at whoever the LOCK command was set to. 
+
+Missile command now uses 1/10th the energy it did before. This should 
+improve the playability of the game.
+
+The ship will automatically reload the FLUX when it gets low. This will aid
+in preventing those unexpected shield drops at the worst time.
+
+Cybertrons have ZIPPERS. Lookout you mining maniacs.
+
+Cybertrons are much more diverse. Some are slow and stupid, some are really
+nasty. You never know. I will be working on much more diverse attack
+stratagies for them in the future.
+
+Player ship selection has been enhanced. If you only have one ship...thats the
+one you get. If you have more than one then they are always listed as 
+1 through 8. No more huge numbers reminding you how many ships you have
+gone through....how embarrasing.
+
+DRONE SHIPS: To add another diverse challenge to the game we have added a
+new type of Artificial Player class called DRONES. Drones are sometimes
+manned with a crew, and depending upon the type of drone ship they may react 
+to an attack or not. Sometimes these drones will have cargo that you may not 
+be able to purchase anywhere in the game. While we are only offering a few
+drones in this release we anticipate many more types in the future.
+
+An API for 3rd party ship "engines" has been defined. With this API in place
+and a bit more testing it will open up a standard for user created drone
+ships. Many of these may be more tenacious than the cybertrons. More on 
+this in the future.
+
+
+02/08/92  Release 2.3g
+===============================================================================
+
+Bugs resolved:
+
+   The NEW SHIP bug where a player could get a "cybertron" has been fixed.
+   It was thouroughly researched and attributed to "stupid programmer error"!
+
+   Several minor problems have been resolved and included.
+
+Enhancements added:
+
+   ZIPPERS now work! They are used to force all mines in the immediate 
+   vicinity to detonate. This can be both good and bad. Please let me know
+   how this seems to effect the strategy of the game and I will make any
+   adjustments if necessary.
+
+   Sector Number is now displayed in the ship list to assist players in 
+   selecting ships.
+  
+Notation:
+
+12/19/91  Release 2.3f
+===============================================================================
+
+Bugs resolved:
+
+  While unable to duplicate it, there have been some reports of GP's in the
+  "killem" routine. We could not find any code directly responsible for it 
+  but did add some additional bounds checking to the outprfge() function to
+  see if this fixes the problem.
+
+  The problem of users getting points for killing themselves with mines has
+  been resolved.
+
+Enhancements added:
+  
+  The scoring has been changed and while I know this will cause alot of 
+  "flak" it cannot be helped. I did not intend for the scores to mount up
+  so quickly, but this has been the outcome of Cybertrons playing 24hrs a
+  day 7 days a week. The change to scoreing is to modify the "bonus" score
+  which is added to the base score for a class of ship when it gets killed.
+  The bonus was a percent (.001) of the killed players score. The intent was
+  to make players at the top of the roster worth more. Well it didn't work
+  as I expected so I have added a new bonus method described below;
+
+  The players position in the roster at nightly cleanup is used to divide 
+  into SCORE_BONUS (a new define statement currently set to 500). The 
+  result is the bonus added to the base points for the class of ship. 
+  SCORE_F1 is no longer used.
+
+  I hope this makes the game more interesting but you will probably get 
+  complaints from users who can no longer make up the huge scoring gap, and
+  you may have to reset the game. I am sorry if this causes any difficulty
+  but I felt it was needed.
+
+  Cybertron processing has been enhanced to spread the processing out more
+  evenly over time. To do this the "ticker" function now process only so
+  many cybertrons and cyberquads each tick which now happen much more
+  often. This also means that the cybertrons can have one speed while the
+  cyberquads have another. To control these there are now two new defines 
+  that you can adjust to your system needs. Remember changing these three 
+  values affects the CPU usage and you will want to consider the load on
+  your system if you are speeding up the cybertrons.
+
+  The cybertron processing is now controlled by these three defines;
+  CYBTICKTIME which controls how often (in seconds) the cybertron processing
+    loop (cybrti) is called. Keep this value fairly small (1, 2, or 3).
+  CYBMAXPERTICK which controls how many cybertrons get processed in each
+    call to cybrti. Adjust this value up to decrease the reaction time of
+    cybertrons.
+  QUADMAXPERTICK which controls how many cyberquads get processed in each
+    call to cybrti. Adjust this value up to decrease the reaction time of
+    cybertrons.
+
+  A good rule of thumb is to adjust these so that all Cybertrons get 
+  processed once each 10 to 15 seconds, and all Cyberquads get processed 
+  each 3 to 6 seconds. This will make the quads much tougher than before.
+
+  If you find your system load is too much (delays in keystrokes being 
+  echoed to players) increase these factors slowly until you find a 
+  combination that works best for you. Remember the faster the cybs react
+  the more challenging they are for you players.
+  
+        
+Notation:
+
+12/2/91  Release 2.3e
+===============================================================================
+This is the first "releasable" version of 2.3. BETA sites have had it for about 
+two months now and with the exception of a couple of trivial bugs the release
+is pretty stable.
+
+Bugs resolved:
+
+  The transfer command has been fixed. Note the change in the format of the
+  command also; TRANSER [UP/DOWN] [number] [item name]
+
+  The abandon command will now remember that you abandened the planet and 
+  will decrement the number of planets you own properly.
+
+  The problem of Mines having zero weight has been fixed.
+
+  Note that the need to use a specific case to SCAN SH X is deliberate to
+  solve a problem for those systems with more than 26 ports.
+
+
+Enhancements added:
+  
+  Several additional GALEMP.H options have been added to allow those of you
+  who choose to "tweek" the game to do so.
+
+  CYB_SCANRANGE defines the distance a Cybertron can see another player at 
+  and attack at.
+
+  CYB_BREAKOFF defines the odds that a Cybertron will break off an attack.
+  The odds are calculated as a 1 in N chance that the cyb will break off the
+  attack each time the cyb "ticks".
+
+  CYB_MINDAM defines the percent of damage that a cyb will take at which 
+  point they will jam and drop mines and try to escape.
+
+  CYBS_FIGHT if set to TRUE will cause Cybertrons to fight each other. This
+  can give the Cybertrons higher scores as they are busy all night and day.
+  ** CAUTION ** this can generate alot more disk activity as more cybs will
+  be dying and getting re-born.
+
+  CYB_BADBAD if set to TRUE if Cybertrons get mad at everyone when they have 
+  been attacked. Set to FALSE if they only get hostile with their attacker.
+
+  JAMTIME defines the length of time the jammers last. Note that this is
+  factored with a players distance from the jammer also, the further away
+  you are the less the time.
+
+  NUM_MINES defines the maximum number of mines that the game can have 
+  "launched" at any one time. Each mine takes a certain amount of processing 
+  time and this number is to limit the maximum overhead taken to process 
+  mines.
+
+  MINEDAMMAX defines the maximum damage a single mine can do. This is factored
+  with distance from mine at the time of explosion to calculate actual 
+  damage.
+
+  
+
+        
+Notation:
+
+07/23/91  Release 2.3a
+===============================================================================
+This is a fairly major release into which we have added a number of enhancements
+we hope will make the game much more enjoyable. We have also started a concerted
+effort to incorporate many of the user configurable options in the GEMSG.MSG
+file. Please note these changes and the documentation below on their usage.
+As this is a new "point" release I expect several more "letter" releases to
+follow with minor bug fixes. 
+
+Bugs resolved:
+
+  A bug which caused all the Cybertrons to start at the same sector
+  each time the system came up was resolved. This will spread them 
+  out more, which can be a problem in larger galaxies.
+
+Enhancements added:
+  
+  A new option was added to the GEMSG.MSG file called TRANSOPT. This option
+  will permit (or dis-allow) players to transfer goods down to planets that
+  they do not own. This means that they can move goods off to un-claimed 
+  planets or to planets that other players might own. This option will 
+  open up the possibility of creating un-claimed caches of goods that any
+  other players can also use without the need to purchase them. Should 
+  create some interesting changes in the way the game is played.
+
+  In addition to the TRANSOPT the new command ABANDON was added permitting 
+  a player to abandon a planet they no longer wish to own. This 
+  command does not move any goods from the planet but simply mark the
+  planet as un-claimed.
+
+  A new option was added to the GEMSG.MSG file called MAXPLNTS. This option
+  permits you to specify the maximum number of planets a single player can 
+  own. With this option you can spur more competion for the choicest planets
+  as a player can only own a limited number. If you wish to disable this 
+  feature set this value to a high number (32000).
+
+  The sysop commands are now configurable in the GEMSG.MSG file. The option
+  SYSCMDS selects if sysop commands are enabled or disabled. The SYSONLY
+  option selects if the command can be used by a player other than the sysop.
+  It is recommended that you not set SYSONLY to "NO", unless for a short
+  period while you log on as another player to grant some cash, or items. 
+  Then reset the option to "YES" shortly after. Failure to do so will soon
+  result in other players trying the SYS command and discovering they can
+  grant themselves cash and goods.
+  NOTE: the command name may still be changed if you like in the GALEMP.C
+  file but the need to do so is less compelling with these options.
+
+  We have added several new items to the game. Ships can now deploy MINES
+  to ward off persuers. The player can set the time till detonation on the
+  mine when they launch them. Neutron Mines are very powerfull, and if 
+  skillfully deployed can destroy a ship in a single explosion. If detonated 
+  too close they will also cause damage to the ship launching them. Mines
+  will display on sector scans as a single period ".". Note that mines are
+  managed as actual space objects and can dramatically increase the number
+  of calculations the game is doing. To help manage this load you can set 
+  the maximum number of mines which can be deployed at one time by ALL 
+  players in the game. This value is in the GALEMP.H file and called 
+  NUM_MINES. 
+
+  An additional defensive weapon JAMMERS have been added. Jammers can be
+  deployed to try and block the opponents ability to see. Once activated 
+  a jammer causes a tempory distortion which causes scanners to be 
+  inoperative. This effect goes away after a period of time which is 
+  relative to the distance the player was to the jammer. Since the ship
+  doing the jamming is always the closest the effect lasts the longest on 
+  them. This means that ships on the fringes of the effect may have operable
+  scanners long before the ship that launched the jammer. The duration of 
+  the effect is set by the parameter JAMTIME in GALEMP.H.
+  
+  The cybertrons now also have the ability to launch jammers, and mines. They
+  will tend to do this as a defensive measure when they are in danger of 
+  being destroyed.
+
+  A new class of cybertron called the Cyberquad has been added to the game. 
+  This ship is four times the power of an ordinary cybertron and extremely
+  dangerous. When encountered it will not show mercy, and will not run. 
+  This should add alot of excitement to the battling game.
+        
+Notation:
+
+09/09/90  Release 2.2e
+===============================================================================
+Bugs resolved:
+
+         The major bug resolved was a problem where the Neutral Zone was
+         losing its items in the update cycles. This has been resolved and
+         a patch placed in to restore those GEPLANET.DAT databases that are
+         already corrupted back to normal.
+
+         A few other really minor bugs were resolved.
+
+Enhancements added:
+
+         The GEMSG.MSG file was run through a spell checker and many spelling
+         errors corrected. Don't know why it took this long to get that done
+         but its done just the same.
+        
+Notation:
+
+         The recent enhancements uploaded on the MEGANET support SIG will
+         be incorporated in the NEXT release.
+
+
+07/15/90  Release 2.2d 
+===============================================================================
+Bugs resolved:
+
+        A couple of minor bugs were resolved and frankly I have forgotten what
+        they were... sorry.
+     
+Enhancements added:
+        
+Notation:
+
+07/01/90  Release 2.2c 
+===============================================================================
+Bugs resolved:
+
+  One last bugs which caused GE to GP in protected mode was
+  resolved.
+
+Enhancements added:
+
+        Colorized screens - Many of the messages have had ANSI colors added
+        to improve the appearance. 
+
+        The scan functions were enhanced to change the color of the "+" and
+        letters used depending on if the ship is a cybertron or not. I am
+        considering using a different color for each class of ship but want
+        some feedback from you the users before I make that change. CALL ME
+        AND LET ME KNOW WHAT YOU THINK!
+
+        The neutral zone is now in the center of the galaxy, sector 290. 
+        Some of you will have difficulty understanding why I think 290 is the
+        center but the choices were 290 or 310 and I picked 290. If you are
+        still confused why there are two choices get out a sheet of graph 
+        paper and work it out. I had to...
+
+        The user guide has been completed (shocked?). You can make this
+        new copy available for downloading to your users.
+
+        Included in this release are several versions of the Galactic
+        Empire Library.
+
+        GALEMP.LIB    - Large Model
+        GALEMPH.LIB   - Huge Model
+        GALEMPM.LIB   - Large Model with Math Coprocessor
+        GALEMPMH.LIB  - Huge Model with Math Coprocessor 
+
+        The huge models are for use with the protected mode systems.
+
+        Also, some of the text files and link examples have been changed
+        to make it easier to understand and install.
+
+        A whole new GALMAKE.EXE has been included in this release. This 
+        version only takes a few minutes to regenerate a galaxy, and lets
+        you bypass the "aging" process if you like. You should not have the
+        need to recompile it but the source is included for those of you 
+        who can't resist. Read the GALMAKE.DOC for further instructions.
+
+        
+Notation:
+
+        READ THIS! - If you wish to keep an existing GEPLANET.DAT which
+        has the neutral zone in sector 100 you MUST change the define 
+        statements in the GALEMP.H file. To do this simply change the
+        following from;
+        
+        #define NEUTRAL_X 9
+        #define NEUTRAL_Y 10
+
+        to;
+
+        #define NEUTRAL_X 0
+        #define NEUTRAL_Y 0
+
+        You must then recompile GALEMP.C and relink your system.
+
+
+06/16/90  Release 2.2b BETA (NOT GENERALLY RELEASED)
+===============================================================================
+Bugs resolved:
+
+  A couple more bugs which caused GE to GP in protected mode were 
+  resolved.
+
+  The bug with a USER RECORD getting set to 255 ships and causing 
+  problems has been resolved.
+
+  The last message in the CYB_ANNOY list of messages will now be 
+  displayed.
+
+  This version is a BETA TEST version released to a limited number
+  of BETA sites to test for other problems.
+          
+
+Enhancements added:
+
+  I have changed the SCAN LO function and added a SCAN HY function.
+  The SCAN LO function now provides a long range scan of ships around
+  your ship but will not display the ship letter. The SCAN HY function
+  now provides the same function that the SCAN LO did with the exception
+  that it also does not show ship letter.
+
+  While I am aware that I will probably catch some flak for these 
+  changes, I feel that they add to the game play. While a player can 
+  tell that there is a ship out there, it is too far to tell any more
+  about it, INCLUDING the letter of the ship. When they get closer they
+  can do a SCAN RA to see what the letter is.
+
+
+Notation:
+
+
+
+06/15/90  Release 2.2a BETA (NOT GENERALLY RELEASED)
+===============================================================================
+Bugs resolved:
+
+  Several bugs which caused GE to GP in protected mode were resolved.
+  This version is a BETA TEST version released to a limited number
+  of BETA sites to test for other problems.
+          
+
+Enhancements added:
+
+  Some of the messages in the message file have been "colorized" for
+  added effect. Thanks for Robert Michnick for his contributions of
+  these changes.
+
+
+Notation:
+
+
+??/??/90  Release 2.1f (NOT RELEASED)
+===============================================================================
+Bugs resolved:
+
+        The captured document listing all the planets a player has was not 
+        limited in length. When a player had many (more than 70) planets the
+        displaying of this text could overflow the output buffer and cause
+        MBBS to hangup on the player. It is now limited to the first 20 planets
+        only. Thanks to Karl Kirk of The Crypt BBS.
+
+        The cybertrons were able to fire on a player in Warp from Impulse 
+        speed. This is now fixed. Thanks to Karl Kirk of the Crypt BBS.
+
+        Some players have noted that ION cannons occasionally continued to 
+        fire on a player after he conquered the planet. This should be 
+        resolved now. Thanks again to Karl Kirk of the Crypt BBS.
+        
+
+Enhancements added:
+
+
+Notation:
+
+03/22/90  Release 2.1e
+===============================================================================
+Bugs resolved:
+
+        The TRANSFER command was fixed to permit more than 65000 items to 
+        be transfered to the planet.
+
+Enhancements added:
+
+        The Cybertrons were enhanced to make them a bit more aggressive. They
+        can move faster and have slightly more powerfull phasers.
+
+Notation:
+
+        PLEASE!!!!!  MAKE SURE YOU USE THE NEW MESSAGE FILES PROVIDED WITH EACH
+        RELEASE. IF YOU HAVE MADE CUSTOM CHANGES TO YOUR .MSG FILES THEN YOU 
+        MUST RUN A FILE COMPARE UTILITY AGAINST THE NEW VERSION AND THE 
+        STANDARD RELEASED PREVIOUS VERSION. THE FILE COMPARE UTILITY WILL 
+        IDENTIFY WHAT CHANGES HAVE BEEN MADE IN THE NEW VERSION AND YOU CAN
+        MAKE THE SAME CHANGES TO YOUR CUSTOM VERSION.
+
+        IF YOU HAVE ANY QUESTIONS CONCERNING THIS PLEASE CALL US, OR LEAVE 
+        MAIL IN THE SUPPORT SIG ON MEGANET (813) 449-2008.
+
+
+03/05/90  Release 2.1d
+===============================================================================
+Bugs resolved:
+
+        A big problem with the attack command where a planet with over 65000
+        fighters or troops when attacked had their troops or fighters 
+        reduced to 65000 (approx). This is an unsigned vs long problem that
+        we thought we had resolved in 2.1a, WHOOPS! Sorry! 
+
+Enhancements added:
+
+        None
+
+Notation:
+
+        If anyone has any additional size problems or display problems please
+        let us know. The only way we get these fixes in is when you, our users
+        bring it to our attention.... MANY THANKS!!!
+
+
+02/28/90  Release 2.1c
+===============================================================================
+Bugs resolved:
+
+        A couple of minor bugs have been resolved and the update posted.
+
+Enhancements added:
+
+        None
+
+
+02/04/90  Release 2.1b
+===============================================================================
+Bugs resolved:
+
+  A problem with BTRIEVE version 5.0 is causing the nightly cleanup
+        to not function. Additionally the roster scores were incorrect.
+        The problem is that BTRIEVE seems to loose its location in the database
+        when an UPDATE is done. In order to resolve the problem I was forced
+        to "re-get" the same record I just updated each time. This is a silly
+        BUG for a "NOVELL COMPANY".  Thanks guys!
+
+        A display problem with the REPORT SYS command (troops line) was 
+  resolved.
+
+        The cybertrons were modified to not pick on new players to hard until
+  they had 50 kills in 2.0k. Some players have complained that the cybs
+  come down too hard at that point. An additional level was added where
+  they are tougher but not their toughest. Additionally the two kill
+  levels that determine these levels are now set in the GALEMP.H file.
+  They are GE_BE_NICE and GE_BE_EASY. You can change them if you like.
+
+Enhancements added:
+
+  The scoring was fine tuned a little bit to resolve a scoring 
+  "loophole". The problem was that cash and taxes were divided 
+  by 10 and the result added to the players score. This permited
+  a player to jump from 3000 to 100000 in one night. To resolve
+  this problem the cash and taxes are now divided by 1000 (or
+  .1%) then added to the score. This means that 1,000,000 in cash 
+  and tax is worth 1,000 in points.
+
+Notation: 
+
+  Release 2.1a has been extremly clean and as a result version 2.0b
+  will be a general release version. 
+
+        THANKS TO ALL WHO HELPED BETA TEST.... WE REALLY APPRECIATE IT!!!
+                               - Mike & Jean -
+
+01/10/90  Release 2.1a
+===============================================================================
+Bugs resolved:
+
+   The problem of hyper-phasers hitting ships at great distances has been 
+   resolved. The hyper-phaser range now terminates at 25000.
+
+   A related problem that would cause the Cybertrons to home in on a ship
+   after a failed lock on with missles has been resolved. 
+
+   Players are no longer immune from cybertron attacks when orbiting.
+
+   The problem of transfers being limited to 65535 items has been resolved.
+
+   Many minor problems were resolved.
+
+Enhancements added:
+   
+   The coding that would permit a victorious player to capture the secret
+   document that listed the other players planets and sectors has been 
+   re-added to the game. This feature can be optionally removed by commenting
+   out the #define SHOWDOC in GALEMP.H. Additionally the odds of the document
+   being captured can be modified by changing the #define RNDDOC statement.
+   Refer to the GALEMP.H file for further instructions.   
+ 
+   The scoring has been enhanced to emphasize the planets more. The items
+   on the planet count for a portion of a players total score in addition
+   to the points for kills. This should have the effect of giving an 
+   advantage to players who can maintain an empire of planets, the original
+   intent of the game.
+
+   The roster now shows additionally, the number of planets a player has, and
+   the total population of his empire. This should help other players rate
+   the strength of the player.
+
+Notation: 
+   =======================================================================
+   * ATTENTION ** ATTENTION ** ATTENTION ** ATTENTION ** ATTENTION *
+   =======================================================================
+
+   With this release the data bases changed. DO NOT IMPLEMENT THIS VERSION
+   WITH THE DATABASES FROM PRIOR VERSIONS AS UNPREDICTABLE PROBLEMS 
+   MAY OCCUR!!!
+
+12/01/89  Release 2.0n
+===============================================================================
+Bugs resolved:
+
+   A bug in the BUY command which permitted players to purchase more than
+   their ships would carry was resolved. This bug was only a problem when 
+   the player typed BUY n <item name> where n was >32767 and less than 65535.
+   Bet you "C" programmers know what I did wrong....oops..
+
+   Since this was a rather serious bug it was rushed out and is the only change
+   from the prior release.
+
+Enhancements added:
+
+Notation: 
+
+11/08/89  Release 2.0m
+===============================================================================
+Bugs resolved:
+
+   Several bugs that were introduced in version 2.0l were resolved.
+   Minor cleanup that shrinks the code size a bit were made.
+
+Enhancements added:
+
+Notation: 
+
+10/27/89  Release 2.0l
+===============================================================================
+Bugs resolved:
+
+   A bug (in version 2.0k only) that causes the system to lockup was 
+   resolved. This is the only change in this release due to its critical
+   nature.
+
+Enhancements added:
+
+Notation: 
+
+10/17/89  Release 2.0k
+===============================================================================
+Bugs resolved:
+
+   A bug which cropped up when GE was combined with KYRANDIA and caused 
+   the SCAN SHIP function to scan invalid ships has been resolved.
+
+Parameters changed:
+
+   This is getting old, with the Cybertron homing code removed the Cybertrons
+   were too easy. The Cybertrons now home again, they also play harder on
+   players who have accumulated more than 50 kills. This lets the newer 
+   players get used to the game before the cybertrons get really nasty.
+
+Enhancements added:
+
+   The planet update function has been enhanced to cause the update to start
+   at a random point in the galaxy rather than sector 101 everytime. This 
+   eliminates the advantage that owners of the lower sectors had.
+
+Notation: 
+
+06/17/89  Release 2.0j
+===============================================================================
+Bugs resolved:
+
+   A really strange bug which allowed a player with the name in the database
+   that preceded Cyborg-1 alphabetically, to sit at the ship selection menu
+   and watch as his channel became the Cyborg-1. He could see all the messages
+   as if he were the captain of Cyborg-1 but could not enter any commands.
+   This presented a chance of creating a BTRIEVE 4 ERROR if by chance both
+   his channel, and channel 1 (presumming it had a Cyborg-1 on it also) got
+   killed at the same time.
+
+   Shields now get repaired at the time you get maintenance.
+   
+Parameters changed:
+
+   Everyone loved the fact that Cybertrons don't home on the lower class 
+   ships, but complained about the problem on all the big ships. I removed
+   the homing code all together. We shall see how this improves play.
+
+   
+Enhancements added:
+
+
+Notation: 
+
+   While a player with a lower class ship will not be attacked unless the
+   cybertrons are provoked, they can be provoked by ANY other player. This
+   means that if a cybertron is close to a Heavy Freighter hauling stuff to
+   a planet, and another player attacks the Cybertron, the Cybertron will 
+   begin to attack both players. Some have complained that this is not fair
+   ( who said Galactic Empire was fair) and others like it this way. Let me
+   hear from you on this subject. Leave mail to Cyclops on MEGANET, or to
+   Mmurdock on Galacticomm.    
+
+06/15/89  Release 2.0i
+===============================================================================
+Bugs resolved:
+
+   Several changes were made to the GEMSG.MSG file where unsigned ints were
+   being displayed with %d designators instead of %u. This resolves display
+   problems where some quantities of items, cash, or other values came up
+   negative.
+
+   Several other really minor things got fixed, and frankly I don't remember
+   what they all were.
+
+   Cybertrons were still attacking Light Freighters, Heavy Freighters, and
+   Inteceptors. Resolved.
+
+Parameters changed:
+
+   Cybertrons no longer home in on Freighters, and Inteceptors. This was 
+   getting to be a problem which made it difficult to get far from Sector 100
+   without getting blasted.
+   
+Enhancements added:
+
+   None    
+
+
+05/30/89  Release 2.0h
+===============================================================================
+Bugs resolved:
+
+   The Hyper-Phasers were identical on all ship classes. This has been
+      corrected to reflect the ships size and power. Be prepared for some
+      flack from your users who used to kill anything with an Interceptor
+      and who now will have a more difficult time facing larger ships.
+      Cybertrons are a bit more difficult to kill since they are more
+      powerfull than the smaller Inteceptor.
+
+   The  hyper-phasers could fire into sector 100. This has been changed to
+      prevent anyone in sector 100 from incuring any damage from an
+      intentional or stray hyper-phaser fired into 100.
+
+   Cybertrons should not fire on a cloaked player anymore.
+
+Parameters changed:
+   
+   CYB_MINCLASS changed to 3 to prevent cybertrons from attacking 
+      freighters first. They will attack when provoked. They will also 
+      fire on anyone and everyone who enters into an area where a battle
+      it in progress. The area is defined by a circle with the radius 
+      defined in SCANRANGE. 
+
+   Cybertrons now have Mark-3 Phasers and Mark-2 shields to toughen them
+      up a bit.
+
+Enhancements added:
+    
+   The parameter SCORE_F1 was added to allow you to adjust the bonus 
+      points awarded to the killer. Bonus points are calculated by 
+      taking the killed players score, dividing it by SCORE_F1, and
+      adding the result to the ship kill points to give a total points
+      awarded. Example: SHIP1 has 41255 points, and is flying a 
+      Dreadnought. When killed the attacking player will get 400 points
+      for killing the dreadnought, plus 412 (41255/SCORE_F1) bonus points.
+      This makes the players on the upper end of the top players list
+      worth alot more and more prone to attack by other greedy players.
+
+   The parameter SCORE_F2 was added to further let you adjust how 
+      scoreing is handled. SCORE_F2 is a percentage of the awarded points
+      to subtract from the killed players score. This means that when 
+      a player kills another player the killed players score goes down
+      by SCORE_F2 percent of the total points awarded to the killer.
+
+05/17/89  Release 2.0g
+===============================================================================
+Bugs resolved:
+   
+Parameters changed:
+   Cybertrons are now limited in how much cash they can have. This is to 
+      prevent the games economy from becoming too rich (kinda acts like the 
+      federal reserve). This amount is set by CYB_MAXCASH in GALEMP.h
+
+   Freighters (and all ships in general) could not hold enough fighters to
+      launch any sort of successfull attack against a planet. The weight of
+      a fighter was lowered to 15 tons, and all the ships weight capacities
+      increased.
+
+Enhancements added:
+   Several sysops (and players) have complained about the scan functions not
+      working around the "wrap" in the galaxy. To resolve this problem I have
+      added an option for you to select the type of galaxy you wish. The 
+      option EDGEOPT in GEMSG.MSG will let you select a "wrapping" galaxy
+      or a flat galaxy. In the flat galaxy, a player crossing the edge, is
+      relocated randomly in the boundries of the galaxy. While this does not
+      specifically resolve the problem, it does eliminate the problem from
+      occuring since you can no longer "wrap".
+
+05/16/89  Release 2.0f
+===============================================================================
+Bugs resolved:
+   The cybertrons were getting updated too opten causing unnecessary disk
+      activity.
+   The cybertrons would shoot at a player in sector 100.
+
+Parameters changed:
+
+   Cybertrons accumulated a bit much cash in a day. CYB_ALLOW lowered a bit.
+   Hyperphasers sucked up too much energy each time they were fired. HPFIRAMT
+      and HPMINFIR adjusted down.
+   Hyperphasers didnt do enough damage. HPDAMMAX adjusted to 35.      
+
+Enhancements added:
+   None that I can remember (its 2am).
+
+
+05/12/89  Release 2.0e
+===============================================================================
+Bugs resolved:
+   The strange bug which cause cybertrons to not be updated resurfaced.
+      It should be resolved now... we hope!
+   Several minor nusance bugs were resolved.
+   Cybertrons were not getting into the roster all the time.
+
+Parameters changed:
+   Cybertrons were now TOO good, we added some changes to even up the game 
+      a bit. 
+   Cybertrons can not go faster than warp 4.0. 
+   Since it was too difficult for new users to do much with just a light 
+      freighter, the first ship a player gets is now a Interceptor. This
+      will allow players to start with a fighting ship and take on the
+      cybertrons. 
+   All ships come equiped with a Mark-1 Phaser and Shield system. This will
+      permit players who are out of cash to still play and try to get more
+      cash from killing another ship.
+
+Enhancements added:
+   The help command HELP CYBERTRON was added to help explain the cybertrons
+      actions.
+
+05/09/89  Release 2.0d
+===============================================================================
+Bugs resolved:
+   Players could sit outside sector 100 and attack ships in the neutral zone.
+   Cybertrons could not fire hyper-phasers properly.
+   The "range=" message was removed from the SCAN RANGE function.
+   The debt display was removed from the REPORT ACCOUNT function.
+   Cybertrons will now get updated on the roster properly.
+
+Parameters changed:
+   The SCAN RANGE 9 was scanning too far, SCANADJ in galemp.h increased.
+
+Enhancements added:
+   The Cybertrons will now attack a player with a more powerful ship with more
+      than one cybertron. This makes it harder for the bigger ships to cruise
+      the universe un-challanged.
+   Cybertrons will now accumulate cash throughout the day makeing them more
+      valuable when the system is less busy. The specific amount granted each
+      "tick" is set with CYB_ALLOW in GALEMP.H.
+   
+
+05/07/89  Release 2.0c
+===============================================================================
+Bugs resolved:
+   Cybertrons would not regenerate right away after being killed.
+   Planetary mail would not delete when read.
+
+Parameters changed:
+   Freighters could not attack planets, yet were the only ships that could
+      hold enough fighters to launch a successfull attack. The weight of a 
+      fighter was reduced to 25 tons, tripleing the number that each ship can 
+      hold. Heavy Freighters can now launch attacks on planets.
+
+   A new parameter was added to the GEMSG.MSG file. The parameter SHOWYN will
+      turn off the logging of informational "GE:" messages to the console when
+      set to NO. 
+
+Enhancements added:
+   Several functions in the game were enhanced to permit the ships to function
+      beyond the current sector only. These changes are;
+
+   The scan functions were changed substantally. SCAN RANGE was enhanced to
+      permit scanning beyond the current sector. SCAN RANGE 9 will provide the
+      longest scan, about 25000 (as defined by SCANRANGE and SCANADJ in
+      GALEMP.H) SCAN SHIP was enhanced to scan a ship that is not in the 
+      current sector. It too uses the SCANRANGE value as a maximum. The 
+      SCAN SHIP display was enhanced to display the sector number of the ship.
+
+   The SCAN HYPERSPACE function was removed as it is duplicated by the enhanced
+      SCAN RANGE function.
+
+   The MISSILE function was enhanced to permit missiles to lock on and be fired
+      beyond the current sector.
+
+   The Cybertrons programming was enhanced to permit it to better track another
+      ship. A bug in its programming prevented them from firing hyperphasers
+      properly. 
+
+Additional notes:
+   The scan functions will always provide directions and distances as if the
+      galaxy is flat. It will not take into account the "shortest route" that
+      may be available by "wrapping" around the edge of the sector. I spent
+      many hours working on a resolution, but the math is very complicated,
+      and further work will be required. This problem will also account for 
+      some strange behaviour in Cybertrons when they are following a player
+      who crosses the boundry.
+
+
+05/01/89  Release 2.0b
+===============================================================================
+Resolved a major scoring bug;
+  Players were able to kill another player and after destroying them was 
+  awarded the cash (or a portion) that was on the other ship. The cash was not
+  deducted from the other players user record and as a result the total cash
+  on hand in the universe kept multiplying dramatically. The Cybertrons soon
+  became very very rich.
+
+Cybertrons still were too easy to kill for an experienced player. Some 
+enhancements to their programming were made to permit them to fight better;
+
+Resolved several minor problems;
+
+Reduced code size 2k;
+
+
+04/29/89  Release 2.0a
+
+This was the first official release of Galactic Empire Version 2.0 outside
+of our BETA sites. It represents a major revision of features, strategy, and
+scoring from release 1.4.
+
+Major features are; 
+  the addition of Cybertron Robot ships to the game
+  the addition of multiple kinds of ships from Light Freighter to Dreadnought
+  the ability for a player to own multiple ships in his fleet
+  a major change to the scoring where score is determined by the kills and
+     not by the players wealth
+  many many other minor improvements and enhancements
+
+
+===============================================================================
+
+Suggestions for enhancements and problem resolution can be made by leaving
+email at the address below.
+
+Our office phone is (320) 654-8522 and suggestions can be left there also.
+
+Additionally they may be mailed to us at the address below;
+
+M. B. Murdock & Associates
+800 Hwy 10 S. #5 
+St. Cloud, MN  56304
+
+Email: mmurdock@cloudnet.com
+===============================================================================
+
+

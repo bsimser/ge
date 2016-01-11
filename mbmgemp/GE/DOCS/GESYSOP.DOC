@@ -1,0 +1,74 @@
+
+
+   Galactic Empire 3.1
+   System Operator Commands
+
+   Please be aware that there are some system operator commands in Galactic
+   Empire provided for your use. These also provide some assistance in 
+   debugging problems. They can however give a player a distinct advantage 
+   if discovered, and it is not recommended that they be used in the 
+   production system all the time.
+
+   The commands can be enabled by turning on the GESYSOP option in the 
+   configuration options (MBMGEMSG.MSG)
+
+   The sysop commands are as follows;
+
+      
+   SYS GET xxxxx <item name>
+      This will grant to the ship xxxxx of the items requested. 
+      Example: SYS GET 100 TOR  gets you 100 torpedoes.
+
+   SYS KILL <userid> 
+      Causes a player in the game to have his ship destroyed for unknown 
+      reasons;
+      Example SYS KILL GREMLIN  will kill gremlins ship
+
+   SYS CASH xxxxx
+      This will grant to the ship xxxxx C's of cash.
+      Example: SYS CASH 999999  will give the ship 999999 in C's
+
+   SYS GOTO x y
+      This will move the ship to the sector in the universe with the specific
+      x and y coordinates.
+      Example: SYS GOTO 10 10   will move the ship to the x=10, y=10 sector.
+   
+   SYS SHIELDTYPE n
+      This will give the current ship a shield of type n. Valid types are
+      1 to 5.
+
+   SYS PHASERTYPE n
+      This will give the current ship a phaser type on n. Valid types are
+      1 to 4.
+
+   SYS CLASS n
+      This will change the current ship to a ship class of n. Valid classes
+      are 0 to 7. NOTE: IF you set the class to 8 or 9 (Cybertrons) I 
+      cannot guarentee the outcome. GP's may result.
+
+   SYS CLASSLIST
+      This lists the current classes enabled in the game.
+
+   SYS LIST 
+      Lists all the ships currently active in the game, including cybertrons
+      and droids.
+
+   SYS HELP will list any new commands that I fail to get put in here.
+
+
+   Please be aware that GE does not restrict the use of these commands to 
+   the sysop only, as they may be used by him when on another acount to 
+   change that players ship. It is your responsibility to determine if running
+   the game with these commands activated is appropriate.
+
+
+   Enjoy! 
+   Mike Murdock
+
+
+
+
+
+
+      
+

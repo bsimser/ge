@@ -1,0 +1,1033 @@
+                         
+
+
+
+
+
+
+
+
+
+
+                                  GALACTIC EMPIRE
+                                    Version 3.2
+
+
+
+
+
+
+                                    Installation 
+                                        and
+                                     Operations
+                                       Guide
+
+
+
+
+
+
+    1.0   Overview
+
+    2.0   Installation
+
+    3.0   Game Operations  
+
+    4.0   Configuration Option
+
+    5.0   Documentation
+
+    6.0   Support
+
+
+
+    1.0   Overview
+
+    Congratulations on purchasing the most popular add on to the MajorBBS.
+    Galactic Empire has been installed in  MajorBBS's since 1988 and
+    provided thousands of players an exciting and challenging game that
+    continues to generate thousands of hours of usage. 
+
+    Release 3.2 represents the latest in an ever evolving game of space
+    battle and conquest. With the increased processing power and expanded
+    memory available in today's systems, and the standardization provided
+    by Galacticomm's release 6.0 of the MajorBBS, we are able to include
+    many advanced features which just a few years ago would not have been
+    possible.
+
+    Galactic Empire 3.2 is simple to install and even simpler to
+    operate. To get your game on-line and your users playing simply
+    follow the instructions in the following section.
+
+    NOTICE: The software is distributed to you un-registered. You can
+    begin running it prior to registration. Send in the registration
+    documentation (attached to this guide) immediately as there is a
+    limited number of days it will operate without a Registration ID. 
+
+    Upon receipt of your Registration Documentation you will be sent a 
+    unique Registration ID valid for your specific MBBS system. Simply 
+    enter this ID in the REGNO field in the configuration options.  For 
+    further information refer to section 4.0 below.
+
+
+
+
+    2.0    Installation from a release diskette
+
+    Use this procedure if you received your Galactic Empire on a release
+    diskette. If you downloaded a .ZIP file from our support system refer
+    to section 2.2 and 2.3.
+
+    STEP 1:   
+    Copying files from install diskette to your system.
+
+    In order to install Galactic Empire place the release diskette in your
+    floppy diskette drive and type the following command;
+
+    A: 
+    INSTALL A: C:\BBSV6 
+
+    Note: If your floppy diskette is B: then substitute "B:" for "A:"
+    above. Also, if your BBS is installed on another drive or in another
+    directory, please substitute your drive and directory for the 
+    "C:\BBSV6" above.
+
+    The install procedure will copy the appropriate files to your BBS
+    directory with virgin databases ready to play.
+
+    STEP 2:
+    Adding Galactic Empire to your menu.
+
+    Using the procedure outlined in your MajorBBS Guide, add Galactic
+    Empire to your menu. 
+
+    STEP 3:
+    Play the game.... and have fun.
+
+
+
+
+
+    2.1   Upgrade from a release diskette
+
+    Use this procedure if you received a Galactic Empire update on a
+    release diskette. If you downloaded a .ZIP file from our support
+    system refer to section 2.2 and 2.3.
+
+    NOTE: ALWAYS BACKUP YOUR SYSTEM PRIOR TO MAKING ANY 
+    MAJOR CHANGES! 
+
+    STEP 1:   
+    Copying files from install diskette to your system.
+
+    In order to update Galactic Empire place the release diskette in your
+    floppy diskette drive and type the following command;
+
+    A: 
+    UPDATE A: C:\BBSV6 
+
+    Note: If your floppy diskette is B: then substitute "B:" for "A:"
+    above. Also, if your BBS is installed on another drive or in another
+    directory, please substitute your drive and directory for the 
+    "C:\BBSV6" above.
+
+    The update procedure will copy the appropriate files to your BBS
+    directory but will not effect your existing databases.
+
+    STEP 2:
+    Play the game.... and have fun.
+
+
+
+    2.2   Installation from a downloaded ZIP file.
+
+    Use this procedure if you received your first copy of Galactic Empire
+    by downloading it from our support BBS. If you are updating a
+    previous release please refer to section 2.3 below.
+
+    STEP 1:   
+    Copy the downloaded file to your BBS directory
+
+    COPY MBMGEnnn.ZIP C:\BBSV6
+
+    Note: replace nnn with the actual files version number (i.e.
+    MBMGE30J.ZIP)
+
+    Note: If your BBS is installed on another drive or in another
+    directory, please substitute your drive and directory for the 
+    "C:\BBSV6" above.
+
+    STEP 2:   
+    Unzipping the downloaded file.
+
+    PKUNZIP MBMGEnnn.ZIP
+
+    The install procedure will create the appropriate files to your BBS
+    directory with virgin databases ready to play.
+
+    STEP 3:
+    Adding Galactic Empire to your menu.
+
+    Using the procedure outlined in  your MajorBBS Guide, add Galactic
+    Empire to your menu. 
+
+    STEP 4:
+    Play the game.... and have fun.
+
+
+
+
+    2.3   Upgrade from a downloaded ZIP file.
+
+    Use this procedure if you downloaded an update from our support BBS.
+    The main difference is that an update will not contain empty
+    databases unless absolutely required.
+
+    NOTE: ALWAYS BACKUP YOUR SYSTEM PRIOR TO MAKING ANY 
+    MAJOR CHANGES! 
+
+    STEP 1:   
+    Copy the downloaded file to your BBS directory
+
+    COPY UPDGEnnn.ZIP C:\BBSV6
+
+    Note: replace nnn with the actual files version number (i.e.
+    UPDGE30J.ZIP)
+
+    Note: If your BBS is installed on another drive or in another
+    directory, please substitute your drive and directory for the 
+    "C:\BBSV6" above.
+
+    STEP 2:   
+    Unzipping the downloaded file.
+
+    PKUNZIP UPDGEnnn.ZIP
+
+    The update procedure will create the appropriate files to your BBS
+    directory but will leave your existing databases in place.
+
+    STEP 3:
+    Play the game.... and have fun.
+
+
+
+
+
+    3.0   Operations
+
+    Galactic Empire is designed to be simple to operate, requiring almost
+    no intervention on your part. There are however some operational
+    aspects which you may wish to consider.
+
+    3.1    CPU Performance
+
+    Galactic Empire is a complex game and depending on how configured can
+    consume a sizable amount of CPU time. In order to maintain acceptable
+    performance you must insure that your system is configured
+    appropriately. The following parameters effect CPU performance
+    dramatically and should be configured carefully for your specific
+    CPU. 
+
+    Note: The default parameters are set for performance on a 33 MHz 386 
+    CPU. Your system's performance may vary and require changes to these 
+    settings.
+
+    MAXPLRS - Controls how many "real" players can be in the game at the
+    same time. You may wish to limit this value to decrease the load on
+    the CPU.
+
+    SHOWOPT - Controls how many "GE" informational messages are generated.
+    Leave set to "0" for optimal performance.
+
+    PLANTOCK - Controls how frequently all the sectors in a Galaxy are
+    updated. Setting this value lower increases CPU load.
+
+    WORMODDS- This option controls the odds of a newly created planet
+    being a wormhole instead. The lower then number the higher the odds.
+    Since when a wormhole is created the destination wormhole sector also
+    must be created, additional disk I/O must occur. The lower you set
+    this number the more disk I/O you will experience. Depending upon the
+    speed of your hard disk and cache this may or may not be a problem.
+
+    NUMSHIPS - Controls how many "robot" ships are in the game. Set this
+    value as high as you can, while maintaining acceptable performance.
+    The more ships in the game, the more enjoyable it is. This value has
+    the most dramatic effect on the CPU as each of the additional ships
+    requires the same CPU resources as a live player.
+
+    UNIVMAX - Controls the size of the Galaxy. You can reduce this number
+    to control the number of sectors that the game has to process in the
+    time specified by PLANTOCK above. Reducing this number decreases the
+    CPU load. Because the Galaxy grows as the game is played you may
+    notice decreased CPU performance as the game progresses for some
+    time, and the databases grow correspondingly.
+
+
+
+    3.2    Database Growth
+
+    In order to insure that your game continues to operate un-interrupted,
+    you must make sure that there is plenty of disk space available for
+    database growth.
+
+    The MBMGEUSR.DAT, MBMGESHP.DAT, MBMGEXRF.DAT, and MBMGEMAL.DAT are
+    proportional to the number of users in the game. The MBMGEPLT.DAT
+    database grows as more players explore the galaxy. Most sectors
+    created will be void of planets and only take a small amount of
+    storage. Since sectors are not created until a player actually scans
+    it the total storage required is minimized. The average space
+    required is 512 bytes per sector created.  Reserving 32,767,000 bytes
+    (32.7 meg) for growth allows for about 64,000 sectors. If you have
+    less space available you may consider decreasing the MAXPLREC option
+    in the next section.
+
+    Each time the system performs the nightly cleanup it will tell you the
+    approximate size of the planet database. Additionally the MajorBBS
+    allows you to display how much disk remains unused. If you have a
+    relatively limited amount of disk storage please monitor these values
+    regularly to insure the integrity of your entire system.
+
+    3.3    Campaigns
+
+    Galactic Empire is best when played in campaigns lasting 1 to 3
+    months. You may wish to award players some additional bonus such as
+    credits based upon their performance at the end of the campaign.
+
+    When you reset a campaign simply initialize the Galactic Empire
+    databases by typing the following while in your BBSV6 directory.
+
+    COPY MBMGE*.NEW MBMGE*.DAT
+
+    You can now begin a new campaign. You may wish to "tweak" some of the
+    configuration options such as Galaxy Size, and/or ship configurations
+    to vary a campaign from the previous one. See the following section
+    for more details.
+
+
+
+    3.4    System Operator Special Commands
+
+    Included in Galactic Empire are several commands reserved specifically
+    for your use. These commands are enabled with the SYSCMDS and SYSONLY
+    options detailed in section 4.2 below. 
+
+    These special commands provide some assistance in debugging problems.
+    They can however give a player a distinct advantage if discovered,
+    and it is not recommended that they be used in the production system
+    all the time.  
+
+    SYS GET xxxxx <item name> This will grant to the ship xxxxx of the
+    items requested. Example: SYS GET 100 TOR  gets you 100 torpedoes.  
+
+    SYS KILL <userid> Causes a player in the game to have his ship
+    destroyed for unknown reasons.  Example SYS KILL GREMLIN  will kill
+    Gremlins ship 
+
+    SYS CASH xxxxx This will grant to the ship xxxxx C's of cash. 
+    Example: SYS CASH 999999  will give the ship 999999 in C's 
+
+    SYS GOTO x y This will move the ship to the sector in the universe
+    with the specific x and y coordinates.  Example: SYS GOTO 10 10  will
+    move the ship to the x=10, y=10 sector.  
+
+    SYS SHIELDTYPE n This will give the current ship a shield of type n.
+    Valid types are 1 to 5. A special type of 20 is an ultimate sysop
+    shield.  
+
+    SYS PHASERTYPE n This will give the current ship a phaser type on n.
+    Valid types are 1 to 4. A special type of 20 is an ultimate sysop
+    phaser.  
+
+    SYS CLASS n This will change the current ship to a ship class of n.
+    Valid classes are 0 to 7 and 13.  NOTE: IF you set the class to 8 or
+    9 (Cybertrons) problems may result.
+
+    SYS MAINT This will begin a fast Maintenance Procedure on the current
+    ship regardless of your orbit status.
+
+    SYS UNJAM This clears the effects  of a jammer on the current ship
+    immediately. 
+
+    SYS LIST This command lists all the active ships in the game, their
+    location, and damage status.
+
+    SYS CLASSLIST will list the classes currently loaded in the game. This
+    will tell you what class the SYSOPIAN DEATH STAR is for the SYS CLASS
+    command.
+
+
+    3.5    Undocumented Commands
+
+    In addition to the commands documented in the Galactic Empire Users
+    Guide, there are a few special commands which are undocumented. There
+    are two classes of undocumented commands;
+
+    3.5.1   System Information Commands
+
+    These commands are included to assist us in determining problems when
+    you call for Technical Support.
+
+    RG#   
+    Reports the Galactic Empire Registration number, and Test Drive
+    status.
+
+    3.5.2     Special Terminal Program Commands
+
+    These commands are included specifically to support terminal programs
+    for Galactic Empire. As we further develop this interface more
+    commands will be added.
+
+    WHO 
+    Provides the Users Name, and Systems MBBS Registration Number.
+    This is for Terminal Programs which may be registered to a specific
+    User, and/or System.
+
+    DATA QAZWSX SCAN  
+    Provides a comma separated data format scan for the
+    current ship. This is useful for terminal programs that display the
+    ship information in another (i.e. Graphical) representation.
+
+    DATA QAZWSX REPORT 
+    Provides a comma separated data format of all the
+    information on the current ship. This is useful for terminal programs
+    that display the ship information in another format.
+
+
+
+    4.0   Options
+
+    All of the configurable options are contained in the MBMGEMSG.MSG file
+    and can be modified using the Galacticomm Configuration option on the
+    BBS menu.
+
+    The options are preset to optimal values. You need not adjust any to
+    begin using the game. You may, however, wish to modify some of these
+    options to challenge your players more, or provide a more interesting
+    game. 
+
+    Please note that some of the options are included to give you maximum
+    configurability but modification is not recommended. These are
+    indicated with a CAUTION note following the option description.
+
+    Listed below are some of the more important options that you may wish
+    to change. For a complete list of options please refer to the
+    Configuration Options selection on the MajorBBS menu.
+
+
+
+    4.1    Security Options
+
+    Option:  REGNO
+    Description:  Registration Number
+    Value:  00000000
+    Type:  String
+    Range:  8 Characters
+
+    This is the Registration Number specific to your MBBS system. This
+    number will be sent to you upon receipt of your registration
+    document. Galactic Empire will function fine for a limited period
+    without this number. After the trial period your system will continue
+    to function properly, although GE will be temporarily suspended. When
+    you place the valid number in this field the game will continue where
+    it left off.
+
+    Option:  PLAYKEY 
+    Description:  Key required to play GE
+    Value:  NORMAL
+    Type:  S
+    Range:  15 
+
+    This option defines the KEY the player must have to play GE. Refer to
+    your MajorBBS Users Guide for a detailed explanation on Locks & Keys.
+
+
+
+    Option:  SYSKEY
+    Description:  Key required for sysop powers
+    Value:  SYSOP
+    Type:  S
+    Range:  15 
+
+
+    This defines the key required to use the special sysop commands. 
+    You can set this to something other than SYSOP and then assign 
+    that key to specific GAMEOP's or players as needed.
+
+
+
+    4.2    Configuration Options
+
+    Option:  MAXPLRS 
+    Description:  The maximum players in the game at once
+    Value:  30
+    Type:  Numeric
+    Range:  1 to  256
+
+    You can limit the number of players who can simultaneously play the
+    game. You may wish to set this value in order to keep your systems
+    performance within an acceptable response.  The more players in the
+    game the more CPU resources the game consumes.
+
+    Option:  TRANSOPT 
+    Description:  Allow goods transfers to planets not owned?
+    Value:  NO
+    Type:  Boolean
+    Range:  YES/NO
+
+    This option controls if a player is allowed to transfer goods to a
+    planet which they do not own. If YES a player can transfer goods to
+    another players planets. This could give players with multiple
+    USERID's an unfair advantage as they could transfer goods from
+    multiple accounts to a single account giving that account an initial
+    boost in the game. Note: If you only permit paying accounts to play
+    the game this is of less concern.
+
+    Option:  SYSCMDS 
+    Description:  Allow sysop commands?
+    Value:  YES
+    Type:  Boolean
+    Range:  YES/NO
+
+    This option enables the special SYSOP commands.  These commands are 
+    documented in the SYSOP.DOC file included on the release diskette.
+    Caution: This option WILL give an unfair advantage to players who use
+    it. It is strongly recommended that it remain set to NO during normal
+    operation or the SYSONLY option be set to YES.
+
+
+    Option:  SYSONLY 
+    Description:  Allow sysop only to use sysop commands?
+    Value:  YES
+    Type:  Boolean
+    Range:  YES/NO
+
+    If sysop commands are enabled are they restricted to players with
+    SYSOP class only.  Caution: It is strongly recommended that this
+    option remain set to YES.
+
+
+
+    Option:  PLANTOCK
+    Description:  How long to take to update all planets (seconds)? 
+    Value:  21600
+    Type:  Numeric
+    Range:  1 to 32767
+
+    This option controls the Dynamic Planet Update Feature. The system
+    will monitor how long it takes to process through all the planets in
+    the galaxy and dynamically adjust the update frequency to keep the
+    total cycle time as close to the time below as it can.  Caution:
+    Setting this value too small will cause the system to consume more
+    CPU time than may be available. It is recommended that this value be
+    set to 6 hours (21600 seconds) which will cause four updates a day. 
+    After you have run a campaign you can reduce the value if CPU 
+    performance remained acceptable throughout the campaign.
+
+    Option:  PLODDS
+    Description:  Frequency factor for planets 
+    Value:  8
+    Type:  Numeric
+    Range:  1 to 20
+
+    This value controls the odds of a sector having planets. The lower the
+    number the more likely a sector will have planets.
+
+
+    Option:  WORMODDS
+    Description:  Frequency factor for wormholes 
+    Value:  20
+    Type:  Numeric
+    Range:  1 to 100
+
+    This value controls the odds of a sector having a wormhole. The lower
+    the number the more likely a sector will have a wormhole
+
+    Option:  NUMSHIPS 
+    Description:  The number of additional ships (robots) in game?
+    Value:  20
+    Type:  Numeric
+    Range:  0 to 256
+
+    Depending upon your CPU's performance you can have up to 256
+    additional Robotic Ships (Automatons) in the game. The system will
+    randomly generate ships to give your players automated combatants.
+    Caution: This value can DRAMATICALLY effect CPU  performance. If you
+    are not confident about your specific system please set to a lower 
+    value at first and experiment with increased values as you evaluate
+    your CPU's performance.
+
+
+
+    Option:  MAXDROID
+    Description:  Max Droid class ships in game.
+    Value:  10
+    Type:  Numeric
+    Range:  1 to 500
+
+    This value limits the number of DROID class ships in the game at the
+    same time. This insures that there are plenty of Cybertrons for
+    players to fight.  The recommended setting is half of NUMSHIPS.
+
+    Option:  UNIVMAX 
+    Description:  The radius of the Virtual Galaxy
+    Value:  32000
+    Type:  Numeric
+    Range:  10 to 32767
+
+    This value controls how far from the center (sector 0 0) the galaxy
+    extends. The Galaxy is square and UNIVMAX sectors in each direction
+    (N,S,E,W).  NOTE: The size of the galaxy has some pretty dramatic
+    effects on the game. You may with to try various values in each of
+    your campaigns to determine which works best for you. 
+
+    CAUTION: Do not change this value without resetting all the Galactic 
+    Empire Databases as explained in Chapter 3.0. Failure to do so will 
+    result in unexpected problems.
+
+    Option:  MAXPLREC 
+    Description:  The size of the GEPLANET.DAT in Kbytes
+    Value:  32767
+    Type:  Numeric
+    Range:  0 to 32767
+
+    This value controls how large the MBMGEPLT.DAT data file will grow to.
+    Each time a sector is "teraformed" the MBMGEPLT.DAT database grows by
+    the following formula; 
+
+    space added = (number planets * 512) + 512
+
+    In order to prevent your disk from filling up you can specify the
+    maximum size that the database will grow to in Kbytes. When the
+    maximum is reached no more planets will be created. 
+
+    Note: a 32,767K database will hold 65,535 planets and sectors. That 
+    should keep most players busy for awhile.
+
+
+
+    4.3    Configuration Tables
+
+    The following options concern two key tables that are provided to give
+    you maximum flexibility over your systems "look and Feel".
+
+    4.3.1    Sector 0 0 Planet Table
+
+    This table configures the number of planets and the planet details for
+    the neutral zone (sector 0 0). Some SYSOPS expressed an interest in
+    being able to make this sector look like the SOL  System (our Solar
+    System). You can modify the following table and add additional
+    planets as required. The only constraint is that the game requires a
+    Trading Planet, and a Population Planet. You can designate any planet
+    you like to be each, but MUST have one and only one of each.
+
+    Additionally, you can "give" the planet to a specific USERID, such as
+    SYSOP. To do this change the owner option for the planet. This has
+    the effect of allowing the owner to administer the planet as they
+    would any other planet they own.
+
+    The table is organized into sets of the following options. Each set is
+    numbered as S00Pnxxx where Pn is the table entry, and xxx is the
+    specific option. 
+
+    If you elect to add additional planets to the table, simply copy the
+    entire set (S00P1NM to S00P1RES) after the last option in the third
+    table entry (S00P3RES). Change the P1 to P4 (or P5, P6, etc.) in the
+    newly copied entries, and update the S00PLNUM option to reflect the
+    new number of planets.
+
+    Option:  S00PLNUM 
+    Description:  Number of Planets in Sector 0 0
+    Value:  3
+    Type:  Numeric
+    Range:  3 to 9
+
+    This option specifies the number of planets in the neutral zone
+    (sector 0 0). Note: You need not change this unless you want more
+    than 3 planets in the Neutral Zone.
+
+
+
+
+    Option:  S00P1NM
+    Description:  Zygor
+    Value:  
+    Type:  String
+    Range:  19 Characters
+
+    This is the name of planet # 1 in the Neutral Zone.
+
+    Option:  S00P1OWN
+    Description:  Owner of Planet #1
+    Value:  "*EMPIRE*"
+    Type:  String
+    Range:  30 Characters
+
+    This field specifies the Owner of this planet. If desired you can
+    specify a specific USERID and that user will be able to administer
+    this planet.
+
+    Option:  S00P1TYP
+    Description:  Planet Type
+    Value:  1
+    Type:  Numeric
+    Range:  0 to 2
+
+    Type of planet indicator. One planet in Sector 0 0 -MUST- be each of
+    the following types;
+
+    0 = Nothing Special
+    1 = Base trading planet (Zygor)
+    2 = Population Planet (Tahanian Station)
+
+    Option:  S00P1X
+    Description:  X Coordinate of Planet
+    Value:  5000
+    Type:  Numeric
+    Range:  100 to 9900
+
+    This value specifies the X coordinate of this planet.
+
+
+
+    Option:  S00P1Y
+    Description:  Y Coordinate of Planet
+    Value:  5000
+    Type:  Numeric
+    Range:  100 to 9900
+
+    This value specifies the Y coordinate of this planet.
+
+    Option:  S00P1ENV
+    Description:  Environment for planet
+    Value:  3
+    Type:  Numeric
+    Range:  0 to 3
+
+    This value specifies the Environment for this Planet.
+
+    0 = Poor
+    1 = Marginal
+    2 = Good
+    3 = Very Good
+
+    Option:  S00P1RES
+    Description:  Resources for planet
+    Value:  3
+    Type:  Numeric
+    Range:  0 to 3
+
+    This value specifies the Resources for this Planet.
+
+    0 = Poor
+    1 = Marginal
+    2 = Good
+    3 = Very Good
+
+
+
+
+    4.3.2    Ship Class Description Table
+
+    The message file MBMGESHP.MSG controls the ships available in the
+    game. You can modify the names, performance, weapons, and cargo 
+    weight. You can also add additional ships to the table. 
+
+    When adding additional ships simply use one of the unused entries
+    between 1 and 41 in the table.
+
+    Note: The rules concerning the addition of ships must be followed 
+    carefully. 
+
+      Add USER ships before the CYBORG ships.
+      Add DROID ships after the CYBORG ships.
+      Add any special sysop ships after the DROID ships.
+      Set the NUMSHIPS option in the MBMGEMSG.MSG file to the sum of all
+         the active SnnMAKE options in the MBMGESHP.MSG file.
+      If you have changed the Cyborgs or Droids mid-game, use the 
+         SYS KILL @ option after the board is loaded to kill existing 
+         Cybs and cause them to "re-generate" according to your new rules.
+
+
+    There are blank entries in the .MSG file already for your use. Please
+    use these and do not add any additional items as this WILL cause program
+    failures.
+
+    The Following options are repeated for each of the 12 classes of
+    ships. The first 8 classes are user ships, the next 2 are Cybertron
+    ships, and the final 3 are droid ships. Caution: You are free to
+    adjust the values of these parameters, however, removing or adding 
+    parameters may cause unexpected problems.
+
+
+    Option:  S01TYPE 
+    Description:  Type of Ship?
+    Value:  USER
+    Type:  Enumerated
+    Range:  USER CYBORG DROID
+
+    This option specifies the TYPE of ship.
+ 
+    USER     = A ship a user can purchase and fly.
+    CYBORG   = A Cybertron ship controlled by the automated battle logic   
+            in the game.
+    DROID    = A non-combatant ship (sometimes) controlled by much   
+           simpler navigation logic.
+
+
+
+    Option:  S01NAME 
+    Description:  Ship Class-01 Name
+    Value:  Interceptor
+    Type:  String
+    Range:  30 Characters
+
+    This option is the Class Name of class 01 ships.
+
+    Option:  S01SHLD 
+    Description:  Maximum Shield Type
+    Value:  2
+    Type:  Numeric
+    Range:  1 to 5
+
+    This option specifies the MAXIMUM shield type for this class of ship.
+
+    Option:  S01PHSR 
+    Description:  Maximum Phaser Type
+    Value:  2
+    Type:  Numeric
+    Range:  1 to 4
+
+    This option specifies the MAXIMUM Phaser type for this class of ship.
+
+    Option:  S01TORP
+    Description:  Has Torpedo Capability?
+    Value:  YES
+    Type:  Boolean
+    Range:  YES/NO
+
+    This option specifies if this ship class has torpedo capability.
+
+    Option:  S01MISL
+    Description:  Has Missile Capability?
+    Value:  NO
+    Type:  Boolean
+    Range:  YES/NO
+
+    This option specifies if this ship class has missile capability.
+
+    Option:  S01DECY 
+    Description:  Has decoy capability?
+    Value:  NO
+    Type:  Boolean
+    Range:  YES/NO
+
+    This option specifies if this ship class has the ability to launch
+    decoys.
+
+
+
+    Option:  S01JAMMR
+    Description:  Has Jammer Capability?
+    Value:  NO
+    Type:  Boolean
+    Range:  YES/NO
+
+    This option specifies if this ship class has the ability to launch
+    jammers.
+
+    Option:  S01ZIPPR
+    Description:  Has Zipper Capability?
+    Value:  NO
+    Type:  Boolean
+    Range:  YES/NO
+
+    This option specifies if this ship class has the ability to launch
+    Zippers.
+
+    Option:  S01MINE
+    Description:  Has Mine Capability?
+    Value:  NO
+    Type:  Boolean
+    Range:  YES/NO
+
+    This option specifies if this ship class has the ability to launch
+    mines.
+
+    Option:  S01ATTK 
+    Description:  Has Attack Planet Capability?
+    Value:  NO
+    Type:  Boolean
+    Range:  YES/NO
+
+    This option specifies if this ship class has planetary attack
+    capability.
+
+    Option:  S01CLOK 
+    Description:  Has Cloaking Capability? 
+    Value:  NO
+    Type:  Boolean
+    Range:  YES/NO
+
+    This option specifies if this ship class has cloaking capability.
+
+    Option:  S01ACCL 
+    Description:  Acceleration Rate
+    Value:  1000
+    Type:  Numeric
+    Range:  20 to 20000
+
+    This option controls the acceleration rate for this class of ship.
+
+
+    Option:  S01WARP 
+    Description:  Maximum Warp
+    Value:  4
+    Type:  Numeric
+    Range:  1 to 100
+
+    This option specifies the maximum warp for this class of ship.
+
+    Option:  S01TONS
+    Description:  Maximum Tonnage (in 100's)
+    Value:  5
+    Type:  Numeric
+    Range:  1 to 5000
+
+    This option specifies the maximum weight in tons for this class of
+    ship.
+
+    Option:  S01PRIC 
+    Description:  Price for each ship (in 1000's)
+    Value:  60
+    Type:  Numeric
+    Range:  1 to 32000
+
+    This option specifies the price for each ship in this class.
+
+    Option:  S01PNTS 
+    Description:  Points awarded for kill
+    Value:  10
+    Type:  Numeric
+    Range:  1 to 1000
+
+    This option specifies the points awarded to another player for killing
+    this class of ship.
+
+
+
+
+    Option:  S01SRNG 
+    Description:  Scan Range (in 1000's)
+    Value:  25
+    Type:  Numeric
+    Range:  1 32767
+
+    This option specifies the maximum range in thousands for the range
+    scanners in this class of ship.
+
+
+    Option:  S01CATK
+    Description:  Cyb's can attack this class ship?
+    Value:  NO
+    Type:  Boolean
+    Range:  YES/NO
+
+    This option determines if this class of ship is "attackable"
+    by cybertrons. If NO then Cyb's will only attack it if 
+    provoked. If YES then they will attack on sight.
+
+
+    Option:  S01NATK
+    Description:  Number of Cyb's to attack this class?
+    Value:  NO
+    Type:  Numeric
+    Range:  0 to 255
+
+    This option determines the number of Cybs that will come
+    after this class of ship at the same time. Set to 0 to
+    have Cyb's leave it alone. Set to higher numbers to
+    have this class massed by Cybertrons.
+
+
+
+
+    5.0    Documentation
+
+    Included with the files on your release diskette is the file
+    MBMGEMP.DOC. This is a complete users guide to Galactic Empire
+    specifically written for your users. 
+
+    Upon installation the MajorBBS will attach this document to the 
+    NEWUSER.DOC file automatically. You may wish to make this document 
+    available for download in your Library also.
+
+
+
+
+    6.0    Support
+
+    In order to receive update notification and on-line support for this
+    product you MUST send in the attached Software Registration Document.
+    Please complete and mail within 10 days of purchase.
+
+    NOTICE: With your registration you will be given access to a special 
+    Forum on NETWORX and permitted to download any enhancements to 
+    release 3.2 for a period of one year from purchase. Future releases
+    will also be available at reduced prices to registered customers.
+
+    For Technical Support dial our on-line system;
+
+    NETWORX
+    (813) 541-5876
+    2400 to 9600 Baud Supported
+
+    Our mailing address is;
+
+    M.B. Murdock & Associates 
+    P.O. Box 2194 
+    Pinellas Park, Fl. 34665-2194
+    (813) 545-8050
+
+
+
+
+    ===================================================================
+
+    Galactic Empire
+    Software Registration Document
+
+
+    Name_________________________________________________
+
+    Company______________________________________________
+
+    Address______________________________________________
+
+    Phone No.____________________________________________
+
+    BBS Name_____________________________________________
+
+    BBS Phone No.________________________________________
+
+    No. Ports____________________________________________
+
+    MBBS Reg. No.________________________________________
+
+    Place of Purchase____________________________________
+  
+
+    Comments_____________________________________________
+
+    _____________________________________________________
+
+    _____________________________________________________  
+
+
+    Mail to:
+    M.B. Murdock & Associates
+    P.O. Box 2194
+    Pinellas Park, Fl. 34665-2194
+
+
+    ===================================================================
+

@@ -1,0 +1,1737 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                             Galactic Empire
+
+
+
+                        (c) Copyright 1988 - 1993
+                          M. B. Murdock & Assoc.
+                           All Rights Reserved
+
+
+                               USERS GUIDE
+                               version 3.2
+                             Revised 02/01/94
+
+
+
+
+                           Table of Contents
+                           -----------------------------
+
+
+                           1.0  ...... Introduction
+                           2.0  ...... Game Environment
+                           3.0  ...... Your First Ship
+                           4.0  ...... Navigating
+                           5.0  ...... Owning Planets
+                           6.0  ...... Game Strategy
+                           7.0  ...... Battle Strategy
+                           8.0  ...... Planetary Battles
+                           9.0  ...... Cyborgs and Cybertrons
+                           10.0 ...... Scoring
+                           11.0 ...... Commands
+                           12.0 ...... Enhancements
+
+
+
+
+
+
+
+
+
+    1.0 Introduction
+
+    It is 3250 in the standard year, 975 years since man has developed
+    inter-planetary space navigation, and 412 years since neutron flux
+    warp technology was perfected by the ship builders of Zygor. They
+    currently lead the industry with the state of the art ships and
+    weapons systems.
+
+    These are good times where a commander with a good ship and some
+    business sense can make himself very very rich. Many of the planets
+    in the known universe are ideal for basing industries to supply the
+    demands of the interstellar fleet. These are also times when the less
+    scrupulous commanders can overrun a distant settlement and claim the
+    planet for his own. It is not a good idea to leave a distant
+    settlement unprotected and the Galactic Command (an ad hoc legal
+    body) recommends that commanders check up on their colonists
+    regularly.
+
+    Once you have secured your ship, it is yours to command and keep
+    maintained. The Zygorians will outfit you with enough supplies to get
+    you started but you will surely run out if you encounter any rouge
+    ships. The Galactic Command recommends you find and settle some
+    planets immediately to secure a supply source for your ship. Or you
+    can purchase supplies from other commanders with whom you have
+    established trade agreements.
+
+    The object of the game is to build and maintain as large an empire as
+    you can sustain, using any means you find appropriate. You can do
+    this by yourself or with a team of other players. Your System
+    Operator will inform you of the prizes and awards for becoming the
+    top player(s) in the game.
+
+    Good luck and beware the dreaded Cybertrons at all cost.
+
+
+
+
+
+    2.0  Game Environment
+
+    The game takes place in a universe with millions of sectors and
+    thousands of known planets. Each sector is 10000 by 10000 parsecs
+    square. The entire navigable galaxy is 6000 by 6000 sectors
+    numbered from the center of the galaxy to the edges. Sectors are
+    mapped on a two coordinate system giving a galactic map that looks
+    something like this;
+
+       +--------------------------------------+
+       |-300,-300                    +300,-300|
+       |                                      |
+       |                                      |
+       |                                      |
+       |                                      |
+       |                                      |
+       |                  0,0                 |
+       |                                      |
+       |                                      |
+       |                                      |
+       |                                      |
+       |                                      |
+       |-300,+300                    +300,+300|
+       +--------------------------------------+
+
+    Each sector is measured 10000 by 10000 parsecs square measured from the
+    top left to bottom right as follows;
+
+       +--------------------------------------+
+       |0,0                             0,9999|
+       |                                      |
+       |                                      |
+       |                                      |
+       |                                      |
+       |                                      |
+       |              5000,5000               |
+       |                                      |
+       |                                      |
+       |                                      |
+       |                                      |
+       |                                      |
+       |9999,0                       9999,9999|
+       +--------------------------------------+
+
+
+    In each sector there may be between 0 and 9 planetary bodies. Each
+    planet has various environmental and resource qualities. The best
+    planet has very good resources and a very good environment.
+
+    Sector 0 0 is governed by the Galactic Command and is a declared
+    neutral zone. This policy is maintained by the enforcer planet
+    Enforcer-9. A single hostile action by any player in this sector will
+    be met with a swift and preemptive strike from the Galactic Commands
+    top secret weapons base on Enforcer-9.  
+
+
+    Sector 0 0 also has the first planet Zygor, the leaders in state-
+    of-the-art weapons and ship hardware. Zygor manufactures the various
+    ships and the weapons they carry. It is also home of the Galactic
+    Monetary Reserve Fund, the only duly authorized financial institution
+    in the Galaxy.
+
+    Planet number two in Sector 0 0 is Tahanian Station, a embarking
+    station for colonists and mercenary soldiers. This is also where you
+    can purchase food supplies.
+
+    There are several wormholes in sector 0 0 which provide portals to 
+    other distant sectors.
+
+    Once out of Sector 0 0 it is a free for all, and you have to decide
+    how to best defend yourself and your planets.
+
+    Additionally Sector 0 0 has three portals (stable wormholes) to other
+    parts of the galaxy. These can be used to help you cross the galaxy
+    faster or to escape enemy ships.
+
+
+
+
+    3.0  Your First Ship
+
+    Your first ship is an Interceptor class fighter. It is outfitted with
+    neutron flux warp drives and standard sub-warp impulse drives. The
+    impulse drives can attain speeds of up to .99 percent light speed
+    while the flux drives can attain warp 5.
+
+    The Interceptor is an extremely fast response, light weight fighter
+    designed for scouting. It is outfitted with Mark-1 shields and Mark-1
+    phasers, hyper-phasers, torpedoes, and defensive decoys. The torpedoes
+    are controlled by a Fire Control System that locks onto the target
+    and guides the weapon to the target. Torpedoes are very fast and
+    carry a fixed but powerful charge, and cannot be used when in hyper
+    space.
+
+    The phasers are line-of-sight weapons which you fire in a specific
+    direction. Hyper-phasers are automatically chosen when in hyper-space
+    as they are the more powerful weapon, taking hyper-energy directly
+    off the neutron flux. Plasma-phasers have an additional feature of
+    being focus able allowing you to create a wider beam that has less
+    "punch" but is easier to score a hit on a moving target.
+
+    The Interceptor has defensive systems that include deflector shields,
+    and decoy's. The deflector shields are useful for protecting from
+    plasma-phasers, and lightly charged missiles, but will not stand up
+    to many torpedo blasts. Decoys are small drone ships used to
+    distract, confuse, and divert incoming missiles and torpedoes. It
+    gives off an electronic image that resembles a much larger ship, will
+    attract an incoming weapon, and self destruct destroying the incoming
+    weapon.
+
+    The ship has a communications console with three separate
+    transmission channels. You can set each to a specific channel or to
+    the HAIL setting which permits you to receive all general hailing
+    messages. If you create alliances you can set one radio to an agreed
+    upon channel and have a private and secure communications path
+    between members of your alliance.
+
+    Finally, your ship has facilities to support a small complement of
+    colonists, troops, fighters, and supplies. The ship can hold a maximum
+    of 500 tons of these supplies.
+
+
+
+
+
+
+    4.0 Navigating
+
+    An explanation of the coordinate system and some of the terms used in
+    navigating in the galaxy will help you get started. Galactic Empire
+    functions on a 360 degree compass and is strictly two dimensional.
+    The major bearings are illustrated as follow;
+
+
+                   315  0  45
+                      \ | /
+                       \|/
+                 270----*----90
+                       /|\
+                      / | \
+                   225 180 135
+
+
+    BEARING - Bearing is always used to indicate where a particular ship
+    or planet is in relation to you. It is relative to the direction you
+    are facing and expressed in a number from -180 to +180. If a object
+    is bearing -90, it is to the left of you, if +90 it is to the right
+    of you, if 0 it is directly in front of you, and if - or + 180 it is
+    directly behind you.
+
+    HEADING - Heading is the relative direction of the other ship. It is
+    used to indicate when a ship is facing toward or away from you. A
+    heading of 0 means the ship is facing toward you, while a heading of
+    180 is away from you.
+
+    GALACTIC HEADING - This is the absolute heading in the galaxy. A
+    galactic heading of 0 means you (or the other ship) is facing north
+    up.
+
+    WORMHOLES - Wormholes are fairly rare galactic anomalies caused by a
+    paired spatial singularity. The effect it to create a means of
+    "leaping" across the galaxy to another sector. To navigate through a
+    wormhole you must carefully approach it directly at about 1/4
+    impulse. You will be pulled into the wormhole and emerge at the
+    terminal sector. If you approach too fast you will simply miss the
+    event horizon. If you approach too slow you may oscillate between
+    terminal sectors. Each time you pass through a wormhole some damage
+    to systems may occur. Passing through a wormhole while severely
+    damaged is not recommended. Wormholes are usually by-directional but
+    an even rarer form of one way wormhole has been speculated to exist.
+
+    The NAV command can be used to assist with inter-sector navigation.
+    It will always produce a direction and distance to the upper-left
+    corner of a sector.
+
+
+
+
+
+
+
+    5.0 Owning Planets
+
+    In order to build up wealth you must colonize planets and maintain
+    them.  Planets are claimed by simply going into orbit around one and
+    using the ADMIN command. You should be choosy at first about which
+    planets you put a population on, as surviving on a poor planet can be
+    very difficult and require frequent supply runs.
+
+    Planets are rated on two factors, resources, and environment, with
+    the following categories, POOR, MARGINAL, GOOD, and VERY GOOD. The
+    resources factor rates the natural resources of the planet. A rating
+    of good or very good will insure that your population has plenty of
+    natural resources to use in the establishment of the colony, and the
+    manufacture of goods. The environment factor rates the hospitality of
+    the planet and how difficult it will be for a colony to survive.  A
+    rating of good, or very good, will insure that the majority of their
+    efforts go toward producing goods and not simply surviving.
+
+    Once you have claimed a planet you need to establish a population on
+    it.  This is done with the TRANSFER command to shuttle items from
+    your ship to the planet. Once a colony is established they become an
+    somewhat independent society. Anything you transfer to the planet
+    belongs to them, you cannot transfer it back. If you wish to retrieve
+    items from a planet you must purchase them from the planet at the
+    base price.
+
+    It is a good idea to leave some additional items on a planet besides
+    men.  They are;
+
+    FOOD - If you fail to leave food on the planet you will find your men
+    and troops all dead when you return next time. It is a good idea to
+    leave a case for each 10 men & troops you have.
+
+    TROOPS - Troops are mercenaries who produce nothing but serve to
+    defend your planet from outside attacks, and squelch social unrest. 
+    They must be fed well, and will fight to the death when attacked.
+
+    FIGHTERS - Fighters will defend your planet from both ground troop
+    invasions and fighter attacks. They provide a primary defense force
+    for your planet. Your troops will not be called into action unless
+    the fighters are all destroyed.
+
+    ION CANNON - This is a large defensive cannon which will attack any
+    hostile ship that is in orbit around your planet. It will fire once
+    every few seconds, and can destroy a ship in just a few blasts.  An
+    attacking ship won't stay long with an ion cannon firing upon them. 
+    You can have multiple ion cannons, but only one will be active at a
+    time.
+
+
+
+
+
+
+    There are several other factors you may adjust when you establish a
+    planet. When the planet is first established your colony is instructed
+    to divide their efforts evenly between the manufacture of food and the
+    pro-creation of population (an ardous chore to be sure) You may wish 
+    to alter this to provide for the production of supplies or let your
+    planet grow at maximum rate, its up to you.
+
+    Additionally, you can tax your planet at a specific rate. The harsher
+    the tax the less the productivity. Tax is your principle source of
+    income for purchasing supplies for your ship. This tax is kept in the
+    planetary bank until you arrive to collect it.
+
+    The higher the taxes the more social unrest there is likely to be.
+    Troops must be maintained to keep the social discontent from becoming
+    a full scale revolt.
+
+    Your colony will produce all the supplies you need for your ship if
+    managed properly. These goods are cheapest at your own planets as
+    Zygor charges three times the base rate for goods. The cash you spend
+    on supplies goes into the planetary bank and is used to purchase more
+    raw materials when the Inter-galactic supply ships come around.
+
+    You can decide to sell supplies to other players if you like, and
+    even mark up the price to other players. If you wish to be selective
+    in who can purchase from your planets you can establish a trade
+    password for your planet and only those who know the password can buy
+    from you.  This is also useful in establishing an alliance with other
+    players where you all would set your planets to the same password and
+    agree on the price to charge each other. Non-members will be excluded
+    from trading with your alliance.
+
+    Remember that the better your planet, the more attractive it is to
+    marauders. Nothing can take the place of a well rounded defense system
+    and frequent supply runs. Leaving a planet un-checked for more than a
+    few days may spell disaster for your colony.
+
+
+
+
+
+
+    6.0 Game Strategy
+
+    Your ship is equipped with nothing when you first enter the game, you
+    are not in any eminent danger as sector 0 0 is a neutral zone. You
+    are provided with an interceptor and an amount of cash with which you
+    must decide what you are going to do.
+
+    On Zygor you can purchase shield systems, phaser systems, missiles, 
+    torpedoes, fighters, decoys, and ion cannons. Note: some of these may
+    not be available or useful on some ship classes (see HELP CLASS for
+    more information).
+
+    On Tahanian Station you can purchase colonists (men), troops, and
+    food.  Your first goal should be to secure an income for yourself,
+    and therefore provide a source for taxes you will need to expand your
+    empire, and keep your ships fully stocked.  To do this you should
+    purchase men, troops, food, and some fighters.  Locate as good a
+    planet as you can find and colonize it. It is advisable that you
+    steer clear of other ships unless you know they are friendly.
+
+    An alternative, albeit somewhat immoral, strategy is to purchase
+    weapons and lie waiting for other ships to leave sector 0 0. When
+    they do mount an attack and upon destroying their ship, gain what
+    remains of the supplies on their ship. After several successful
+    attacks you may have enough to colonize a planet or two.
+
+    When you do colonize a planet you should redirect the majority of the
+    effort to producing men, food, and troops, and gaining cash with which
+    you can purchase larger and more powerful ships and expand your
+    empire.
+
+    Remember, these are only a couple suggested strategies, and others
+    are only limited by your imagination.
+
+
+
+
+
+
+
+    7.0  Battle Strategy
+
+    The flexibility of Galactic Empire precludes an exhaustive discussion
+    of all the strategies involved in user versus user battling. Some
+    suggestions are simply put forth here to get you started.
+
+    When in a potential battle situation make sure your shields are up,
+    and keep moving. The easiest target is a ship with shields down,
+    sitting still.
+
+    If your ship has a cloaking system, use it sparingly as it consumes
+    incredible amounts of energy. It is most useful in covering a
+    retreat.
+
+    If you have incoming torpedoes you can ditch them easily by making a
+    jump to light speed. This does not work for missiles though.
+
+    Launching decoys does not guarantee that the incoming missiles or
+    torpedoes will be destroyed. Launching more decoys than incoming
+    weapons increases the chance of destroying an incoming weapon.
+
+    When launching an attack try to get close to the target and use the
+    faster torpedoes as they will have less time to react.
+
+    If a target goes to light speed be prepared to make the jump with him
+    and use Hyper-Phasers as soon as you pass warp 1.
+
+    If you get hit with a Hyper-Phaser immediately go into a series of
+    180 degree high speed turns as your opponent will have difficulty
+    locating you. Go out of light speed in another sector and immediately
+    cloak (if you have a cloaking system) as a last ditch effort to loose
+    your pursuers.
+
+    Form alliances to help protect each other from marauders. Remember
+    two ships are twice as powerful as one.
+
+    When you are under attack you cannot EXIT the game to avoid your
+    attackers. If you hang-up while you are under attack your ship will
+    be destroyed. Remember "Death before Dishonor"!!
+
+    If you are damaged try to make it back to sector 0 0 or to one of your
+    own planets where you can get your ship repaired with the MAINT
+    command.  Remember the cost for everything is much more expensive in
+    Sector 0 0.
+
+    When you kill another ship you will get some of his goods on his
+    ship.  This can be very helpful when you are running low.
+
+    When you want to find another player in hyper space use the SCAN RA
+    command if the player is close or SCAN LO if the player is far away.
+    The long range scanner will tell you where another player is in the
+    galaxy.
+
+
+
+
+
+
+
+    8.0  Planetary Battles
+
+    Planets can defend themselves with troops, fighters, and ion cannons. 
+    If you have no troops or fighters then your planet can be easily
+    overrun.
+
+    FIGHTERS are Nova Class Battle Fighters commanded by a fully
+    automated tactical computer. They have inboard and outboard photon
+    cannons capable of powerful and deadly offensive and defensive
+    attacks. When pitted against troops the fighter is deadly, capable of
+    taking out between 10 and 50 troops in a pass. When pitted against
+    other fighters they are fairly evenly matched.
+
+    TROOPS are trained mercenaries, and serve no other function than the
+    defense or attack on a planet. The consume food, maintain there
+    skills, and mostly play cards. But when needed they will fight to the
+    death.
+
+    ION CANNONS are the very powerful fixed focus, ion-plasma
+    transmitters, capable of taking out a Star Class ship with only a few
+    strikes. They are strictly defensive weapons controlled by a fully
+    automated system.  When the planet comes under attack they will
+    automatically locate the attacker and commence firing upon the ship.
+
+    When attacking a planet you are always at a disadvantage, as the
+    local troops and fighters are better supported and fresh. Knowing
+    this you should always plan on commencing a battle with superior
+    numbers.
+
+    Begin with a fighter attack. If they have no fighters you will
+    overpower the troops rather quickly. If they have fighters you will
+    be in a better position to do battle.
+
+    After each wave your fighters or troops will return to your ship. If
+    you wish to send them back you can do so. Remember, you will not take
+    a planet so long as 1 fighter or 1 squad of troops (5) exists on the
+    planet.
+
+
+
+
+
+    9.0  Cyborgs and Cybertrons
+
+    Cyborgs are a race of automatons which are bent on the destruction of
+    all humans from the universe. They command a class of ship
+    manufactured specifically for them, the Cybertron. Both pilot and
+    ship function as a single fighting unit and they can be quite deadly.
+
+    The Cybertron is armed with phasers, and torpedoes, but has no
+    missile capability. They can be deadly in hyper space with
+    hyper-phasers, but cannot recycle the phaser as fast as most other
+    ships. Cybertrons are prone to battle failure, and they will
+    malfunction occasionally. This is often noted  by strange
+    transmissions from their ship.
+
+    When attacked the Cybertron may summon other Cyborg Class ships to aid
+    in the battle. If a Cybertron gets damaged too much they may launch
+    jammers to cover a retreat. Be careful as they may often mine an area
+    prior to leaving.
+
+    Finally, Cybertrons will not attack interceptors and freighters
+    unless first provoked, so don't mess with them unless you know what
+    you are doing.
+
+
+
+
+
+
+    10.0  Scoring
+
+    The Score Board is updated in real time and each night, during the
+    nightly cleanup of the system. 
+
+    Scores are based upon the size of your empire and the number and class
+    of kills you have accumulated is ship to ship combat. Each class of
+    ship is worth a different number of points as detailed below;
+
+    Interceptor                10
+    Light Freighter            25
+    Heavy Freighter            75
+    Destroyer                 150
+    Star Cruiser              200
+    Battle Cruiser            250
+    Frigate                   300
+    Dreadnought               500
+    Freight Barge             200
+    Cybertron Scout            75
+    Cybertron Battle Cruiser  200
+
+    Additionally you are awarded as a bonus, a small percentage of the
+    killed players score on top of the ship points. 
+
+    Finally, when you kill another player, his score goes down also. 
+    This means that you can actually knock him down on the top player
+    list making it easier to overtake him (or pass him further).
+
+    While you can quickly gain a good score with points gained from ship
+    to ship combat, over the long haul the scoring system awards the
+    highest scores to players who create planetary empires and manage
+    them well.
+
+
+
+
+
+
+
+    11.0  Commands
+
+    All commands can be abbreviated to 3 characters for speed. Most
+    commands have a full explanation displayed if they are entered with
+    no options or improperly.
+
+
+    11.1  ABANDON - Abandon a planet previously claimed
+
+    The abandon command will release ownership of a planet previously
+    claimed.  You must be in orbit around the planet to be abandoned. 
+    Issue the abandon command as follows;
+
+    abandon
+
+    simple enough.
+
+
+    11.2  ABORT - Abort a self destruct sequence
+
+    This command will abort a self destruct sequence.
+
+
+    11.3  ADMIN    - claim and administer a planet once in orbit.
+
+    This command is used to claim and administer a planet. If the planet
+    is un-owned then you will be asked if you wish to settle it;
+
+        Do you wish to settle this planet, Sir! (y/n)? --->
+
+    If you respond YES then you own the planet and will be prompted;
+
+        The Protocol Officer requests an appropriate name for the
+        planet Sir, (20 characters max) --->
+
+    Once you declare a name you can now adjust your policies with the
+    ADMINISTRATION MENU.
+
+           Planet Administration Menu
+         -----------------------------------
+           1 - Get accounting report
+           2 - Collect taxes ($)
+           3 - Alter work assignments and
+               adjust trade policy/pricing
+           4 - Rename planet
+           5 - Adjust Tax Rate
+           6 - Set Trade Password
+           7 - Set Beacon Message
+           x - Exit to command mode
+
+         Please Select (1 - 6)  --->
+
+
+
+
+
+
+    1 - Displays a full accounting report on the planet as follows;
+
+        Planet Accounting report for Cyclops 1
+        --------------------------------------
+        Item          Rate Qty  Price  Resv S Mkup  Sold
+        men            50  1911     2 10000 N   10     0
+        missiles        0    25    20   100 N    0    20
+        torpedoes       0     7     7   100 N    0     1
+        ion cannons     0     0    33   100 N    0     0
+        flux pods       0     0   200   100 N    0     0
+        food cases     10   790     2  1000 N   50     0
+        fighters       40    17    50  1000 N  100    41
+        decoys          0    12    18   100 N    0     0
+        troops          0   100     1   100 N    0     0
+        jammers         0     0    50   100 N    0     0
+        zippers         0     0    50   100 N    0     0
+        mines           0     0    50   100 N    0     0
+        --------------------------------------
+        Cash in Planetary Bank ..... 266
+        Tax Revenue ................ 2229
+        Tax Rate ................... 50
+        Trade password.............. none
+        --------------------------------------
+
+    "Rate" is the percentage of the effort of the population being put
+    into the production of this item. The total of all items cannot
+    exceed 100%.
+
+    "Qty" is the number on hand.
+
+    "Price" is the base price set by the Galactic Command. You cannot
+    charge any less than this amount. This is also the price charged to
+    the "owner" of this planet for each good (explained further below).
+
+    "Resv" is the number of each item to reserve for the use of the
+    population or the "owner". Your colonists will only sell what is in
+    excess of this amount.
+
+    "S" is the flag indicating whether this good is for sale at all. A
+    "N" indicates that it is not for sale, while a "Y" means that it is.
+
+    "Mkup" is the amount over the price to charge for each item. The
+    "owner" will not be charged the marked up price, only other players.
+
+    "Sold" is the quantity of the item sold.
+
+    "Cash in Planetary Bank" is cash that has been paid for goods sold. 
+    This cash is not available to the owner as it belongs to the
+    colonists.  They will use it to purchase raw materials from Galactic
+    Command Supply Ships.  Having a cash surplus enhances the production
+    of goods.
+
+
+
+
+
+
+    "Tax revenue" is the amount of taxes collected from the colonists.
+    This amount is available to the "owner" and can be collected with
+    selection #2.
+
+    "Tax Rate" is the percentage of tax being assessed on the colonists. 
+    The higher the tax the more tax revenue collected, but the lower the
+    production of the colonists. A tax rate of 100% will assess a 1 C tax
+    per person per day. Example: in the above display there are 1911
+    colonists, and a tax rate of 50%. This will generate 955 C's each
+    day.
+
+    "Trade Password" is the password you have set with selection #6. This
+    password will be asked of anyone before they can buy any goods. It is
+    also asked prior to permitting a ship to get repairs at your planet.
+    If set to "none" then no password will be required.
+
+    2 - Will permit you to collect taxes from the planetary bank and
+    place them on your ship. The Galactic Command recommends you do this
+    often as an attacker will gain all the taxes if they overtake your
+    planet.
+
+    3 - Will permit you to adjust your policies concerning a given item. 
+    When selected the following menu is displayed;
+
+        Select the item to adjust
+        ----------------------------
+          men  = adjust men
+          mis  = adjust missiles
+          tor  = adjust torpedoes
+          ion  = adjust ion cannons
+          flu  = adjust flux pods
+          foo  = adjust food
+          fig  = adjust fighters
+          dec  = adjust decoys
+          tro  = adjust troops
+          zip  = adjust zippers
+          jam  = adjust jammers
+          min  = adjust mines
+        ----------------------------
+        Select now -->
+
+    Select an item to adjust and you will be prompted;
+
+        Select the percentage of effort toward men. --->
+
+    Select an amount between 0 and 100 percent. Remember if you already
+    have assigned most of the activity you may need to first reduce an
+    item before increasing one.
+
+        Charge how much for Men. --->
+
+    Enter the amount to charge to other ships, if you are not going to
+    sell this can be 0.
+
+
+
+
+         Sell men to other ships? (y/n) --->
+
+    Enter Y if you wish to permit anyone (yourself included) to purchase
+    goods from this planet, enter N if not.
+
+       Reserve how many men for stock piling --->
+
+    Enter an amount of goods to reserve for yourself, or the planet. This
+    is useful in preventing another ship from purchasing too many goods
+    (such as fighters) and endangering the colony.
+
+    4 - Will permit you to change the name of the planet. You will be
+    prompted;
+
+        The Protocol Officer requests an appropriate name for the
+        planet Sir, (20 characters max) --->
+
+    5 - Will permit you to set the tax rate to charge the colonists, you
+    will be prompted as follows;
+
+        Enter the new TAX rate (0 - 100) --->
+
+    A tax rate of 0 will entice the colonists to produce as much as
+    possible, while a tax rate of 100% will reduce their productivity to
+    20% of full production.
+
+    6 - Will prompt you for the new trade password as follows;
+
+        Enter the new password "team" or "none"  --->
+
+    If you enter the word "team" the planet becomes a team planet and any
+    member of your current team can trade with your planet. If you change
+    teams later you MUST change the password to "team" AGAIN as this is 
+    when the team ID is read and recorded.
+
+    If you enter the word "none" there will be no trade password in
+    effect.  Any other word will become the trade password. This is
+    useful for creating alliances as all the members of an alliance can
+    set their password to the same word and all can trade and get repairs
+    from each other.
+
+    7 - Will set a beacon message that is broadcast to all ships who come
+    within range of your planet.
+
+    X - Will return you to command mode.
+
+
+
+
+    11.4  ATTACK  -  Attack a planet with Fighters or Troops
+
+    Issue the Attack command as follows;
+
+         attack [<number>] [tro/fig]
+
+         number = number of troops or fighters to attack with;
+
+         tro = send <number> troops to the surface.
+         fig = send <number> fighters to the surface.
+
+    Examples: attack 100 tro
+              attack 30 fighters
+
+    Provided you have sufficient fighters or troops to send to the planet
+    the battle will commence, you will see a blow by blow report of the
+    progress of the battle. After the attack, and provided there are any
+    survivors, your remaining forces will return to the ship. You can
+    then decide to attack again, or lick your wounds and go away.
+
+    If the planet has an Ion Cannon then any hostilities will trigger the
+    ion cannon to fire. The Ion Cannon will continue to fire so long as
+    you are in orbit.
+
+    Should your attacking forces meet little or no resistance than you
+    will conquer the planet and its goods, funds, and civilization is
+    yours.
+
+    TIP: Match fighters against fighters and troops against troops. If
+    fighters are present on the planet, begin with a fighter attack until
+    the fighters are knocked out. Then proceed with a ground assault
+    using troops.  Pitting troops against fighters will yield
+    disappointing results.
+
+
+
+
+
+
+    11.5  BUY  -  Buy goods or colonists from a planet
+
+    The Buy command will permit you to purchase goods from one of your
+    own planets or another players planet. Issue the Buy command as
+    follows;
+
+    buy [<number>] [men/tro/mis/tor/ion/flu/foo/fig/dec/min/jam/zip/gol]
+        [<password>]
+
+    number = the number you want to buy.
+
+      men  = buy men
+      tro  = buy troops
+      mis  = buy missiles
+      tor  = buy torpedoes
+      ion  = buy ion cannons
+      flu  = buy flux pods
+      foo  = buy food
+      fig  = buy fighters
+      dec  = buy decoys
+      min  = buy mines
+      jam  = buy jammers
+      zip  = buy zippers
+      gol  = buy gold
+
+      password = optional trade password may be required by planet.
+
+    examples:
+      buy 1000 men
+      buy 3 ion
+      buy 500 foo drowssap
+
+    All goods put onboard your ship must be purchased, or if permitted,
+    transferred up. The cash will go towards improving the general
+    conditions of the population. Additionally the population will use
+    the cash to purchase more supplies and increase its production
+    levels.
+
+
+    11.6  CLOAK - Turn on or off the cloaking system
+
+    The Cloak command will turn on or off the cloaking system, if your
+    ship is equipped. The cloaking system consumes large amounts of power
+    and you should be careful not to drain all your energy pool. Due to the
+    time it takes to charge the ST-Coils there is a few seconds of delay 
+    before the ship actually becomes invisible.
+
+    Issue the command as;
+
+    Cloak [ON/OFF]
+
+    Example:  cloak on
+              cloak off
+
+
+    11.7 CLS - Clear the screen using ANSI Clear Screen Sequence.
+
+    The CLS command is useful if your screen becomes cluttered and you
+    want to clear it.
+
+
+
+
+
+
+
+    11.8  DECOY - deploy a decoy
+
+    The Decoy command deploys a single decoy. Decoys proceed away from
+    your ship and send a sensor signature that resembles your ship. If a
+    torpedo or missile comes near the decoy the decoy will explode and
+    destroy the inbound weapon. The decoy will self destruct after a
+    period of time to prevent stray decoys floating around in your
+    navigation path.
+
+
+    11.9  DESTRUCT - Start the self destruct sequence
+
+    The Destruct command will begin a self destruct countdown timer that
+    when it reaches zero will destroy your ship. The countdown can be
+    aborted with the ABORT command.
+
+
+    11.10  FLUX - Load a new flux pod into the neutron engines
+
+    The Flux command will replace an exhausted Flux Pod from the energy
+    pool with a new one. This command presumes that you want it changed
+    now, and does not warn you if there is still a good percentage of
+    power left in the old pod. The old pod is jettisoned. Your power is
+    restored to full charge automatically.
+
+
+    11.11 FREQ - Sets the communications channel frequency
+
+    The freq command permits you to specify the channels you want your
+    ships communication system set to.
+
+    Issue the freq command as follows;
+
+         freq [<channel>] [hail/<freq>]
+
+         <channel> = Your communications channel A, B, or C as set by
+                     the FREQ command.
+
+         hail      = Sets the channel to accept all hailing messages.
+
+         <freq>    = The frequency to set this channel to.
+
+     examples: freq A 12345
+               freq b hail
+               freq c 23221
+
+     note: Channel frequencies above 20000 are converted to hyper space
+              modulation packets and transmitted through hyper space.
+
+           Channel frequencies below 20000 are transmitted in the current
+              star system only.
+
+
+
+
+
+
+
+    11.12  HELP - Display help information
+
+    Issue the help command as follows;
+
+    help [<topic>/<command>]
+
+    Commands: abandon abort  admin  attack  buy  cloak  cls  decoy 
+          destruct flux  freq  help  impulse  jammer  maintenance  
+          mine  missile  new  orbit  phaser  planet price rename  
+          report  roster  rotate  scan  send  set  shield  torpedo  
+          transfer  warp  zipper
+
+    Topics  : battle  class  communicate  cybertron  galaxy  navigate  
+          planets  scoring  sector  starting  strategy
+
+    The Help command will display a vast amount of information on
+    Galactic Empire.
+
+
+    11.13 IMPULSE - Engage the impulse engines
+
+    The Impulse command directs your impulse (sub-light) engines and sets
+    your course and speed. Issue the Impulse command as follows;
+
+
+         impulse [<speed>] [<heading>]
+
+         speed   = the impulse speed between 0 and 99 (99 is .99 light
+                   speed)
+         heading = the heading from your current direction
+
+    Examples:
+
+         impulse 5 0    would alter the speed to impulse 5 and not
+                        change the heading.
+         impulse 10 5   would alter the speed to impulse 10 and turn the
+                        ship 5 degrees to the starboard (right).
+         impulse 10 355 would alter the speed to impulse 10 and turn the
+                        ship 5 degrees to the port (left).
+
+
+
+
+
+
+
+    11.14 JAM - Launch a Jammer
+
+    The jammer command will cause a jammer device to be launched. It
+    disrupts all scanner systems on all ships within range of the device,
+    yours included. It is useful for covering an escape or distracting an
+    opponent. 
+
+    Issue the jammer command as follows;
+
+    Jammer
+
+    Simple enough!
+
+
+    11.145 JETTESON - Jetteson some or all of an item type
+
+    The JET command allows you to dump some or all of a given item. This 
+    frees up cargo space for other items. Issue the command as follows;
+
+    jettison [ALL/<number>] [men/tro/mis/tor/ion/flu/foo/fig/dec/min/jam]
+
+
+    examples:
+    jettison ALL ion 
+    jettison 500 foo 
+
+      
+    11.15 LOCK - Lock fire control on a particular ship
+
+    The Lock command permits you to lock your fire control systems onto a
+    specific ship no matter what its letter designation changes to. As
+    long as the ship is within scanner range the fire control systems
+    will remain locked onto that specific ship. This is extremely useful
+    when in heated battle and multiple ships are in the vicinity.  Ship
+    letter designated -A- may become -B- or -C- as other ships move
+    closer to you. The Lock command permits you to stay locked on to the
+    ship as distances and letter designates change. 
+
+    Commands like MISSILE and TORPEDO can be then be used with the Lock
+    option to fire on the ship you have locked onto. Issue the Lock
+    command as follows;
+
+        lock [<ship letter designate>]
+        -or-
+        lock
+
+    examples: lock A     would lock onto the closest ship.
+              lock B     would lock onto the second closest ship.
+
+              lock       would cause the lock to be released.
+
+    Note: Once a ship is killed the lock is released automatically.
+
+
+
+
+
+
+    11.16 MAINTENANCE - Requests maintenance from a planet.
+
+    The Maintenance command functions when you are in orbit at your own
+    planet or Zygor. The maintenance crews will start repairing your ship
+    and charge you a nominal fee of 200c's at your own planet and 2500c's
+    at Zygor.
+
+    Leaving orbit early will cease all repairs on the ship.
+
+
+    11.17 MINE - Launch a Neutron Mine
+
+    The MINE command causes a neutron mine to be deposited at your
+    current location. You specify how long until detonation permitting
+    you time to leave the spot for safety. Mines are useful when you are
+    being tailed by another ship. Beware that they are very powerful and
+    you can also be damaged by them if you don't get far enough away. 
+    Issue the MINE command as follows;
+
+      mine [<time>]
+
+      time = the time till detonation in centocks (approx. 5 seconds). 
+             This can be set from 1 to 50.
+
+    Example:  mine 10    will deposit a mine to detonate in 10 centocks
+
+
+
+
+
+
+    11.18 MISSILE - Fire a missile
+
+    The Missile command instructs your ship to fire a hyper-missile at a
+    given ship with a given charge. This missile guidance system will
+    attempt to lock on the ship prior to firing the missile. If a lock is
+    made the missile is launched. Missiles are slower and you determine
+    the amount of charge to place in them. They are basically a
+    Hyper-drive engine with a target tracking system, designed to produce
+    a Neutron flux implosion of any remaining energy when it nears its
+    target. They will continue to track a target into Hyper space to
+    deliver its charge.
+
+    Issue the Missile command as follows;
+
+         missile [<ship letter>/@] [<energy>]
+
+         ship letter = the ship you are firing upon
+         @           = to fire at the locked on ship
+         energy      = the energy from your Neutron Flux Pile to charge
+                       into the missile.
+
+    Examples:
+
+         missile A 100   would fire a missile at ship A which will only
+                         cause minor (if any) damage.
+         missile C 20000 would fire a missile at ship C which will cause
+                         major damage.
+         missile @ 10000 would fire on the ship that a previous Lock 
+                         command has locked on to.
+
+
+    Note: the energy imparted to the missile must come from your charged
+          neutron flux pile and will drain the pile by 10% of that amount.
+
+
+    11.19 NAVIGATE - Invoke the navigation assist function
+
+    The navigate command will give you a bearing and distance to a
+    sector.  Please issue the Navigate command as follows;
+
+    navigate [sector]
+
+    sector number = the sector number you wish to navigate to.
+
+    Examples: navigate sector 0 0   give a bearing and distance to 
+                                    sector 0 0.
+
+
+
+
+
+
+    11.20 NEW - Purchase a new ship, phaser system, or shields.
+
+    The New command permits you to purchase from the ship yards at Zygor
+    one of several types of shields, phaser systems, or even a new ship.
+
+    Issue the New command as follows;
+
+         New [shield/ship/phaser] [<type>]
+
+         type   = the class type of the shield, phaser, or ship you wish
+                  to purchase.
+
+           ---- Shields ----   ---- Phasers ----   ------ Ships ------
+           Mark-1 Shield = 1   Mark-1 Phaser = 1   Interceptor     = 1
+           Mark-2 Shield = 2   Mark-2 Phaser = 2   Light Freighter = 2
+           Mark-3 Shield = 3   Mark-3 Phaser = 3   Heavy Freighter = 3
+           Mark-4 Shield = 4   Mark-4 Phaser = 4   Destroyer       = 4
+           Mark-5 Shield = 5   Mark-5 Phaser = 5   Star Cruiser    = 5
+           Mark-6 Shield = 6                       Battle Cruiser  = 6
+                                                   Frigate         = 7
+                                                   Dreadnought     = 8
+
+    Examples:
+
+         new ship 2    purchase a new Heavy Freighter
+
+    Note: you must be orbiting around Zygor in Sector 0 0 to issue this
+          command.
+
+    Prices of shields and phasers can be obtained from the HELP NEWPRICE
+    command.
+
+
+    11.21 ORBIT - Enter into an orbit around a planet
+
+    The Orbit command instructs your ship to enter into orbit around a
+    given planet. Issue the Orbit command as follows;
+
+         orbit [<planet #>]
+
+         planet # = the planet you are wishing to orbit.
+
+    Example:
+
+         orbit 2
+
+    Note: You must be 250 or closer to orbit a planet!
+
+
+
+
+
+    11.22 PHASER - Fires either the normal, or Hyper-phasers.
+
+    The Phaser command directs your ships phasers to fire in a given
+    direction with a given beam spread. The more narrow the beam the
+    stronger the hit, but the more difficult it is to get a hit.
+
+    Issue the Phaser command as follows;
+
+         phaser [<direction>] [<spread>]
+
+         direction = the heading to fire the phasers at, usually the same
+                     as the bearing of another ship given in the "scan sh"
+                     command.
+
+         spread    = the focus of the beam (0 to 5). 0 gives the most
+                     concentrated beam but is so narrow that you must be
+                     dead on to get a hit. 1 and 2 are good numbers to use
+                     if you know where a target is located. Use 5 if you
+                     know he is close but cloaked.
+
+    Examples:
+
+         phaser 4 1     fire 4 degrees off starboard, focus 1.
+         phaser 180 5   fire directly behind focus 5.
+
+
+    When in hyper space the normal ships phasers are useless. The
+    Hyper-Phaser however can be deadly. The Hyper-Phaser Beam is very
+    narrow but very powerful and can destroy another ship with only a few
+    well placed shots.
+
+    Issue the Hyper-Phaser command as follows;
+
+         phaser [<direction>]
+
+         direction = the heading to fire the phasers at, usually the same
+                     as the bearing of another ship given in the "scan sh"
+                     command. With the Hyper-Phaser you must be pin-point
+                     accurate to score a hit.
+
+    Examples:
+
+         phaser 4    fire 4 degrees off starboard.
+         phaser 180  fire directly behind you.
+
+    Note: The Fire Control System automatically switches to Hyper-Phasers
+          when in hyper space.
+
+
+
+
+
+
+    11.23 PLANETS - Lists the planets in your empire
+
+    Produces a list of the planets registered to you. This list is only
+    current as of 3AM each day. Any planets added to your empire today
+    will not appear in the list until tomorrow due to the nightly
+    processing involved.
+
+
+    11.24 PRICE - Get a price quote prior to a purchase
+
+    The Price command permits you to get a price for a quantity of goods
+    prior to actually purchasing them. Issue the Price command as
+    follows;
+
+    price [<number>] [men/tro/mis/tor/ion/flu/foo/fig/dec/min/jam/zip/gol]
+
+          men  = price men
+          tro  = price troops
+          mis  = price missiles
+          tor  = price torpedoes
+          ion  = price ion cannons
+          flu  = price flux pods
+          foo  = price food
+          fig  = price fighters
+          dec  = price decoys
+          min  = price mines
+          jam  = price jammers
+          zip  = price zippers
+          gol  = price gold
+
+    examples:
+          price 1000 men
+          price 3 ion
+          price 500 foo
+
+
+    11.25 RENAME - Rename your ship
+
+    The Rename command will change the name assigned to your ship. Issue
+    the Rename command as follows;
+
+         rename <new ship name>
+
+         <new ship name> is the new name for your ship.
+
+    Example:
+
+         rename Hippo   will rename your ship to "The Hippo"
+
+    Note: leave off the "The" as it will be automatically inserted.
+
+
+
+
+
+
+    11.26 REPORT - Generates several types of status reports
+
+    The Report command gives you status information on navigation, ships
+    systems, inventory, and accounting.
+
+    Issue the Report command as follows;
+
+         report [nav/sys/inv/acc]
+
+    Examples:
+
+         report nav    - produces a navigational report
+         report sys    - produces a systems report
+         report inv    - produces an inventory report
+         report acc    - produces an accounting report
+
+
+    11.27 ROSTER - Displays a top players roster
+
+    The Roster command will display the Top Players Roster.
+
+    Issue the Roster command as follows;
+
+         roster [all]
+
+
+    Examples:
+   
+         roster        - Produce a top 20 list
+         roster all     - Produce a complete list of all players 
+                          scores.
+
+    11.28 ROTATE - Rotate the ships heading
+
+    The Rotate command will cause to directional thrusters to rotate the
+    ship a specified number of degrees. The ship must be stationary
+    first.  The ship will automatically turn in the direction which
+    causes the shortest arc to arrive at the given heading.
+
+    Issue the Rotate command as follows;
+
+         rotate [<heading>]
+          -or-
+         rotate [@<absolute heading>]
+
+         heading = the heading from your current direction
+
+         absolute heading = the galactic heading you wish to go (ie. 0 = 
+         north, 90 = east, 180 = south, 270 = west)
+           
+                   
+
+    Examples:
+
+         rotate 5   would turn the ship 5 degrees to the starboard
+                    (right).
+         rotate -5  would turn the ship 5 degrees to the port (left).
+
+         rotate @355 would turn you to absolute 355 degrees.
+
+    Note: that the heading is relative from your current heading and not
+          fixed unless you use the @ flag.
+
+
+
+
+
+    11.29 SCAN - displays several types of tactical scans
+
+    The Scan command permits you to direct the ships tactical scanners in
+    a number of different ways.
+
+    Issue the Scanner command as follows;
+
+    scan [se/sh/pl/ra/lo] [<ship letter>/<planet #>/<range>]
+
+    se = sector scan showing the ships and planets in this sector
+    sh = ship scan showing detail on ship <ship letter>
+    pl = planet scan showing detail on planet <planet #>
+    ra = close range scan for range <range> 1 to 9
+    lo = long range scan of neutron distortions
+
+    examples: scan se
+              scan sh a
+              scan pl 1
+              scan ra 9 
+              scan lo
+
+    NOTE: The SET command allows you to customize some scan options. 
+    Type HELP SET for more details.
+
+    11.30 SELL - Permits you to sell goods back to Zygor-3.
+
+    The Sell command will permit you to re-sell back to the Empire excess 
+    goods. The Empire will charge a small Tranfer Tax on each transaction.
+
+    Issue the Sell command as follows;
+
+    Sell [<number>] [men/tro/mis/tor/ion/flu/foo/fig/dec/min/jam/zip/gol] 
+
+    number = the number you want to sell.
+
+      men  = sell men
+      tro  = sell troops
+      mis  = sell missiles
+      tor  = sell torpedoes
+      ion  = sell ion cannons
+      flu  = sell flux pods
+      foo  = sell food
+      fig  = sell fighters
+      dec  = sell decoys
+      min  = sell mines
+      jam  = sell jammers
+      zip  = sell zippers
+      gol  = sell gold
+ 
+    examples:
+      sell 1000 men
+      sell 3 ion
+      sell 500 foo 
+
+
+
+
+    11.31 SEND - Sends a message to another ship
+
+    The Send command is the only means of communication between ships and
+    team members. Please issue the Send command as follows;
+
+         send [<channel>] [<message>]
+
+         channel  = Your communications channel A, B, or C as set by
+                    the FREQ command.
+
+         message  = Your message to be sent.
+
+    Examples:
+
+         send A Why you scum guzzler, I am gonna get you
+         send C This is a warning to all ships.... I am here!!!!
+
+
+
+
+
+
+
+    11.32 SET - Sets player options
+
+    The Set command permits you to specify certain user preferences as
+    detailed below;
+
+    Issue the set command as follows;
+
+         set [scanfull/scannames/scanhome] [on/off]
+
+         scanfull   controls is SCAN RA displays the full screen format
+                    which includes ship details on the right side of the
+                    screen.
+
+         scannames  if scanfull is ON this option will add the ships name
+                     to the detail on the right side of the screen.
+
+         scanhome   this option enables ANSI HOME SCREEN before each 
+                    display. This can be useful when performing 
+                    repeated scans.
+                
+    examples: set scanfull on
+              set scannames off
+              set scanhome on
+
+
+    11.33 SHIELD - Turn the shields on or off
+
+    The Shield command will raise or lower the ships shields. The shields
+    will begin charging upon being raised for the first time. They are
+    providing immediate yet limited protection until fully charged.  When
+    fully charged the shields come up immediately when issued.  The
+    shields do drain on the neutron flux pile, and will automatically
+    come down when the energy drops to dangerously low levels.
+
+    Note: When firing a weapon with the shields up, the shields will be
+          automatically lowered. They WILL NOT be automatically raised
+          after the firing.
+
+    Issue the shield command as follows;
+
+       shield [up/down]
+
+       examples: shield up    would raise the shields
+                 shield down  would lower the shields
+
+
+
+
+
+
+
+    11.34 SPY - transfers down a spy to the planet.
+
+    Issue the Spy command as follows;
+
+       Spy
+
+    Provided you have a spy onboard and are in orbit around another planet
+    you may transport a spy to the planet. Provided the spy is not caught
+    or killed you will from time to time get intellegence reports in your
+    mail (or GEmail) from your spy.
+
+    
+
+    11.35 TEAM - Perform one of several team functions
+
+    The Team command allows you to perform a number of functions related
+    to teams. It allows you to join a team, create a new team, leave a team,
+    and get team scores. Additionally the team founder (or anyone with the 
+    founder password) can expell a team member, change the Team Password, or
+    change the team name.
+
+    Teams are identified by a 5 digit team code created by the founder when
+    they started the team. This code never changes even though the team name 
+    may be changed. 
+
+    Team Founder commands are;
+
+       TEAM START nnnnn ssssssssss pppppppppp <team name>
+
+           starts a new team with code nnnnn, Founder Password ssssssssss, 
+           Member Password pppppppppp, and with the team name <team name>.
+
+           Example: Team start 12345 frogdung toadspit The Murdonian Constant
+
+       TEAM KICK ssssssssss <user name>
+
+           permits a team member with the Founder Password to kick another 
+           team member off the team. Note: if you don't also change the 
+            password the kicked player can simply rejoin.
+
+           Example: Team Kick toadspit John Doe
+
+       TEAM NEWPASS ssssssssss pppppppppp
+
+           permits a team member with the Founder Passowrd to assign a new 
+           Member Password pppppppppp.
+
+           Example: Team newpass toadspit birdbait
+
+       TEAM NEWNAME ssssssssss <team name>
+
+           permits a team member with the Founder Password to change the 
+           team name to <team name>.
+
+           Example: Team newname toadspit The Klystron Klan
+
+    NOTE: All the above commands require the team Founder Password. If you
+          don't know it then you are not a "founder".
+
+
+
+    11.35 TEAM (cont.)
+
+    Team Member commands are;
+
+       TEAM JOIN nnnnn pppppppppp
+
+           permits a player to join the team nnnnn provided they have the 
+           correct member password pppppppppp
+
+           Example: Team join 12345 toadspit
+
+       TEAM UNJOIN
+
+           permits the player to leave the current team they are a member of.
+
+       TEAM SCORE
+
+           displays a list of the current teams and their scores.
+
+       TEAM MEMBERS
+
+           displays a list of the members of the players current team.
+
+    Scoring: Team scoring is the product of the result of the sum of 
+             the individual scores divided by the number of team members
+             plus a bonus score for each team member (A/B)+(C*B). This
+             means that a player with less of an individual score dilutes
+             the whole teams score. You can make up for this in numbers
+             but the best scores will be larger teams with good individual
+             scores.
+
+
+
+
+    11.36 TORPEDO - Fire a torpedo at another ship
+
+    The Torpedo command instructs your ship to fire a torpedo at a given
+    ship. This fire control system will attempt to lock on the ship prior
+    to firing the torpedo. If a lock is made the torpedo is launched.
+
+    Issue the Torpedo command as follows;
+
+
+       torpedo [<ship letter>/@] 
+
+       ship letter = the ship you are firing upon
+       @           = the locked on ship.
+
+       examples: torpedo A   would fire a torpedo at ship A.
+                 torpedo @   would fire at the ship you locked on with
+                             the LOCK command.
+
+
+    11.37 TRANSFER - Transfers freight to a planet
+
+    The Transfer command permits you to transfer goods from your ship to
+    a newly established planet, or from a planet to your ship. Issue the
+    transfer command as follows;
+
+    transfer [up/down] [<number>] [men/tro/mis/tor/ion/flu/foo/fig/dec
+                                   /min/jam/gol]
+
+        men  = transfer men
+        tro  = transfer troops
+        mis  = transfer missiles
+        tor  = transfer torpedoes
+        ion  = transfer ion cannons
+        flu  = transfer flux pods
+        foo  = transfer food
+        fig  = transfer fighters
+        dec  = transfer decoys
+        min  = transfer mines
+        jam  = transfer jammers
+        zip  = transfer zippers
+        gol  = transfer gold
+
+    examples:
+        transfer up 3 ion 
+        transfer down 500 foo 
+
+
+
+
+
+
+
+    11.38 WARP - Engage the warp drive engines
+
+    The Warp command starts the warp drives (provided your type of ship
+    has them) and directs your course and speed.
+
+    Issue the Warp command as follows;
+
+         warp [<speed>] [<heading>]
+
+         speed   = the warp speed between 0 and 50
+         heading = the heading from your current direction
+
+    Examples:
+
+         warp 5 0    would alter the speed to warp 5 and not
+                     change the heading.
+         warp 10 5   would alter the speed to warp 10 and turn the ship
+                     5 degrees to the starboard (right).
+         warp 10 355 would alter the speed to warp 10 and turn the ship
+                     5 degrees to the port (left).
+
+    Note: you can push the warp engines beyond their rated speed for short
+    durations. The faster and longer you do this, however, the greater the
+    damage to the engines.
+
+
+    11.39 ZIPPER - Launch a zipper
+
+    The ZIP command launches a defensive (and sometimes offensive) weapon
+    which interferes with the timing mechanism on mines. The effect is to
+    trip all mines in the vicinity of the players ship into exploding
+    immediately.  This weapon can be used to "trip" an opponents mines
+    after he has laid them but before he can distance himself from them,
+    causing the mines to do damage to the opponents own ship. Issue the
+    zipper command as follows;
+
+        zipper
+
+    Easy enough!
+
+
+
+
+
+
+
+    12.0  ENHANCEMENTS
+
+    As Galactic Empire is an evolving game, with over 200 new
+    enhancements being added each year, we value your input as a player.
+    If you wish to see some features changed, or have identified some
+    problems, or have some ideas for enhancements, we would be happy to
+    hear from you.
+
+    Send your suggestions to;
+
+    M.B. Murdock & Associates
+    P.O. Box 2194 
+    Pinellas Park, Fl   34665
+
+
+    Include with as much detail as possible the changes you would like to
+    see. Your involvement in this game is much appreciated.
+
+    Also, we are collecting any newsletters, T-shirts, and other Galactic
+    Empire novelties created by you the users. We would be extremely
+    pleased to accept any items of this type that you are able to send. 
+
+    Finally, this game has been a labor of love and adventure for us
+    since early 1987. I am astounded by the phenomenal support and
+    enthusiasm you have shown this game and wish to say THANK YOU for
+    making Galactic Empire the outstanding success that it is.
+
+    Mike Murdock
+
+
+
+
+
+

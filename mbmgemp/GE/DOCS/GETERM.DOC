@@ -1,0 +1,185 @@
+
+This documents the special terminal program commands in Galactic Empire 3.0.
+These commands are designed to assist in the rendering of information
+on a terminal program display by cutting out the textual portion of the
+information and conveying only the data in an easy to parse format.
+
+The commands available are...
+
+
+
+
+DATA pppppp SCAN       
+----------------
+
+
+Reports information on all the other ships that this ship can "see". It
+is the same information as in the SCAN RANGE 9 command with SCANFULL and
+SCANNAMES set on.
+
+The pppppp is the password for the terminal program. This insures that only
+terminal programs use these commands, and not the everyday user. It is
+set to "qazwsx" and will probably stay that way.
+
+
+The format for the information is...
+
+" %c %d %d %d %d %s %d %d %u.%u %d/%s\r"   (for those "C" programmers)
+
+or
+
+Shp Xsect Ysect Xcoord Ycoord Distance Bearing Heading Speed Class 
+
+* = this ship
+
+
+
+
+The next command available is...
+
+data pppppp report
+
+This command tells you everything you need to know about this ship.
+The first three characters are a data class indicator, followed by a colon.
+UD = User Data, SD = Ship Data.
+
+The entire response is formatted as follows;
+
+
+UD1:userid,noships,kills,rospos,planets*
+UD2:Score,cash,population*
+SD1:shipname,class*
+SD2:heading,speed,xsect,ysect,xcord,ycord,damage,energy*
+SD3:phasr,phasrtype,kills,lastfired,shieldtype,shieldstat,shield,cloak,tactical
+    helm,train,where*
+SD4:T0:channel,distance,T1:channel,distance,T2:channel,distance,*
+SD5:M0:channel,distance,M1:channel,distance,M2:channel,distance,*
+SD6:I0:amount,I1,amount...In,amount,*
+SD7:decout,jammer,kills,freq[0],freq[1],freq[2],hostile,cantexit,repair
+    hypha,firecntl,destruct,status*
+
+
+Some additional notes....
+
+damage is the amount of damage in % that this ship has >99 = dead
+
+Phasr is the strength of the phaser.
+
+Lastfired is a pointer to the ship who last fired on this ship... not much use
+   to you as you havn't got access to the table.
+
+shieldstat is the current shield status as follows;
+1 = up
+2 = down
+3 = damaged
+
+shield is the current shield charge. It is figured as follows;
+% charged = (shield/100)/(40 + (shieldtype * 10))
+
+if the shields are damaged the shield # will be negative. The more negative
+the number the worse the damage.
+
+cloak is used as follows;
+cloak = 0  indicates not-cloaked
+cloak > 0  indicates cloaked
+cloak <	0  indicates damaged cloak
+
+tactical is used as follows;
+
+tactical = 0  indicates the tactical display is fine
+tactical < 0  indicates the tactical display is damaged (no scans permitted)
+
+helm is used as follows;
+
+helm = 0  indicates the helm is fine
+helm < 0  indicates the helm is damaged (no IMP or WAR or ROT permitted)
+
+train is not used currently
+
+where is used as follows;
+
+where = 0   ship is in impulse drive
+where = 1   ship is in warp drive
+where > 10  ship is in orbit around planet # (where - 10)
+where = -1  ship gone (do not use to determine if this ship is killed)
+
+T0 - T2 indicate if torpedoes are locked on to this ship. 
+If distance > 0 an incomming torpedo is locked on.
+
+M0 - M1 indicates if missiles are locked on to this ship.
+If distance > 0 an incomming missile is locked on.
+
+I0 - I12 indicate the quantity of items on this ship where
+
+MEN	   =0
+MISSILE	   =1
+TORPEDO	   =2
+IONCANNON  =3
+FLUXPOD	   =4
+FOOD	   =5
+FIGHTER	   =6
+DECOYS	   =7
+TROOPS	   =8
+ZIPPERS	   =9
+JAMMERS	   =10
+MINE	   =11
+GOLD	   =12
+
+decout indicates the number of decoys deployed
+
+jammer indicates the condition of any jamming where
+0 = no jamming
+> 0 = jammed
+
+freq[0] - freq[2] indicates the frequency the com channels are set to
+
+hostile indicates that this player has been hostile toward a planet
+and any ION CANNONS may fire on it.
+
+cantexit indicates the player has been fighting and cannot exit until
+this value is 0.
+
+repair indicates the ship is under repair if > 0. The higher the number 
+the longer till done.
+
+hypha indicates the current hyper phaser status
+if > 0 they are cooling down.
+if 0 they can fire
+
+firecntl indicates the fire control status as follows;
+if = 0 the ship can fire
+if > 0 the fire control is being repaired
+
+destruct indicates if a self destruct is underway. 
+If = 0 no
+if > 0 countdown in progress 
+
+status should be always a 1 (if not let me know)
+
+
+
+
+
+Additionally for those of you who care...
+
+the command WHO will display the userid, username, and BBS registration #
+in case you wish to register a program to a specific user or system.
+
+
+
+
+
+I know this is not everything you might like but its a start. As you get 
+going please let me know what else you need to make your program the best
+it can be.
+
+
+If you need any help please call me at (813) 545-8050
+
+
+Mike Murdock
+
+
+
+
+

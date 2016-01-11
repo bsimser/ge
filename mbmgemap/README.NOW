@@ -1,0 +1,68 @@
+
+MBMGEMAP Version 1.0
+
+лллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллл
+
+Thank you for trying our software.
+
+Included on this distribution diskette you will find the
+following files;
+
+MBMGEMAP.EXE - The Main Executable for the GE Starmap Extract Utility
+MBMGEMAP.DOC - Installation and operations documentation for MBMGEMAP.EXE
+GECLEAN.BAT  - A sample batch file to be added to your BBSCLEAN.BAT
+               NOTE! Some changes may be required. Please read the 
+               MBMGEMAP.DOC file.
+
+MBMGEGRF.ZIP - The evaluation version of MBMGEGRF for your users to download.
+
+README.NOW   - This file
+ORDER.FRM    - Order form for purchasing this product
+
+лллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллл
+
+What the heck is this this?
+
+The GE Starmap utility enhances your users enjoyment of the Galactic Empire
+game by giving them the ability to generate personal starmaps on the CURRENT
+Galactic Empire Game. To do this there are two key parts; The MBMGEMAP GE
+Planet Database Extract Utility, and the MBMGEGRF Starmap Graphing Utility.
+
+MBMGEMAP is designed to run in your nightly cleanup batch. It processes the
+MBMGEPLT.DAT file and extracts a subset to the encrypted MBMGEPLT.MAP file.
+This file should then be copied into the file library to be made available
+for download to your users. All this can be automated so you don't have to
+to anything each day.
+
+MBMGEGRF is designed to be run by your users. It gives them the ability to
+produce custom starmaps on those sections of the galaxy they are most 
+interested in. They also can product GIF and PCX files to save or print. You
+should put the MBMGEGRF.ZIP file in your file library for your users to freely
+download.
+
+Because the database is current each day your users get a fresh map 
+detailing all the known sectors of the galaxy.
+
+лллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллл
+
+How much does it cost me?
+
+Nothing! The Extract Utility is being distributed to you FREE of charge. If
+your users elect to use the Starmap Utility MBMGEGRF we hope they will 
+purchase the registered version which includes more features than the demo
+version. The price of the registered version of MBMGEGRF only $15. 
+
+лллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллл
+
+How to purchase this product:
+
+If you wish to register a copy of the MBMGEGRF Starmap Graphing Utility for
+your personal use simply print out the file ORDER.FRM, complete it, and mail 
+it with a check for $15.00 to the address below. To order it faster you may 
+fax the completed order form to us, or just simply give us a call. We DO 
+accept Mastercard and VISA.
+
+лллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллл
+
+
+

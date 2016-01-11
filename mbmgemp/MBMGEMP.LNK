@@ -1,0 +1,20 @@
+\run286\bc3\lib\c0phdll  +
+\run286\bc3\lib\fpdmy +
+\bbsv6\phobj\gemain +
+\bbsv6\phobj\gefuncs +
+\bbsv6\phobj\gecmds +
+\bbsv6\phobj\gecybs +
+\bbsv6\phobj\gedroids +
+\bbsv6\phobj\geplanet +
+\bbsv6\phobj\gelib +
+\bbsv6\phobj\secure
+\bbsv6\mbmgemp
+\bbsv6\mbmgemp.map
+\run286\bc3\lib\phapi +
+\bbsv6\dlib\galimp +
+\bbsv6\dlib\msgimp +
+\bbsv6\dlib\gsblimp +
+\borlandc\lib\mathh /Twd /s /n 
+\bbsv6\dlib\mathdef
+
+
